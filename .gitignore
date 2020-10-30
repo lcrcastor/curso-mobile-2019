@@ -2,4 +2,5 @@
 burp
 burp.cert
 burp.der
+burp.crt
 docker.code-workspace

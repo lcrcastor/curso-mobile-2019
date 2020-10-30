@@ -1,0 +1,1763 @@
+<!doctype html>
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Resumen metodológico: "Buenas prácticas en desarrollo aplicaciones móviles" </title>
+
+		<meta name="description" content="Diapositivas resumen práctico OWASP">
+		<meta name="author" content="Juan Urbano Stordeur">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!--Slide #1-->
+			<div class="slides">
+				<section>
+				<section>
+				<h3>Buenas prácticas en desarrollo de aplicaciones móviles</h3>
+
+				<h5>(Teoría: Módulo VIII)</h5>
+				</section>
+				<section data-markdown>
+					¡Antes de comenzar no olviden hacer un **git pull** sobre la carpeta del proyecto!
+				</section>
+				<section data-markdown>
+					1. **Introducción**
+					2. **Almacenamiento interno y externo de la aplicación**
+					3. **Transferencia de información (Aplicación/Backend)**
+					4. **Ingeniería inversa(reverse engineering) a la aplicación:**
+					5. **Recursos adicionales para el aprendizaje: desafíos en Android**
+					6. **Herramientas para el análisis automatizado**				
+				</section>
+				<section data-markdown>
+					#### Introducción
+					
+					Conceptos básicos sobre Android
+				</section>
+				<section data-markdown>#### Almacenamiento interno y externo de la aplicación
+                    </section>
+                    <section data-markdown>
+                        1. **SQLite**
+                        2. **Shared Prefs**
+                        3. **Internal Storage**
+                        4. **External Storage**
+                    </section>
+					<section data-markdown>
+                        #### Transferencia de información (Aplicación/Backend)
+					</section>
+                    <section data-markdown>
+                        1. **Configuración de TLS de manera segura**
+                        2. **Personalizar CAs de confianza**
+                        3. **Certificate Pinning**
+                    </section>
+					<section data-markdown>
+                        #### **Ingeniería inversa (reverse engineering) a la aplicación**
+                    </section>
+                    <section data-markdown>
+                        1. **Android Anti-Reversing Defenses**
+                        2. **Root Detection**
+                        3. **Anti-Emulation**
+                        4. **Anti-Debugging**
+                        5. **File Integrity Checks**
+                        6. **Obfuscation**
+                        7. **Run Time Integrity Checks**
+                        8. **Detection of Reverse Engineering Tools**
+					</section>
+					<section data-markdown>
+                    #### Recursos adicionales para el aprendizaje: desafíos en Android    
+					</section>
+					<section data-markdown>
+						0. Configuración de herramientas/descarga desafíos
+						1. **Práctica**: Insecure Logs: DIVA #1
+						2. **Práctica**: Insecure Logs (Aplicación bancaria)
+						3. **Práctica**: Insecure Data Storage #1
+						4. **Práctica**: Insecure Data Storage #2
+						5. **Práctica**: Insecure Data Storage #3
+						6. **Práctica**: Insecure Data Storage #4
+					</section>
+					<section data-markdown="">
+						7. **Práctica**: Transferencia de información #1 (Burp)
+						8. **Práctica**: Transferencia de información #2 (tcpdump)
+						9. **Práctica**: Bypass Certificate Pinning
+						10. **Práctica**: Protecciones binarias #1 (root check)
+						11. **Práctica**: Protecciones binarias #2 (emulation check)
+						12. **Práctica**: Protecciones binarias #3 (All in one) Uncrackable3
+						13. **Práctica**: Ransomware I 
+						14. **Práctica**: Practica análisis dinámico
+					</section>
+					<section data-markdown>
+					#### Herramientas para el análisis automatizado
+					</section>
+					<section data-markdown>
+					* MobSF
+					* Drozer
+					* Androbugs
+					* Androwarn
+					* Adhrit
+					* Qark
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						1. **Introducción**
+
+						Conceptos básicos sobre Android
+					</section>
+					<section data-markdown>
+					* ¿Por qué Android?
+
+					* ¿Dalvik VM vs ART?
+
+					* ¿Qué es un APK? 
+					
+					* Android Manifest
+
+					* Package Name </section>
+					<section data-markdown>
+					* Componentes en Android:
+					* Activity:
+					* Service
+					* Broadcast Receiver:
+					* Content Providers:
+					* Intent e Intent filters
+					* Permisos en Android:
+					</section>
+					<section data-markdown>¿Por qué Android?</section>
+					<section data-markdown>![Mobile](images/m8/mostUsedSO.png)</section>
+					<section data-markdown>![Mobile](images/m8/World_Wide_Smartphone_Sales.png)</section>
+					<section data-markdown>Arquitectura</section>
+					<section data-markdown>![Mobile](images/m8/oldArch.png)</section>
+					<section data-markdown>![Mobile](images/m8/newArch.png)</section>
+					<section data-markdown>¿Dalvik VM vs ART?</section>
+					<section data-markdown>
+						* DVM == Dalvik Virtual Machine 
+						* ART == Android Runtime</section>
+					<section data-markdown>* Dalvik es la máquina virtual que utiliza la plataforma para dispositivos móviles Android</section>
+					<section data-markdown>* La Máquina Virtual Dalvik (DVM) permite ejecutar aplicaciones programadas en Java.</section>
+					<section data-markdown>* DVM sacrifica la portabilidad que caracteriza a Java, para poder crear aplicaciones con un **mejor rendimiento** y **menor consumo de energía**</section>
+					<section data-markdown>* Las características anteriores son **extremadamente importantes** en dispositivos móviles</section>
+					<section data-markdown>¿Se les ocurre por qué?</section>
+					<section data-markdown>Principalmente a *la capacidad de las baterías* en estos dispositivos **es limitada**</section>
+					<section data-markdown>
+						1. DVM está optimizada para requerir poca memoria y está diseñada para permitir ejecutar varias instancias de la máquina virtual simultáneamente.</section>
+					<section data-markdown>	2. Delegando en el sistema operativo subyacente el soporte de aislamiento de procesos, gestión de memoria e hilos. </section>
+					<section data-markdown>
+					Es importante entender que: 
+					
+					* DVM no es una JVM
+					* Debido a que el bytecode que opera no es Java Bytecode</section>
+					<section data-markdown>ART reemplaza a Dalvik</section>				
+					<section data-markdown>* Hasta la versión 4.4 Android se utilizaba Dalvik como máquina virtual con la compilación justo a tiempo (JIT), para ejecutar Dalvik dex-code (Dalvik ejecutable).
+					</section>
+					<section data-markdown>* Dalvik realizaba la compilación y ejecución nativa de segmentos de código cada vez que se inicia una aplicación.
+					</section>
+					<section data-markdown>* Con Android 4.4 introdujo el ART (Android Runtime) como un nuevo entorno de ejecución, que **compila el Java bytecode durante la instalación de una aplicación**.
+					</section>
+					<section data-markdown>* Se convirtió en la única opción en tiempo de ejecución en la versión 5.0.</section>
+					<section data-markdown>![Mobile](images/m8/dvVSart.png)</section>
+					<section data-markdown>
+					* (JIT) "just- in-time" compila el código cada vez que se inicia una aplicación. 
+					
+						VS
+
+					* (ART) "ahead-of-time" (AOT), que crea un archivo de compilación posterior a la instalación de la aplicación.</section> 
+					<section data-markdown>
+					1. Este archivo es utilizado al abrir la aplicación, con esto **se evita que la aplicación se compile continuamente**, cada vez que ésta es ejecutada. 
+					</section>
+					<section data-markdown>
+					2. Al reducir la cantidad global de compilaciones realizadas por cada aplicación, **el uso del procesador del dispositivo móvil se reduce y aumenta la duración de la batería**.</section>	
+					<section data-markdown>¿Cual es el proceso que ocurre desde que se desarrolla la aplicación, hasta que obtenemos el APK?</section>
+					<section data-markdown>¿Nadie?</section>
+					<section data-markdown>![Mobile](images/m8/javaToApk.png)</section>
+					<section data-markdown>
+					1. El compilador de Android compila los “.java” en archivos “.class”</section>
+					<section data-markdown>
+					2. Los archivos “.class” son convertidos a “.dex” (archivos Dalvik Executables)</section>
+					<section data-markdown>
+					3. Los archivos Dex son “bytecode” de DVM, la cual es una “no-estandar” JVM que se ejecuta en los dispositivos Android.</section>
+					<section data-markdown>
+					4. Los archivos XML son convertidos a un formato binario “optimizado” para crear archivos más pequeños.</section>
+					<section data-markdown>5. Los archivos .dex y otros recursos necesarios son “empaquetados” en un archivo **Android (.apk)**</section>
+					<section data-markdown>¿Qué es un APK? </section>
+					<section data-markdown>![Mobile](images/m8/apkInternal.png)</section>
+					<section data-markdown>
+					DEMO: Unzip APK (diva)
+					* $unzip -e diva-beta.apk -d unzip_diva</section>
+					<section data-markdown>![Mobile](images/m8/internalUnzip.png)</section>
+					<section data-markdown>Android Manifest</section>
+					<section data-markdown>![Mobile](images/m8/androidManifest.png)</section>
+					<section data-markdown>¿Qué contiene básicamente?</section>
+					<section data-markdown>
+					* Activities
+					* Services
+					* Receivers
+					* Intents
+					* App Permissions
+					* App meta-data</section>
+					<section data-markdown>
+					* Package Name
+					* Version Code/Name
+					* Flags(debuggable, backup, etc).
+					* Librerías referenciadas</section>
+					<section data-markdown>
+					**Package Name**
+					
+					package="com.example.reverzeme"
+					</section>
+					<section data-markdown>
+					
+							<script type="text/template">
+							Declaracion de permisos
+							```
+							  <uses-permission Android:name=“ANDROID.PERMISSION.INTERNET>
+							```
+							</script>
+						</section>
+					<section data-markdown>
+					* Normal 
+					* Dangerous
+					* Signature
+					* SignatureOrSystem</section>
+					<section data-markdown>
+						<script type="text/template">
+						```
+						<manifest xmlns:android="http://schemas.android.com/apk/res/android"    
+							package="com.android.app.myapp" >
+							<uses-permission android:name="android.permission.RECEIVE_SMS"/>
+							<uses-permission android:name=”android.permission.READ_LOGS”/> 
+							<uses-permission android:name=”android.permission.READ_CONTACTS”/>
+							<uses-permission android:name=”android.permission.WRITE_CALENDAR”/>
+						</manifest>
+						```
+						</script>
+					</section>
+					<section data-markdown>Normal</section>
+					<section data-markdown>
+					* El permiso “normal”, no necesita ningún tipo de validación por parte del usuario 
+					* Son aprobados automáticamente por el SO 
+					* Para Android No presuponen un riesgo directo hacia el usuario, ni para la información que se almacena dentro del dispositivo</section>
+					<section data-markdown>Dangerous</section>
+					<section data-markdown>
+					* Los permisos del atributo “dangerous” necesitan validación explicita del usuario
+					* Presuponen un riesgo para la aplicación o la información dentro del dispositivo, por ello deben ser validados por el usuario. </section>
+					<section data-markdown>Signature</section>
+					<section data-markdown>
+					* El atributo“signature” son permisos que, solo pueden ser usados por aplicaciones que están firmadas con el mismo certificado con el que la aplicación declaró el permiso. </section>
+					<section data-markdown>* Si los certificados coinciden, el sistema otorga automáticamente el permiso sin notificar al usuario o puede solicitar la aprobación explícita del usuario. </section>
+					<section data-markdown>SignatureOrSystem</section>
+					<section data-markdown>
+					* El sistema otorga este permiso solo a las aplicaciones que están en la imagen del sistema Android. 
+					* O que están firmadas con el mismo certificado que la aplicación que declaró el permiso. </section>
+					<section data-markdown>Componentes en Android</section>
+					<section data-markdown>
+					* Activity 
+					* Service
+					* Content Provider
+					* Broadcast Receiver
+					</section>
+					<section data-markdown>Activity</section>
+					<section data-markdown>Un **Activity** es un componente de la aplicación, que contiene una pantalla con la que los usuarios pueden interactuar para realizar una acción</section>
+					<section data-markdown>
+							<script type="text/template">
+							```
+							<manifest ...> 
+								<application ...>      
+									<activity android:name=".ExamplePrincipalActivity"/> ...  
+								</application ...> 
+							</manifest>
+							```
+							</script>
+						</section>
+					<section data-markdown>Service</section>
+					<section data-markdown>
+					* Un **Service** es un componente de una aplicación que, puede realizar operaciones de larga ejecución en segundo plano y que no proporciona una interfaz de usuario.</section>
+					<section data-markdown>
+						<script type="text/template">
+						```
+						<manifest ...> 
+							<application ...>      
+								<service android:name=".ExampleServiceImplentation"/>...  
+							</application ...> 
+						</manifest>
+						```
+						</script>
+					</section>
+					<section data-markdown>Content Provider</section>
+					<section data-markdown>
+					* Los Content Providers administran el acceso a un conjunto estructurado de datos. 
+					* Encapsulan los datos y proporcionan mecanismos para definir la seguridad de los mismos.</section>
+					<section data-markdown>Los **Content Providers** ofrecen un mecanismo de almacenamiento externo que, puede limitarse a tu aplicación o exportarse para permitir el acceso a otras aplicaciones</section>
+					<section data-markdown>
+						<script type="text/template">
+						```
+						<manifest ...> 
+							<application ...>      
+								<provider android:name=".ExampleProviderImplentation"/>...
+							</application ...> 
+						</manifest>
+						```
+						</script>
+					</section>
+					<section data-markdown>Broadcast Receiver</section>
+					<section data-markdown>
+					* Es un componente que está destinado a recibir y responder ante eventos globales generados por el sistema.
+					* Como un aviso de batería baja, un SMS recibido, un SMS enviado.</section>
+					<section data-markdown>
+						<script type="text/template">
+						```
+						<manifest ...> 
+							<application ...>      
+								<receiver android:name=".ExampleReceiverImplentation" />
+							</application ...> 
+						</manifest>
+						```
+						</script>
+					</section>
+					<section data-markdown>
+					Se comunican a través de IPC 
+					
+					**(Inter Process Communication)**</section>
+					<section data-markdown>
+					Intents
+					* Un intent es “un objeto de acción, que se puede usar para solicitar una acción de otro componente de la aplicación”</section>
+					<section data-markdown>
+					Intents
+					* Son mensajes que los componentes pueden enviar y recibir.
+					* Es un mecanismo universal para pasar datos entre procesos.
+					</section>
+					<section data-markdown>
+					Intents
+
+					* Con la ayuda de los intents, se puede iniciar servicios/actividades, invocar receptores de difusión (broadcast receviers), etc.
+					* A su vez, estos pueden ser declarados de manera implícita o explícita. 
+					</section>
+					<section data-markdown>
+					Intent para comenzar una actividad
+					* Puedes iniciar una nueva instancia de una Activity pasando una Intent a **startActivity()**
+					* La Intent describe la actividad que se debe iniciar y contiene los datos necesarios para iniciarse.
+					</section>
+					<section data-markdown>
+					Intent para iniciar un servicio
+					
+					* Puede iniciar un servicio para realizar una operación única (como descargar un archivo) pasando una Intent a **startService()**
+					* El Intent describe el servicio que se debe iniciar y contiene los datos necesarios para ello.
+					</section>
+					<section data-markdown>
+					Intent para entregar un mensaje
+
+					* Un mensaje es un aviso que cualquier aplicación puede recibir. 
+					* El sistema entrega varios mensajes de eventos del sistema, como cuando el sistema arranca o el dispositivo comienza a cargarse. 
+					</section>
+					<section data-markdown>
+					Intent para entregar un mensaje
+					
+					* Puedes enviar un mensaje a otras apps pasando una Intent a **sendBroadcast()**, **sendOrderedBroadcast()** o **sendStickyBroadcast()**
+					</section>
+					<section data-markdown>
+					Intent Explicito
+
+					* El usuario usa un Intent explícito para iniciar un componente en **su propia aplicación**, porque conoce el nombre de clase de la actividad o el servicio que desea iniciar
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						```
+						Intent downloadIntent = new Intent(this, DownloadService.class);
+						 downloadIntent.setData(Uri.parse(fileUrl));
+						 startService(downloadIntent); 
+						```
+						</script>
+					</section>
+					<section data-markdown>
+					Intent Implícito
+				
+					* No se nombra el componente específicamente.
+					* En cambio, se declara una acción general para realizar, lo que permite que un componente de otra aplicación la maneje.
+					</section>
+					<section data-markdown>Intent Implícito</section>
+					<section data-markdown>
+						<script type="text/template">
+						```
+						// Crear un mensaje de texto con un string
+						Intent sendIntent = new Intent();
+						sendIntent.setAction(Intent.ACTION_SEND);
+						sendIntent.putExtra(Intent.EXTRA_TEXT, textMessage);
+						sendIntent.setType("text/plain");
+							startActivity(sendIntent);} 
+						```
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						Intent Filters
+						
+						* Busca realizar una acción basada en el filtro que se declara sobre un elemento:
+						```
+						<action>, <data> y <category>
+						```
+						</script>
+					</section>
+					<section data-markdown>
+					* Cada filtro de intents está definido por un elemento **intent-filter** en el archivo Android Manifest de la app, anidado en el componente de la app correspondiente (como un elemento <activity>). </section>
+					<section data-markdown>* En el <intent-filter>, se puede especificar el tipo de intent que se aceptará con uno o más de estos tres elementos anteriormente mencionados
+					</section>
+					<section data-markdown>
+					Intent Filters
+
+					* **action**: 
+						Declara la acción de la intent aceptada, en el atributo name. El valor debe ser el valor de la string literal de una acción, no la constante de clase.
+					</section>
+					<section data-markdown>
+					Intent Filters
+
+					* **data**: 
+						Declara el tipo de datos que se acepta, mediante el uso de uno o más atributos que especifican varios aspectos del URI de los datos (scheme, host, port, path, etc.) y el tipo de MIME.
+					</section>
+					<section data-markdown>
+					Intent Filters
+
+					* **category**: 
+						Declara la categoría de la intent aceptada, en el atributo name. El valor debe ser el valor de la string literal de una acción, no la constante de clase.
+					</section>
+					<section data-markdown>
+					Interacción con la aplicación
+
+					* adb(Android Device Bridge)
+					* am (Activity Manager)
+					* pm (Package Manager)
+					</section>
+					<section data-markdown>
+						ADB: Android Device Bridge 
+					</section>
+					<section data-markdown>
+					Demo ADB
+			
+					* $adb shell
+					* $adb install nombreApp.apk 
+					* $adb devices –l 
+					* $adb connect ip:port
+					* $adb forward tcp:31415 tcp:31415
+					* $adb pull /data/data/app/ /destino/ordenador
+					* $adb push /destino/ordenador /data/data/app
+					</section>
+					<section data-markdown>
+					* $adb shell logcat | grep nombreApp
+					* $adb shell ps | grep nombreApp
+					* $adb shell dumpsys package com.android.chrome
+					* $adb shell getprop ro.build.fingerprint
+					* $adb shell input text "hola"
+					* $adb remount
+					* $adb shell screencap /sdcard/screen.png
+					</section>
+					<section data-markdown>
+						PM: Package Manager
+					</section>
+					<section data-markdown>
+					Demo PM
+
+					* $adb shell pm list packages
+					* $adb shell pm path package
+					* $adb shell pm list packages –i
+					* $adb shell pm list users
+					* $adb shell pm uninstall com.example.MyApp
+					</section>
+					<section data-markdown>
+						AM: Activity Manager
+					</section>
+					<section data-markdown>
+					Demo AM
+				
+					* $adb shell am
+					* $adb shell am kill "package"
+					* $adb shell am start -n package-name/.activity
+					* $adb shell am start -n "package-name/path.to.the.Activity" - e "key" "data"
+					* $adb shell am start -a android.intent.action.VIEW -d https://github.com</section>
+					<section data-markdown>
+					* $adb shell am start -a "android.intent.action.SEND" --es "android.intent.extra.TEXT" "Hello World" -t "text/plain"						
+					* $adb shell am startservice -n package-name/.BackgroundService</section>
+					<section data-markdown>
+					* $adb shell am broadcast -a "android.intent.action.PACKAGE_FIRST_LAUNCH" -d "com.example.application"</section><section data-markdown>
+					* $adb shell am broadcast -a com.google.android.c2dm.intent.RECEIVE -n 'YOUR_PACKAGE_NAME'/'YOUR_RECEIVER_NAME' -e 'EXTRA_KEY_1'
+					'EXTRA_VALUE_1' -e 'EXTRA_KEY_2' 'EXTRA_VALUE_2'
+					</section>
+					<section data-markdown>
+					Ejercicio: Utilizando adb, pm y am realice: 
+
+
+					1. Busque dentro del dispositivo la aplicacion easteregg o egg.
+					2. Inicie el MainActivity, o alguno de ellos.
+					</section>
+					<section data-markdown>
+					Resolución: Utilizando el emulador realice:
+
+					1. $adb shell pm list packages | grep egg
+					
+					package:com.android.egg</section>
+					<section data-markdown>
+					2. $adb shell dumpsys package com.android.egg	
+							Activity Resolver Table:
+  							Non-Data Actions:
+  						    android.intent.action.MAIN:
+  						      4f4efb3 com.android.egg/.octo.Ocquarium filter 32a6fcf
+  						        Action: "android.intent.action.MAIN"
+  						        Category: "android.intent.category.DEFAULT"
+  						        Category: "com.android.internal.category.PLATLOGO"
+  						      4c4c970 com.android.egg/.neko.NekoLand filter 3cdd5c
+  						        Action: "android.service.quicksettings.action.QS_TILE_PREFERENCES"
+  						        Action: "android.intent.action.MAIN"
+  						      9ca14e9 com.android.egg/.neko.NekoActivationActivity filter 6847865
+  						        Action: "android.intent.action.MAIN"
+  						        Category: "android.intent.category.DEFAULT"
+  						    android.service.quicksettings.action.QS_TILE_PREFERENCES:
+  						      4c4c970 com.android.egg/.neko.NekoLand filter 3cdd5c
+  						        Action: "android.service.quicksettings.action.QS_TILE_PREFERENCES"
+  						        Action: "android.intent.action.MAIN"
+					</section>
+					<section data-markdown>
+					Iniciamos el activity:
+
+					* $adb shell am start -n **com.android.egg/.octo.Ocquarium**
+					* $adb shell am start -n **com.android.egg/.neko.NekoActivationActivity**
+					* $adb shell am start -n **com.android.egg/.neko.NekoLand**
+					</section>	
+					<section data-markdown>
+					![](images/m8/easter2.png)
+					</section>
+					<section data-markdown>
+					Demo Logging Information
+					
+					Abrir **"/reveal.js/ejercios.html"** y realizar los primeros dos ejercicios.
+					</section>
+                </section>
+                <section>
+                    <section data-markdown>
+                    2. **Almacenamiento interno y externo de la aplicación**
+                    </section>
+                    
+                    <aside class="notes">
+                            Normalmente una aplicación necesita tener dentro de sí información privada, tokens de autenticación u otra información sensible. 
+                            Con lo cual es muy importante poder manejar la misma de forma segura. 
+                            Android provee mecanismos para que esto ocurra, donde la premisa general es que **"la información pública esté siempre pública"** y que **la información sensible o privada debe estar protegida (KeyStore), o mejor aún almacenada fuera del dispositivo"**
+
+                            A grandes rasgos existe el almacenamiento interno y el externo (SD), donde a continuación mencionaremos algunos casos prácticos con el ejemplo de código que indica un caso de uso habitual y su correcta implementación.
+                    </aside>
+                    <section data-markdown>
+                        ### Almacenamiento Interno
+                    </section>
+                    <section data-markdown>
+                        #### Demo instalación diva                      
+                    </section>
+                    <section data-markdown>
+                        $adb install diva-beta.apk
+                        
+                        success
+					</section>
+                    <section data-markdown>
+                        #### Demo 
+
+                        1. Buscar la aplicación Diva-beta dentro del dispositivo (apk)
+                        2. Buscar donde se encuentra su almacenamiento interno utilizando los comandos anteriormente vistos
+                    </section>
+                    <section data-markdown>
+                        **/data/data/nombre.aplicación/** (almacenamiento interno aplicación)
+
+						**/system/app/** (aplicaciones instaladas del sistema)
+						**/data/app/** (aplicaciones instaladas por el usuario)
+                    </section>
+                    <section data-markdown>
+                        $adb install MiAFIP.apk
+
+                        ```
+                        root@k3g:/data/data/ar.gob.afip.mobile.android.contribuyentes.mi_afip # pwd
+                        /data/data/ar.gob.afip.mobile.android.contribuyentes.mi_afip
+                        ```
+                    </section>
+                    <section data-markdown data-notes="^Note:"> 
+                        <script type="text/template">
+                        ```
+		root@k3g:/data/data/ar.gob.afip.mobile.android.contribuyentes.mi_afip # ls -la
+		drwxrwx--x u0_a232  u0_a232           2019-05-20 16:04 app_textures
+		drwx------ u0_a232  u0_a232           2019-05-20 16:04 app_webview
+		drwxrwx--x u0_a232  u0_a232           2019-05-20 16:07 cache
+		drwxrwx--x u0_a232  u0_a232           2019-05-20 16:04 databases
+		drwxrwx--x u0_a232  u0_a232           2019-05-20 16:07 files
+		lrwxrwxrwx install  install           2019-05-20 16:04 lib -> 
+			/data/app/ar.gob.afip.mobile.android.contribuyentes.mi_afip-1/lib/arm
+		drwxrwx--x u0_a232  u0_a232           2019-05-20 16:04 no_backup
+		drwxrwx--x u0_a232  u0_a232           2019-05-21 11:15 shared_prefs
+                        ```
+
+                        Note: 
+                            Como mencionamos haremos principalmente foco a los siguientes:
+                             drwxrwx–x u0_a232 u0_a232 2019-05-20 16:04 databases
+                             drwxrwx–x u0_a232 u0_a232 2019-05-21 11:15 shared_prefs
+                             drwxrwx–x u0_a232 u0_a232 2019-05-20 16:07 cache
+                        </script>                         
+                    </section>
+                    <section data-markdown>
+                        #### SQLite (databases)
+
+                        * SQLite es un motor de base de datos SQL que almacena datos en archivos .db
+                        * El SDK de Android tiene soporte incorporado para bases de datos SQLite
+                        * El principal paquete utilizado para administrar las bases de datos es *android.database.sqlite*
+                    </section>					
+                    <section data-markdown data-notes="^Note:"> 
+                        <script type="text/template">
+                        #### Ejemplo de código
+                        ```
+                        SQLiteDatabase notSoSecure = openOrCreateDatabase("demoDatabase",MODE_PRIVATE,null);
+                        notSoSecure.execSQL("CREATE TABLE IF NOT EXISTS Accounts(Username VARCHAR,Password VARCHAR);");
+                        notSoSecure.execSQL("INSERT INTO Accounts VALUES('admin','AdminPassEnc');");
+                        notSoSecure.close();
+                        ```
+                        Note:
+
+                        Básicamente se creará la base de datos "demoDatabase" y la tabla "Accounts" si no existe, 
+                        insertando los valores "admin" y "AdminPass" dentro de la misma.
+                        </script> 
+					</section>
+					<section data-markdown=>
+						> /data/data/**package-name**/databases/demoDatabase.db
+
+						![Uncrackable-Level1](images/m8/demoDatabasePlainTextINfo.png)
+					</section>    
+					<section data-markdown>
+						Existen múltiples formas de almacenar la contraseña de cifrado, **no se recomienda**:
+					</section>
+					<section data-markdown>
+						1. Que la contraseña se encuentre almacenada dentro del código.
+						2. Que tampoco esté almacenada dentro de: 
+							* Shared Prefs 
+							* Almacenamiento interno
+							* Carpeta resource u otro sistema de archivos.
+					</section>
+					<section data-markdown>
+						### Se recomienda 
+					</section>	
+					<section data-markdown>
+						* Cifrar la información sensible de SQLite usando [SQLCipher](https://www.zetetic.net/sqlcipher/)
+						* Cifrar toda la base de datos usando [PRAGMA key](https://www.sqlite.org/pragma.html)	
+					</section>
+					<section data-markdown>
+						*  La clave PRAGMA se genera en tiempo de ejecución
+						*  Al primer inicio de la aplicación o cuando se instala
+						*  Debe ser única para cada usuario y dispositivo
+						*  Debe Key de generación debe tener suficiente entropia 
+						*  Evitar que la Key de generación pueda ser facilmente predictible.
+					</section>		
+					<section data-markdown data-notes="^Note:"> 
+						<script type="text/template">
+						#### En resumen
+
+						Note:	
+						
+						Pedir al usuario que descifre la base de datos con un PIN o contraseña una vez que se abra la aplicación.
+						(Tener en cuenta que las contraseñas débiles y los PIN son vulnerables a los ataques de fuerza bruta locales).
+						</script>
+					</section>	
+					
+					<section data-markdown>
+						#### Shared Prefs 
+					</section>	
+					<section data-markdown>
+						* La librería SharedPreferences es comunmente usada para almacenar información en formato de "clave:valor". 
+						* La misma se guarda en texto plano, en un archivo XML.
+					</section>
+					<section data-markdown data-notes="^Note:"> 
+						<script type="text/template">
+						Antiguamente los objetos de SharedPreferences podían ser declarados como "modo-lectura",
+						accesibles para todas las aplicaciones, también podián definirse privados.
+						
+						Note:	
+						Si bien esto se mitigo desde la API Level 17, 
+						normalmente suele ser un punto de información sensible utilizada por los desarrolladores si un tercero tiene acceso al dispositivo:
+						</script>
+					</section>
+
+					<section data-markdown data-notes="^Note:"> 
+							<script type="text/template">
+							#### Ejemplo de código
+							```
+							SharedPreferences sharedPref = getSharedPreferences("demoSharedPref",MODE_WORLD_READABLE);
+							SharedPreferences.Editor editor = sharedPref.edit();
+							editor.putString("username", "administrator");
+							editor.putString("password", "supersecret");
+							editor.commit();
+							```
+							Note:
+	
+							Una vez que el archivo demoSharedPref.xml es generado, el mismo almacena la información en texto plano dentro de sí. 
+							Dejando almacenado en el almacenamiento interno de la aplicación el "username" y "password"
+							</script> 
+					</section>
+					<section data-markdown>
+
+						#### Ejemplo SharedPrefs generado
+						<script type="text/template">
+						```
+						<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+						<map>
+						  <string name="username">administrator</string>
+						  <string name="password">supersecret</string>
+						</map>
+						```
+						</script>
+					</section>
+					<section data-markdown>
+						Adicionalmente existen librerías para cifrar la información como [Secure-Preferences](https://github.com/scottyab/secure-preferences) (actualmente sin soporte), suelen almacenar información de manera insegura la **key de cifrado**
+					</section>
+					<section data-markdown>
+					[Secure-Preferences](https://github.com/scottyab/secure-preferences): 
+
+					"De forma predeterminada, la clave generada se almacena en el archivo de preferencias de respaldo y, 
+					por lo tanto, el usuario root puede leerla y extraerla."
+					</section>
+					<section data-markdown>
+					**Con lo cual no suele ser un buen lugar para almacenar información sensible**
+					</section>
+					<section data-markdown>
+						#### Almacenamiento interno & Cache 
+					</section>
+					<section data-markdown>
+						Muchas veces las aplicaciones almacenan información por tiempo indefinido en directorios internos o en Cache, 
+						**siendo estos potenciales vectores de ataque**
+					</section>
+					<section data-markdown>
+						*  Los archivos en el almacenamiento interno están en contenedores de forma predeterminada.
+						
+						*  No se puede acceder a ellos desde otras aplicaciones en el dispositivo. 
+						
+						*  Cuando el usuario desinstala su aplicación estos archivos se eliminan.
+					</section>
+					<section data-markdown>
+							```
+							FileOutputStream fos = null;
+								{
+									fos = openFileOutput (FILENAME, Context.MODE_PRIVATE);
+									fos.write (test.getBytes ());
+									fos.close ();
+								} catch (FileNotFoundException e) {
+									e.printStackTrace ();
+								} captura (IOException e) {
+									e.printStackTrace ();
+							}
+							```
+					</section> 
+					<section data-markdown data-notes="^Note">
+						Los modos como MODE_WORLD_READABLE y MODE_WORLD_WRITEABLE pueden presentar un riesgo de seguridad ([API Level 17](https://developer.android.com/reference/android/content/Context#MODE_WORLD_READABLE))
+
+						Notes:
+						Normalmente buscar la clase *FileInputStream* ayuda a averiguar qué archivos se abren y se leen dentro de la aplicación.
+					</section>
+					<section data-markdown>
+						#### Almacenamiento Externo
+					</section>
+					<section data-markdown>
+						Todos los dispositivos compatibles con Android admiten [almacenamiento externo](https://developer.android.com/guide/topics/data/data-storage.html#filesExternal) compartido.
+					</section>
+					<section data-markdown>
+						* Este almacenamiento puede ser extraíble **(como una tarjeta SD)** o **interno (no extraíble)** 
+
+						* Los archivos guardados en almacenamiento externo tienen el permiso "world-readable", 
+							con lo cual pueden ser leídos por "todo el mundo".
+					</section>
+					<section data-markdown data-notes="^Note">
+						<script type="text/template">
+						```
+							File file = new File (Environment.getExternalFilesDir(), "password.txt");
+							String password = "SecretPassword";
+							FileOutputStream fos;
+								fos = new FileOutputStream(file);
+								fos.write(password.getBytes());
+								fos.cl
+						```
+						Notes:
+						El archivo se creará y los datos se almacenarán en un archivo de texto plano en el almacenamiento externo, una vez que se haya llamado la actividad.
+						</script>
+					</section>
+					<section data-markdown>
+						#### Resoluciones prácticas
+					</section>					
+					<section data-markdown>
+						* Configuración JADX
+						* Configuración APKTOOL
+					</section>
+					<section data-markdown>
+						#### JADX: Decompilador de Java.
+						```
+						$git clone https://github.com/skylot/jadx.git 
+						$cd jadx
+						$./gradlew dist 
+						$jadx diva-app.apk
+						```
+					</section>
+					<section data-markdown>
+						![Proceso Decompilación](images/m8/decompilation.png)
+					</section>
+					<section data-markdown>
+						#### APKTOOL
+
+						* Una herramienta para la ingeniería inversa de aplicaciones de Android. 
+						* Puede decodificar recursos de forma casi original y reconstruirlos después de hacer algunas modificaciones.
+						* Permite ver el código .smali
+					</section>
+					<section data-markdown>
+						#### Instalación:
+
+						1. Descargar Linux [wrapper script](https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool) (click derecho, Guardar enlace como apktool)
+						2. Descarga apktool-2 (encuentra la más reciente aquí)
+						3. Renombrar el jar descargado a apktool.jar
+					</section>
+					<section data-markdown>
+						4. Mueva ambos archivos (apktool.jar y apktool) a /usr/local/bin (se necesita root)
+						5. Asegúrate de que ambos archivos sean ejecutables (chmod + x)
+						6. Intenta ejecutar apktool a través de cli
+					</section>
+					<section data-markdown>
+					```
+						Uso:
+						$ apktool d diva-app.apk
+						$ apktool b /directorio/
+					```	
+					</section>
+					<section data-markdown>
+					TO-DO Por ustedes prácticas almacenamiento de información.
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						3. **Transferencia de información**
+					</section>
+					<section data-markdown>
+						* Dentro de este apartado veremos como se puede configurar el archivo *network_security_config.xml* 
+						
+						* Para evitar ataques asociados entre la comunicación realizada por la aplicación y su backend.	
+					</section>		
+					<section data-markdown>
+						Lo primero que deberá hacer es crear el siguiente archivo:
+						
+						```
+						res/xml/network_security_config.xml
+						```
+					</section>
+					<section data-markdown>
+						El cual quedará declarado dentro del *AndroidManifest.xml* de la siguiente forma
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							```
+							<?xml version="1.0" encoding="utf-8"?>
+							<manifest ... >
+								<application android:networkSecurityConfig="@xml/network_security_config" ... >
+									...
+								</application>
+							</manifest>
+							```
+						</script>
+					</section>
+					<section data-markdown>
+						Configuración de TLS de manera segura
+					</section>
+					<section data-markdown>
+						La configuración de seguridad de red, **permite a las aplicaciones personalizar sus configuraciones de seguridad de red en un archivo de configuración declarativo** 
+					</section>
+					<section data-markdown>
+						* Estas configuraciones se pueden definir para dominios específicos y para una aplicación específica. 
+					</section>	
+					<section data-markdown>						
+						* De manera segura y **sin modificar el código de la aplicación**
+					</section>	
+					<section>
+						Las capacidades mas importantes son las siguientes:    
+					</section>
+					<section data-markdown>
+						**Personalizar CAs de confianza**
+					</section>
+					<section data-markdown>
+						Es posible que una aplicación desee confiar en un conjunto personalizado de CAs, en lugar de uno predeterminado por Android.</section>
+					<section data-markdown>
+						* Conectarse a un *host* con una autoridad de certificación personalizada, como una CA autofirmada o emitida internamente dentro de una organización.
+					</section>
+					<section data-markdown>						
+						* Querer limitar el conjunto de CA a solo las CA en las que confía, en lugar de cada CA preinstalada en el SO.
+					</section>						
+					<section data-markdown>	
+						* Querer confiar en CAs adicionales, no incluidas en el sistema.
+					</section>
+					<section>
+						Configurar una CA personalizada:
+					</section>
+					<section data-markdown>
+						Suponga que desea conectarse a un *host* que utiliza un *certificado SSL autofirmado* o a un *host* cuyo *certificado SSL es emitido por una CA no pública en la que confía*, como la **CA interna de su organismo u organización**.
+					</section>
+					<section data-markdown>
+							
+						Dentro del archivo **network_security_config** incluya el siguiente código:
+
+						<script type="text/template">
+							```
+							<?xml version="1.0" encoding="utf-8"?>
+							<network-security-config>
+							    <domain-config>
+							        <domain includeSubdomains="true">ejemplodedominio.afip.gob.ar</domain>
+							        <trust-anchors>
+							            <certificates src="@raw/my_ca"/>
+							        </trust-anchors>
+							    </domain-config>
+							</network-security-config>
+							```
+						</script>
+					</section>
+					<section data-markdown>
+						Ingrese dentro de la carpeta */res/raw/my_ca* el certificado auto firmado en formato PER o DER.
+					</section>
+					<section>
+						Limitar el conjunto de CA confiables:
+					</section>
+					<section data-markdown>
+						Este caso es bastante parecido al anterior, salvo que **debe configurarse** en la aplicación **aquellas CA en las cuales no se desea confiar**.
+					</section>
+					<section>
+						Esto proteje a la aplicación contra el uso de certificados emitidos por terceros, que puedan generar algún impacto en el flujo ordinario de la aplicación.
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							```
+							<?xml version="1.0" encoding="utf-8"?>
+							<network-security-config>
+							    <domain-config>
+							        <domain includeSubdomains="true">secure.afip.gob.ar</domain>
+							        <domain includeSubdomains="true">curso.android.afip.gob.ar</domain>
+							        <trust-anchors>
+							            <certificates src="@raw/trusted_roots"/>
+							        </trust-anchors>
+							    </domain-config>
+							</network-security-config>
+							```
+						</script>
+
+						Este caso en particular es implementado para facilitarnos el análisis de aplicaciciones viendolo del lado del atacante. Se verá mas adelante.
+						: Existen algunas configuraciónes adicionales, la cuales no veremos dentro del contenido del taller. 
+					</section>
+					<section data-markdown>
+						**Certificate Pinning**
+					</section>
+					<section data-markdown>
+						* La "fijación de certificados" ([Certificate Pinning](https://developer.android.com/training/articles/security-config.html#CertificatePinning)) es el proceso de asociar el servidor backend con **un certificado X509 particular** o **una clave pública** 
+						
+						* En lugar de aceptar **cualquier certificado firmado por una autoridad de certificación de confianza (CA)**. 
+					</section>
+					<section data-markdown>
+						* Después de "fijar" el certificado del servidor o la clave pública
+
+						* **La aplicación móvil se conectará posteriormente solo al servidor conocido.**
+					</section>
+					<section data-markdown>
+						
+						1. El certificado se puede fijar y codificar en la aplicación o recuperar en el momento en que se conecta por primera vez al backend. 
+						
+						2. En este último caso, el certificado se asocia con el host cuando se ve el host por primera vez. 
+												
+					</section>
+					<section data-markdown>
+					**Esta alternativa es menos segura porque los atacantes que interceptan la conexión inicial, pueden inyectar sus propios certificados**
+					</section>
+					<section data-markdown>					
+					* Cuando use Certificate Pinning, siempre debe incluir una clave de respaldo.
+					</section>
+					<section data-markdown>
+					* Si se ve obligado a cambiar a nuevas claves o a cambiar las CA la conectividad de su aplicación no se vea afectada. 
+					</section>
+					<section data-markdown>
+					* De lo contrario, debe enviar una actualización a la aplicación para restaurar la conectividad.
+					</section>
+					<section data-markdown data-notes="^Note">
+						<script type="text/template">
+						
+						1. Normalmente, una aplicación confía en todas las *CA* pre instaladas. 
+			
+						Notes:
+
+						</script>
+					</section>
+					<section data-markdown data-notes="^Note">
+						<script type="text/template">
+						
+						2. Si alguna de estas *CA* emitiera un certificado fraudulento, la aplicación correría el riesgo de un ataque de *"Man in the middle"*	
+
+						Notes:
+						</script>
+					</section>
+					<section data-markdown data-notes="^Note">
+						<script type="text/template">
+						
+						3. Algunas aplicaciones optan por limitar el conjunto de certificados que aceptan, ya sea limitando el conjunto de *CA* en las que confían o mediante la "*fijación de certificados*" (Certificate Pinning).
+			
+						Notes:
+
+						</script>
+					</section>
+					<section data-markdown data-notes="^Note">
+						<script type="text/template">
+						
+						4. Retirar la confianza de las CA externas **reduce** la superficie de ataque.			
+
+						Notes:
+
+						4.(Después de todo, hay muchos casos de autoridades de certificación que han sido comprometidas o engañadas para emitir certificados a terceros).
+						</script>
+					</section>
+					<section data-markdown>
+						Ejemplo implementación:
+
+						* Dependiendo sí se desarrolla de forma nativa o utilizando algun framework como [OkHttp3](https://square.github.io/okhttp/https/#certificate-pinning), [Apache Cordova](https://cordova.apache.org/), etc. 
+
+						* La implementación puede ser distinta o no existir de manera nativa por propiedades propias de los Frameworks de desarrollo ([expo.io](https://expo.io/)). 				
+					</section>
+					<section data-markdown>
+						Basados en la documentación de Android, la siguiente es la correcta implementación de [Certificate Pinning](https://developer.android.com/training/articles/security-config.html#CertificatePinning):
+					</section>
+					<section data-markdown>
+					1. Cree el archivo *network_security_config.xml* en caso de que no exista dentro de la siguiente ruta:
+
+						```
+						res/xml/network_security_config.xml:
+						```
+					</section>
+					<section data-markdown>
+					2. Configure y fije el hash de la clave pública dentro del archivo *network_security_config.xml*
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+						```
+						<?xml version="1.0" encoding="utf-8"?>
+						<network-security-config>
+							<domain-config>
+								<domain includeSubdomains="true">example.com</domain>
+								<pin-set expiration="2018-01-01">
+									<pin digest="SHA-256">7HIpactkIAq2Y49orFOOQKurWxmmSFZhBCoQYcRhJ3Y=</pin>
+									<!-- backup pin -->
+									<pin digest="SHA-256">fwza0LRMXouZHRC8Ei+4PyuldPDcf3UKgO/04cDM1oE=</pin>
+								</pin-set>
+							</domain-config>
+						</network-security-config>
+						```
+						</script>
+					</section>
+				<section data-markdown>
+					También como se menciono anteriormente, existen implementaciónes de Certificate Pinning dependiendo del [Framework de desarrollo](https://developer.android.com/training/articles/security-config.html#CertificatePinning), del cliente que se utilice [OkHttp3](https://square.github.io/okhttp/https/#certificate-pinning), [Apache Cordova](https://cordova.apache.org/), etc.
+				</section>
+				</section>
+				<section>
+					<section data-markdown>
+						4. **Ingeniería inversa (reverse engineering)**
+					</section>
+					<section data-markdown>
+						4.1 **Android Anti-Reversing Defenses**
+					</section>							
+					<section data-markdown data-notes="^Note">
+						<script type="text/template">
+						**Conjunto de protecciones**
+
+						Notes:
+						
+						En el contexto de anti-reverse-engineering, por ejemplo el objetivo de la detección de *root* es hacer que la ejecución de la aplicación en un dispositivo con acceso *root* sea un poco más difícil, lo que a su vez bloquea algunas de las herramientas y técnicas que los atacantes pueden realiza. 
+						Al igual que la mayoría de las otras defensas la detección de *root* no es muy efectiva por sí misma, pero la implementación de múltiples comprobaciones de *root* dispersas en toda la aplicación puede mejorar la efectividad del esquema general contra las manipulaciones de la aplicación.
+						</script>
+					</section> 
+					<section data-markdown>
+						4.2 **Root Detection**
+					</section>
+					<section data-markdown data-notes="^Note">
+						<script type="text/template">
+						*Utilizando [SafetyNet](https://developer.android.com/training/safetynet)*
+
+						Notes:
+						SafetyNet es una API de Android que proporciona un conjunto de servicios y crea perfiles de dispositivos de acuerdo con la información de software y hardware.
+						</script>
+					</section>
+					<section data-markdown data-notes="^Note">
+						<script type="text/template">
+						*File existence checks (chequeo de existencia de archivos)* 
+							
+    								/system/app/Superuser.apk
+    								/system/etc/init.d/99SuperSUDaemon
+    								/dev/com.koushikdutta.superuser.daemon/
+    								/system/xbin/daemonsu
+    								/system/etc/.has_su_daemon
+
+						Notes:
+						
+						Quizás el método más utilizado para la detección es verificar los archivos que se encuentran normalmente en dispositivos "rooteados", aplicaciones comunes instaladas post proceso de *root*, sus archivos y directorios asociados:
+						</script>
+					</section>
+					<section data-markdown data-notes="^Note">
+						<script type="text/template">
+							*Detección de binarios utilizados, teniendo acceso root*
+
+									/system/sd/xbin/su  
+									/data/local/su  
+									/system/xbin/busybox  
+									/sbin/su
+
+							Notes:
+							
+							(BusyBox)
+						</script>
+					</section>
+					<section data-markdown data-notes="^Note">
+						<script type="text/template">
+							*Detección de aplicacciones "nombre de paquetes instalados"*
+
+    								com.thirdparty.superuser
+    								eu.chainfire.supersu
+    								com.noshufou.android.su
+    								com.koushikdutta.superuser
+
+							Notes:
+
+							Clásicas aplicaciones para restringir el uso de root
+						</script>
+					</section>
+					<section data-markdown data-notes="^Note">
+						<script type="text/template">
+							*Detección de "custom builds"*
+					
+									$adb shell getprop ro.build.tags
+									release-keys
+
+									$adb shell getprop ro.build.tags
+									test-keys
+									
+							Notes:
+
+							En ocasiones si existe "test-keys" suele indicar que no es propietario el build.
+							Se puede controlar si la aplicación ejecuta un "custom build" o si tiene el propietario.
+						</script>
+					</section>
+					<section data-markdown>
+						Un ejemplo de implementación:
+
+								private boolean isTestKeyBuild()
+								{
+								String str = Build.TAGS;
+								if ((str != null) && (str.contains("test-keys")));
+								for (int i = 1; ; i = 0)
+									return i;
+								}
+					</section>
+					<section data-markdown>
+						Otro ejemplo de implementación:
+						
+							public static boolean testRoot() {
+								for (String file : new String[]
+									{"/system/app/Superuser.apk", "/system/xbin/daemonsu", 
+									"/system/etc/init.d/99SuperSUDaemon", "/system/bin/.ext/.su", 
+									"/system/etc/.has_su_daemon", "/system/etc/.installed_su_daemon", 
+									"/dev/com.koushikdutta.superuser.daemon/"}) {
+										if (new File(file).exists()) {
+											return true;
+							}
+					</section>
+					<section data-markdown>
+						4.3 **Anti-Emulation**
+					</section>
+					<section data-markdown data-notes="^Note">
+						<script type="text/template">
+							
+							* Existen multiples formas de analizar si una aplicación esta siendo ejecutada desde un Emulador 
+							* Normalmente se suele validar indicadores estáticos del dispositivo. 
+
+							Notes:
+							Esta mayor dificultad obliga al atacante a anular las comprobaciones del emulador o utilizar el dispositivo físico, impidiendo así el acceso requerido para el análisis de dispositivos a gran escala.
+						</script>
+					</section>
+					<section data-markdown>
+					Viendo los valores que devuelve el metodo de la API en
+
+					* Build
+					* TelephonyManager
+					* Product
+					* Kernel 
+					* Hardware
+					* Bootloader, 
+					* Secure, etc.
+					</section>
+					<section data-markdown>
+
+			╰─$ adb shell getprop ro.product.name
+			vbox86p
+			╰─$ adb shell getprop ro.product.device
+			vbox86p
+			╰─$ adb shell getprop ro.product.model
+			Custom Phone - 5.1.0 - API 22 - 768x1280
+			╰─$ adb shell getprop ro.kernel.qemu
+			1
+			╰─$ adb shell getprop ro.hardware
+			vbox86
+					</section>
+					<section data-markdown>
+
+			╰─$ adb shell getprop ro.hardware
+			vbox86
+			╰─$ adb shell getprop qemu.hw.mainkeys
+			0
+			╰─$ adb shell getprop ro.bootloader
+			unknown
+			╰─$ adb shell getprop ro.bootmode
+			unknown
+			╰─$ adb shell getprop ro.secure
+			1
+					</section>
+					<section data-markdown data-notes="^Note">
+						<script type="text/template">
+							
+								private Boolean checkIfDeviceIsEmulator() {
+									if (Build.FINGERPRINT.startsWith("generic") || 
+									Build.FINGERPRINT.startsWith(EnvironmentCompat.MEDIA_UNKNOWN) || 
+									Build.MODEL.contains("google_sdk") || Build.MODEL.contains("Emulator") || 
+									Build.MODEL.contains("Android SDK built for x86") || 
+									Build.MANUFACTURER.contains("Genymotion") || 
+									((Build.BRAND.startsWith("generic") && Build.DEVICE.startsWith("generic")) || 
+									"google_sdk".equals(Build.PRODUCT))) {
+										return Boolean.valueOf(true);
+									}
+										return Boolean.valueOf(false);
+									}
+
+							Notes:
+							El siguiente código puede se ser un ejemplo de su implementación, en donde se comparan los valores antes mencionados. Interpretando si los contiene, comienza con, es igual a, etc.
+						</script>
+					</section>
+					<section data-markdown>
+					**Librería implementada dentro del organismo** 
+					
+					* Si accedemos al siguiente link [Bibliotecas para Aplicaciones Móviles / libRootDetection-Android](https://gitlab.cloudint.afip.gob.ar/mobile-libs/libRootDetection-Android), podemos ver una librería desarrollada por *Ezequiel Aceto*
+					* Implementa distintas protecciones para lo que es **RootCheck** y **Anti-emulation**.
+					</section> 
+					<section data-markdown>
+						Implementación **Anti-emulación** y **RootCheck** en la librería
+
+							public boolean isRunningOnATestBuild() {
+								return isEmulatorBuild() || hasTestKeys();
+							}
+					</section>
+					<section data-markdown>
+
+	private boolean isEmulatorBuild() {
+		return Build.FINGERPRINT.startsWith(EncryptedConstants.decode(EncryptedConstants.generic))
+		|| Build.FINGERPRINT.startsWith(EncryptedConstants.decode(EncryptedConstants.unknown))
+		|| Build.MODEL.contains(EncryptedConstants.decode(EncryptedConstants.google_sdk))
+		|| Build.MODEL.contains(EncryptedConstants.decode(EncryptedConstants.Emulator))
+		|| Build.MODEL.contains(EncryptedConstants.decode(EncryptedConstants.android_sdk_built_for_x86))
+		|| Build.MANUFACTURER.contains(EncryptedConstants.decode(EncryptedConstants.genymotion)) 
+		|| (Build.BRAND.startsWith(EncryptedConstants.decode(EncryptedConstants.generic)) && 
+		Build.DEVICE.startsWith(EncryptedConstants.decode(EncryptedConstants.generic))) 
+		|| EncryptedConstants.decode(EncryptedConstants.google_sdk).equals(Build.PRODUCT);
+	}
+					</section>
+					<section data-markdown>
+     	// test-keys
+	 	public static String test_keys = "XghDFhwHVk01";
+	 	// generic
+	 	static String generic = "TQheB0MFUA==";
+	 	// Android SDK built for x86
+	 	static String android_sdk_built_for_x86 = "awNUEF4FVxQVdTsSUkRfSklZBwkTGEwbWw==";
+	 	// Genymotion
+	 	static String genymotion = "bQheG1wDR10pXw==";
+					</section>
+					<section data-markdown data-notes="^Note">
+						<script type="text/template">
+						4.4 **Anti-Debugging**		
+						
+						Notes:
+						La depuración (debugging) es una forma altamente efectiva de analizar el comportamiento de la aplicación en tiempo de ejecución. 
+						Permite al atacante recorrer el código, detener la ejecución de la aplicación en puntos arbitrarios, inspeccionar el estado de las variables, leer y modificar la memoria, y mucho más.
+						</script>
+					</section>
+					<section>
+						Las características anti-debugging pueden ser preventivas o reactivas.
+					</section>
+					<section data-markdown data-notes="^Note">
+						<script type="text/template">
+						* Preventivo evita que el depurador (debugger) se conecte en primer lugar.
+
+						* Reactivo sería detectar a los debuggers y reaccionar de alguna manera.
+
+						Notes:
+						(por ejemplo, terminando la aplicación o desencadenando un comportamiento oculto).
+						</script>
+					</section>
+					<section data-markdown>
+						Se puede corroborar si esta el flag "debuggable:="true"" dentro del AndroidManifest.xml
+
+							public static boolean isDebuggable(Context context){
+								return ((context.getApplicationContext().getApplicationInfo().flags & 
+								ApplicationInfo.FLAG_DEBUGGABLE) != 0);
+							}
+					</section>
+					<section data-markdown>
+						* La clase Android Debug ofrece un método estático, determinando si el debugger está conectado.
+						* Se puede corroborar sino dentro del código de la aplicación, devolviendo un valor booleano:
+						
+								public static boolean detectDebugger() {
+								return Debug.isDebuggerConnected();
+								}
+					</section>
+					<section data-markdown data-notes="^Note">
+						<script type="text/template">
+						* También controles basados en el tiempo de respuesta **(*Debug.threadCpuTimeNanos*)**
+						* Debido a que el *debugging* **ralentiza** la ejecución del proceso
+						* La diferencia en el tiempo de ejecución para adivinar si hay un *debugger* conectado.
+						
+
+						Notes:
+						*Debug.threadCpuTimeNanos* indica la cantidad de tiempo que el subproceso actual ha estado ejecutando el código.
+						Debido a que el *debugging* ralentiza la ejecución del proceso, puede usar la diferencia en el tiempo de ejecución para adivinar si hay un *debugger* conectado.
+						</script>
+					</section>
+					<section data-markdown>
+
+			static boolean detect_threadCpuTimeNanos(){
+				long start = Debug.threadCpuTimeNanos();
+				for(int i=0; i<1000000; ++i)
+				continue;
+				long stop = Debug.threadCpuTimeNanos();
+				if(stop - start < 10000000) {
+				  return false;
+				}
+				else {
+				  return true;
+				}
+			  }
+
+					</section>					
+					<section data-markdown>
+						4.5 **File Integrity Checks**
+					</section>
+					<section data-markdown>
+						* La aplicación solo se ejecute correctamente en su estado no modificado.
+						* Incluso si la firma del código es válida.
+						* Las comprobaciones de integridad a menudo calculan una suma de comprobación o un hash sobre los archivos seleccionados.
+					</section>
+					<section data-markdown data-notes="^Note">
+						<script type="text/template">
+						
+						* AndroidManifest.xml,
+
+						* class files *.dex,
+
+						* native libraries (*.so). 
+							Notes:
+							Los archivos comúnmente protegidos incluyen
+							La idea es tener controles adicionales.	
+							La protección suele ser multi dex	
+				
+						</script>
+					</section>
+					<section data-markdown>
+						Un ejemplo de código podría ser el siguiente utilizando [CRC](https://es.wikipedia.org/wiki/Verificaci%C3%B3n_de_redundancia_c%C3%ADclica) (Cyclic Redundancy Checking) en español "Verificación por Redundancia Cíclica". 
+					</section>
+					<section data-markdown data-notes="^Note">
+							<script type="text/template">
+								
+									private void crcTest() throws IOException {
+									boolean modified = false;
+									// se requiere un valor dex crc almacenado como una cadena de texto.
+									long dexCrc = Long.parseLong(Main.MyContext.getString(R.string.dex_crc));
+											ZipFile zf = new ZipFile(Main.MyContext.getPackageCodePath());
+									ZipEntry ze = zf.getEntry("classes.dex");
+											if ( ze.getCrc() != dexCrc ) {
+									 // El código dex ha sido modificado 
+									 modified = true;
+									}
+									else {
+									 // El código dex no ha sido modificado
+									 modified = false;
+									}
+
+								Notes:
+								Basicamente se utiliza para el control de integridad de datos, donde si existe la manipulación del mensaje (cambios de los bits), entonces se tomará una nueva clave produciendo un valor falso de CRC.
+							</script>
+						</section>
+					<section data-markdown>
+						4.6 **Obfuscation**
+					</section> 
+					<section data-markdown data-notes="^Note">
+						<script type="text/template">
+							
+							* La ofuscación es el proceso de transformar el código y los datos para que sea más difícil de comprender (reducción). 
+							
+							* Es una parte integral de cada esquema de protección de software.
+							
+							* Ofuscar no es cifrar
+
+							Notes:						
+								La ofuscación no es algo que se pueda activar o desactivar simplemente. 
+								Los programas pueden hacerse incomprensibles, en su totalidad o en parte, de muchas maneras y en diferentes grados.
+						</script>
+					</section>
+					<section data-markdown>
+						Para habilitar con ProGuard -> archivo build.gradle -> *minifyEnabled true*
+
+								android {
+									buildTypes {
+										release {
+											minifyEnabled true
+											proguardFiles getDefaultProguardFile('proguard-android.txt'),
+													'proguard-rules.pro'
+										}
+									}
+									...
+								}					
+					</section>					
+					<section data-markdown>
+							Un ejemplo sería:
+						
+								public static boolean b() {
+									String str = Build.TAGS;
+									return str != null && str.contains("test-keys");
+								}
+					</section>
+					<section data-markdown>
+						Un ejemplo malware:
+
+					</section> 
+					<section data-markdown>
+						4.7 **Detection of Reverse Engineering Tools**
+					</section>
+					<section data-markdown>
+						* Substrate for Android
+						* Xposed
+						* Frida
+						* Drozer
+						* RootCloak
+						* Android SSL Trust Killer					
+					</section>
+					<section data-markdown data-notes="^Note">
+						<script type="text/template">
+							* Existen distintas protecciones para las distintas herramientas.
+							
+							* Se recomienda [Testing-Resiliency-Against-Reverse-Engineering](https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05j-Testing-Resiliency-Against-Reverse-Engineering.md#testing-reverse-engineering-tools-detection-mstg-resilience-4).
+
+							Notes:
+						
+						</script>
+					</section>
+					<section data-markdown>
+						4.8 **Frida check**
+					</section>
+					<section data-markdown data-notes="^Note">
+						<script type="text/template">
+							Permite instrumentar dinámicamente y manipular el comportamiento de la aplicación.
+
+							Notes:
+						
+						</script>
+					</section>
+					<section data-markdown>
+						
+							public boolean checkRunningProcesses() {
+								boolean returnValue = false;
+								try {
+									Process process = Runtime.getRuntime().exec("ps");
+									BufferedReader reader = 
+										new BufferedReader(new InputStreamReader(process.getInputStream()));
+									int read;
+									char[] buffer = new char[4096];
+									StringBuffer output = new StringBuffer();
+									while ((read = reader.read(buffer)) > 0) {
+										output.append(buffer, 0, read);
+									}
+									reader.close();
+									// Waits for the command to finish.
+									process.waitFor();
+									Log.d("fridaserver", output.toString());Certificate Pinning
+									if(output.toString().contains("frida-server")) {
+										Log.d("fridaserver","Frida Server process found!" );
+										returnValue = true;
+									}
+								} catch (IOException e) {
+								} catch (InterruptedException e) {
+								}
+								return returnValue;
+								}
+					 </section>
+					<section data-markdown>
+						¡Fin de la teoría! En la parte práctica veremos algunos ejemplos de resolución.	
+					</section>
+					<section data-markdown>
+						<h1>¡Gracias!</h1>	
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						5. **Recursos adicionales para el aprendizaje: desafíos en Android**
+					</section>
+					<section data-markdown>
+						Ingrese a [Ciberapps](https://ciberapps.afip.gob.ar/codelabs/mobile-best-practices-m8/#5)
+					</section>
+					<section data-markdown>
+						¡Gracias!
+					</section>
+				</section>
+				<section>
+					<section data-markdown>6. **Herramientas para el análisis automatizado**</section>
+					<section data-markdown>
+					En este breve apartado, veremos **algunas** de las herramientas de análisis estático disponibles, que ayudan a la hora de realizar una auditoría a un aplicación
+					</section>
+					<section data-markdown>
+					* MobSF
+					* Drozer
+					* Androbugs
+					* Androwarn
+					* Adhrit
+					* Qark
+					</section>
+					<section data-markdown>[MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF)</section>
+					<section data-markdown>Básicamente hay un script *setup.sh*</section>
+					<section data-markdown>
+						```
+						if ! [ -x "$(command -v python3)" ]; then
+							echo '[ERROR] python3 is not installed.' >&2
+							exit 1
+						fi
+						 echo '[INSTALL] Found Python3'
+						 echo '[INSTALL] Installing Virtualenv'
+						 python3 -m pip install virtualenv
+						 echo '[INSTALL] Using Virtualenv'
+						 virtualenv venv -p python3
+						 source venv/bin/activate
+						 platform='unknown'
+						 unamestr=`uname`
+						if [[ "$unamestr" == 'Darwin' ]]; then
+						 export ARCHFLAGS="-arch x86_64"
+						 export LDFLAGS="-L/usr/local/opt/openssl/lib"
+						 export CFLAGS="-I/usr/local/opt/openssl/include"  
+						 fi
+						 echo '[INSTALL] Installing Requirements'
+						 pip install -r requirements.txt
+						 echo '[INSTALL] Installation Complete'
+						```
+					</section>
+					<section data-markdown>Básicamente se puede ver un *pip install -r requirements.txt*</section>
+					<section data-markdown>Instalan las dependecias, le dan al otro script *./run* y listo</section>
+					<section data-markdown>Nota pueden modificar en *./run* de *0.0.0.0* a *localhost* o generar la configuración que necesiten</section>
+					<section data-markdown>
+						```
+						more run.sh 
+						. venv/bin/activate && python manage.py runserver
+						```
+					</section>
+					<section data-markdown>![MOBSF](images/m8/mobsf1.png)</section>
+					<section data-markdown>¡Básicamente arrastran el apk y ya!</section>										
+					<section data-markdown>[Drozer](https://github.com/FSecureLABS/drozer)</section>
+					<section data-markdown>¿Qué es Drozer?</section>
+					<section data-markdown>La instalación de drozer es un poco más compleja, ustedes ya la tienen instalada, [aquí](https://github.com/FSecureLABS/drozer) pueden descargar drozer</section>	
+					<section data-markdown>
+					Les recomiendo la siguiente forma de instalación:
+					
+					$sudo pip install dist/drozer-2.x.x-py2-none-any.whl
+					</section>
+					<section data-markdown>Debemos instalar el apk de drozer en nuestro dispositivo</section>
+					<section data-markdown>Pueden descargarlo de [git](https://github.com/mwrlabs/drozer/releases/download/2.3.4/drozer-agent-2.3.4.apk) o dentro de la carpeta materiales</section>
+					<section data-markdown>$adb install drozer.apk</section>
+					<section data-markdown>Una vez instalado hay que hacer un forward de la aplicación (deben ejecutarla en su dispositivo)</section>
+					<section data-markdown>
+						```
+						$adb forward tcp:31415 tcp:31415
+
+						$drozer console connect					
+						```
+					</section>
+					<section data-markdown>Una vez realizado esto, se pueden hacer multiples pruebas desde drozer.</section>
+					<section data-markdown>
+					Listando paquetes
+
+						dz> run app.package.list -f diva
+						jakhar.aseem.diva (Diva)
+													
+						dz> run app.package.list -f jak
+						jakhar.aseem.diva (Diva)
+
+					</section>
+					<section data-markdown>
+					Listando información específica de la aplicación
+
+						dz> run app.package.info -a jakhar.aseem.diva
+						Package: jakhar.aseem.diva
+						  Application Label: Diva
+						  Process Name: jakhar.aseem.diva
+						  Version: 1.0
+						  Data Directory: /data/data/jakhar.aseem.diva
+						  APK Path: /data/app/jakhar.aseem.diva-1/base.apk
+						  UID: 10062
+						  GID: [1028, 1015, 3003]
+						  Shared Libraries: null
+						  Shared User ID: null
+						  Uses Permissions:
+						  - android.permission.WRITE_EXTERNAL_STORAGE
+						  - android.permission.READ_EXTERNAL_STORAGE
+						  - android.permissiohttps://github.com/MobSF/Mobile-Security-Framework-MobSFn.INTERNET
+						  Defines Permissions:
+						  - None
+
+					</section>
+					<section data-markdown>
+					Listando componentes exportados y modo debug
+
+						run app.package.attacksurface jakhar.aseem.diva
+						Attack Surface:
+						  3 activities exported
+						  0 broadcast receivers exported
+						  1 content providers exported
+						  0 services exported
+								is debuggable
+					</section>				
+					<section data-markdown>
+					Listando los activities de la aplicación:
+
+						run app.activity.info jakhar.aseem.diva
+						unrecognized arguments: jakhar.aseem.diva
+						dz> run app.activity.info -a jakhar.aseem.diva
+						Package: jakhar.aseem.diva
+						  jakhar.aseem.diva.MainActivity
+								Permission: null
+						  jakhar.aseem.diva.APICredsActivity
+								Permission: null
+						  jakhar.aseem.diva.APICreds2Activity
+								Permission: null
+					</section>	
+					<section data-markdown>
+					Accediendo al Activity de la aplicación
+					
+						run app.activity.start --component jakhar.aseem.diva jakhar.aseem.diva.APICredsActivity
+					</section>
+					<section data-markdown>¿Parecido a que es? ¿Recuerdan?</section>
+					<section data-markdown>
+					Accediendo a los Content Providers
+
+						dz> run app.provider.finduri jakhar.aseem.diva
+						Scanning jakhar.aseem.diva...
+						content://jakhar.aseem.diva.provider.notesprovider/notes/
+						content://jakhar.aseem.diva.provider.notesprovider
+						content://jakhar.aseem.diva.provider.notesprovider/
+						content://jakhar.aseem.diva.provider.notesprovider/notes
+					</section>
+					<section data-markdown>
+					Accediendo a un Content Provider en particular
+
+						dz> run app.provider.query content://jakhar.aseem.diva.provider.notesprovider/notes/
+						| _id | title        | note                                     |
+						| 5   | Exercise | Alternate days running                   |
+						| 4   | Expense  | Spent too much on home theater           |
+						| 6   | Weekend  | b333333333333r                           |
+						| 3   | holiday  | Either Goa or Amsterdam                  |
+						| 2   | home         | Buy toys for baby, Order dinner          |
+						| 1   | office   | 10 Meetings. 5 Calls. Lunch with CEO |
+
+					</section>
+					<section data-markdown>
+					Tiene exploits también
+
+						$drozer exploit list
+					</section>
+					<section data-markdown>
+					O se puede levantar una shell 
+					
+						$drozer shellcode list 
+					</section>
+					<section data-markdown>
+					* Los modulos anteriores son viejos, pero funcionan. 
+					
+					* Drozer no deja de ser una herramienta complementaria para analizar aplicaciones móviles</section>
+					<section data-markdown>¿Preguntas?</section>
+					<section data-markdown>[Androwarn](https://github.com/maaaaz/androwarn)</section>
+					<section data-markdown>
+					Instalación
+
+						$pip install -r requirements.txt</section>
+					<section data-markdown>
+					Uso
+						
+						$python androwarn.py -i aplicación.apk -r html -v 3</section>				
+					<section data-markdown>[Androbugs](https://github.com/AndroBugs/AndroBugs_Framework)</section>
+					<section data-markdown>$python androbugs.py -f [APK file]</section>					
+					<section data-markdown>[Adhrit](https://github.com/abhi-r3v0/Adhrit)</section>
+					<section data-markdown>Tiene distintos modos de ejecución</section>
+					<section data-markdown>$python3 adhrit.py -a myapp.apk</section>
+					<section data-markdown>
+					Pentest Mode
+
+					* $python3 adhrit.py -pen myapp.apk</section>
+					<section data-markdown>
+					Malware Mode
+
+					* $python3 adhrit.py -mal myapp.apk
+					</section>
+					<section data-markdown>¿Se animan a usar el malware mode con el Ransomware?</section>
+				</section>
+			</section>	
+				
+			</div>
+
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				slideNumber: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

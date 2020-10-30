@@ -1,0 +1,1920 @@
+<!doctype html>
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Resumen metodológico: "Buenas prácticas en desarrollo aplicaciones móviles" </title>
+
+		<meta name="description" content="Diapositivas resumen práctico OWASP">
+		<meta name="author" content="Juan Urbano Stordeur">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!--Slide #1-->
+			<div class="slides">
+				<section>
+				<h3>Ejercicios prácticos</h3>
+				</section>
+				<section>
+					<section data-markdown>
+                        1. **Práctica**: Insecure Logs: DIVA #1
+                        2. **Práctica**: Insecure Logs (Aplicación bancaria)
+                        3. **Práctica**: Insecure Data Storage #1
+                        4. **Práctica**: Insecure Data Storage #2
+                        5. **Práctica**: Insecure Data Storage #3
+                        6. **Práctica**: Insecure Data Storage #4
+                    </section>
+                    <section data-markdown>
+                        7. **Práctica**: Transferencia de información #1 (Burp)
+                        8. **Práctica**: Transferencia de información #2 (tcpdump)
+                        9. **Práctica**: Bypass Certificate Pinning
+                        10. **Práctica**: Protecciones binarias #1 (root check)
+                        11. **Práctica**: Protecciones binarias #2 (emulation check)
+                        12. **Práctica**: Protecciones binarias #3 (All in one) Uncrackable3
+                        13. **Práctica**: Ransomware I 
+                        14. **Práctica**: Practica análisis dinámico
+					</section>
+                </section>
+                <section>    
+                    <section data-markdown>
+                        1. Práctica Insecure Logs: DIVA #1
+                    </section>
+					<section data-markdown>
+                        #### [Logs internos](https://developer.android.com/reference/android/util/Log.html)
+                    </section>
+                    <section data-markdown>
+                        * En general, se debe usar los métodos Log.v (), Log.d (), Log.i (), Log.w () y Log.e () para escribir registros. 
+                        
+                        * Luego **estos** se pueden ver en los registros en logcat.
+                    </section>
+                    <section data-markdown>
+                        * El orden en términos de verbosidad, de menor a mayor es ERROR, WARN, INFO, DEBUG, VERBOSE. 
+                        
+                        * Verbose nunca debe compilarse en una aplicación, excepto durante el desarrollo. 
+                        
+                        * Los registros de depuración se compilan pero se eliminan en tiempo de ejecución. 
+                        
+                        * Los registros de errores, advertencias e información siempre se mantienen.
+                    </section>
+                    <section data-markdown>
+                        * Log.e(String, String) **(error)**
+                        
+                        * Log.w(String, String) **(warning)**
+                        
+                        * Log.i(String, String) **(information)**
+                        
+                        * Log.d(String, String) **(debug)**
+                        
+                        * Log.v(String, String) **(verbose)**
+                    </section>
+                    <section data-markdown>
+                        1. $adb install diva-beta.apk
+
+                        2. $adb install sieve.apk
+                    </section>
+                    <section data-markdown>
+                        1. $jadx diva-beta.apk -d diva-beta-jadx
+
+                        2. $apktool d diva-beta.apk -o diva-beta-apktool
+                        
+                        3. $subl .
+                        
+                        4. Mismo paso con **sieve**
+                    </section>
+                    <section data-markdown>
+                        Ejercicio TO-DO por ustedes
+
+                        * Utilice adb shell logcat
+
+                        * Utilice pidcat
+
+                        * Compare ambos
+                    </section> 
+                    <section data-markdown>
+                        Resolución Práctica Insecure Logs: DIVA #1
+                    </section>
+                    <section data-markdown>
+                        Análisis de código
+                    </section>   
+                    <section data-markdown>
+                        ![Diva LogActivity](ejercicios/Ejercicio_Logcat/diva/diva-LogActivity.png)
+                    </section>
+                    <section data-markdown>
+                        ![Diva LogActivity](ejercicios/Ejercicio_Logcat/diva/diva-LogActivity2.png)
+                    </section>   
+                    <section data-markdown>
+                        ![Diva LogActivity](ejercicios/Ejercicio_Logcat/diva/diva-LogActivity1.png)
+                    </section>                                                  
+                    <section data-markdown>
+                        2. Practica Insecure Logs: Aplicación bancaria.
+                    </section>
+                    <section data-markdown>
+                        Ejercicio TO-DO por ustedes
+                        * Utilice adb shell logcat
+
+                        * Utilice pidcat
+
+                        * Compare ambos
+                    </section>
+                    <section data-markdown>
+                        Resolución
+                    </section>
+                    <section data-markdown>
+                        $adb install banco.apk
+                    </section>
+                    <section data-markdown>
+                        ![Logcat](ejercicios/Ejercicio_Logcat/banco/2_screencap.png)
+                    </section>
+                    <section data-markdown>
+                        ![Logcat](ejercicios/Ejercicio_Logcat/banco/1_screencap.png)
+                    </section>
+                    <section data-markdown>
+                        ![Logcat](ejercicios/Ejercicio_Logcat/banco/3_loginformation.png)
+                    </section>                                                                                                                        
+                    <section data-markdown>
+                        ![Logcat](ejercicios/Ejercicio_Logcat/banco/4_loginformation1.png)
+                    </section>      
+                </section>   
+                <section>                                                                                                               
+					<section data-markdown>
+						3. Práctica Insecure Data Storage #1:
+                    </section>
+                    <section data-markdown>
+                    Ayuda:
+
+                    * Analice el código.
+                    * Instale la aplicación
+                    * Encuentre la mala práctica 
+                    </section>
+					<section data-markdown>
+						![](images/m8/insecure_data_practica1.png)
+					</section>
+					<section>
+						<pre>
+							<code class="chico">
+public class InsecureDataStorage1Activity extends AppCompatActivity {
+	/* Access modifiers changed, original: protected */
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView((int) R.layout.activity_insecure_data_storage1);
+	}
+
+	public void saveCredentials(View view) {
+		Editor spedit = PreferenceManager.getDefaultSharedPreferences(this).edit();
+		EditText pwd = (EditText) findViewById(R.id.ids1Pwd);
+		spedit.putString("user", ((EditText) findViewById(R.id.ids1Usr)).getText().toString());
+		spedit.putString("password", pwd.getText().toString());
+		spedit.commit();
+		Toast.makeText(this, "3rd party credentials saved successfully!", 0).show();
+	}
+							</code>
+						</pre>	
+                    </section>
+                    <section data-markdown>
+                    *Resolución #1:*
+
+                        root@vbox86p:/data/data/jakhar.aseem.diva/shared_prefs # ls -la
+                        -rw-rw---- u0_a11   u0_a11        175 2019-07-05 15:52 jakhar.aseem.diva_preferences.xml
+
+                        root@vbox86p:/data/data/jakhar.aseem.diva/shared_prefs # cat jakhar.aseem.diva_preferences.xml
+                    </section> 
+                    <section data-markdown>
+                        <script type="text/template">
+                            *Resolución #1:*
+                            ```
+                            <?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+                            <map>
+                                <string name="user">UsuarioSharedPrefs</string>
+                                <string name="password">DemoSharedPrefs</string>
+                            </map>
+                            ```
+                        </script>
+                    </section>
+					<section data-markdown>
+						4. Práctica Insecure Data Storage 2:
+                    </section>
+                    <section data-markdown>
+                    Ayuda:
+
+                    * Analice el código.
+                    * Instale la aplicación
+                    * Encuentre la mala práctica 
+                    </section>
+					<section data-markdown>
+					```
+					public class InsecureDataStorage2Activity extends AppCompatActivity {
+					    private SQLiteDatabase mDB;
+					
+					    public void onCreate(Bundle savedInstanceState) {
+					        super.onCreate(savedInstanceState);
+					        try {
+					            this.mDB = openOrCreateDatabase("ids2", 0, null);
+					            this.mDB.execSQL("CREATE TABLE IF NOT EXISTS myuser(user VARCHAR, password VARCHAR);");
+					        } catch (Exception e) {
+					            Log.d("Diva", "Error occurred while creating database: " + e.getMessage());
+					        }
+					        setContentView((int) R.layout.activity_insecure_data_storage2);
+						}
+					```
+					</section>
+					<section data-markdown>
+					```
+					    public void saveCredentials(View view) {
+					        try {
+					            this.mDB.execSQL("INSERT INTO myuser VALUES ('" + ((EditText) findViewById(R.id.ids2Usr)).getText().toString() + "', '" + ((EditText) findViewById(R.id.ids2Pwd)).getText().toString() + "');");
+					            this.mDB.close();
+					        } catch (Exception e) {
+					            Log.d("Diva", "Error occurred while inserting into database: " + e.getMessage());
+					        }
+					        Toast.makeText(this, "3rd party credentials saved successfully!", 0).show();
+					    }
+					}
+					```
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            *Resolución #1:*
+                            ```
+                                root@vbox86p:/data/data/jakhar.aseem.diva/databases # ls -la
+                                -rw-rw---- u0_a11   u0_a11      20480 2019-07-05 15:51 divanotes.db
+                                -rw------- u0_a11   u0_a11       8720 2019-07-05 15:51 divanotes.db-journal
+                                -rw------- root     root            0 2019-07-05 16:00 dump
+                                -rw-rw---- u0_a11   u0_a11      16384 2019-07-05 15:59 ids2
+                                -rw------- u0_a11   u0_a11       8720 2019-07-05 15:59 ids2-journal
+                                root@vbox86p:/data/data/jakhar.aseem.diva/databases #hexdump -C ids2 | tail -n 6                                                    
+                                00003010  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
+                                00003fd0  00 00 00 00 00 00 00 27  01 03 2d 35 55 73 75 61  |.......'..-5Usua|
+                                00003fe0  72 69 6f 44 61 74 61 62  61 73 65 32 44 65 6d 6f  |rioDatabase2Demo|
+                                00003ff0  44 61 74 61 62 61 73 65  50 61 73 73 77 6f 72 64  |DatabasePassword|
+                            ```
+                        </script>
+                    </section>
+                    <section data-markdown>
+                    Utilizando SQLiteBrowser:
+                    </section>  
+                    <section data-markdown>
+                    ![SQLiteBrowser](images/m8/demoDatabasePlainText.png)
+                    </section> 
+					<section data-markdown>
+					5. Práctica Insecure Data Storage 3:			
+                    </section>
+                    <section data-markdown>
+                    Ayuda:
+
+                    * Analice el código.
+                    * Instale la aplicación
+                    * Encuentre la mala práctica 
+                    </section>
+					<section data-markdown>
+						```
+						public class InsecureDataStorage3Activity extends AppCompatActivity {
+							/* Access modifiers changed, original: protected */
+							public void onCreate(Bundle savedInstanceState) {
+								super.onCreate(savedInstanceState);
+								setContentView((int) R.layout.activity_insecure_data_storage3);
+							}
+						
+							public void saveCredentials(View view) {
+								EditText usr = (EditText) findViewById(R.id.ids3Usr);
+								EditText pwd = (EditText) findViewById(R.id.ids3Pwd);
+								try {
+									File uinfo = File.createTempFile("uinfo", "tmp", new File(getApplicationInfo().dataDir));
+									uinfo.setReadable(true);
+									uinfo.setWritable(true);
+									FileWriter fw = new FileWriter(uinfo);
+									fw.write(usr.getText().toString() + ":" + pwd.getText().toString() + "\n");
+									fw.close();
+									Toast.makeText(this, "3rd party credentials saved successfully!", 0).show();
+								} catch (Exception e) {
+									Toast.makeText(this, "File error occurred", 0).show();
+									Log.d("Diva", "File error: " + e.getMessage());
+								}
+							}
+						}
+						```
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            *Resolución #3:*
+                            ```
+                            $root@vbox86p:/data/data/jakhar.aseem.diva # ls -ld *                           
+                            drwxrwx--x u0_a11  u0_a11  2019-07-05 15:51 cache
+                            drwxrwx--x u0_a11  u0_a11  2019-07-05 15:51 code_cache
+                            drwxrwx--x u0_a11  u0_a11  2019-07-05 16:00 databases
+                            lrwxrwxrwx root    root    2019-07-05 15:51 lib->/data/app/jakhar.aseem.diva-1/lib/x86
+                            drwxrwx--x u0_a11  u0_a11  2019-07-05 15:52 shared_prefs
+                            -rw------- u0_a11  u0_a11  2019-07-05 17:21 uinfo-1938289761tmp
+                            ```
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        ```
+                        $root@vbox86p:/data/data/jakhar.aseem.diva # cat uinfo-1938289761tmp                                                        
+                        UsuarioStorage3:DemoStoragePassword
+                        ```
+                    </section>
+					<section data-markdown>
+						6. Práctica Insecure Data Storage 4:
+                    </section>
+                    <section data-markdown>
+                    Ayuda:
+
+                    * Analice el código.
+                    * Instale la aplicación
+                    * Encuentre la mala práctica 
+                    </section> 
+					<section data-markdown>
+							```
+							public class InsecureDataStorage4Activity extends AppCompatActivity {
+								/* Access modifiers changed, original: protected */
+								public void onCreate(Bundle savedInstanceState) {
+									super.onCreate(savedInstanceState);
+									setContentView((int) R.layout.activity_insecure_data_storage4);
+								}
+							
+								public void saveCredentials(View view) {
+									EditText usr = (EditText) findViewById(R.id.ids4Usr);
+									EditText pwd = (EditText) findViewById(R.id.ids4Pwd);
+									try {
+										File uinfo = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/.uinfo.txt");
+										uinfo.setReadable(true);
+										uinfo.setWritable(true);
+										FileWriter fw = new FileWriter(uinfo);
+										fw.write(usr.getText().toString() + ":" + pwd.getText().toString() + "\n");
+										fw.close();
+										Toast.makeText(this, "3rd party credentials saved successfully!", 0).show();
+									} catch (Exception e) {
+										Toast.makeText(this, "File error occurred", 0).show();
+										Log.d("Diva", "File error: " + e.getMessage());
+									}
+								}
+							}
+							```
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            *Resolución #4:*
+                            ```
+                            $root@vbox86p:/storage/emulated/0#ls -la
+                            drwxrwx--x root    sdcard_rw    2018-10-30 08:49 Alarms
+                            -rw-rw---- root    sdcard_rw    2019-07-05 17:35 .uinfo.txt
+                            drwxrwx--x root    sdcard_rw    2018-10-30 10:11 Android
+                            drwxrwx--x root    sdcard_rw    2018-10-30 08:49 DCIM
+                            drwxrwx--x root    sdcard_rw    2018-10-30 12:25 Download
+                            drwxrwx--x root    sdcard_rw    2018-10-30 08:49 Movies
+                            drwxrwx--x root    sdcard_rw    2018-10-30 08:49 Music
+                            drwxrwx--x root    sdcard_rw    2018-10-30 08:49 Notifications
+                            drwxrwx--x root    sdcard_rw    2018-10-30 08:49 Pictures
+                            drwxrwx--x root    sdcard_rw    2018-10-30 08:49 Podcasts
+                            drwxrwx--x root    sdcard_rw    2018-10-30 08:49 Ringtones
+                            ```
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        ```
+                        $root@vbox86p:/storage/emulated/0#cat .uinfo.txt                              
+                        
+                        UsuarioExternalStorage4:PasswordExternalStorage
+                        ```
+                    </section>
+					<section data-markdown>
+					Para mayor detalle, las resoluciones se encuentran en [ciberapps](https://ciberapps.afip.gob.ar/codelabs/mobile-best-practices-m8/index.html?index=..%2F..index#5), dentro de la sección de recursos adicionales.
+                    </section>
+                </section>
+                <section>  
+                    <section data-markdown>
+                    Bonus I: Debuggable Apps
+                    </section>
+                    <section data-markdown>Según Wikipedia</section>
+                    <section data-markdown>"*La depuración es el proceso de encontrar y resolver defectos o problemas dentro de un programa informático que impiden el funcionamiento correcto del software o sistema*"</section>
+                    <section data-markdown>En etapa de desarrollo y utilizando el Emulador de Android Studio, se encuentra **habilitado por defecto**</section>
+                    <section data-markdown>Dentro del archivo de configuración *build.gradle* podemos modificar el flag Debuggable</section>
+                    <section>
+                    <pre>
+                    <code class="chico">
+                        android {
+                            buildTypes {
+                                customDebugType {
+                                    debuggable true
+                                    ...
+                                }
+                            }
+                        } 
+                    </code>
+                    </pre>
+                    </section>
+                    <section data-markdown>Antiguamente las aplicaciones podían subirse al Playstore en modo debug</section>
+                    <section data-markdown>Hoy en día ocurre lo siguiente</section>
+                    <section data-markdown>"*You uploaded a debuggable APK. For security reasons you need to disable debugging before it can be published in Google Play*"
+                    </section>
+                    <section data-markdown>¿Cómo podemos comprobar si una aplicación esta en modo debuggable?</section>
+                    <section data-markdown>¿Recuerdan?</section>
+                    <section data-markdown>Adicionalmente nosotros también podemos poner la aplicación en modo debug (modificación tag **application**) </section>
+                    <section data-markdown>
+                    1. Ejercicio buscar una aplicación que este en modo debug dentro de la carpeta material
+
+
+                    * Nota: Puede realizarlo decompilando la aplicación o utilizando adb  
+                    </section>
+                    <section data-markdown>
+                    Sino puede utilizar aapt ;)
+
+                    [Android Asset Packaging Tool](https://developer.android.com/studio/command-line/aapt2)
+                    </section>
+                    <section data-markdown>
+                    Es una herramienta de compilación que *Android Studio* y *Android Gradle Plugin* utilizan para compilar y empaquetar los recursos de su aplicación. 
+                    </section>
+                    <section data-markdown>AAPT analiza, indexa y compila los recursos en un formato binario que está optimizado para la plataforma Android.</section>
+                    <section data-markdown>Actualmente esta la version AAPT2</section>
+                    <section data-markdown>
+                    $/home/usuario/genymotion/tools/aapt
+                           
+                        Usage:
+                         aapt l[ist] [-v] [-a] file.{zip,jar,apk}
+                           List contents of Zip-compatible archive.
+                        
+                         aapt d[ump] [--values] [--include-meta-data] WHAT file.{apk} [asset [asset ...]]
+                           strings          Print the contents of the resource table string pool in the APK.
+                           badging          Print the label and icon for the app declared in APK.
+                           permissions      Print the permissions from the APK.
+                           resources        Print the resource table from the APK.
+                           configurations   Print the configurations in the APK.
+                           xmltree          Print the compiled xmls in the given assets.
+                           xmlstrings       Print the strings of the given compiled xml assets.
+                    </section>
+                    <section data-markdown>
+                    $aapt dump badging diva-beta.apk  | grep debug
+                    
+                    *application-debuggable*</section>
+                    <section data-markdown>¿Cómo podemos ir más allá?</section>
+                    <section data-markdown>
+                    Podemos utilizar **JDWP**, para hacer debugging en Java</section>
+                    <section data-markdown>
+                    JDWP = "*Java Debug Wire Protocol*"
+                    </section>
+                    <section data-markdown>JDWP es un protocolo de debugging estándar, es compatible con todas las herramientas de línea de comandos e **IDE de Java**, incluidos jdb, JEB, IntelliJ y Eclipse</section>
+                    <section data-markdown>Dalvik y ART admiten el JDWP</section>
+                    <section data-markdown>
+                    El debugging con JDWP permite:
+
+                    * Recorrer el código Java
+                    * Establecer puntos de interrupción (breakpoints) en los métodos Java
+                    * Inspeccionar y modificar variables locales y de instancia</section>
+                    <section data-markdown>
+                    Demo:
+                    
+                    * Utilizando una de las aplicaciones halladas anterioremente en modo *debug* realizar la siguiente práctica:
+                    </section>
+                    <section data-markdown>Listamos las aplicaciones en modo debug</section>
+                    <section data-markdown>
+
+                    $adb jdwp
+                    18163
+                    11546
+                    1058
+                    4152
+                    5516 
+                    </section>
+                    <section data-markdown>Elegimos UnCrackable-Level_debuggable.apk</section>
+                    <section data-markdown>Breve modificación que tuve que hacer a la aplicación, por ahora no nos detendremos en esto.</section>
+                    <section data-markdown>![Agregando el TAG debuggable](images/m8/debuggable/addTag.png)</section>
+
+                    <section data-markdown>
+
+    $adb shell ps | grep 11546
+    u0_a120 11546  3177 1641164  28692 SyS_epoll_wait 0 S com.mwr.example.sieve:remote
+                    </section>
+                    <section data-markdown>Si no aparece ninguna probar ejecutando las aplicaciones y corriendo el comando anterior =)</section>
+                    <section data-markdown>Luego se debe hacer un adb forward para indicar el proceso a jdwp</section>
+                    <section data-markdown>
+                    
+                    $ adb forward tcp:7777 jdwp:11546       
+                    $ { echo "suspend"; cat; } | jdb -attach localhost:7777
+                    Set uncaught java.lang.Throwable
+                    Set deferred uncaught java.lang.Throwable
+                    Initializing jdb ...
+                    > All threads suspended.
+                    </section>
+                    <section data-markdown>
+                    Comandos útiles a la hora de usar JDWP
+
+                    * *classes: list all loaded classes
+                    * class/method/fields : Print details about a class and list its method and fields
+                    * locals: print local variables in current stack frame
+                    * print/dump : print information about an object
+                    * stop in : set a method breakpoint
+                    * clear : remove a method breakpoint
+                    * set = : assign new value to field/variable/array element
+                    </section>
+                    <section data-markdown>
+                    
+                    Thread number not specified.
+                    > help
+                    > classes
+                    javax.net.ssl.KeyManagerFactorySpi
+                    javax.net.ssl.SSLSessionContext
+                    javax.net.ssl.SSLSocket
+                    javax.net.ssl.SSLSocketFactory
+                    javax.net.ssl.SSLSocketFactory$1
+                    javax.net.ssl.TrustManager
+                    javax.net.ssl.TrustManagerFactory
+                    javax.net.ssl.TrustManagerFactory$1
+                    javax.net.ssl.TrustManagerFactorySpi
+                    javax.net.ssl.X509ExtendedKeyManager
+                    javax.net.ssl.X509ExtendedTrustManager
+                    javax.net.ssl.X509KeyManager
+                    </section>
+                    <section data-markdown>
+                    
+                        > class javax.net.ssl.TrustManager
+                        Interface: javax.net.ssl.TrustManager
+                        subinterface: javax.net.ssl.X509TrustManager
+                    </section>
+                    <section data-markdown>
+
+                        > methods javax.net.ssl.X509TrustManager
+                        ** methods list **
+                        javax.net.ssl.X509TrustManager checkClientTrusted(java.security.cert.X509Certificate[], java.lang.String)
+                        javax.net.ssl.X509TrustManager checkServerTrusted(java.security.cert.X509Certificate[], java.lang.String)
+                        javax.net.ssl.X509TrustManager getAcceptedIssuers()                            
+                    </section>                    
+                    <section data-markdown> Attachamos y buscamos las clases de Uncrackable-Level1</section>
+                    <section data-markdown>
+                        
+                        > classes 
+                        sg.vantagepoint.a.b
+                        sg.vantagepoint.a.c
+                        sg.vantagepoint.uncrackable1.MainActivity
+                        sg.vantagepoint.uncrackable1.MainActivity$1
+                    </section>
+                    <section data-markdown>
+                        
+                        > class sg.vantagepoint.uncrackable1.MainActivity
+                        Class: sg.vantagepoint.uncrackable1.MainActivity
+                        extends: android.app.Activity
+                        nested: sg.vantagepoint.uncrackable1.MainActivity$1    
+                    </section>
+                    <section data-markdown>Listamos los métodos</section>
+                    <section data-markdown>
+                        
+    > methods sg.vantagepoint.uncrackable1.MainActivity
+    ** methods list **
+    sg.vantagepoint.uncrackable1.MainActivity <init>()
+    sg.vantagepoint.uncrackable1.MainActivity a(java.lang.String)
+    sg.vantagepoint.uncrackable1.MainActivity onCreate(android.os.Bundle)
+    sg.vantagepoint.uncrackable1.MainActivity verify(android.view.View)    
+                    </section>
+                    <section data-markdown>
+                    Análizamos:
+                        
+                    * sg.vantagepoint.uncrackable1.MainActivity a(java.lang.String)
+                    </section>
+                    <section data-markdown>Recuerden podemos analizar el comportamiento utilizando Jadx/código decompilado</section>
+                    <section data-markdown>
+
+            > stop in sg.vantagepoint.uncrackable1.MainActivity.a                  
+            Set breakpoint sg.vantagepoint.uncrackable1.MainActivity.a
+                    </section>
+                    <section data-markdown>Si volvémos al dispositivo, podemos ver que la aplicación no continua ni realiza ninguna acción</section>
+                    <section data-markdown>
+                    Para que vuelva a resumir su ejecución:
+                    
+                        > resume
+                        All threads resumed.        
+                    </section>
+                    <section data-markdown>
+                    Por ejemplo si buscamos:
+                    
+                        private void a(final String title) {
+                            final AlertDialog create = new AlertDialog$Builder((Context)this).create();
+                            create.setTitle((CharSequence)title);
+                            create.setMessage((CharSequence)"This in unacceptable. The app is now going to exit.");
+                            create.setButton(-3, (CharSequence)"OK", (DialogInterface$OnClickListener)new b(this));
+                            create.setCancelable(false);
+                            create.show();
+                        }
+                    </section>
+                    <section data-markdown>setCancelable es boolean y podríamos manipularlo</section>
+                    <section data-markdown>
+
+    > stop in android.app.Dialog.setCancelable
+    Set breakpoint android.app.Dialog.setCancelable
+    > resume
+    All threads resumed.
+    >
+    Breakpoint hit: "thread=main", android.app.Dialog.setCancelable(), line=1,110 bci=0
+    main[1]    
+                    </section>
+                    <section data-markdown>
+                        
+    main[1] locals
+    Method arguments:
+    Local variables:
+    flag = true
+                    </section>
+                    <section data-markdown>
+                    Podemos cambiar la instrucción realizando el siguiente comando:
+
+                        main[1] set flag = true
+                        flag = true = true
+                        main[1] resume
+                    </section>
+                    <section data-markdown>De esta forma podemos manipular la aplicación en tiempo real =)</section>
+                    <section data-markdown>Por ejemplo pueden ver los strings:
+                    
+    >stop in java.lang.String.equals
+    Set breakpoint java.lang.String.equals
+                    </section>
+                    <section data-markdown>
+                        
+    > 
+    Breakpoint hit: 
+    Breakpoint hit: "thread=Binder:14945_3", java.lang.String.equals(), line=944 bci=2
+    
+    Binder:14945_3[1] locals
+    Method arguments:
+    anObject = "und"
+    Local variables:
+    Binder:14945_3[1] resume
+    All threads resumed.
+    > 
+    Breakpoint hit: 
+    Breakpoint hit: "thread=Binder:14945_2", java.lang.String.equals(), line=944 bci=2
+    
+    Binder:14945_2[1] 
+    Breakpoint hit: 
+    Breakpoint hit: "thread=Binder:14945_1", java.lang.String.equals(), line=944 bci=2
+    
+    Binder:14945_1[1] locals
+    Method arguments:
+    anObject = "android.content.res.Configuration"
+    Local variables:
+    Binder:14945_1[1] resume
+    All threads resumed.
+    > stop in java.lang.String.equals
+    Set breakpoint java.lang.String.equals
+    > resume
+    All threads resumed.    
+                    </section>
+                    <section data-markdown>¿Dudas?</section>
+                    <section data-markdown>
+                        Bonus II: Signature Information
+                    </section>
+                    <section data-markdown>Podemos obtener información estática y descriptiva respecto de la aplicación</section>
+                    <section data-markdown>Nos sirve para comparar una aplicación licita vs una no lícita</section>
+                    <section data-markdown>
+                    Podemos obtener la información con distintas herramientas:
+                    
+                    * keytool
+                    * openssl 
+                    * jarsigner
+                    </section>
+                    <section data-markdown>
+                    DEMO:
+                    
+                    1. Volvemos a hacer *unzip* de la aplicación
+                
+                    2. Elija 2 aplicaciones y compare su firma</section>
+                    <section data-markdown>
+                    * $unzip -e diva-beta.apk -d unzip_diva
+                    * $unzip -e UnCrackable-Level1.apk -d unzip_ucl1
+                    * $unzip -e sieve.apk -d sieve
+                    * $unzip -e ReverzeMe1.apk -d reverzeme1</section>
+                    <section data-markdown>Buscar dentro de las carpetas extraídas el archivo **META-INF/CERT.RSA**</section>
+                    <section data-markdown>
+                        ```
+                        $unzip -e ReverzeMe1.apk -d reverzeme1
+                        $cd reverzeme1/META-INF/
+                        $file CERT.RSA
+                        CERT.RSA: data
+                        ```
+                    </section>
+                    <section data-markdown>¿Cómo obtenemos la información? ¿Probáron un strings?</section>
+                    <section data-markdown>Como ya les mencioné podemos usar, **openssl**, **keytool** o **jarsigner** </section>
+                    <section data-markdown>$openssl pkcs7 -inform DER -in CERT.RSA -noout -print_certs -text</section>
+                    <section data-markdown>
+                        ```
+                        Certificate:
+                            Data:
+                                Version: 1 (0x0)
+                                Serial Number: 1 (0x1)
+                                Signature Algorithm: sha1WithRSAEncryption
+                                Issuer: CN=Android Debug, O=Android, C=US
+                                Validity
+                                    Not Before: Oct  4 21:27:31 2016 GMT
+                                    Not After : Sep 27 21:27:31 2046 GMT
+                                Subject: CN=Android Debug, O=Android, C=US
+                                Subject Public Key Info:
+                                    Public Key Algorithm: rsaEncryption
+                                        RSA Public-Key: (1024 bit)
+                                        Modulus:
+                                            00:b9:4b:8e:cf:2d:c1:77:47:48:e3:e6:8e:61:e7:
+                                            4b:64:12:38:7f:02:a5:30:bd:50:de:d4:e1:da:5d:
+                                            25:62:c4:5d:5c:03:63:44:26:bb:d5:4b:10:35:94:
+                                            b8:73:e1:ba:5e:11:84:4f:1a:ef:86:c5:cc:17:af:
+                                            71:e0:ee:db:6d:2f:17:93:90:7d:29:f1:9b:7b:0b:
+                                            82:fa:84:12:d5:44:68:10:3c:2b:d0:cb:1d:e6:c0:
+                                            47:3d:3c:d9:c7:3e:7e:df:98:53:f5:ae:cb:75:a8:
+                                            78:f0:d3:3f:a4:4c:b9:d8:8b:7d:90:84:de:50:58:
+                                            66:2d:f9:ea:3d:2e:2f:68:b5
+                                        Exponent: 65537 (0x10001)
+                            Signature Algorithm: sha1WithRSAEncryption
+                                 9a:93:ca:82:b0:30:3d:6c:08:44:23:55:b7:a4:54:47:cd:03:
+                                 f9:cd:b7:aa:fb:30:3e:e4:60:a1:a3:1c:6c:71:00:51:fb:fe:
+                                 a4:5d:53:df:3b:c7:fd:2c:ce:44:1b:2d:52:9e:b7:f3:80:6c:
+                                 64:41:dc:eb:5e:c2:a1:f4:6e:60:a6:f9:fd:18:ee:df:c6:69:
+                                 42:92:c9:78:ac:5a:50:af:58:34:b7:a0:7a:e0:f3:2b:6a:2e:
+                                 09:9b:10:81:05:25:eb:c3:76:06:a9:14:34:fb:d2:fb:22:9a:
+                                 14:a6:43:07:f1:7c:70:47:5e:25:3d:ee:51:37:23:09:24:0b:
+                                 77:ca
+                        ```
+                    </section>
+                    <section data-markdown>$keytool -printcert -file CERT.RSA -v </section>
+                    <section data-markdown>
+                        ```
+                        Owner: C=US, O=Android, CN=Android Debug
+                        Issuer: C=US, O=Android, CN=Android Debug
+                        Serial number: 1
+                        Valid from: Tue Oct 04 18:27:31 ART 2016 until: Thu Sep 27 18:27:31 ART 2046
+                        Certificate fingerprints:
+                             MD5:  F8:4D:DF:65:04:59:C0:BE:48:16:12:9B:EB:91:6F:80
+                             SHA1: 9E:62:17:4A:F1:FF:0E:4A:8A:6E:43:5D:79:81:50:9B:3E:02:D1:F0
+                             SHA256: 10:DC:1A:AA:12:4C:99:64:CE:0D:BD:DF:93:FF:91:5A:40:52:0A:F1:42:54:57:E3:32:AC:BA:E5:48:02:D7:5D
+                        Signature algorithm name: SHA1withRSA
+                        Subject Public Key Algorithm: 1024-bit RSA key
+                        Version: 1
+                        ```
+                    </section>
+                    <section data-markdown>$jarsigner -verify -certs -verbose app.apk</section>
+                    <section data-markdown>
+                        ```
+                        >>> Signer
+                        X.509, C=US, O=Android, CN=Android Debug
+                        [certificate is valid from 10/4/16 6:27 PM to 9/27/46 6:27 PM]
+                        [Invalid certificate chain: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target]
+                        s = signature was verified 
+                        m = entry is listed in manifest
+                        k = at least one certificate was found in keystore
+                        i = at least one certificate was found in identity scope
+                            
+                        - Signed by "C=US, O=Android, CN=Android Debug"
+                            Digest algorithm: SHA1
+                            Signature algorithm: SHA1withRSA, 1024-bit key
+                        ```
+                    </section>
+                    <section data-markdown>
+                        Bonus III: Backup Allowed
+                    </section>
+                </section> 
+                <section> 
+                    <section data-markdown>
+                    7. **Práctica**: Transferencia de información #1 (Burp)
+                    </section>
+                    <section data-markdown>Para poder realizar ataques de MITM debemos **instalar una CA de confianza en el dispositivo** o **manipular el binario**</section>
+                    <section data-markdown>
+                    * Configuración CA Android < 7.1
+                    * Configuración CA Burp Android > 7.1
+                    * Manipulación del binario
+                    </section>
+                    <section data-markdown>Configuración CA Android < 7.1:</section>
+                    <section data-markdown>
+                        1. Ejecutar BurpSuite
+                        2. Configurar BurpSuite como proxy
+                        3. Descargar la CA de BurpSuite, para luego agregarla dentro del dispostivo</section>
+                    <section data-markdown>$java -jar BurpSuite.jar </section>
+                    <section data-markdown>
+                    Ir a la pestaña de proxy:
+                    
+                    ![Burp_1](images/m8/burp/Burp_1.png)</section>
+                    <section data-markdown>
+                    Seleccionar: *Edit -> “all interfaces”*
+                    
+                    ![Burp_2](images/m8/burp/Burp_2.png)</section>
+                    <section data-markdown>
+                    Luego dentro de *Request handling* tildar la opcion *support invisible proxying* y darle OK.
+
+                    ![Burp_3](images/m8/burp/Burp_3.png)</section>
+                    <section data-markdown>
+                    * Ahora necesitamos **agregar la CA dentro del dispositivo**                    
+                    * Tildamos *Import / Export CA certificate* y seleccionamos el formato:
+                    
+                    ![Burp_4](images/m8/burp/Burp_4.png)    
+                    </section>
+                    <section data-markdown>
+                    Por último lo almacenamos:
+
+                    ![Burp_5](images/m8/burp/Burp_5.png)</section>
+                    <section data-markdown>
+                    Una vez que tenemos acceso al certificado lo siguiente será modificar el nombre del certificado y luego subirlo al dispositivo:
+                    </section>
+                    <section data-markdown>
+                    * $mv cacert.der cacert.crt
+                    * $adb push cert-der.crt /sdcard/</section>
+                    <section data-markdown>
+                    Ingresar a **"Configuraciones -> Seguridad -> Agregar certificado desde la tarjeta de memoria"**, asignar un nombre al certificado.
+                    </section>
+                    <section data-markdown>
+                    Por último hay que indicarle al dispositivo que tiene que redirigir el tráfico del **dispositivo** a **nuestra computadora**: 
+                    </section>
+                    <section data-markdown>
+                    **"Configuraciones -> WIFI -> Opciones avanzadas -> Habilitar proxy"**</section>
+                    <section data-markdown>
+                    Nota:
+                    
+                    * Aquí deben poner la dirección IP de su computadora y el puerto que configuramos anteriormente (8080). 
+                    * Para obtener la dirección IP pueden usar el comando *ifconfig*
+                    </section>
+                    <section data-markdown>
+                    Una vez realizado los pasos anteriores deben navegar desde el dispositivo, y debería aparecerles el tráfico desde el historial del proxy.
+                    </section>
+                    <section data-markdown>
+                    ![Burp_6](images/m8/burp/Burp_6.png)</section>
+                    <section data-markdown>En caso de tener algún problema puede acceder a [installing-burp-s-ca-certificate-in-an-android-device](https://support.portswigger.net/customer/portal/articles/1841102-installing-burp-s-ca-certificate-in-an-android-device) directamente para seguir el paso a paso en detalle.</section>
+                    <section data-markdown>Configuración CA Burp Android > 7.1:</section>                    
+                    <section data-markdown>Los pasos anteriores son iguales al punto de descargar la CA desde BurpSuite, ahora agregaremos la CA dentro del "*system trusted certificates*" (Como lo vimos teoricamente en la etapa de **Personalizar CAs de confianza**).</section>
+                    <section data-markdown>Vamos al directorio en donde teniamos descargada la CA de BurpSuite (cacert.der) y realizamos los siguientes comandos:
+                    </section>
+                    <section data-markdown>
+                    1. $openssl x509 -inform DER -in cacert.der -out cacert.pem  
+                    2. $openssl x509 -inform PEM -subject_hash_old -in cacert.pem |head -1  
+                    3. $mv cacert.pem 9a5ba575.0</section>
+                    <section data-markdown>![Burp_7](images/m8/burp/Burp_7.png)</section>
+                    <section data-markdown>
+                    Ahora lo que se deberá hacer es copiar el certificado al dispositivo en */system*:</section>  
+                    <section data-markdown>
+                    * $adb devices -l
+                    * $adb root  
+                    * $adb remount  
+                    * $adb push 9a5ba575.0 /sdcard/  </section>                                        
+                    <section data-markdown>Se copia copiarlo en el directorio correspondiente y se asignan los permisos correspondientes:</section>
+                    <section data-markdown>
+                    $mv /sdcard/9a5ba575.0 /system/etc/security/cacerts/
+                    
+                    $chmod 644 /system/etc/security/cacerts/9a5ba575.0   </section>
+                    <section data-markdown>![Burp_8](images/m8/burp/Burp_8.png)</section>
+                    <section data-markdown>
+                    Por último dentro de *Configuraciones -> Seguridad -> Credenciales de Confianza* se tílda la opción de Sistema y se habilita el Certificado de BurpSuite.
+
+                    ![Burp_9](images/m8/burp/Burp_9.png)</section>
+                    <section data-markdown>Con eso debería alcanzar para que podamos capturar tráfico en las **versiones más recientes de Android**, tal como lo vimos anteriormente.</section>
+                    <section data-markdown>![Burp_6](images/m8/burp/Burp_6.png)</section>
+                    <section data-markdown>Manipulación del binario</section>
+                    <section data-markdown>Básicamente debemos manipular el archivo AndroidManifest.xml</section>
+                    <section data-markdown>
+                    Nota: para hacer este ejercio se recomienda ver las "Protecciones binarias, con modificación estática del binario"</section>
+                    <section data-markdown>Por último agregar dentro del archivo *network-security-config.xml* generado las siguientes lineas:</section>
+                    <section>
+        <pre>
+            <code class="chico">
+            <network-security-config>    
+               <base-config>  
+                  <trust-anchors>
+                      <certificates src="system" />
+                      <certificates src="user" />
+                  </trust-anchors>
+               </base-config>
+            </network-security-config>
+            </code>
+        </pre>
+                    </section>
+                    <section data-markdown>¡Listo! ya deberíamos poder capturar el tráfico de la aplicación por alguna de las formas mencionadas.</section>
+                    <section data-markdown>
+                    8. **Práctica**: Transferencia de información #2 (tcpdump)
+                    </section>
+                    <section data-markdown>¿Qué creen? ¿En qué casos nos serviría utilizar tcpdump?</section>
+                    <section data-markdown>
+                        * Para analizar el tráfico de forma pasiva
+                        * Para analizar malware
+                    </section>
+                    <section data-markdown>
+                        Ingresen a /material/tools/**tcpdump**
+                    </section>
+                    <section data-markdown>
+                    ```
+                    $file tcpdump 
+                    
+                    tcpdump: ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), 
+                            statically linked, stripped
+                    ```
+                    </section>
+                    <section data-markdown>
+                    ```
+                    1. $adb push tcpdump /data/local/tmp/
+                    bullhead:/data/local/tmp # ./tcpdump
+                    /system/bin/sh: ./tcpdump: can't execute: Permission denied
+                    bullhead:/data/local/tmp # chmod 755 tcpdump
+                    bullhead:/data/local/tmp # ./tcpdump
+                    tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+                    listening on dummy0, link-type EN10MB (Ethernet), capture size 262144 bytes
+                    
+                    0 packets captured
+                    0 packets received by filter
+                    0 packets dropped by kernel
+                    ```
+                    </section>
+                    <section data-markdown>
+                        ```
+                        bullhead:/data/local/tmp # ./tcpdump -h
+                        tcpdump version 4.9.3
+                        libpcap version 1.9.1 (with TPACKET_V3)
+                        Usage: tcpdump [-aAbdDefhHIJKlLnNOpqStuUvxX#] [ -B size ] [ -c count ]
+                        		[ -C file_size ] [ -E algo:secret ] [ -F file ] [ -G seconds ]
+                        		[ -i interface ] [ -j tstamptype ] [ -M secret ] [ --number ]
+                        		[ -Q in|out|inout ]
+                        		[ -r file ] [ -s snaplen ] [ --time-stamp-precision precision ]
+                        		[ --immediate-mode ] [ -T type ] [ --version ] [ -V file ]
+                        		[ -w file ] [ -W filecount ] [ -y datalinktype ] [ -z postrotate-command ]
+                        		[ -Z user ] [ expression ]
+                        ```
+                    </section>
+                    <section data-markdown>
+                        ```
+                        bullhead:/data/local/tmp # ifconfig
+                        rmnet_ipa0 Link encap:UNSPEC  
+                                  UP RUNNING  MTU:2000  Metric:1
+                                  RX packets:0 errors:0 dropped:0 overruns:0 frame:0 
+                                  TX packets:121 errors:0 dropped:0 overruns:0 carrier:0 
+                                  collisions:0 txqueuelen:1000 
+                                  RX bytes:0 TX bytes:7228 
+
+                        wlan0     Link encap:Ethernet  HWaddr 5c:70:a3:7d:5d:3a  Driver cnss_wlan_pci
+                                  inet addr:172.28.23.5  Bcast:172.28.23.255  Mask:255.255.255.0 
+                                  inet6 addr: fe80::5e70:a3ff:fe7d:5d3a/64 Scope: Link
+                                  UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+                                  RX packets:157 errors:0 dropped:0 overruns:0 frame:0 
+                                  TX packets:1305 errors:0 dropped:0 overruns:0 carrier:0 
+                                  collisions:0 txqueuelen:3000 
+                                  RX bytes:7449 TX bytes:106186 
+                        ```
+                    </section>
+                    <section data-markdown>
+                        ```
+                        bullhead:/data/local/tmp # ./tcpdump -i wlan0 -w demo.cap
+                        tcpdump: listening on wlan0, link-type EN10MB (Ethernet), capture size 262144 bytes
+                        573 packets captured
+                        573 packets received by filter
+                        0 packets dropped by kernel
+                        ```
+                    </section>
+                    <section data-markdown>¿Dudas? ¿Preguntas?</section>
+                    <section data-markdown>
+                    9. **Práctica**: Certificate Pinning
+                    </section>
+                    <section data-markdown>Para realizar el bypass del certificate pinning existen diversas formas:</section>
+                    <section data-markdown>¿Recuerdan que era el Certificate Pinning?</section>
+                    <section data-markdown>
+                        * La "fijación de certificados" ([Certificate Pinning](https://developer.android.com/training/articles/security-config.html#CertificatePinning)) es el proceso de asociar el servidor backend con **un certificado X509 particular** o **una clave pública** 
+                        
+                        * En lugar de aceptar **cualquier certificado firmado por una autoridad de certificación de confianza (CA)**. 
+                    </section>
+                    <section data-markdown>
+                        * Después de "fijar" el certificado del servidor o la clave pública
+
+                        * **La aplicación móvil se conectará posteriormente solo al servidor conocido.**
+                    </section>
+                    <section data-markdown>
+                    1. El certificado se puede fijar y codificar en la aplicación o recuperar en el momento en que se conecta por primera vez al backend. 
+                    
+                    2. En este último caso, el certificado se asocia con el host cuando se ve el host por primera vez. 
+                                                
+                    </section>
+                    <section data-markdown>
+                    **Esta alternativa es menos segura porque los atacantes que interceptan la conexión inicial, pueden inyectar sus propios certificados**
+                    </section>                    
+                    <section data-markdown>Eliminar el Certificado</section>
+                    <section data-markdown>Modificar el Certificado</section>
+                    <section data-markdown>Agregar un Certificado</section>
+                    <section data-markdown>Dicho esto, vamos a hacer foco al bypass de certificate pinning con [Frida](https://github.com/frida/frida/releases)</section>
+                    <section data-markdown>Previo haremos algunas notas adicionales de [frida](https://frida.re/)</section>
+                    <section data-markdown>**"Dynamic instrumentation toolkit for developers, reverse-engineers, and security researchers"**</section>
+                    <section data-markdown>
+                    * Es una herramienta para instrumentar dinámicamente
+                    * Creada por @oleavr 
+                    * Existe [documentación oficial](https://frida.re/docs/home/)
+                    </section>
+                    <section data-markdown>
+                    Según @oleavr frida es:
+
+                    * Dynamic instrumentation toolkit
+                        * Debug live processes
+                    * Scriptable
+                        * Execute your own debug scripts inside another process
+                    * Multi-platform
+                        * Windows, Mac, Linux, iOS, Android, QNX
+                    * Highly modular, JavaScript is optional
+                    * Open Source
+                    </section>
+                    <section data-markdown>
+                    Como recién vimos, se puede utilizar JavaScript
+                    
+                    * Dentro del [awesome frida](https://github.com/dweinstein/awesome-frida) existen multiples scripts
+                    * También en [codeshare.frida](https://codeshare.frida.re/) la comunidad comparte sus scripts
+                    * Sino en las [conferencias donde hablaron](https://frida.re/docs/presentations/)
+                    </section>
+                    <section data-markdown>Más adelante veremos como se escriben y se utilizan estos scripts</section>
+                    <section data-markdown>¿Cómo instalar y configurar frida?</section>
+                    <section data-markdown>Ingresamos al [repositorio](https://github.com/frida/frida/releases) </section>
+                    <section data-markdown>
+                        ```
+                        $pip install frida frida-tools --user
+                        $frida --version
+                        12.5.3
+                        $adb shell getprop ro.product.cpu.abi
+                        x86
+                        $wget https://github.com/frida/frida/releases/download/12.5.3/frida-server-12.5.3-android-arm.xz
+                        ```
+                    </section>
+                    <section data-markdown>
+                    Copiamos el servidor de frida (frida-server) en el dipostivo y lo ejecutamos:
+
+                    1. $ adb push frida-server /data/local/tmp/
+                    2. $ adb shell "chmod 755 /data/local/tmp/frida-server"
+                    3. $ adb shell "su -c /data/local/tmp/frida-server &"
+                    </section> 
+                    <section data-markdown>¡Vamos a ver un [ejemplo](https://frida.re/docs/examples/android/) del sitio!</section>
+                    <section data-markdown>
+                    1. Podemos generar un **.py** como vamos a ver
+                    2. Podemos generar un **.js** e invocarlo desde frida luego</section>
+                    <section data-markdown>
+                    * Básicamente si copiamos el siguiente código dentro de *ctf.py*, vamos a poder luego invocar el *ctf.py*
+                    * Este llamará a nuestro código JavaScript para ser utilizado por *frida* en el dispositivo.
+                    </section>
+                    <section data-markdown>
+
+                        
+                    import frida, sys
+                    def on_message(message, data):
+                        if message['type'] == 'send':
+                            print("[*] {0}".format(message['payload']))
+                        else:
+                            print(message)
+                    jscode = """
+                    Java.perform(function () {
+                      // Function to hook is defined here
+                      var MainActivity = Java.use('com.example.seccon2015.rock_paper_scissors.MainActivity');
+                      // Whenever button is clicked
+                      var onClick = MainActivity.onClick;
+                      onClick.implementation = function (v) {
+                        // Show a message to know that the function got called
+                        send('onClick');
+                        // Call the original onClick handler
+                        onClick.call(this, v);
+                        // Set our values after running the original onClick handler
+                        this.m.value = 0;
+                        this.n.value = 1;
+                        this.cnt.value = 999;
+                        // Log to the console that it's done, and we should have the flag!
+                        console.log('Done:' + JSON.stringify(this.cnt));
+                      };
+                    });
+                    """
+                    process = frida.get_usb_device().attach('com.example.seccon2015.rock_paper_scissors')
+                    script = process.create_script(jscode)
+                    script.on('message', on_message)
+                    print('[*] Running CTF')
+                    script.load()
+                    sys.stdin.read()
+                    </section>
+                    <section data-markdown>
+                    
+                        import frida, sys
+                        def on_message(message, data):
+                            if message['type'] == 'send':
+                                print("[*] {0}".format(message['payload']))
+                            else:
+                                print(message)
+                    </section> 
+                    <section data-markdown> 
+
+
+    jscode = """
+    Java.perform(function () {
+      // Function to hook is defined here
+
+      var MainActivity = Java.use('com.example.seccon2015.rock_paper_scissors.MainActivity');
+      // Whenever button is clicked
+      
+      var onClick = MainActivity.onClick;
+      onClick.implementation = function (v){
+      // Show a message to know that the function got called
+      
+      send('onClick');
+      // Call the original onClick handler
+      
+      onClick.call(this, v);
+      // Set our values after running the original onClick handler
+      
+      this.m.value = 0;
+      this.n.value = 1;
+      this.cnt.value = 999;
+      
+      // Log to the console that it's done, and we should have the flag!
+      console.log('Done:' + JSON.stringify(this.cnt));
+      };
+    });
+    """
+
+                    </section> 
+                    <section data-markdown>
+                     
+    process = frida.get_usb_device().attach('com.example.seccon2015.rock_paper_scissors')
+    script = process.create_script(jscode)
+    script.on('message', on_message)
+    print('[*] Running CTF')
+    script.load()
+    sys.stdin.read()
+                        
+                    </section> 
+                    <section data-markdown>
+                    Otro ejemplo puede ser:
+
+                            var EditText = Java.use("android.widget.EditText");
+
+                            EditText.getText.implementation = function () {
+                                retval = this.getText.call(this);
+                                console.log("[*] EditText Return: " + retval);
+                                return retval;
+                            };
+
+                    </section>
+                    <section data-markdown>Básicamente pudimos ver como podemos utilizar **Python** para invocar código **JavaScript**, para realizar una acción</section> 
+                    <section data-markdown>
+                    Es importante por ahora resaltar:
+                    
+                    1. Java.use("") -> Usa la clase en particular
+                    2. Java.perform() -> Usado para ejecutar JS en el main thread 
+                    3. .implementation -> Sobre escribe la implementación original</section>                    
+                    <section data-markdown>Una vez aclarado lo anterior, vamos a descargar el Universal SSL Pinning Bypass y utilizarlo</section> 
+                    <section data-markdown>[Acá](https://techblog.mediaservice.net/2017/07/universal-android-ssl-pinning-bypass-with-frida/) tienen una referencia, sinó directamente de [code-share de frida](https://codeshare.frida.re/@pcipolloni/universal-android-ssl-pinning-bypass-with-frida/)</section> 
+                    <section data-markdown>
+                    Básicamente funciona realizando lo siguiente:
+
+                    1. Carga nuestro CA de confiaza del dispositivo
+                    2. Crea nuestro propio KeyStore que contiene nuestra CA de confianza
+                    3. Crea un TrustManager que confia en las CA dentro de nuestro KeyStore
+                    </section>
+                    <section data-markdown>Antes de realizar la configuración, podemos ver rápidamente el código</section> 
+                    <section data-markdown>Se puede ver que define la funcion *function()*
+
+                        Java.perform(function ()}
+                    </section> 
+                    <section data-markdown>
+                    Declara las variables:
+
+                        var CertificateFactory = Java.use("java.security.cert.CertificateFactory");
+                        var FileInputStream = Java.use("java.io.FileInputStream");
+                        var BufferedInputStream = Java.use("java.io.BufferedInputStream");
+                        var X509Certificate = Java.use("java.security.cert.X509Certificate");
+                        var KeyStore = Java.use("java.security.KeyStore");
+                        var TrustManagerFactory = Java.use("javax.net.ssl.TrustManagerFactory");
+                        var SSLContext = Java.use("javax.net.ssl.SSLContext");
+                    </section> 
+                    <section data-markdown>
+                    Levanta el certificado nuestro de BurpSuite para hacer el MITM
+                        
+                        var fileInputStream = FileInputStream.$new("/data/local/tmp/cert-der.crt");</section> 
+
+                    <section data-markdown>Con lo cual, si queremos hacer el ataque completo debemos</section> 
+                    <section data-markdown>
+                        1. Ejecutar frida en el dispositivo
+                        2. Descargar y modificar el script (nombre de la CA y ruta) 
+                        3. Ejecutar frida con el script descargado
+                        4. Capturar tráfico nuevamente con BurpSuite</section> 
+                    <section data-markdown> 1. Ejecutar frida en el dispositivo</section> 
+                    <section data-markdown>
+                    * $cd /data/local/tmp
+                
+                    * $./frida-server
+                    </section> 
+                    <section data-markdown>2. Descargar y modificar el script (nombre de la CA y ruta)</section> 
+                    <section data-markdown>
+                    Corroboren esto:
+                        
+                        var fileInputStream = FileInputStream.$new("/data/local/tmp/cert-der.crt");
+                    </section> 
+                    <section data-markdown>3. $adb install banco2.apk</section>  
+                    <section data-markdown>4. Ejecutar frida (¡**desde su computadora**!)</section> 
+                    <section data-markdown>$frida-ps -Uia</section> 
+                    <section data-markdown>Buscar el nombre de la aplicación y realizar el siguiente comando</section> 
+                    <section data-markdown>$frida -U -f nombreaplicacion -l nombreScriptDescargado.js --no-pause --debug</section>             
+            
+                    <section data-markdown>5. Ir a BurpSuite y buscar dentro del History el tráfico capturado</section> 
+                    <section>Ejemplo Bypass Certificate Pinning Video
+                    <video data-autoplay src="file:///home/bh/projects/2019/gitlab_curso/android-secure-modules/reveal.js/images/m8/009_bypass_certificate_pinning_720.mov"></video>
+                    </section>
+                    <section data-markdown>
+                    Si no les funcionó pueden usar la v2.0 del Universal Bypass SSL Pinning
+                    </section>
+                    <section data-markdown>
+                    V2.0 Universal SSL Pinning
+
+                        
+    Java.perform(function() {
+        var array_list = Java.use("java.util.ArrayList");
+        var ApiClient = Java.use('com.android.org.conscrypt.TrustManagerImpl');
+        ApiClient.checkTrustedRecursive.implementation = function(a1,a2,a3,a4,a5,a6) {
+                console.log('Bypassing SSL Pinning');
+                var k = array_list.$new(); 
+                return k;
+        } 
+    },0);
+
+                    </section>
+                    <section data-markdown>¿Preguntas?</section>
+                </section> 
+                <section> 
+                    <section data-markdown>
+                    10. **Práctica**: Protecciones binarias #1 (estático root check)
+                    </section>
+                    <section data-markdown>Introducción al Smali</section>
+                    <section data-markdown>**Es el "assembly code" que es ejecutado dentro de Dalvik/ART VM en Android**</section>
+                    <section data-markdown>
+                    * Tiene 256 instrucciones (definidas con el prymer byte)
+                    * 36 tipos de formatos de argumentos
+                    * Alloca dinamicamente registro por funciones.
+                    * En contrsate con Java, es una                     <section data-markdown>QUE ES FRIDA</section>
+                    VM basada en el registro y no basada en el stack
+                    * Soporta carga dinamica de código, pero no se puede modificar o (unload) la carga de código
+                    </section>
+                    <section data-markdown>**Java Code** 
+
+                        if (flag == 1) 
+                    
+                        flag = 2
+                    
+                        else
+                    
+                        flag = 3 
+                    </section>
+                    <section data-markdown>**Smali Code**
+
+                    const/4 v1, 0x1
+                    
+                    if-ne v0, v1, :cond_0
+                    
+                    const/4 v2, 0x2
+                    
+                    move v0,v2
+                    
+                    goto :goto_0
+                    
+                    :cond_0
+                    
+                    const/4 v2, 0x3
+                    
+                    move v0,v2
+                    
+                    :goto_0
+                    </section>
+                    <section data-markdown>
+                    Lcom/example/vulnerableapp/Authenticate;
+
+                    **VS**
+
+                    com.example.vulnerableapp.Authenticate;
+                    </section>
+                    <section data-markdown>Una función sería:
+                    
+                    .method public doSomething()V</section>
+                    <section data-markdown>
+                    * V : void
+                    * Z : boolean
+                    r un máster en periodismo político que se dictaba en Barcelona, España,                     * B : byte
+                    * S : short
+                    * C : char
+                    * F : float
+                    * I : int
+                    * J : long
+                    * D : double
+                    * [ : array
+                    </section>
+                    <section data-markdown> Nos enfocaremos y buscaremos las invocaciones de métodos dentro del código:
+                    
+                        invoke-virtual
+                        invoke-method
+                        invoke-direct 
+                        invoke-static
+                    </section>
+                    <section data-markdown>Si necesitamos tener más información o referencia sobre el código smali de la aplicación el siguiente [link](http://pallergabor.uw.hu/androidblog/dalvik_opcodes.html) es una **gran referencia**</section>
+                    <section data-markdown>Les hice un **breve resumen** de instrucciónes que nos facilitaran la resolución al momento de analizar la aplicación</section>
+                    <section data-markdown>![Smali](images/m8/smali/opcode_1.png)</section>
+                    <section data-markdown>![Smali](images/m8/smali/opcode_1_0.png)</section>
+                    <section data-markdown>![Smali](images/m8/smali/opcode_2.png)</section>
+                    <section data-markdown>![Smali](images/m8/smali/opcode_2_1.png)</section>                    
+                    <section data-markdown>![Smali](images/m8/smali/opcode_3.png)</section>
+                    <section data-markdown>En resumen:
+
+                    v0, v1, v2, p0, p1, p2: Se utilizan para indicar registros
+                    
+                    v0 -> El primer registro local
+                    
+                    v1 -> El segundo registro local
+                    
+                    v2 or p0 -> El primer parámetro de registro
+                    
+                    v3 or p1 -> El segundo parámetro de registro
+                    
+                    Iput: Utilizado para "poner" los valores (setearlos)
+                    
+                    Const: Usado para indicar valores de constantes
+                    </section>
+                    <section data-markdown>Un ejemplo sería:
+
+            class public LHelloWorld;
+            .super Ljava/lang/Object;
+            .method public static main([Ljava/lang/String;)V
+            .registers 2
+            sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+            const-string v1, "hello,world!"
+            invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+            return-void
+            .end method
+                    </section>
+                    <section data-markdown>
+                    La clase HelloWord
+                        
+                        class public LHelloWorld;
+                    </section>
+                    <section data-markdown>
+                    Hace uso de Super, de java.lang.Object
+
+                        .super Ljava/lang/Object;
+                    </section>
+                    <section data-markdown>
+                    Llamada al método main()
+
+                        .method public static main([Ljava/lang/String;)V                
+                    </section>
+                    <section data-markdown>
+                    Se utilizarán dos registros:
+
+                        .registers 2                        
+                    </section>
+                    <section data-markdown>
+                    V0 refiere a System.out
+
+                        sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+                    </section>
+                    <section data-markdown>
+                    V1 es una constante que dice "hello, world!"    
+
+                        const-string v1, "hello,world!"
+                    </section>
+                    <section data-markdown>
+                    Llamada a system.printl.out con el hello world
+
+                        invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+                    </section>
+                    <section data-markdown>
+                    Devuelve nada como el tipo de retorno
+
+                        return-void
+                    </section>
+                    <section data-markdown>¡Estamos listos para resolver los desafíos!</section>
+                    <section data-markdown>¡Sí, estamos listos!</section>
+                    <section>$adb install Uncrackable1.apk </section data-markdown>
+                    <section data-markdown>
+                    ![Uncrackable-Level1](images/m8/Uncrackable-Level1/001.png)
+                    </section>                    
+                    <section data-markdown>
+                    Abrir desde sublime el decode de apktool y la decompilación con jadx.
+
+                    ![Uncrackable-Level1](images/m8/Uncrackable-Level1/003.png)
+                    </section>
+                    <section data-markdown>![Uncrackable-Level1](images/m8/Uncrackable-Level1/004.png)</section>                     
+                    <section data-markdown>
+                    Advertencia dispositivo *rooteado*
+                    
+                    ![Uncrackable-Level1](images/m8/Uncrackable-Level1/005.png)</section>
+                    <section data-markdown>Buscando la advertencia en el código decompilado
+                            ![Uncrackable-Level1](images/m8/Uncrackable-Level1/006.png)</section>
+                    <section data-markdown>Buscando la implementación de la validación:
+                            ![Uncrackable-Level1](images/m8/Uncrackable-Level1/007.png)</section>
+                    <section data-markdown>Analizando la implementación en Java:
+                            ![Uncrackable-Level1](images/m8/Uncrackable-Level1/008.png)</section>
+                    <section data-markdown>
+                    Analizando la implementación en Smali: 
+                    
+                    **Validación SU**
+                    </section>
+                    <section data-markdown>
+                    ![Uncrackable-Level1](images/m8/Uncrackable-Level1/009.png)</section>
+                    <section data-markdown>**Modificación método validación SU**:
+                    ![Uncrackable-Level1](images/m8/Uncrackable-Level1/010.png)</section>
+                    <section data-markdown>**Validación método Build**:
+                    ![Uncrackable-Level1](images/m8/Uncrackable-Level1/011.png)</section>
+                    <section data-markdown>**Modificación método Build**:
+                    ![Uncrackable-Level1](images/m8/Uncrackable-Level1/012.png)</section>
+                    <section data-markdown>**Validación Files**:</section>
+                    <section data-markdown>
+                    ![Uncrackable-Level1](images/m8/Uncrackable-Level1/013.png)</section>
+                    <section data-markdown>**Modificación método Files**:
+                    ![Uncrackable-Level1](images/m8/Uncrackable-Level1/014.png)</section>
+                    <section data-markdown>Pasos para realizar nuevamente el Build de la aplicación modificada:</section>
+                    <section data-markdown>
+                    Realizamos el build con apktool
+                    
+                        $apktool b carpeta
+                    </section>
+                    <section data-markdown>$zipalign -v 4 dist/Uncrackable-Level1.apk ../UncrackableLevel1_modified.apk</section> 
+                    <section data-markdown>
+                    * Esta herramienta "alinea" todos los datos sin comprimir (como imágenes, archivos sin procesar y límites de 4 bytes) dentro del APK. 
+                    
+                    * Ayuda a mejorar la administración de la memoria durante el tiempo de ejecución de la aplicación.
+                    </section>
+                    <section data-markdown>
+                    Creamos una debug key para firmar la app
+                    </section>
+                    <section data-markdown>* $keytool -genkey -v -keystore ~/.android/debug.keystore -alias signkey -keyalg RSA -keysize 2048 -validity 20000
+                    </section>
+                    <section data-markdown>
+                    Se puede mejorar el Key size etc, pero a los fines prácticos no influye.
+                    </section>
+                    <section>Firmamos la app.</section>
+                    <section data-markdown>$apksigner sign --ks ~/.android/debug.keystore --ks-key-alias signkey UncrackableLevel1_modified.apk</section>
+                    <section data-markdown> Borramos la aplicación anteriormente instalada 
+                            ![Uncrackable-Level1](images/m8/Uncrackable-Level1/018.png)</section>
+                    <section data-markdown>Pueden borrarla con **$adb uninstall packageName** ;)</section> 
+                    <section data-markdown>
+                    Re instalamos la aplicación modificada
+                    
+                    * $adb install modified_apk</section>
+                    <section data-markdown>
+                    ![Uncrackable-Level1](images/m8/Uncrackable-Level1/019.png)</section>
+                    <section data-markdown> Iniciamos la aplicación:
+                            ![Uncrackable-Level1](images/m8/Uncrackable-Level1/020_w00t.png)</section>
+                    <section data-markdown>¡Podemos ver que desapareció la protección!</section>
+                    <section data-markdown>Falta la última validación:</section>
+                    <section data-markdown>![Uncrackable-Level1](images/m8/Uncrackable-Level1/021.png)</section>
+                    <section data-markdown>La buscamos dentro del código Java:
+                            ![Uncrackable-Level1](images/m8/Uncrackable-Level1/022.png)</section>
+                    <section data-markdown> La encontramos 
+                            ![Uncrackable-Level1](images/m8/Uncrackable-Level1/023.png)</section>
+                    <section data-markdown> La buscamos en Smali:
+                            ![Uncrackable-Level1](images/m8/Uncrackable-Level1/024.png)</section>
+                    <section data-markdown>La modificamos en Smali:
+                            ![Uncrackable-Level1](images/m8/Uncrackable-Level1/025.png)</section>
+                    <section data-markdown>Realizamos el re-build de la aplicación modificada:
+                            ![Uncrackable-Level1](images/m8/Uncrackable-Level1/026.png)</section>
+                    <section data-markdown>Ustedes hacen todos los pasos manualmente :)</section>
+                        <section data-markdown>Re instalamos y voila!</section>
+                        <section data-markdown>![Uncrackable-Level1](images/m8/Uncrackable-Level1/027.png)</section>
+                    <section data-markdown>Quien lo resuelva primero se gana un vino :)</section>
+                    <section>Video Resolución anti-rootcheck 
+                            <video data-autoplay src="file:///home/bh/projects/2019/gitlab_curso/android-secure-modules/reveal.js/images/m8/uncrackable_video2_720.mov"></video>
+                            </section>
+                    <section data-markdown>Resolución #2: **SIN** modificación del binario</section>
+                    <section data-markdown>¿Se animan?</section>
+                    <section data-markdown>Hacemos el bypass al RootCheck como antes</section>
+                    <section data-markdown>Luego, básicamente debemos analizar el código .java</section>
+                    <section data-markdown>Vemos la siguiente implementación
+                    ![Uncrackable-Level1](images/m8/Uncrackable-Level1/resolucion_por_codigo1.png)
+                    </section>
+                    <section data-markdown>Vemos la siguiente implementación
+                    ![Uncrackable-Level1](images/m8/Uncrackable-Level1/resolucion_por_codigo.png)
+                    </section>
+                    <section data-markdown>¿Qué necesitamos para descifrar algo cifrado?</section>
+                    <section data-markdown>¿Qué componentes debería tener?</section>
+                    <section data-markdown>Acá en el código tengo la Key y el Secreto</section>
+                    <section data-markdown>Key = '8d127684cbc37c17616d806cf50473cc'</section>
+                    <section data-markdown>Secreto = '5UJiFctbmgbDoLXmpL12mkno8HT4Lv8dlat8FxR2GOc='</section>
+                    <section data-markdown>Podemos utilizar ipython para la siguiente resolución:</section>
+                    <section data-markdown>Recuerden tener instalado pycrypto</section>
+
+                    <section>
+<pre>
+    <code class="chico">
+        import base64                                                                                                                                                                                
+        secret = base64.b64decode('5UJiFctbmgbDoLXmpL12mkno8HT4Lv8dlat8FxR2GOc=')
+        key = bytes.fromhex('8d127684cbc37c17616d806cf50473cc')
+        from Crypto.Cipher import AES
+        cipher = AES.new(key, AES.MODE_ECB)
+        plaintext = cipher.decrypt(secret)
+        plaintext                                                                                                                                                                                    
+    </code>
+</pre>
+                    </section>
+                    <section data-markdown>Vemos la siguiente implementación
+                    ![Uncrackable-Level1](images/m8/Uncrackable-Level1/script.png)
+                    </section>
+                    <section data-markdown>b'I want to believe\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f\x0f'</section>
+                    <section data-markdown>¿Y Ahora?</section>
+                    <section data-markdown>**Deben escribir esa frase, en la aplicación con el bypass de root previamente realizado**</section>
+                    <section data-markdown>¿Funcionó?</section>
+                    <section data-markdown>¿Preguntas?</section>
+                    <section data-markdown>11. **Práctica**: Protecciones binarias #2 (emulation check)</section>
+                    <section data-markdown>
+                    1. $adb install Reverzeme1.apk
+                    2. $apktool d Reverzeme1.apk -o reverzeme_apktool
+                    3. $jadx Reverzeme1.apk -d reverzeme_jadx
+                    </section>
+                    <section data-markdown>
+                    Ayuda:  
+                    * Analice el código.
+                    * Instale la aplicación
+                    * Encuentre la mala práctica 
+                    </section>
+                    <section data-markdown>![Uncrackable-Level1](images/m8/Reverzeme1/00_device_not_supported.png)</section>
+                    <section data-markdown>![Uncrackable-Level1](images/m8/Reverzeme1/03_jadx_challengeJNI.png)</section>
+                    <section data-markdown>![Uncrackable-Level1](images/m8/Reverzeme1/04_checkIfDeviceIsEmulator.png)</section>
+                    <section data-markdown>![Uncrackable-Level1](images/m8/Reverzeme1/05_checkIfDeviceIsEmulator2.png)</section>
+                    <section data-markdown>
+                    * $apktool d ReverseMe1.apk -output reverseme_apktool
+                    * $cd reverseme_apktool
+                    * $ls -la 
+                    </section>
+                    <section data-markdown>![Uncrackable-Level1](images/m8/Reverzeme1/08_apktool_ls_la.png)</section>
+                    <section data-markdown>![Uncrackable-Level1](images/m8/Reverzeme1/01_checkIfDeviceIsEmulator().png)</section>
+                    <section data-markdown>No es ni más ni menos que esto</section>
+                    <section data-markdown>![Uncrackable-Level1](images/m8/Reverzeme1/02_checkIfDeviceIsEmulator2.png)</section>
+                    <section data-markdown>![Uncrackable-Level1](images/m8/Reverzeme1/03_checkIfDevicesIsEmulator_modified.png)</section>
+                    <section data-markdown>
+                    Re build de la aplicación:
+                    
+                    1. $apktool b ReverzeMe1
+                    2. $zipalign -v 4 dist/ReverzeMe1.apk ../ReverzeMe1_modified.apk
+                    3. $keytool -genkey -v -keystore ~/.android/debug.keystore -alias signkey -keyalg RSA -keysize 2048 -validity 20000
+                    4. $/opt/android-sdk/build-tools/27.0.1/apksigner sign --ks ~/.android/debug.keystore --ks-key-alias signkey ReverzeMe1_modified.apk
+                    5. $ adb install ReverzeMe1_modified.apk</section>
+                    <section data-markdown>1. $apktool b ReverzeMe1</section>
+                    <section data-markdown>![Uncrackable-Level1](images/m8/Reverzeme1/04_apktool_b.png)</section>
+                    <section data-markdown>Controlamos que haya creado el build</section>                    
+                    <section data-markdown>![Uncrackable-Level1](images/m8/Reverzeme1/05_apktool_ls_dist.png)</section>
+                    <section data-markdown>2. $zipalign -v 4 dist/ReverzeMe1.apk ../ReverzeMe1_modified.apk</section>
+                    <section data-markdown>3. $keytool -genkey -v -keystore ~/.android/debug.keystore -alias signkey -keyalg RSA -keysize 2048 -validity 20000</section>
+                    <section data-markdown>4. $/opt/android-sdk/build-tools/27.0.1/apksigner sign --ks ~/.android/debug.keystore --ks-key-alias signkey ReverzeMe1_modified.apk</section>
+                    <section data-markdown>![Uncrackable-Level1](images/m8/Reverzeme1/07_apksigner.png)</section>
+                    <section data-markdown>$ adb install ReverzeMe1_modified.apk</section>
+                    <section data-markdown>![Uncrackable-Level1](images/m8/Reverzeme1/08_adb_install_modified.png)</section>
+                    <section data-markdown>![Uncrackable-Level1](images/m8/Reverzeme1/09_wrong_password.png)</section>
+                    <section data-markdown>¿Cambio algo? :)</section>
+                    <section data-markdown>![Uncrackable-Level1](images/m8/Reverzeme1/10_pass_condition.png)</section>                    
+                    <section data-markdown>![Uncrackable-Level1](images/m8/Reverzeme1/11_pass_smali.png)</section>
+                    <section data-markdown>“0x7f0c0053 = 2131492947”</section>
+                    <section data-markdown>![Uncrackable-Level1](images/m8/Reverzeme1/12_ids.png)</section>
+                    <section data-markdown>![Uncrackable-Level1](images/m8/Reverzeme1/13_edit_text_password.png)</section>                    
+                    <section data-markdown>![Uncrackable-Level1](images/m8/Reverzeme1/14_modified_table.png)</section>                    
+                    <section data-markdown>
+                    Re build:
+
+                    1. apktool b
+                    2. zipalign
+                    3. apksigner
+                    4. adb install modified_apk
+                    </section>
+                    <section data-markdown>![Uncrackable-Level1](images/m8/Reverzeme1/18_reverzeme_final_2.png)</section>                    
+                    <section data-markdown>11. **Práctica**: Protecciones binarias #2 (emulation check) **biss**</section>
+                    <section data-markdown>Resuelva el mismo desafío sin modificar los strings de la aplicación</section>
+                    <section data-markdown>Quien lo resuelva primero se gana un vino :)</section>
+
+                    <section data-markdown>12. **Práctica**: Protecciones binarias #3 (All in one) Uncrackable3</section>
+                    <section data-markdown>Creo que ya entendimos el concepto, ¿Alguno se anima?</section>
+                </section> 
+                <section> 
+                    <section data-markdown>13. **Práctica**: Practica análisis dinámico</section>
+                    <section data-markdown>Como ya vimos en la práctica #9 (slide 172), utilizamos Frida para instrumentar dinámicamente</section>
+                    <section data-markdown>¿Qué es el análisis dinámico?</section>
+                    <section data-markdown>Es aquel análisis que hacemos en tiempo de ejecución, donde pondemos analizar y modificar por ejemplo, el comportamiento de la aplicación</section>
+                    <section data-markdown>¿Qué ejemplos se les ocurren?</section>
+                    <section data-markdown>
+                    Como ya configuramos Frida en el ejercicio #9 ahora vamos a ampliar un poco más</section>
+                    <section data-markdown>Vamos a ejecutar Frida en el dispositivo (como vimos anteriormente)</section> 
+                    <section data-markdown>
+                    * $cd /data/local/tmp
+                
+                    * $./frida-server &
+                    </section> 
+                    <section data-markdown>Luego podemos hacer un **$frida -h**
+   
+    Usage: frida [options] target
+    Options:
+        --version             show program's version number and exit
+        -h, --help            show this help message and exit
+        -D ID, --device=ID    connect to device with the given ID
+        -U, --usb             connect to USB device
+        -R, --remote          connect to remote frida-server
+        -H HOST, --host=HOST  connect to remote frida-server on HOST
+        -f FILE, --file=FILE  spawn FILE
+        -n NAME, --attach-name=NAME attach to NAME
+        -p PID, --attach-pid=PID attach to PID
+        --debug               enable the Node.js compatible script debugger
+        --enable-jit          enable JIT
+        -l SCRIPT, --load=SCRIPT load SCRIPT
+        -c CODESHARE_URI, --codeshare=CODESHARE_URI load CODESHARE_URI
+        -e CODE, --eval=CODE  evaluate CODE
+        -q quiet mode (no prompt) and quit after -l and -e
+        --no-pause automatically start main thread after startup
+        -o LOGFILE, --output=LOGFILE output to log file                       
+                    </section>
+                    <section data-markdown>
+                    Listar los dispositivos
+
+                        $frida-ls-devices 
+                        Id                Type    Name        
+                        ----------------  ------  ------------
+                        local             local   Local System
+                        020240423c9a95f0  usb     LGE Nexus 5X
+                        tcp               remote  Local TCP   
+                    </section>
+                    <section data-markdown>También podemos usar el siguiente comando para ver el **PID**, el **identificador** de las aplicaciones y la conexión vía **USB**</section>
+                    <section data-markdown>
+                        
+    $frida-ps -Uai 
+    
+    PID   | Name                    | Identifier
+    3583  | Android System          | android
+    12477 | Blocked Numbers Storage | com.android.providers.blockednumber
+    3583  | Call Management         | com.android.server.telecom
+    14174 | Chrome                  | com.android.chrome
+    13903 | Clock                   | com.google.android.deskclock
+    12477 | Contacts Storage        | com.android.providers.contacts
+    7489  | Device Health Services  | com.google.android.apps.turbo
+    13140 | Download Manager        | com.android.providers.downloads
+    12647 | Drive                   | com.google.android.apps.docs
+    3583  | Fused Location          | com.android.location.fused
+    3913  | Gboard                  | com.google.android.inputmethod.latin
+                    </section>
+                    <section data-markdown>
+                    Podemos utilizar grep
+
+                        $frida-ps -Uai | grep sieve
+                        14393  Sieve          
+                    
+                    </section>                    
+                    <section data-markdown>¿Bueno, ahora si analizamos el código de la aplicación que podemos ver?</section>
+                    <section data-markdown>Decompilen *sieve.apk* si no lo hicieron, y análicemos el **MainActivity**</section>
+                    <section data-markdown>¿Alguno me puede decir que hace *checkKeyResult*?</section>
+                    <section data-markdown>
+                    
+                        public void checkKeyResult(boolean status) {
+                            if (status) {
+                                loginSuccessful();
+                            } else {
+                                loginFailed();
+                            }
+
+                    </section>
+                    <section data-markdown>
+                    1. ¿Como podemos evitar esa validación? 
+                    2. De manera estática y ahora lo vamos a hacer de manera dinámica</section>
+                    <section data-markdown>
+                    ¿Quién se anima a hacerlo de manera estática? ¡Se gana un **vino**!
+                
+                    ¡Me muestra la resolución y listo!</section>
+                    <section data-markdown>Si analizamos el siguiente código</section>
+                    <section data-markdown>
+                        
+    Java.perform(function (){
+        console.log('');
+        console.log('[*] Iniciando el bypass del login');
+        console.log('[*] Presionen el boton "Sign in"');
+        var Activity = Java.use('com.mwr.example.sieve.MainLoginActivity');
+        Activity.checkKeyResult.implementation = function(bypass) {
+        send('checkKeyResult');
+        console.log('[*] Cambiamos el valor dentro de checkKeyResult')
+        this.checkKeyResult(true);
+        console.log('[*] ¡Funciono el bypass!');
+        }
+    });
+
+                    </section>
+                    <section data-markdown>
+                    
+        $frida -U -f com.mwr.example.sieve -l bypassLogin.js --no-pause
+            ____
+           / _  |   Frida 12.5.3 - A world-class dynamic instrumentation toolkit
+          | (_| |
+           > _  |   Commands:
+          /_/ |_|       help      -> Displays the help system
+          . . . .       object?   -> Display information about 'object'
+          . . . .       exit/quit -> Exit
+          . . . .
+          . . . .   More info at http://www.frida.re/docs/home/
+        Spawned `com.mwr.example.sieve`. Resuming main thread!                  
+        [LGE Nexus 5X::com.mwr.example.sieve]->  
+        [*] Iniciando el bypass del login
+        [*] Presionen el boton "Sign in"
+        message: {'type': 'send', 'payload': 'checkKeyResult'} data: None
+        [*] Cambiamos el valor dentro de checkKeyResult
+        [*] ¡Funciono el bypass!
+
+                    </section>
+                    <section data-markdown>![LoginBypass1](images/m8/loginbypass.png)</section>
+                    <section data-markdown>![LoginBypass2](images/m8/loginbypass2.png)</section>
+                    <section data-markdown>De la misma forma que se armo el script, se puede utlizar distintos scripts vistos anteriormente</section>
+                    <section data-markwown>Pueden ver dentro de la carpeta material distintos ejemplos descargados, para analizar y utilizar como punto de partida</section>
+                    <section data-markdown>Como el [fridaantiroot](https://codeshare.frida.re/@dzonerzy/fridantiroot/) y ver si funciona con alguna de las aplicaciones que vimos, o adaptarlo a nuestras necesidades</section>
+                    <section data-markdown>[AES Info](https://codeshare.frida.re/@dzonerzy/aesinfo/)</section>
+                    <section data-markdown>
+                    [Location Spoofing](https://codeshare.frida.re/@dzervas/android-location-spoofing/)
+                
+                    frida -U -f com.mwr.example.sieve -l locationSpoofing.js --no-pause</section>
+                    <section data-markdown>Podríamos tomar el siguiente ejemplo y modificarlo para hacer el bypass al modo debuggable</section>
+                    <section data-markdown>![LoginBypass1](images/m8/debuggableFrida.png)</section>
+                    <section data-markdown>
+
+                        
+                setTimeout(function() {
+                    Java.perform(function() {
+                        console.log("");
+                        console.log("[.] Debug check bypass");
+                
+                        var Debug = Java.use('android.os.Debug');
+                        Debug.isDebuggerConnected.implementation = function(){
+                            //console.log('isDebuggerConnected Bypassed !');
+                            return false;
+                        }
+                    });
+                }, 0);
+
+                    </section>
+                    <section data-markdown>¿Recuerdan la implementación de **UnCrackable-Level1**?</section>
+                    <section data-markdown>
+
+    package sg.vantagepoint.a;
+    import android.content.Context;
+    
+    public class b {
+    public static boolean a(Context context) {
+    return (context.getApplicationContext().getApplicationInfo().flags & 2) != 0;
+    }}
+
+                    </section>      
+                    <section data-markdown>¿Se animan?</section>              
+                    <section data-markdown>[objection](https://github.com/sensepost/objection)</section>
+                    <section data-markdown>
+                    "objection **is a runtime mobile exploration toolkit**, powered by Frida, built to help you assess the security posture of your mobile applications, without needing a jailbreak"
+                    </section>
+                    <section data-markdown>
+                    * Supports both iOS and Android.
+                    * Inspect and interact with container file systems.
+                    * Bypass SSL pinning.
+                    * Dump keychains.
+                    * Perform memory related tasks, such as dumping & patching (ya veremos **Fridump**)
+                    * Explore and manipulate objects on the heap.                        
+                    </section>
+                    <section data-markdown>
+                    Instalamos
+
+                        $pip3 install objection</section>
+                    <section data-markdown>[Video Objection](https://asciinema.org/a/8O6fjDHOdVKgPYeqITHXPp6HV)</section>
+                    <section data-markdown>
+
+
+            $objection --gadget "owasp.mstg.uncrackable1" explore
+            Using USB device `LGE Nexus 5X`
+            Agent injected and responds ok!
+            [tab] for command suggestions
+            owasp.mstg.uncrackable1 on (google: 8.1.0) [usb] #
+
+                    </section>
+                    <section data-markdown>![LoginBypass1](images/m8/objection.png)</section>
+                    <section data-markdown>YAPA I: [Fridump](https://github.com/Nightbringer21/fridump)</section>
+                    <section data-markdown>¿Para qué se les ocurre que podemos usar esta herramienta?</section>
+                    <section data-markdown>¿Qué beneficio podemos obtener?</section>
+                    <section data-markdown>
+                    Instalación
+
+                        $git clone https://github.com/Nightbringer21/fridump.git
+                        $python fridump.py -h
+                    </section>                      
+                    <section data-markdown>
+                        
+    $ fridump [-h] [-o dir] [-U] [-v] [-r] [-s] [--max-size bytes] process
+                    
+                    </section>  
+                    <section data-markdown>
+
+            $python3.7 fridump.py -h
+            usage: fridump [-h] [-o dir] [-U] [-v] [-r] [-s] [--max-size bytes] process
+            positional arguments: process the process that you will be injecting to.
+            optional arguments:
+            -h, --help         show this help message and exit
+            -o dir, --out dir  provide full output directory path. (def: 'dump')
+            -U, --usb          device connected over usb
+            -v, --verbose      verbose
+            -r, --read-only    dump read-only parts of memory. More data, more errors
+            -s, --strings      run strings on all dump files. Saved in output dir.
+            --max-size bytes   maximum size of dump file in bytes (def: 20971520)
+                            
+                    </section>  
+                    <section data-markdown>
+                    
+            0. $ frida-ps -Uia  
+            1. Ejecutar frida /data/local/tmp/frida-server
+                root@k3g:/data/local/tmp # ./frida-server
+            2. $python3.7 fridump.py -U -s owasp.mstg.uncrackable1 -o owasp.mstg.uncrackable1  --max-size 200000
+            3. Luego strings * y listo
+
+                    </section>  
+                    <section data-markdown>![fridump](images/m8/fridump.png)</section>  
+                    <section data-markdown>![fridump](images/m8/fridump2.png)</section>  
+                    <section data-markdown>![fridump](images/m8/fridump3.png)</section>  
+                    <section data-markdown>¿Dudas? ¿Preguntas?</section>  
+                    <section data-markdown>¡GRACIAS!</section>
+                </section>                                                                                        
+                <section> 
+                    <section data-markdown>14. **Práctica**: Ransomware I </section>                    
+                    <section data-markdown>Recuerden es un **Ransomware**, si lo ejecutan en el dispositivo les va a cifrar el mismo</section>
+                    <section data-markdown>**Tengan en cuenta que es una muestra de *MALWARE REAL* y deben tratarla como tal** </section>
+                    <section data-markdown>* Les recomiendo, si no quieren perder la configuración que realizaron en las VM's hagan un *clone* de la virtual</section>
+                    <section data-markdown>
+                    * Pueden ayudarse con las herramientas de análisis estático y dinámico que vimos
+                    * Consideren isolar en caso de ser necesario la red de la maquina virtual, no lo ejecuten hasta no estar **seguros** de su comportamiento</section>
+                    <section data-markdown>
+                    **Por último hagan las pruebas a conciencia, es el Ejercio FINAL**</section>
+                    <section data-markdown>**EXAMEN FINAL**</section>
+                    <section data-markdown>
+                    **¿Cuál sería el objetivo?**
+                
+                    1. Busque la KEY de cifrado del Ransomware
+                    2. Identifique cuales son los archivos que cifra y ¿Porqué cifra esos archivos en particular?
+                    3. ¿Realiza alguna conexión a un sitio externo? ¿Como puede justificarlo?
+                    4. ¿La aplicación simula ser una aplicación y en particular es otra? ¿Puede detectar con evidencia dicho comportamiento?</section>
+                    <section data-markdown>
+                    5. En particular, hablando de almacenamiento del dispositivo donde guarda la información cifrada? ¿Por qué es posible esto? Que vimos durante el curso que justifica dicha acción.
+                    6. ¿Encontró alguna protección asociada al Malware que evite que la aplicación sea analizada? Justifique
+                    7. ¿Qué información brinda el certificado con el cual se firmo la aplicación? </section>
+                    <section data-markdown>
+                    8. ¿Qué indican las siguientes lineas de código? ¿Qué hace en particular home.html?
+
+                            if (!this.firstLoad) {
+                                this.firstLoad = true;
+                                Eng_1.loadUrl("file:///android_asset/home.html");}
+                    9. Realice una solución para descifrar la información cifrada
+                    10. Para todas las respuestas anteriores, genere la evidencia, responda y genere un archivo PDF. Se acepta capturas de pantalla con la justificación de la evidencia.
+                    </section>
+                    <section data-markdown>El PDF debe ser enviado a mi correo jurbano@afip.gob.ar o entregarmelo personalmente</section>
+
+                    <section data-markdown>¿Dudas? ¿Preguntas?</section>
+                    <section data-markdown>**¡Suerte en la resolución!**</section>
+                    <section data-markdown>
+                    Ultimas dos Notas
+                    
+                    1. Voy a enviarles para que me completen una encuesta.</section>
+                    <section data-markdown>
+                    2. ¿Fecha para el asado?</section>
+                    <section data-markdown>**¡GRACIAS!**</section>
+
+				</section>
+
+                    </section>                                                                                                                        
+        
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				slideNumber: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

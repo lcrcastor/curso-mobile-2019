@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:focusableInTouchMode="true" android:importantForAccessibility="no" style="@style/MainLayout">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:importantForAccessibility="yes">
+        <TextView android:id="@+id/F32_50_lbl_titulo" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="@string/ID_4443_DEBIN_CONFIRMARANULACIONDEDEBIN" style="@style/generic_title"/>
+        <View style="@style/SeparatorSectionTitle"/>
+    </LinearLayout>
+    <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="no">
+        <ScrollView android:id="@+id/scrollDetVAbm" android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/F32_50_row_botones">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="no">
+                <RelativeLayout android:gravity="center" android:id="@+id/F32_50_rll_abm_importe" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="33sp" android:textColor="@color/grey_medium_dark" android:id="@+id/F32_50_lbl_moneda" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="13dp" android:text="" style="@style/generic_fontLight"/>
+                    <TextView android:textSize="33sp" android:textColor="@color/grey_medium_dark" android:id="@+id/F32_50_lbl_importe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="13dp" android:text="" android:layout_toRightOf="@+id/F32_50_lbl_moneda" style="@style/generic_fontLight"/>
+                </RelativeLayout>
+                <TextView android:textColor="@color/grey_medium_dark" android:gravity="center" android:id="@+id/F32_50_lbl_solicitante" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" fontPath="fonts/OpenSans-Bold.otf"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="22dp" android:importantForAccessibility="yes">
+                    <RelativeLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                        <TextView android:gravity="center_horizontal" android:id="@+id/F32_50_TXT_CUIT" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F32_13_txt_cuit" android:contentDescription="@string/AC_CUIT2" style="@style/generic_list_data_column2_bottom_text"/>
+                        <TextView android:gravity="center_horizontal" android:id="@+id/F32_50_lbl_solicitanteDato" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:text="" android:layout_toRightOf="@+id/F32_50_TXT_CUIT" style="@style/generic_list_data_column2_bottom_text"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <View style="@style/SeparatorSectionTitle"/>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes" style="@style/generic_margin_row">
+                    <TextView android:id="@+id/F32_50_lbl_cbu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4421_DEBIN_CBU" style="@style/generic_row_label_conf"/>
+                    <TextView android:gravity="end" android:id="@+id/F32_50_lbl_data_cbu" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F32_50_lbl_cbu" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                </RelativeLayout>
+                <View style="@style/SeparatorListView"/>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F32_50_rowAlias" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes" style="@style/generic_margin_row">
+                        <TextView android:id="@+id/F32_50_lbl_alias" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4422_DEBIN_ALIAS" style="@style/generic_row_label_conf"/>
+                        <TextView android:gravity="end" android:id="@+id/F32_50_lbl_data_alias" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F32_50_lbl_alias" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorListView"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F32_50_row_banco" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_margin_row">
+                        <TextView android:id="@+id/F32_50_lbl_banco" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4423_DEBIN_BANCO" style="@style/generic_row_label_conf"/>
+                        <TextView android:gravity="end" android:id="@+id/F32_50_lbl_data_banco" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F32_50_lbl_banco" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorListView"/>
+                </LinearLayout>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes" style="@style/generic_margin_row">
+                    <TextView android:id="@+id/F32_50_lbl_estado" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4414_DEBIN_ESTADO" style="@style/generic_row_label_conf"/>
+                    <TextView android:gravity="end" android:id="@+id/F32_50_lbl_data_estado" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F32_50_lbl_estado" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                </RelativeLayout>
+                <View style="@style/SeparatorListView"/>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes" style="@style/generic_margin_row">
+                    <TextView android:id="@+id/F32_50_lbl_cDebito" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4433_DEBIN_CUENTADEACREDITACION" style="@style/generic_row_label_conf"/>
+                    <TextView android:gravity="right" android:id="@+id/F32_50_lbl_data_cDebito" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F32_50_lbl_cDebito" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                    <TextView android:gravity="end" android:id="@+id/F32_50_lbl_data_cDebito_saldo" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_below="@+id/F32_50_lbl_data_cDebito" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                </RelativeLayout>
+                <View style="@style/SeparatorListView"/>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes" style="@style/generic_margin_row">
+                    <TextView android:id="@+id/F32_50_lbl_fechaSolicitud" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4425_DEBIN_FECHADESOLICITUD" style="@style/generic_row_label_conf"/>
+                    <TextView android:gravity="end" android:id="@+id/F32_50_lbl_data_fechaSolicitud" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F32_50_lbl_fechaSolicitud" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                </RelativeLayout>
+                <View style="@style/SeparatorListView"/>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes" style="@style/generic_margin_row">
+                    <TextView android:id="@+id/F32_50_lbl_fechaVencimiento" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4426_DEBIN_FECHADEVTO" android:contentDescription="@string/AC_VENCIMIENTO" style="@style/generic_row_label_conf"/>
+                    <TextView android:gravity="end" android:id="@+id/F32_50_lbl_data_fechaVencimiento" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F32_50_lbl_fechaVencimiento" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                </RelativeLayout>
+                <View style="@style/SeparatorListView"/>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes" style="@style/generic_margin_row">
+                    <TextView android:id="@+id/F32_50_lbl_idDebin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4427_DEBIN_IDDEBIN" android:contentDescription="@string/CONTENT_DESCRIPTION_ID_DEBIN" style="@style/generic_row_label_conf"/>
+                    <TextView android:gravity="end" android:id="@+id/F32_50_lbl_data_idDebin" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F32_50_lbl_idDebin" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                </RelativeLayout>
+                <View style="@style/SeparatorListView"/>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes" style="@style/generic_margin_row">
+                    <TextView android:id="@+id/F32_50_lbl_concepto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4428_DEBIN_CONCEPTO" style="@style/generic_row_label_conf"/>
+                    <TextView android:gravity="end" android:id="@+id/F32_50_lbl_data_concepto" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F32_50_lbl_concepto" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                </RelativeLayout>
+                <View style="@style/SeparatorListView"/>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F32_50_rowDescripcion" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_margin_row">
+                        <TextView android:id="@+id/F32_50_lbl_descripcion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="@string/ID_4429_DEBIN_DESCRIPCION" style="@style/generic_row_label_conf"/>
+                        <TextView android:gravity="end" android:id="@+id/F32_50_lbl_data_descripcion" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="30dp" android:text="" android:layout_toRightOf="@+id/F32_50_lbl_descripcion" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorListView"/>
+                </LinearLayout>
+                <TextView android:gravity="center" android:layout_gravity="center" android:id="@+id/F32_50_lbl_data_leyenda" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="36dp" android:layout_marginTop="8dp" android:layout_marginRight="36dp" android:text="" style="@style/generic_leyend_light"/>
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout android:orientation="vertical" android:id="@+id/F32_50_row_botones" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <Button android:id="@+id/F32_50_BTN_CONFIRMAR_DEBIN" android:visibility="visible" android:text="@string/F24_31_btn_confirmar" android:layout_alignParentBottom="true" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

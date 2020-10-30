@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <View style="@style/SeparatorSubSection"/>
+    <FrameLayout android:id="@+id/scrollView" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <android.support.v4.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@+id/layout_pdf" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@+id/logo_pdf" android:padding="@dimen/general_margin" android:visibility="visible" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/img_santander_logo_red"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="24sp" android:textColor="@color/black" android:gravity="center" android:padding="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/comprobante_de_pago" android:fontFamily="@font/open_sans_bold"/>
+                            <TextView android:textSize="14sp" android:textColor="@color/black" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/recarga_label_sube" android:fontFamily="@font/open_sans_semi_bold"/>
+                            <TextView android:textSize="32sp" android:textColor="@color/generic_black" android:gravity="center" android:id="@+id/tv_monto" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/open_sans_bold"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <View android:layout_width="match_parent" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/SeparatorSectionLight"/>
+                            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="2">
+                                <TextView android:textColor="@color/black_light" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/recarga_label_tarjeta" android:layout_weight="1" style="generic_row_data_comp"/>
+                                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                                    <TextView android:textSize="14sp" android:textColor="@color/black" android:gravity="right" android:id="@+id/tv_tarjeta" android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/open_sans_bold"/>
+                                    <TextView android:textSize="14sp" android:textColor="@color/black" android:gravity="right" android:id="@+id/tv_tarjeta_alias" android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/open_sans_light"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <View android:layout_width="match_parent" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/SeparatorSectionLight"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="2">
+                                <TextView android:textColor="@color/black" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/recarga_label_medio_pago" android:layout_weight="1"/>
+                                <TextView android:textSize="14sp" android:textColor="@color/black" android:gravity="right" android:id="@+id/tv_medio_pago" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/open_sans_bold"/>
+                            </LinearLayout>
+                            <View android:layout_width="match_parent" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/SeparatorSectionLight"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="2">
+                                <TextView android:textColor="@color/black" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/recarga_label_fecha" android:layout_weight="1"/>
+                                <TextView android:textSize="14sp" android:textColor="@color/black" android:gravity="right" android:id="@+id/tv_fecha" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/open_sans_bold"/>
+                            </LinearLayout>
+                            <View android:layout_width="match_parent" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/SeparatorSectionLight"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="2">
+                                <TextView android:textColor="@color/black_light" android:id="@+id/nro_comprobante" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/recarga_label_nro_comprobante" android:layout_weight="1"/>
+                                <TextView android:textSize="14sp" android:textColor="@color/black_light" android:gravity="right" android:id="@+id/tv_nro_comprobante" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/open_sans_bold"/>
+                            </LinearLayout>
+                            <View android:layout_width="match_parent" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/SeparatorSectionLight"/>
+                            <TextView android:id="@+id/tv_terminos_condiciones" android:padding="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/text_legend_small"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/layout_buttons" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/general_margin">
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="2">
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/layout_download" android:background="@drawable/gray_border_small_radius" android:layout_width="150dp" android:layout_height="60dp" android:layout_marginRight="4dp">
+                            <ImageView android:background="@color/white" android:layout_width="100dp" android:layout_height="33dp" android:src="@drawable/ic_download_red_b"/>
+                            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/descargar" style="@style/generic_small_text"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/layout_share" android:background="@drawable/gray_border_small_radius" android:layout_width="150dp" android:layout_height="60dp" android:layout_marginLeft="4dp">
+                            <ImageView android:background="@color/white" android:layout_width="34dp" android:layout_height="34dp" android:src="@drawable/ic_share_red_b"/>
+                            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/compartir" style="@style/generic_small_text"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView android:textColor="@color/red_medium_light" android:id="@+id/btn_realizar_recarga" android:visibility="gone" android:layout_marginBottom="2dp" android:text="@string/recarga_label_realizar_recarga" android:textAllCaps="false" style="@style/generic_boton_blanco_borderless"/>
+                    <Button android:id="@+id/btn_volver_home" android:visibility="gone" android:layout_marginTop="2dp" android:text="@string/recarga_label_volver_a_home" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+                    <View android:layout_width="wrap_content" android:layout_height="20dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </FrameLayout>
+</LinearLayout>

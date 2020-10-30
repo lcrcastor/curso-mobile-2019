@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="no">
+    <include android:id="@+id/title_page1" layout="@layout/title_simple_layout"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="no">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="no">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:gravity="bottom|center_vertical|center_horizontal|center" android:layout_gravity="bottom" android:id="@+id/idImporteMaximoTV" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/general_margin" android:text="@string/ID121_CREDITS_MAIN_LBL_MAXIMPORT" android:contentDescription="@string/ACCESSIBILITY_CREDITOS_IMPORTE_MAXIMO" style="@style/generic_topDescription_amount_semibold"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="80dp">
+                    <ar.com.santander.rio.mbanking.view.AmountView android:textColor="@color/green" android:gravity="center" android:id="@+id/credito.importeMaximo" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="@dimen/general_margin" app:minTextSize="@dimen/text_size_amount_min" style="@style/fontLight"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="no">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:importantForAccessibility="yes">
+                    <View style="@style/SeparatorSection"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="3" style="@style/generic_margin_row">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2">
+                            <TextView android:gravity="center_vertical" android:layout_gravity="bottom" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/ID122_CREDITS_MAIN_LBL_MINIMPORT" style="@style/generic_row_label_form"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="right" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                            <ar.com.santander.rio.mbanking.view.AmountView android:layout_gravity="center" android:id="@+id/credito.importeMinimo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/generic_row_data_form"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:importantForAccessibility="yes">
+                    <View style="@style/SeparatorSection"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="3" style="@style/generic_margin_row">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2">
+                            <TextView android:gravity="center_vertical" android:layout_gravity="bottom" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/ID123_CREDITS_MAIN_LBL_MAXCUOTE" style="@style/generic_row_label_form"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="right" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                            <ar.com.santander.rio.mbanking.view.AmountView android:layout_gravity="center" android:id="@+id/credito.cuotaMaxima" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/generic_row_data_form"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <View style="@style/SeparatorSectionTitle"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="no">
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:layout_gravity="left" android:id="@+id/vLabelFilterSelected" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/ID124_CREDITS_MAIN_LBL_RATEANDTERM" android:contentDescription="@string/ID124_CREDITS_MAIN_LBL_RATEANDTERM" style="@style/generic_title"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSubSection"/>
+            <LinearLayout android:background="@color/grey_extra_light" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="6" android:importantForAccessibility="yes" style="@style/generic_margin_row">
+                    <TextView android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/ID125_CREDITS_MAIN_LBL_RATETYPE_SOLICITUD_TIPO_PRESTAMO" android:layout_weight="1.5" android:contentDescription="@string/ID125_CREDITS_MAIN_LBL_RATETYPE_SOLICITUD_TIPO_PRESTAMO_DESCRIPTION" style="@style/generic_list_data_column2"/>
+                    <TextView android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/TC449812_Det_Prestamo_Prendarios_UVAS" android:layout_weight="2.5" android:contentDescription="@string/ID126_CREDITS_MAIN_LBL_YEARLYRATE" style="@style/generic_list_title_3columns"/>
+                    <TextView android:gravity="left|center_vertical|center_horizontal|center" android:layout_gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/ID127_CREDITS_MAIN_LBL_MAXMINCUOTES" android:layout_weight="2.5" android:contentDescription="@string/ACCESSIBILITY_CREDITOS_CUOTAS_MAX_MIN" style="@style/generic_list_title_3columns"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

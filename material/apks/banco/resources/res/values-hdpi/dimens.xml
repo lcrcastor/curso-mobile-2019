@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="bloque_texto_text_size">13dp</dimen>
+    <dimen name="carruselHome_text_size">11sp</dimen>
+    <dimen name="com_facebook_picker_divider_width">1px</dimen>
+    <dimen name="default_dialog_margin">20dp</dimen>
+    <dimen name="detalle_text_size">11dp</dimen>
+    <dimen name="generic_menu_item_inactivo_text_size">4sp</dimen>
+    <dimen name="height_button_map">40dp</dimen>
+    <dimen name="home_button_padding">12dp</dimen>
+    <dimen name="home_principal_button">5sp</dimen>
+    <dimen name="image_popup_width">60dp</dimen>
+    <dimen name="list_title_fondos_text_size">13sp</dimen>
+    <dimen name="login_edittext_size">35dp</dimen>
+    <dimen name="map_detail">180dp</dimen>
+    <dimen name="min_height_detail_footer">250dp</dimen>
+    <dimen name="min_width_map_popup">250dp</dimen>
+    <dimen name="navigation_drawer_width">280dp</dimen>
+    <dimen name="options_pop_up_constraint_height_max">549dp</dimen>
+    <dimen name="promocionesHome_text_size">20sp</dimen>
+    <dimen name="tab_height">45dp</dimen>
+    <dimen name="titular1_big_text_size">24sp</dimen>
+    <dimen name="titular1_text_size">14dp</dimen>
+    <dimen name="titulo2_small_text_size">10dp</dimen>
+    <dimen name="titulo2_text_size">13dp</dimen>
+    <dimen name="weight_button_map">40dp</dimen>
+</resources>

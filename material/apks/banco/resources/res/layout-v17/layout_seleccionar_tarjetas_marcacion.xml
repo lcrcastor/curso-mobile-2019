@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:id="@+id/F26_04_LBL_TITLE" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="@string/ID3991_MARCACION_VIAJE_TITLE_SELECCIONAR_TARJETAS" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" style="@style/generic_title"/>
+        <View android:id="@+id/F26_04_SEPARATOR_TITLE" android:visibility="gone" android:layout_below="@+id/F26_04_LBL_TITLE" style="@style/SeparatorSectionTitle"/>
+    </LinearLayout>
+    <ar.com.santander.rio.mbanking.view.AnimatedExpandableListView android:id="@+id/F26_04_EXP_LST_TARJETAS" android:layout_width="match_parent" android:layout_height="wrap_content" android:groupIndicator="@null" android:dividerHeight="0dp" android:layout_above="@+id/F26_04_BTN_GUARDAR" android:layout_below="@+id/title" android:headerDividersEnabled="false" android:footerDividersEnabled="false"/>
+    <Button android:id="@+id/F26_04_BTN_GUARDAR" android:text="@string/IDXX_MARCACION_VIAJE_BTN_SELECCIONAR_TARJETAS_GUARDAR" android:layout_alignParentBottom="true" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="@string/ID_4630_DEBIN_TIT_PREAUTORIZACIONES" android:contentDescription="@string/ID_TITTLE" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" style="@style/generic_title"/>
+        </LinearLayout>
+        <View style="@style/SeparatorSectionTitle"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15dp" android:layout_gravity="center" android:id="@+id/estadoDePreautorizacion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="25dp" android:layout_marginRight="18dp" android:layout_marginBottom="5dp" android:text="@string/ID_4631_DEBIN_TIT_ESTADO_PREAUTORIZACION" android:contentDescription="@string/ID_4631_DEBIN_TIT_ESTADO_PREAUTORIZACION" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" fontPath="fonts/OpenSans-Bold.otf" style="@style/generic_title"/>
+            <RelativeLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/buscadorDebin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentEnd="true">
+                <ImageView android:id="@+id/img_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="15dp" android:layout_marginBottom="12dp" android:src="@drawable/arrow_down" android:layout_alignParentRight="true" android:layout_marginStart="5dp" android:layout_alignParentEnd="true"/>
+                <TextView android:id="@+id/buscar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="12dp" android:layout_toLeftOf="@+id/img_arrow" android:layout_toStartOf="@+id/img_arrow" style="@style/generic_text_view_rojo_bold"/>
+            </RelativeLayout>
+            <View style="@style/SeparatorSectionTitle"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/F32_00_RESPUESTA_OK" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/cabeceraDebin" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_list_title_background">
+                <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="14dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                    <TextView android:layout_gravity="start" android:id="@+id/F32_01_lbl_solicitante_destinatario" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F32_00_4406" android:layout_alignParentLeft="true" android:contentDescription="@string/F32_00_4406_DESCRIPTION" android:layout_alignParentStart="true" style="@style/generic_list_title_fondos"/>
+                </RelativeLayout>
+                <View style="@style/SeparatorSection"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/sinDebinesPreAutorzaciones" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:layout_marginStart="18dp" android:layout_marginEnd="18dp">
+                <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/error_continuacion_b"/>
+                <TextView android:gravity="center" android:id="@+id/textoErrorPreAutorizaciones" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/F32_00_4409" style="@style/generic_leyend_light"/>
+            </LinearLayout>
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView android:id="@+id/F32_01_RCV_DEBINESS" android:visibility="visible" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </LinearLayout>
+</FrameLayout>

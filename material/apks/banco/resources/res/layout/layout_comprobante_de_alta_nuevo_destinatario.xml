@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:id="@+id/F23_04_SCR_COMPROBANTE" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/F23_04_LLN_BOTONES" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:id="@+id/F23_04_LBL_TITLE" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="@string/ID_3824_TRANSFERENCE_LBL_HIGH_RECIPIENT" style="@style/generic_title"/>
+            <View style="@style/SeparatorSectionTitle"/>
+            <TableLayout android:orientation="vertical" android:id="@+id/F23_04_TABLE" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:lineSpacingExtra="3dp">
+                <include layout="@layout/layout_bottom_receipt_share"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@+id/F23_04_LLN_BOTONES" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:id="@+id/F23_04_BTN_TRANSFERIR" android:text="@string/ID_3826_TRANSFERENCE_TRANSFERRING_RECIPIENT" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+        <Button android:id="@+id/F23_04_BTN_AGENDA" android:text="@string/ID_3803_TRANSFERENCE_AGENDA_DESRINATARIOS" android:textAllCaps="false" style="@style/generic_boton_blanco_border"/>
+    </LinearLayout>
+</RelativeLayout>

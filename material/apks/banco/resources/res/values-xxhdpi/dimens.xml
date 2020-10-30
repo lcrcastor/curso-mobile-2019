@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="bloque_texto_text_size">14dp</dimen>
+    <dimen name="carruselHome_text_size">11sp</dimen>
+    <dimen name="default_dialog_margin">20dp</dimen>
+    <dimen name="detalle_text_size">11dp</dimen>
+    <dimen name="generic_menu_item_inactivo_text_size">15sp</dimen>
+    <dimen name="height_button_map">60dp</dimen>
+    <dimen name="home_button_padding">12dp</dimen>
+    <dimen name="home_principal_button">11sp</dimen>
+    <dimen name="image_popup_width">70dp</dimen>
+    <dimen name="list_title_fondos_text_size">13sp</dimen>
+    <dimen name="login_edittext_size">40dp</dimen>
+    <dimen name="min_height_detail_footer">300dp</dimen>
+    <dimen name="min_width_map_popup">300dp</dimen>
+    <dimen name="navigation_drawer_width">320dp</dimen>
+    <dimen name="options_pop_up_constraint_height_max">620dp</dimen>
+    <dimen name="promocionesHome_text_size">22sp</dimen>
+    <dimen name="tab_height">55dp</dimen>
+    <dimen name="titular1_big_text_size">26dp</dimen>
+    <dimen name="titular1_text_size">20dp</dimen>
+    <dimen name="titulo2_small_text_size">11dp</dimen>
+    <dimen name="titulo2_text_size">15dp</dimen>
+    <dimen name="weight_button_map">60dp</dimen>
+</resources>

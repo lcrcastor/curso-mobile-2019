@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" style="@style/MainLayout">
+    <LinearLayout android:id="@+id/credit_cards_list_header_1_container" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:id="@+id/credit_cards_list_header_1" android:layout_margin="@dimen/general_margin" android:text="@string/ID228_CARDPAYMENT_MAIN_LBL_TITLE" style="@style/generic_title"/>
+    </LinearLayout>
+    <View style="@style/SeparatorSectionTitle"/>
+    <LinearLayout android:gravity="top" android:orientation="horizontal" android:id="@+id/credit_cards_list_header_2_container" android:background="@color/grey_extra_light" android:paddingLeft="@dimen/general_margin" android:paddingTop="5dp" android:paddingRight="@dimen/general_margin" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/credit_cards_list_header_2" android:background="@color/grey_extra_light" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="13dp" android:textColor="@color/generic_black" android:gravity="start" android:id="@+id/credit_cards_list_header_2_expire_date" android:paddingTop="@dimen/general_margin" android:paddingRight="@dimen/padding_item_data" android:paddingBottom="@dimen/padding_item_data" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/ID229_CARDPAYMENT_MAIN_LBL_ENDDDATE" android:layout_weight="80" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_FECHA_VTO" style="@style/generic_fontSemibold"/>
+            <TextView android:gravity="start" android:layout_gravity="bottom" android:id="@+id/credit_cards_list_header_2_credit_card" android:paddingTop="@dimen/general_margin" android:paddingRight="@dimen/padding_item_data" android:paddingBottom="@dimen/padding_item_data" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/ID230_CARDPAYMENT_MAIN_LBL_CARD" android:layout_weight="130" style="@style/generic_list_title_3columns"/>
+            <TextView android:gravity="end" android:layout_gravity="bottom" android:id="@+id/credit_cards_list_header_2_amount" android:paddingTop="@dimen/general_margin" android:paddingBottom="@dimen/padding_item_data" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="@string/ID231_CARDPAYMENT_MAIN_LBL_PAYMENTAMOUNT" android:layout_weight="65" style="@style/generic_list_title_3columns"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

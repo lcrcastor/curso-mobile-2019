@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/lLCalificacionRadioButton" android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <android.support.v7.widget.AppCompatRadioButton android:layout_gravity="center" android:id="@+id/rbRadio" android:layout_width="wrap_content" android:layout_height="wrap_content" app:buttonTint="@color/red_light"/>
+    <TextView android:textColor="@color/black" android:gravity="center" android:layout_gravity="center" android:id="@+id/tvText" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</LinearLayout>

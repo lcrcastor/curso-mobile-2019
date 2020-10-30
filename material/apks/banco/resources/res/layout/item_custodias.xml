@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="10dp" android:paddingTop="20dp" android:paddingRight="10dp" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+        <TextView android:textSize="14sp" android:textColor="#303030" android:id="@+id/tv_custodia_desc" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="25dp" android:layout_weight="0.6" android:lineSpacingExtra="6sp"/>
+        <TextView android:textSize="14sp" android:textColor="#333333" android:gravity="end" android:id="@+id/tv_custodia_tenencia_hoy" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.4" android:lineSpacingExtra="3sp"/>
+    </LinearLayout>
+    <View style="@style/SeparatorSubSection"/>
+</LinearLayout>

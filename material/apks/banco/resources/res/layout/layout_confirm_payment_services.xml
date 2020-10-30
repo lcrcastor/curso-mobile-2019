@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="bottom" android:id="@+id/wrapperBtn" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout style="@style/wrapperButtonRed">
+            <Button android:id="@+id/btnConfirmPayment" android:text="@string/ID212_PAYMENT_DETAIL_BTN_CONFIRM" style="@style/generic_boton_rojo"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <ScrollView android:id="@+id/svPageConfirm" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/wrapperBtn">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include layout="@layout/title_simple_layout"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/vgWrapperTableConfirmPayment" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

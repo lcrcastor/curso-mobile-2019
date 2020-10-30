@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" style="@style/MainLayout">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp">
+        <TextView android:id="@+id/F32_01_lbl_titulo" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="@string/ID_4413_DEBIN_BUSCARSOLICITUDESRECIBIDAS" style="@style/generic_title"/>
+        <View style="@style/SeparatorSectionTitle"/>
+    </LinearLayout>
+    <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:layout_marginStart="18dp" android:layout_marginEnd="18dp">
+        <LinearLayout android:id="@+id/lbl_estado" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="12dp" android:text="@string/ID_4414_DEBIN_ESTADO" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" style="@style/generic_row_label_form"/>
+        </LinearLayout>
+        <RelativeLayout android:orientation="horizontal" android:id="@+id/F32_01_row_estado" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/lbl_estado" android:layout_alignParentRight="true" android:layout_toEndOf="@+id/lbl_estado" android:layout_alignParentEnd="true" fontPath="fonts/OpenSans-Bold.otf">
+            <TextView android:id="@+id/F32_01_txt_estado" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="12dp" android:text="Pendientes" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/generic_row_data_selectable_form"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <View style="@style/SeparatorSection"/>
+    <LinearLayout android:background="@color/grey_light" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/grey_medium_dark" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="14dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="@string/ID_4415_DEBIN_FECHADEALTA" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" fontPath="fonts/OpenSans-Bold.otf"/>
+    </LinearLayout>
+    <View style="@style/SeparatorSection"/>
+    <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:layout_marginStart="18dp" android:layout_marginEnd="18dp">
+        <LinearLayout android:id="@+id/F32_01_lbl_fecha_desde" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:id="@+id/F32_01_label_fecha_desde" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="12dp" android:text="@string/ID_4416_DEBIN_FECHADESDE" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" style="@style/generic_row_label_form"/>
+        </LinearLayout>
+        <RelativeLayout android:orientation="horizontal" android:id="@+id/F32_01_row_fecha_desde" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/F32_01_lbl_fecha_desde" android:layout_alignParentRight="true" android:layout_toEndOf="@+id/F32_01_lbl_fecha_desde" android:layout_alignParentEnd="true" fontPath="fonts/OpenSans-Bold.otf">
+            <TextView android:id="@+id/F32_01_txt_fecha_desde" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="12dp" android:text="12/07/2017" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/generic_row_data_selectable_form"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <View style="@style/SeparatorSection"/>
+    <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:layout_marginStart="18dp" android:layout_marginEnd="18dp">
+        <LinearLayout android:id="@+id/F32_01_lbl_fecha_hasta" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:id="@+id/F32_01_label_fecha_hasta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="12dp" android:text="@string/ID_4417_DEBIN_FECHAHASTA" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" style="@style/generic_row_label_form"/>
+        </LinearLayout>
+        <RelativeLayout android:orientation="horizontal" android:id="@+id/F32_01_row_fecha_hasta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/F32_01_lbl_fecha_hasta" android:layout_alignParentRight="true" android:layout_toEndOf="@+id/F32_01_lbl_fecha_hasta" android:layout_alignParentEnd="true" fontPath="fonts/OpenSans-Bold.otf">
+            <TextView android:id="@+id/F32_01_txt_fecha_hasta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="12dp" android:text="12/07/2017" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/generic_row_data_selectable_form"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <View style="@style/SeparatorSection"/>
+    <Button android:id="@+id/F32_01_BTN_BUSCAR_DEBIN" android:text="@string/ID_4405_DEBIN_BUSCAR" android:layout_alignParentBottom="true" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+</LinearLayout>

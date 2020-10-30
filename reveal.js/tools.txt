@@ -1,0 +1,16 @@
+Herramientas configuradas en la maquina del curso:
+
+drozer -> https://labs.mwrinfosecurity.com/tools/drozer/
+jadx -> https://github.com/skylot/jadx
+apktool -> https://ibotpeaches.github.io/Apktool/
+ADB -> https://developer.android.com/studio/command-line/adb?hl=es-419
+cfr -> https://www.benf.org/other/cfr/
+dex2jar -> https://github.com/pxb1988/dex2jar
+Genymotion -> https://www.genymotion.com/
+frida -> pip install frida-tools
+frida-tools -> pip install frida-tools
+radare2 https://github.com/radareorg/radare2 
+pidcat https://github.com/JakeWharton/pidcat
+MobSF https://github.com/MobSF/Mobile-Security-Framework-MobSF
+qark  https://github.com/linkedin/qark
+Adhrit https://github.com/abhi-r3v0/Adhrit

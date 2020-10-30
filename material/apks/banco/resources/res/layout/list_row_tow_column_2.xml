@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/wrapperRow" android:padding="0dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/generic_margin_row">
+        <TextView android:textColor="@color/grey_dark" android:gravity="left" android:id="@+id/rowLabel" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LABEL" android:layout_toLeftOf="@+id/rowContent" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:importantForAccessibility="no" style="@style/LabelForm"/>
+        <TextView android:ellipsize="end" android:id="@+id/rowContent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="VALUE" android:singleLine="true" android:maxLength="20" android:layout_alignTop="@+id/rowLabel" android:layout_alignParentRight="true" android:importantForAccessibility="no" style="@style/ValueForm"/>
+    </RelativeLayout>
+    <View style="@style/SeparatorSection"/>
+</LinearLayout>

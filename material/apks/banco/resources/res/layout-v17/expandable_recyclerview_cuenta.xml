@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/expandable_recyclerview_cuenta" android:background="@color/leyenda_gris" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:id="@+id/tvNroDeCuenta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14dp" android:layout_marginTop="10dp" android:layout_marginBottom="5dp" android:layout_marginStart="14dp" style="@style/title_item_expandable_cuentas"/>
+        <TextView android:id="@+id/tvIntervinientesCuenta" android:layout_width="300dp" android:layout_height="wrap_content" android:layout_marginLeft="14dp" android:layout_marginBottom="5dp" android:maxLines="1" android:minLines="1" android:layout_below="@+id/tvNroDeCuenta" android:layout_marginStart="14dp" style="@style/generic_list_data_column1"/>
+        <ImageView android:id="@+id/downArrow" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="15dp" android:layout_marginTop="15dp" android:layout_marginRight="15dp" android:src="@drawable/arrow_down" android:tint="@color/black" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_marginStart="15dp" android:layout_marginEnd="15dp" android:layout_alignParentEnd="true"/>
+        <TextView android:id="@+id/tvTotalPesosCuenta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14dp" android:layout_marginBottom="15dp" android:layout_below="@+id/tvIntervinientesCuenta" android:layout_marginStart="14dp" style="@style/generic_list_data_column2"/>
+        <TextView android:id="@+id/tvTotalDolaresCuenta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_toRightOf="@+id/tvTotalPesosCuenta" android:layout_below="@+id/tvIntervinientesCuenta" android:layout_marginStart="10dp" android:layout_toEndOf="@+id/tvTotalPesosCuenta" style="@style/generic_list_data_column2"/>
+        <View android:id="@+id/separadorExpandableCta" android:layout_below="@+id/tvTotalPesosCuenta" style="@style/SeparatorSectionBlack"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/llContenedor_productos" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/expandable_recyclerview_cuenta"/>
+    <HorizontalScrollView android:id="@+id/scroll_tenencias" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <include android:layout_width="290dp" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" layout="@layout/layout_tenencia_reexpresada_pesos"/>
+            <include android:layout_width="290dp" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" layout="@layout/layout_tenencia_reexpresada_dolares"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

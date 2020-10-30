@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/scrollMap" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <fragment android:name="com.google.android.gms.maps.MapFragment" android:id="@+id/sucursal_detalle_map_view" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="@dimen/map_detail"/>
+            <RelativeLayout android:id="@+id/llDist" android:background="@color/white_semitransparent" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <TextView android:id="@+id/txtDirec" android:padding="@dimen/padding_body_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:layout_toLeftOf="@+id/txtDist" android:layout_alignParentLeft="true" android:layout_marginEnd="10dp" android:layout_toStartOf="@+id/txtDist" android:layout_alignParentStart="true" style="@style/generic_row_data_comp"/>
+                <TextView android:id="@+id/txtDist" android:padding="@dimen/padding_body_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/generic_row_data_comp"/>
+            </RelativeLayout>
+            <View android:layout_alignParentBottom="true" style="@style/SeparatorSection"/>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/ll" android:background="@color/white" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2">
+            <LinearLayout android:gravity="top|center_vertical|center_horizontal|center" android:orientation="horizontal" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center" android:id="@+id/imgCajero" android:background="@drawable/border_image_list" android:layout_width="0dp" android:layout_height="80dp" android:layout_marginRight="10dp" android:layout_weight="1" android:layout_marginEnd="10dp"/>
+                <LinearLayout android:orientation="vertical" android:padding="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3">
+                    <TextView android:id="@+id/txtNombre" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/generic_row_data_comp"/>
+                    <TextView android:textSize="12dp" android:textColor="@color/generic_black" android:id="@+id/txtDesc2" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/generic_fontRegular"/>
+                    <TextView android:id="@+id/txtDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/generic_row_label_comp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:id="@+id/imgShoppingSeparator" android:background="@color/grey_medium_light_transparent" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp"/>
+            <LinearLayout android:gravity="top|center_vertical|center_horizontal|center" android:orientation="horizontal" android:id="@+id/imgShopping" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+                <ImageView android:layout_gravity="center" android:id="@+id/ic_super_club" android:padding="5dp" android:layout_width="0dp" android:layout_height="60dp" android:src="@drawable/ic_super_club" android:layout_weight="1"/>
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:padding="5dp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="3">
+                    <TextView android:textSize="@dimen/titulo2_text_size" android:textStyle="bold" android:textColor="@color/grey_dark" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Descuento SuperClub" style="@style/generic_row_data_comp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3">
+                    <ar.com.santander.rio.mbanking.view.HorizontalScrollList android:id="@+id/tabSelector" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/scrollDetalle" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="11dp" android:textColor="@color/generic_black" android:id="@+id/txtHtmlDesc" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_fontRegular"/>
+                        <TextView android:id="@+id/webViewLegales" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" style="@style/generic_leyend_light"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/scrollLocales" android:padding="10dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <WebView android:textColor="@color/grey_medium_dark" android:id="@+id/txtLocales" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

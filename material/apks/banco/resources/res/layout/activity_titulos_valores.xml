@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/llTenenciaInvercionesHomeView" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/layout_container_selector_cuenta" android:paddingTop="21dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="2">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:layout_weight="1.5">
+            <TextView android:gravity="left" android:layout_gravity="left" android:id="@+id/view_title" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:nextFocusForward="@+id/vgSelectorAccount" style="@style/generic_account_selector"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="18dp" android:layout_weight="0.5">
+            <ar.com.santander.rio.mbanking.view.CustomSpinner android:layout_gravity="right" android:id="@+id/spinner_change_account" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="Botón cambiar de cuenta" app:labelSpinner="@string/F24_00_LBL_CAMBIAR_CUENTA"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View style="@style/SeparatorSectionTitle"/>
+    <android.support.v4.widget.NestedScrollView android:id="@+id/scrollView" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:overScrollMode="never">
+        <LinearLayout android:orientation="vertical" android:id="@+id/rlBelowSelector" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include android:id="@+id/view_title" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginBottom="-2dp" android:layout_alignParentTop="true" layout="@layout/generic_view_title_layout"/>
+            <include android:id="@+id/view_msj_error" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/generic_view_msj_error"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_ok_header" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/title">
+                <include android:id="@+id/amount_view" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/generic_view_tenencias"/>
+            </LinearLayout>
+            <ar.com.santander.rio.mbanking.view.HorizontalScrollList android:id="@+id/tabSelector" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_ok_result" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layout_recycler_description" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/general_margin" android:layout_marginTop="@dimen/general_margin" android:layout_marginRight="@dimen/general_margin" android:layout_marginBottom="@dimen/general_margin" android:layout_weight="1">
+                    <TextView android:layout_gravity="left" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/LABEL_DESCRIPCION" android:layout_weight="0.5" style="@style/generic_bottomDescription_amount"/>
+                    <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="@dimen/general_margin" android:text="@string/LABEL_TENENCIA_VALUADA_A_HOY" android:layout_weight="0.5" style="@style/generic_bottomDescription_amount"/>
+                </LinearLayout>
+                <android.support.v7.widget.RecyclerView android:id="@+id/recycler_titulos_valores" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="@dimen/general_margin"/>
+                <TextView android:textSize="@dimen/size_text_label" android:textColor="@color/red_light" android:layout_gravity="center" android:id="@+id/tv_ver_terminos_condiciones" android:padding="@dimen/general_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ver_t_rminos_y_condiciones"/>
+            </LinearLayout>
+            <include android:id="@+id/include_error" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/generic_error_res4"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

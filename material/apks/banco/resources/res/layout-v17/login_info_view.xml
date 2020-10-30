@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/buttons">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/big_title_general_margin_width" android:layout_marginTop="@dimen/big_title_general_margin_height" android:layout_marginRight="@dimen/big_title_general_margin_width" android:layout_marginBottom="@dimen/big_title_general_margin_height">
+                <TextView android:gravity="center_vertical" android:id="@+id/titleWebView" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Usuario:\10 ¿Cómo tiene que ser?" style="@style/BigTitleAyuda"/>
+            </LinearLayout>
+            <WebView android:id="@+id/detail" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" style="@style/TextLegend1"/>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@+id/buttons" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:layout_alignParentStart="true">
+        <Button android:id="@+id/buttonGenerar" android:text="Quiero generar mi Usuario" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" style="@style/generic_boton_rojo"/>
+        <Button android:textSize="13sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@+id/buttonYaTengo" android:background="@drawable/boton_redondeado_rojo" android:layout_width="match_parent" android:layout_height="41dp" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="18dp" android:text="Ya tengo Usuario" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:textAllCaps="false" android:layout_alignParentStart="true"/>
+    </LinearLayout>
+</RelativeLayout>

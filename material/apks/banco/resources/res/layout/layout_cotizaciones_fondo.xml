@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/drawer_layout" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15dp" android:textColor="@color/generic_black" android:id="@+id/F24_13_LBL_TITULO_INFORMACION_DE_FONDO" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:text="@string/F24_13_LBL_TITULO_COTIZACIONES_FONDO" android:layout_toLeftOf="@+id/F24_13_BTN_SORT" style="@style/generic_fontSemibold"/>
+            <ImageButton android:id="@+id/F24_13_BTN_SORT" android:background="@drawable/updown" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginRight="18dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/F24_13_BOTON_ORDEN_VARIACION"/>
+        </RelativeLayout>
+        <View style="@style/SeparatorSectionTitle"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="14dp">
+            <ar.com.santander.rio.mbanking.view.CustomSpinner android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/F24_13_vgSelectorTipoFondo" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:contentDescription="@string/F24_13_SELECTOR_CAMBIAR_TIPO_ACCESIBILIDAD" app:labelSpinner="@string/F24_13_SELECTOR_CAMBIAR_TIPO_TODOS_TIPOS"/>
+            <ar.com.santander.rio.mbanking.view.CustomSpinner android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/F24_13_vgSelectorValoresFondo" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:contentDescription="@string/F24_13_SELECTOR_CAMBIAR_VALOR_ACCESIBILIDAD" app:labelSpinner="@string/F24_13_SELECTOR_CAMBIAR_VALOR_CUOTA"/>
+        </RelativeLayout>
+        <View style="@style/StrongSeparatorSection"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@+id/F24_13_LNL_LST_WRAPPER" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <View style="@style/SeparatorSection"/>
+                <TextView android:id="@+id/F24_13_LBL_LEGALES" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="26dp" android:layout_marginRight="18dp" android:layout_marginBottom="18dp" style="@style/generic_leyend_light"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <ListView android:layout_gravity="start" android:id="@+id/ID16_PRIVATEMENU_BTN_CREDITS" android:background="@color/grey_dark" android:scrollbars="none" android:layout_width="@dimen/navigation_drawer_width" android:layout_height="match_parent" android:divider="@android:color/transparent" android:dividerHeight="0dp" android:choiceMode="singleChoice"/>
+</android.support.v4.widget.DrawerLayout>

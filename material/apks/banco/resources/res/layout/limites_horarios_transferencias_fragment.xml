@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" style="@style/MainLayout">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/big_title_general_margin">
+            <TextView android:gravity="start" android:id="@+id/textViewTituloLimites" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID491_TRANSFERENCE_PROOF_DONE_LBL_TIMETABLE" style="@style/BigTitleAyuda"/>
+        </LinearLayout>
+        <View style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/textViewLeyendaLimites" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" style="@style/DescriptionText"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

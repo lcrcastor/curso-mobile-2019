@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.constraint.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <include android:id="@+id/title" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" layout="@layout/generic_view_title_layout"/>
+        <WebView android:id="@+id/instrucciones_web_view" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/btn_selection" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/title"/>
+        <include android:id="@+id/btn_selection" android:layout_width="match_parent" android:layout_height="42dp" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginBottom="8dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintHorizontal_bias="0" app:layout_constraintStart_toStartOf="0" layout="@layout/generic_red_button"/>
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>

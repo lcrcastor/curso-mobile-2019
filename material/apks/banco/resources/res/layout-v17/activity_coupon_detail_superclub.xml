@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/F20_03_BTN_CHANGE" android:layout_alignParentTop="true">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:id="@+id/F20_02_LBL_TITLE" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:text="@string/ID3012_COMODINES_SUPER_CLUB_LBL_DETALLE" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" style="@style/generic_title"/>
+        </LinearLayout>
+        <View android:layout_marginTop="12dp" style="@style/SeparatorSectionTitle"/>
+        <TextView android:layout_gravity="center_horizontal" android:id="@+id/F20_02_LBL_POINTS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:layout_marginRight="18dp" android:text="@string/ID3001_COMODINES_SUPER_CLUB_LBL_PUNTOS_SC" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" style="@style/generic_topDescription_amount"/>
+        <TextView android:layout_gravity="center_horizontal" android:id="@+id/F20_02_LBL_DATA_POINTS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="2dp" android:layout_marginRight="18dp" android:text="4.500" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" style="@style/generic_amount"/>
+        <View android:layout_marginTop="15dp" style="@style/SeparatorSectionTitle"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center" android:background="@color/container_area_light_gray" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@+id/F20_02_IMG_COUPON_GROUP" android:layout_width="100dp" android:layout_height="60dp" android:layout_marginTop="15dp" android:layout_marginRight="18dp" android:layout_marginBottom="15dp" android:layout_marginStart="18dp" android:layout_marginEnd="18dp"/>
+                    <TextView android:id="@+id/F20_02_LBL_COUPON_GROUP" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Penguin" android:layout_marginEnd="18dp" style="@style/generic_list_data_column3"/>
+                </LinearLayout>
+                <View style="@style/SeparatorSubSection"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="center_vertical" android:id="@+id/F20_02_IMG_COUPON" android:clickable="true" android:layout_width="151dp" android:layout_height="38dp" android:layout_marginLeft="18dp" android:layout_marginStart="18dp"/>
+                    <TextView android:gravity="end" android:id="@+id/F20_02_LBL_COUPON" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="34dp" android:layout_marginRight="18dp" android:layout_marginBottom="34dp" android:text="@string/ID3004_COMODINES_SUPER_CLUB_LBL_PUNTOS" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" style="@style/generic_list_label_fondos"/>
+                </LinearLayout>
+                <View style="@style/SeparatorSubSection"/>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F20_02_LNL_STORES" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:id="@+id/F20_02_LBL_STORES" android:paddingLeft="18dp" android:paddingTop="20dp" android:paddingBottom="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID3005_COMODINES_SUPER_CLUB_BTN_LOCALES" android:layout_toLeftOf="@+id/F20_02_IMG_STORES" android:paddingStart="18dp" style="@style/generic_list_label_fondos"/>
+                        <ImageView android:layout_gravity="center_vertical" android:id="@+id/F20_02_IMG_STORES" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="18dp" android:src="@drawable/arrow_right" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_marginEnd="18dp" android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSubSection"/>
+                </LinearLayout>
+                <TextView android:id="@+id/F20_02_LBL_LEGAL" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:lineSpacingExtra="3dp" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" style="@style/generic_leyend_light"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <Button android:id="@+id/F20_03_BTN_CHANGE" android:text="@string/ID3007_COMODINES_SUPER_CLUB_BTN_CANJEAR" android:layout_alignParentBottom="true" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+</RelativeLayout>

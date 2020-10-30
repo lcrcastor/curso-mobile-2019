@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/tarjetas_detalle_consumo" style="@style/MainLayout">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:background="@color/grey_dark" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ar.com.santander.rio.mbanking.view.DateView android:textSize="@dimen/bloque_texto_text_size" android:textColor="@color/white" android:gravity="center" android:id="@+id/detalle_fecha_head" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:singleLine="false"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="160dp">
+                <ar.com.santander.rio.mbanking.view.AmountView android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/detalle_value_head" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/general_margin" android:layout_marginTop="@dimen/general_margin" android:layout_marginRight="@dimen/general_margin" android:layout_marginBottom="3dp" android:layout_weight="1" app:maxTextSize="@dimen/text_size_amount_max" app:minTextSize="@dimen/text_size_amount_min" style="@style/generic_amount"/>
+                <TextView android:textSize="@dimen/titulo2_text_size" android:textColor="@color/grey_dark" android:gravity="top|center_vertical|center_horizontal|center" android:id="@+id/detalle_desc_head" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/general_margin" android:layout_marginRight="@dimen/general_margin" android:layout_marginBottom="@dimen/general_margin" android:layout_weight="1.5" android:textAllCaps="true"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="@dimen/general_margin">
+                <TextView android:id="@+id/text1" android:layout_width="120dp" android:layout_height="match_parent" android:text="@string/ID532_CCARDS_LIMITS_LBL_CARD" style="@style/generic_row_label_conf"/>
+                <TextView android:ellipsize="end" android:gravity="end" android:id="@+id/detalle_tarjeta" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="@dimen/general_margin">
+                <TextView android:id="@+id/text2" android:layout_width="120dp" android:layout_height="wrap_content" android:text="@string/ID533_CCARDS_LIMITS_LBL_DATE" style="@style/generic_row_label_conf"/>
+                <ar.com.santander.rio.mbanking.view.DateView android:ellipsize="end" android:gravity="end" android:id="@+id/detalle_fecha" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="@dimen/general_margin">
+                <TextView android:id="@+id/text3" android:layout_width="120dp" android:layout_height="wrap_content" android:text="@string/ID534_CCARDS_LIMITS_LBL_AMMOUNT" style="@style/generic_row_label_conf"/>
+                <ar.com.santander.rio.mbanking.view.AmountView android:ellipsize="end" android:gravity="end" android:id="@+id/detalle_value" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1" app:maxTextSize="@dimen/bloque_texto_text_size" app:minTextSize="@dimen/detalle_text_size" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="@dimen/general_margin">
+                <TextView android:id="@+id/text4" android:layout_width="120dp" android:layout_height="wrap_content" android:text="@string/ID535_CCARDS_LIMITS_LBL_COINAGE" style="@style/generic_row_label_conf"/>
+                <TextView android:ellipsize="end" android:gravity="end" android:id="@+id/detalle_moneda" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="@dimen/general_margin">
+                <TextView android:id="@+id/text5" android:layout_width="120dp" android:layout_height="wrap_content" android:text="@string/ID536_CCARDS_LIMITS_LBL_DESCRIPTION" style="@style/generic_row_label_conf"/>
+                <TextView android:ellipsize="end" android:gravity="end" android:id="@+id/detalle_desc" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="1" android:scrollHorizontally="true" android:layout_weight="1" android:textAllCaps="true" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" style="@style/SeparatorSection"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

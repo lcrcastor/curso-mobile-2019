@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" style="@style/MainLayout">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="30dp">
+            <TextView android:gravity="start" android:id="@+id/text1" android:text="@string/ID540_CCARDS_LIMITS_LBL_TERMSANDCOND" style="@style/generic_title"/>
+        </LinearLayout>
+        <View style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="8dp">
+            <TextView android:textSize="@dimen/bloque_texto_text_size" android:textColor="@color/grey_medium_light" android:gravity="start" android:id="@+id/text_legales" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" style="@style/DescriptionText"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

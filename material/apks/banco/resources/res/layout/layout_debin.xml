@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" style="@style/MainLayout">
+    <android.support.constraint.ConstraintLayout android:padding="18dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:id="@+id/textView8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F32_00_4401" android:contentDescription="@string/AC_TITTLE" style="@style/generic_title"/>
+        <TextView android:textSize="15sp" android:id="@+id/txtView8_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:text="@string/F32_00_4401_2" android:layout_toRightOf="@+id/textView8" app:layout_constraintStart_toEndOf="@+id/textView8" style="@style/generic_label_currency"/>
+    </android.support.constraint.ConstraintLayout>
+    <View style="@style/SeparatorSectionTitle"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/F32_00_RESPUESTA_OK" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:id="@+id/F32_00_LNL_TABS" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+                <RelativeLayout android:orientation="horizontal" android:id="@+id/F32_00_SELECTOR_DEBIN_RECIBIDOS" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="60dp" android:text="recibidas" android:layout_weight="1">
+                    <TextView android:textSize="14dp" android:textColor="@color/generic_red" android:id="@+id/F32_00_lbl_SELECTOR_DEBIN_RECIBIDOS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RECIBIDAS" android:layout_centerInParent="true"/>
+                    <View android:id="@+id/F32_00_view_SELECTOR_DEBIN_RECIBIDOS" android:background="@color/generic_red" android:layout_width="match_parent" android:layout_height="3dp" android:layout_alignParentBottom="true"/>
+                    <View android:id="@+id/F32_00_BLOCK_TABS_RECIBIDAS" android:background="@color/white_semitransparent" android:visibility="gone" android:layout_width="match_parent" android:layout_height="60dp"/>
+                </RelativeLayout>
+                <RelativeLayout android:orientation="horizontal" android:id="@+id/F32_00_SELECTOR_DEBIN_ENVIADOS" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="60dp" android:text="enviadas" android:layout_weight="1">
+                    <TextView android:textSize="14dp" android:textColor="@color/generic_grey" android:id="@+id/F32_00_lbl_SELECTOR_DEBIN_ENVIADOS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ENVIADAS" android:layout_centerInParent="true"/>
+                    <View android:id="@+id/F32_00_view_SELECTOR_DEBIN_ENVIADOS" android:background="@color/generic_grey" android:layout_width="match_parent" android:layout_height="3dp" android:layout_alignParentBottom="true"/>
+                    <View android:id="@+id/F32_00_BLOCK_TABS_ENVIADAS" android:background="@color/white_semitransparent" android:layout_width="match_parent" android:layout_height="60dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <View style="@style/SeparatorSection"/>
+        <RelativeLayout android:orientation="horizontal" android:id="@+id/rl_busc" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="18dp">
+            <LinearLayout android:id="@+id/todasSolis" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:id="@+id/todasSolicitudes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="12dp" android:text="Todas las solicitudes" android:layout_alignParentLeft="true" style="@style/generic_row_label_form"/>
+            </LinearLayout>
+            <RelativeLayout android:orientation="horizontal" android:id="@+id/buscadorDebin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/todasSolis" android:layout_alignParentRight="true">
+                <ImageView android:id="@+id/img_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="25dp" android:layout_marginBottom="12dp" android:src="@drawable/arrow_down" android:layout_alignParentRight="true"/>
+                <TextView android:id="@+id/buscar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="12dp" android:text="@string/F32_00_4405" android:layout_toLeftOf="@+id/img_arrow" style="@style/generic_row_data_form"/>
+            </RelativeLayout>
+            <View android:id="@+id/F32_00_BLOCK_BUSCAR" android:background="@color/white_semitransparent" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignLeft="@+id/buscadorDebin" android:layout_alignTop="@+id/buscadorDebin" android:layout_alignRight="@+id/buscadorDebin" android:layout_alignBottom="@+id/buscadorDebin"/>
+        </RelativeLayout>
+        <View style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/cabeceraDebin" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_list_title_background">
+            <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="14dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                <TextView android:layout_gravity="start" android:id="@+id/F32_01_lbl_solicitante_destinatario" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F32_00_4406" android:layout_alignParentLeft="true" android:contentDescription="@string/F32_00_4406_DESCRIPTION" style="@style/generic_list_data_column2"/>
+                <TextView android:gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F32_00_4407" android:layout_alignParentRight="true" style="@style/generic_list_title_3columns"/>
+            </RelativeLayout>
+            <View style="@style/SeparatorListView"/>
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.constraint.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/sinDebines" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/txtLeyend" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+            <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:src="@drawable/error_continuacion_b"/>
+            <TextView android:gravity="center" android:id="@+id/textoError" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="10dp" android:layout_marginRight="5dp" android:text="@string/F32_00_4409" style="@style/generic_leyend_light"/>
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView android:id="@+id/F32_01_RCV_DEBINES" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintBottom_toTopOf="@+id/txtLeyend" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <TextView android:gravity="bottom" android:id="@+id/txtLeyend" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginLeft="10dp" android:layout_marginBottom="5dp" android:text="@string/F32_00_4410" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" style="@style/generic_label_currency"/>
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

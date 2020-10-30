@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@drawable/action_phone_btn" android:padding="18dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:id="@+id/txtNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" android:layout_toLeftOf="@+id/imgPhone" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_toStartOf="@+id/imgPhone" android:layout_alignParentStart="true" style="@style/generic_phone_number"/>
+    <ImageView android:id="@+id/imgPhone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/red_phone" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:gravity="start" android:orientation="horizontal" android:id="@+id/llBuscar" android:background="@color/white" android:padding="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="80dp" android:layout_alignParentTop="true" style="@style/generic_row_data_comp"/>
+    <EditText android:id="@+id/eTxtFavorito" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="36dp" android:layout_marginRight="18dp" android:hint="@string/ID83_MYLOCATION_TBX_SAVE" android:singleLine="true" android:layout_below="@+id/llBuscar" android:layout_centerHorizontal="true" style="@style/generic_row_input_form"/>
+    <Button android:id="@+id/btnAgregar" android:text="@string/ID84_MYLOCATION_TBX_ADD" android:layout_below="@+id/eTxtFavorito" style="@style/generic_boton_rojo"/>
+</RelativeLayout>

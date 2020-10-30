@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:id="@+id/F27_21_seleccionar_plan_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="Seleccionar el tipo de cobertura" style="@style/generic_title"/>
+    <View android:id="@+id/F27_21_tittle_separator" style="@style/SeparatorSectionTitle"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+        <TextView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:text="@string/ID_4135_SEGUROS_LBL_SGRO_MOVIL" style="@style/generic_row_label_form"/>
+        <TextView android:layout_gravity="center_horizontal" android:id="@+id/F27_21_lbl_data_importe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13dp" android:text="" style="@style/generic_amount"/>
+        <TextView android:textSize="13dp" android:textColor="@color/generic_black" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:layout_marginBottom="23dp" android:text="@string/ID_4069_SEGUROS_LBL_IMPORTE_MENSUAL" style="@style/generic_fontLight"/>
+        <View style="@style/SeparatorSectionTitle"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/black" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/ID_4117_SEGUROS_LBL_DISPO_ASEG" style="@style/generic_title"/>
+        <TextView android:textColor="@color/generic_grey_dark" android:gravity="center_horizontal" android:id="@+id/F27_21_dispositivo_a_asegurar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="20dp" style="@style/generic_fontSemibold"/>
+        <View android:id="@+id/F27_31_separador" style="@style/SeparatorListView"/>
+    </LinearLayout>
+</LinearLayout>

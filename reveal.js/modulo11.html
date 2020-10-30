@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Resumen metodológico: "Buenas prácticas en aplicaciones móviles" </title>
+
+		<meta name="description" content="Diapositivas resumen metodología OWASP">
+		<meta name="author" content="Juan Urbano Stordeur">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!--Slide #1-->
+			<div class="slides">
+			<section>
+				<section>
+				<h3>Resumen metodológico OWASP</h3>
+				<h4>Modulo XI</h4>
+				</section>	
+				<section data-markdown>
+				* Desarrollo y dictado por: Juan Urbano Stordeur
+				* Contacto: jurbano@afip.gob.ar	
+				* @juanurss	
+				</section>
+				<section data-markdown>
+				**Descarga material**
+				* $ git clone https://infojuanurss@bitbucket.org/juanurss/curso-mobile-2019.git
+				* Contraseña: enviada por slack | compartida en clase
+				</section>
+				<section data-markdown>
+				**Nota**: Tener en cuenta que el contenido para la primer clase se encuentra dentro **"/reveal.js/modulo11.html"**, el mismo debe ser abierto desde el browser.
+				</section>
+				<section data-markdown>
+				Configuración slack:
+				* Pueden [descargar](https://slack.com/intl/es-ar/downloads/linux) el .deb 
+				* Ingresar vía web
+				</section>
+				<section data-markdown>
+				Link de acceso al canal: [Invitación Slack](https://join.slack.com/t/aaaanlisisdea-usq8449/shared_invite/enQtODEzOTk4MjQyODcxLTc3MThjODJjNzlhNGNiZDBjMzliMDJiMzMwZWM5NTg3M2ZkODVjYWZlNzc1ZTBkMjBkZTA1MTRjNGM4YTM2NDg)
+				</section>
+				</section>
+			</section>
+				
+				<section>
+					<section data-markdown>
+						1. **¿Qué y por qué OWASP?**
+						2. **[Top Ten Mobile](https://www.owasp.org/index.php/Mobile_Top_10_2016-Top_10)**
+						3. **OWASP Mobile projects**
+
+							3.1. **[MASVS](https://github.com/OWASP/owasp-masvs/releases/download/1.1.3/OWASP_Mobile_AppSec_Verification_Standard_1.1.3_Document.pdf) (Mobile Application Security Verification Standard)**
+						
+							3.2. **[MASC](https://github.com/OWASP/owasp-mstg/blob/master/Checklists/Mobile_App_Security_Checklist-Spanish.xlsx) (Mobile Application Security Checklist)**
+						
+							3.3. **[MSTG](https://www.github.com/OWASP/owasp-mstg/) (Mobile Application Security Testing Guide)**
+						4. **Recusos prácticos adicionales para el aprendizaje**
+					</section>
+					<section data-markdown>
+						Recursos adicionales
+
+						[**Canal de Slack**](https://app.slack.com/client/T04T40NHX/C1M6ZVC6S)
+						
+						[**Gitbook MSTG**](https://mobile-security.gitbook.io/mobile-security-testing-guide/overview/0x03-overview)
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<h2>**¿Qué y por qué OWASP?**</h2>
+						
+						![](images/m11/OWASP_logo.png "OWASP-mobile-security-projects")
+					</section>
+					<section data-markdown>
+						[OWASP](https://www.owasp.org/) (acrónimo de Open Web Application Security Project, en inglés ‘Proyecto abierto de seguridad de aplicaciones web’)
+					</section>
+					<section data-markdown>	
+						**Es un proyecto de código abierto dedicado a determinar y combatir las causas que hacen que el software sea inseguro** 
+					</section>
+					<section data-markdown>
+						La Fundación OWASP es un organismo sin ánimo de lucro que apoya y gestiona los proyectos e infraestructura de OWASP. 
+					</section>
+					<section data-markdown>
+						**Existen diversos projectos de OWASP**, destinados a la seguridad de las aplicaciones móviles que veremos a continuación.	
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<h2>Top Ten Mobile</h2>
+						![](images/m11/OWASP-Mobile-Top-10.png)
+					</section>
+					<section data-markdown>
+						[El Proyecto de seguridad móvil OWASP Top Ten](https://www.owasp.org/index.php/Mobile_Top_10_2016-Top_10) es un recurso centralizado.
+					</section>
+					<section data-markdown>	
+						**Destinado a brindar a los desarrolladores y equipos de seguridad los recursos que necesitan para crear y mantener aplicaciones móviles seguras.** 
+					</section>
+					<section data-markdown>
+						A través del proyecto, **nuestro objetivo es**:
+						
+						* Clasificar los riesgos de seguridad móvil. 
+						
+						* Proporcionar controles de desarrollo para **reducir su impacto o probabilidad de explotación** 	
+					</section>
+					<section data-markdown>
+						Clasificación del **M1 al M10 las vulnerabilidades móviles que tienen mayor incidencia**. 
+					</section> 
+					<section data-markdown>
+						Ejemplo Improper Platform Usage
+						![](images/m11/Mobile-Top-10-ejemplo.png)			
+					</section>
+					<section data-markdown>
+						|  |  |
+						| --- | --- |
+						| **Riesgos de mayor incidencia** | **Descripción:** |
+						| **M1 - Uso inadecuado de la plataforma -**  *(Improper Platform Usage)*  | Esta categoría cubre el **uso indebido de una función de la plataforma** o la **falta de uso de los controles de seguridad** de la plataforma|
+					</section>
+					<section data-markdown>
+						<p>
+						* Puede incluir intents de Android
+						* Permisos de plataforma
+						* Uso incorrecto de TouchID y Keychain 
+						* Algún otro **control de seguridad que sea parte del sistema operativo móvil**
+						</p>
+					</section>
+					<section data-markdown>
+						![](images/m11/TopTen/M1_01.png)
+					</section>
+					<section data-markdown>
+						![](images/m11/TopTen/M1_02.png)
+					</section>					
+					<section data-markdown>
+						| 	  | 	|
+						| --- | --- |
+						| **Riesgos de mayor incidencia** | **Descripción:** |
+						| **M2 - Almacenamiento de Datos Inseguro -** *(Insecure Data Storage)* | Esta nueva categoría es una combinación de M2 ​​+ M4 de Mobile Top Ten 2014.|	
+					</section>
+					<section data-markdown>
+					<h4>Esto cubre el almacenamiento de datos inseguros y la fuga de datos involuntaria de información</h4>
+					</section>
+					<section data-markdown>
+						* Sqlite
+						* Shared Prefs
+						* tmp		
+						* Cache
+					</section>
+					<section data-markdown>
+						![](images/m11/TopTen/M2_01.png)
+					</section>
+					<section data-markdown>
+						| 	  | 	|
+						| --- | --- |
+						| **Riesgos de mayor incidencia** | **Descripción:** |
+						| **M3 - Comunicación Insegura -** *(Insecure Communication)* | Esto cubre la mala comunicación, las versiones de SSL incorrectas, la negociación débil, la comunicación de texto claro de activos sensibles, etc.|	
+					</section>
+					<section data-markdown>
+						![](images/m11/TopTen/M3_01.png)
+					</section>
+					<section data-markdown>
+						| 	  | 	|
+						| --- | --- |
+						| **Riesgos de mayor incidencia** | **Descripción:** |
+						| **M4 - Autenticación Insegura -** *(Insecure Authentication)* | Esta categoría engloba las nociones de autenticación del usuario final o la mala gestión de la sesión. |
+					</section>
+					<section data-markdown>
+						Incluyendo: 
+						* **No poder identificar el usuario cuando es requerido**
+						* **Fallar al mantener un usuario identificado cuando es requerído**
+						* **Falta de manejo de sesiones**
+						* **Compromiso de tokens o sesiones**
+					</section>
+					<section data-markdown>
+						![](images/m11/TopTen/M4_01.png)
+					</section>
+					<section data-markdown>
+						| 	  | 	|
+						| --- | --- |
+						| **Riesgos de mayor incidencia** | **Descripción:** |
+						| **M5 - Criptografía insuficiente -** *(Insufficient Cryptography)*| Dentro del código se suele aplicar la criptografía a un activo de información sensible |
+					</section> 
+
+					<section>
+						Esta categoría es para problemas en los que se implemento  criptografía, pero no se hizo correctamente.
+						<aside class="notes">
+			    			Tenga en cuenta que todo lo relacionado con TLS o SSL va en M3. Además, si la aplicación no puede utilizar la criptografía cuando debería, probablemente per	tenece a M2.
+						</aside>
+					</section>
+			
+					<section data-markdown>
+						![](images/m11/TopTen/M5_01.png)
+
+						![](images/m11/TopTen/M5_02.png)	
+					</section>
+					<section data-markdown>
+						| 	  | 	|
+						| --- | --- |
+						| **Riesgos de mayor incidencia** | **Descripción:** |
+						| **M6 - Autorización Insegura -** *(Insecure Authorization)*| Basicamente falencias en la autorización del lado del cliente |	
+					</section>
+					<section data-markdown>
+						![](images/m8/easter1.png)
+
+						* $adb shell am start -n com.android.egg/.neko.NekoActivationActivity
+						
+						* $adb shell am start -n com.android.egg/.octo.Ocquarium
+					</section>
+					<section data-markdown>
+						![](images/m8/easter2.png)
+					</section>
+
+					<section data-markdown>
+						| 	  | 	|
+						| --- | --- |
+						| **Riesgos de mayor incidencia** | **Descripción:** |
+						| **M7 - Calidad de Código del lado cliente -** *(Client Code Quality)* | El problema general para **de implementación de código en el cliente móvil**.| 
+					</section>
+
+					<section>
+						Se capturan errores a nivel de código en los que la solución es reescribir parte del código que se ejecuta.
+						<aside class="notes">
+	    				Esto es distinto de los errores de programación del lado del servidor.
+						Por ejemplo desbordamientos de búfer, vulnerabilidades de cadenas de formato, etc.
+						</aside>
+					</section>
+					
+					<section data-markdown>
+						![](images/m11/TopTen/M7_01.png)
+					</section>
+					
+					<section data-markdown>
+						| 	  | 	|
+						| --- | --- |
+						| **Riesgos de mayor incidencia** | **Descripción:** |
+						| **M8 - Manipulación de código -** *(Code Tampering)* | Abarca la aplicación de **parches binarios, la modificación de recursos locales, el enlace de métodos, la modificación de métodos y la modificación de memoria dinámica.**|
+					</section>
+
+					<section>
+						
+						Una vez que la aplicación se instala en el dispositivo móvil, el código y los recursos de datos residen allí. 
+
+						<aside class="notes">
+							<p>Un atacante puede modificar directamente el código</p>
+							<p>cambiar el contenido de la memoria dinámicamente, cambiar o reemplazar las API del sistema que utiliza la aplicación, o modificar los datos y recursos de la aplicación</p>. 
+							<p>Buscando un fin monetarío o perjudicial para la aplicación.</p>
+						</aside>
+					</section>
+					<section data-markdown>
+							```
+							$r2pm -r apktool d miafip.apk
+							.method public isRunningOnATestBuild()Z
+								if-nez v0, :cond_1
+								if-eqz v0, :cond_0
+							$r2pm -r apktool b miafip -o ~/projects/2019/tabletChina/miafip_modificado.apk	
+							$apksigner sign --ks ~/.android/debug.keystore --ks-key-alias signkey miafip_modificado.apk
+							```
+					</section>
+					<section data-markdown="">
+						```
+						$adb install miafip_modificado.apk
+						Success
+						```
+					</section>
+					<section data-markdown>
+						| 	  | 	|
+						| --- | --- |
+						| **Riesgos de mayor incidencia** | **Descripción:** |
+						| **M9 - Ingeniería Reversa -** *(Reverse Engineering)* | Esta categoría incluye **el análisis del binario para determinar su código fuente, bibliotecas, algoritmos y otros activos**.|
+					</section>
+
+					<section>						
+						Frida, Radare2, apktool, IDA Pro, cfr, etc. 
+						<aside class="notes">
+							<p>Se pueden usar para inspeccionar el binario y darle al atacante una idea del funcionamiento interno de la aplicación.</p>
+							<p>Esto se puede usar para explotar otras vulnerabilidades en la aplicación, así como para revelar información sobre servidores back-end, constantes criptográficas y cifrados, etc.</p>
+						</aside>
+					</section>
+
+					<section data-markdown>
+						| 	  | 	|
+						| --- | --- |
+						| **Riesgos de mayor incidencia** | **Descripción:** |
+						| **M10 - Funcionalidad extraña -** *(Extraneous Functionality)* | A menudo, **los desarrolladores incluyen una funcionalidad de "puerta trasera" oculta u otros controles de seguridad de desarrollo internos que no están destinados a ser liberados en un entorno de producción**.|
+					</section>					
+
+					<section data-markdown>
+						* Un desarrollador puede incluir accidentalmente una contraseña como comentario en una aplicación. 
+						* Incluir una desactivación de la autenticación de 2 factores durante la prueba.
+						* Funcionaliades ocultas al presionar un botón por un tiempo determinado.				
+					</section>
+
+					<section data-markdown>
+						<h2>**Resumen OWASP Mobile Top Ten**</h2>
+
+						1. Indica las vulnerabilidades de mayor incidencia.
+						2. Se enfoca en "areas de riesgo" y no en vulnerabilidades.
+						3. Adoptar este documento genera conciencia dentro de la organización.
+						4. Garantiza que sus aplicaciones minimicen los riesgos
+					</section>
+					<section data-markdown>
+						Adoptar el OWASP Top 10 es quizás el primer paso, más efectivo para cambiar la cultura de desarrollo de software dentro de la organización, para poder desarrollar código más seguro.
+					</section>
+				</section>
+				<section>	
+					<section data-markdown>
+						<h2>Mobile Application Security Verification Standard (MASVS)</h2>
+
+						![MASVS](images/m11/MASVS/masvs-mini-cover.jpg)
+					</section>
+					<section data-markdown>
+						El **[MASVS](https://github.com/OWASP/owasp-masvs/releases/download/1.1.3/OWASP_Mobile_AppSec_Verification_Standard_1.1.3_Document-es.pdf)** **es un estandar que define dos niveles estrictos de verificación de seguridad (L1 y L2)**, así como también un conjunto de requisitos de resistencia a la ingeniería inversa **(MASVS-R)**
+					</section>
+					<section data-markdown>
+						**Se enumera de V1 a V8 diversas metricas para L1,L2 y R según corresponda a la aplicación**.
+					</section>
+					<section data-markdown>
+						Los niveles **MASVS-L1** y **MASVS-L2** contienen **requerimientos genéricos de seguridad para todas las aplicaciones móviles (L1)** y para aplicaciones que **manejan datos altamente sensibles (L2).**
+					</section>
+					<section data-markdown>
+						**MASVS-R cubre los controles de seguridad adicionales que se pueden aplicar**, si la prevención de las amenazas del lado del cliente son un objetivo de diseño.
+					</section>
+					<section data-markdown>
+						![OWASP-MASVS](images/m11/MASVS/masvs-levels-new.jpg "OWASP-MASVS")
+					</section>
+					<section>
+						<h4>A un mayor nivel de detalle sería<h4>
+					</section>
+					<section data-markdown>
+						#### MASVS-L1: Seguridad Estándar
+
+						* Una aplicación móvil que logra el nivel **MASVS-L1** se adhiere a las mejores prácticas de seguridad en aplicaciones móviles. 
+						* Cumple con los requerimientos básicos en términos de calidad de código, manejo de los datos sensibles e interacción con el entorno móvil. 
+					</section>
+					<section data-markdown>
+						#### MASVS-L2: Defensa en Profundidad
+
+						* **MASVS-L2** introduce controles de seguridad avanzados que van más allá de los requisitos estándar. 
+
+						* Para cumplir con el nivel L2, debe existir un modelo de amenaza y la seguridad debe ser una parte fundamental de la arquitectura y el diseño de la aplicación. 
+					</section>
+					<section data-markdown>
+						* Este nivel es apropiado para aplicaciones que manejan datos sensibles e información sensible de usuarios.						
+					</section>
+					<section data-markdown>
+						#### MASVS-R: Resistencia contra la ingeniería inversa y la manipulación
+
+						* La aplicación que cuenta con el nivel de seguridad específico (L1/L2) y también es resistente a ataques específicos ( R ). 	
+					</section>
+					<section data-markdown>
+						* Controles definidos del lado del cliente, e incluyen la alteración, modificación o ingeniería inversa para extraer código o datos sensibles. 
+
+						* Esta aplicación aprovecha las características de seguridad del hardware o bien técnicas de protección de software suficientemente fuertes y verificables.
+					</section>
+					<section data-markdown>
+						Dentro del documento de **[MASVS](https://github.com/OWASP/owasp-masvs/releases/download/1.1.3/OWASP_Mobile_AppSec_Verification_Standard_1.1.3_Document-es.pdf)** se pueden ver los requerimientos, que van desde el V1 al V8 cubriendo todas las necesidades anteriormente descriptas.
+					</section>										
+					<section data-markdown>
+						* *V1: Requerimientos de Arquitectura, Diseño y Modelado de Amenazas*
+						* *V2: Requerimientos en el Almacenamiento de datos y la Privacidad*
+						* *V3: Requerimientos de Criptografía*
+						* *V4: Requerimientos de Autenticación y Manejo de Sesiones*
+					</section>	
+					<section data-markdown>
+						* *V5: Requerimientos de Comunicación a través de la red*
+						* *V6: Requerimientos de Interacción con la Plataforma*
+						* *V7: Requerimientos de Calidad de Código y Configuración del Compilador*
+						* *V8: Requerimientos de Resistencia ante la Ingeniería Inversa*					
+					</section>	
+					<section data-markdown>
+						<p>Un ejemplo de la guía sería:</p>
+
+						**[V2: Requerimientos en el Almacenamiento de datos y la Privacidad](https://github.com/OWASP/owasp-masvs/blob/master/Document-es/0x07-V2-Data_Storage_and_Privacy_requirements.md)** 
+					</section>
+					<section data-markdown>
+						![](images/m11/MASVS/requerimientos-ejemplo.png)
+					</section>																	
+					<section>
+						<h4>Resumen MASVS</h4>
+					</section>
+					<section data-markdown>
+						* **Usar como una métrica** - Para proporcionar un *estándar de seguridad* el cual, las aplicaciones móviles existentes pueden ser comparadas por desarrolladores y los propietarios de las aplicaciones;
+					</section>											
+					<section data-markdown>
+						* **Utilizar como guía** - Proporcionar una guía durante todas las fases del desarrollo y prueba de las aplicaciones móviles;
+					</section>	
+					<section data-markdown>
+						* **Usar durante una auditoría de seguridad** - Proporcionar una línea de base para la verificación de seguridad de aplicaciones móviles.
+					</section>	
+					<section data-markdown>
+						* **Complemento con el checklist** - Busca evidenciar de forma metodológica y clara los puntos observados.
+					</section>	
+				</section>
+
+				<section>
+					<section data-markdown>
+						<h2>MASC - Mobile Application Security Checklist -</h2>
+					</section>	
+					<section data-markdown>
+						El **[MASC](https://github.com/OWASP/owasp-mstg/blob/master/Checklists/Mobile_App_Security_Checklist-Spanish.xlsx)** *(Mobile Application Security Checklist)* nos facilita la tarea de control sobre todos los puntos dentro del **[MASVS](https://github.com/OWASP/owasp-masvs/releases/download/1.1.3/OWASP_Mobile_AppSec_Verification_Standard_1.1.3_Document-es.pdf)** **manera metodológica y detallada**
+					</section>		
+					<section data-markdown>
+						* Dicho documento indica el "Estado" de la prueba (si paso o no).
+						* Si no esta disponible (N/A).
+					</section>	
+					<section data-markdown>
+						**V1: Requerimientos de Arquitectura, Diseño y Modelado de Amenazas:** 
+						
+						![](images/m11/Checklist/1.png)
+					</section>
+					<section data-markdown>
+						**V2: Requerimientos en el Almacenamiento de datos y la Privacidad**
+						
+						![V2: Requerimientos en el Almacenamiento de datos y la Privacidad](images/m11/Checklist/2.png)
+					</section>
+					<section data-markdown>
+						**V8: Requerimientos de Resistencia ante la Ingeniería Inversa**
+
+						![V8: Requerimientos de Resistencia ante la Ingeniería Inversa](images/m11/Checklist/3.png)
+					</section>
+					<section data-markdown>
+						* Genera un estado final sobre el análisis de la aplicación.
+					</section>	
+					<section data-markdown>
+						#### Métricas finales:
+
+						![Métrica](images/m11/Checklist/4.png)
+					</section>						
+					<section data-markdown>
+						![Resultado](images/m11/Checklist/5.png)
+					</section>
+					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+					</section>			
+				</section>
+				
+				<section>
+					<section data-markdown>
+						MSTG - Mobile Security Testing Guide -
+	
+						![MSTG](images/m11/MSTG/mstg-cover-release-small.jpg)
+					</section>
+					<section data-markdown>
+						**El [MSTG](https://github.com/OWASP/owasp-mstg) es un manual completo para pruebas de seguridad de aplicaciones móviles e ingeniería inversa.** 	
+					</section>	
+					<section data-markdown>	
+						Describe procesos técnicos, para verificar los controles enumerados en [(MASVS)](https://github.com/OWASP/owasp-masvs/blob/master/Document-es/0x03-Using_the_MASVS.md).
+					</section>
+					<section data-markdown>	
+						Abarca conceptos generales y dependiendo de los mismos, son detallados de manera exhaustiva en cada sección.
+					</section>				
+					<section data-markdown>		
+						Esta orientado para **iOS** y **Android**. 
+					</section>
+					<section data-markdown>		
+						 ![MSTG_Android](images/m11/MSTG/android.png)
+					</section>
+					<section data-markdown>		
+						 ![MSTG_iOS](images/m11/MSTG/ios.png)
+					</section>
+					<section data-markdown>		
+						* Cada sección tiene la descripción para buscar distintas vulnerabilidades de manera **estática** y **dinámica**. 
+						* Con el fin de poder comparar y confirmar las vulnerabilidades dentro del código.	
+					</section>
+					<section data-markdown>		
+						![MSTG_iOS](images/m11/MSTG/estatico.png)
+					</section>
+					<section data-markdown>		
+						![MSTG_iOS](images/m11/MSTG/dinamico.png)
+					</section>					
+				</section>
+			<section>
+				<section data-markdown>
+					Recusos prácticos adicionales para el aprendizaje
+
+					[Mobile Crackmes Android & iOS](https://github.com/OWASP/owasp-mstg/tree/master/Crackmes)
+				</section>
+				<section data-markdown>
+					* Aplicaciones vulnerables en Android & iOS.
+				</section>
+				<section data-markdown>
+					* Facilitan mucho el aprendizaje a la hora de analizar una aplicación
+					* Principalmente, ayuda a entender y comparar con la metodología y las buenas prácticas anteriormente mencionadas.
+				</section>
+				<section data-markdown>
+					* Dentro del MSTG se encuentran las resoluciones para los desafios.
+					* Abarcan todas las etapas.
+				</section>
+				<section data-markdown>
+					**Android:**
+
+					* [UnCrackable App for Android Level 1](https://github.com/OWASP/owasp-mstg/tree/master/Crackmes/Android/Level_01/)
+
+					* [UnCrackable App for Android Level 2](https://github.com/OWASP/owasp-mstg/tree/master/Crackmes/Android/Level_02/)
+					
+					* [UnCrackable App for Android Level 3](https://github.com/OWASP/owasp-mstg/tree/master/Crackmes/Android/Level_03/ )
+					
+					* [Damn Insecure and Vulnerable App (DIVA)](https://payatu.com/damn-insecure-and-vulnerable-app/)
+
+					* [Insecure Bankv2](https://github.com/dineshshetty/Android-InsecureBankv2/blob/master/InsecureBankv2.apk)
+
+					* [Sieve](https://labs.mwrinfosecurity.com/system/assets/380/original/sieve.apk )
+
+					* [EVABS](https://github.com/abhi-r3v0/EVABS)
+				</section>
+				<section data-markdown>
+					**iOS:**
+
+					* [UnCrackable App for iOS Level 1](https://github.com/OWASP/owasp-mstg/tree/master/Crackmes/iOS/Level_01/)
+					
+					* [UnCrackable App for iOS Level 2](https://github.com/OWASP/owasp-mstg/tree/master/Crackmes/iOS/Level_02/)
+					
+					* [Damn Vulnerable iOS Application (DVIA)](http://damnvulnerableiosapp.com/)
+					
+					* [Mobile CTF](https://ivrodriguez.com/mobile-ctf/)
+				</section>
+				<section data-markdown>
+					En la parte práctica veremos algunos ejemplos de resolución.	
+				</section>
+				<section data-markdown>
+					<h1>¡Gracias!</h1>	
+				</section>
+			</section>	
+				
+			</div>
+
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				slideNumber: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

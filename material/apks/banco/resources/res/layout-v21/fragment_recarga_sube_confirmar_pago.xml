@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <View android:id="@+id/close_animation_view" android:background="@color/green_leaf" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include android:id="@+id/recarga_sube_confirmada_actionbar" layout="@layout/actionbar_white_only_sube"/>
+        <View android:id="@+id/separator_view" android:visibility="gone" android:layout_width="match_parent" style="@style/SeparatorSubSection"/>
+        <android.support.v4.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/layout_visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/general_margin" android:layout_marginTop="@dimen/general_margin" android:layout_marginRight="@dimen/general_margin" android:layout_marginBottom="@dimen/general_margin" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+                    <ImageView android:layout_gravity="center" android:id="@+id/icon_ok" android:layout_width="71dp" android:layout_height="71dp" android:src="@drawable/ic_ok_green"/>
+                    <TextView android:textSize="28sp" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="8dp" android:text="@string/se_realizo_pago" android:fontFamily="@font/open_sans_bold" android:textAlignment="center" style="@style/generic_big_input_label_bold"/>
+                    <TextView android:textSize="14sp" android:id="@+id/tv_legend_credit" android:background="@color/green_opacity" android:padding="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/general_margin" android:layout_marginBottom="@dimen/general_margin" android:text="@string/recorda_acreditar" android:fontFamily="@font/open_sans_regular" style="@style/generic_subtitle"/>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/layout_sube_app" android:background="@drawable/gray_border_small_radius" android:padding="@dimen/logo_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:layout_marginTop="@dimen/general_margin" android:layout_marginRight="4dp" android:layout_marginBottom="@dimen/general_margin" android:elevation="2dp">
+                        <ImageView android:layout_gravity="center" android:background="@color/white" android:layout_width="33dp" android:layout_height="33dp" android:layout_marginTop="8dp" app:srcCompat="@drawable/ic_sube_logo"/>
+                        <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:text="@string/acreditar_recarga" style="@style/generic_small_text"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <View android:layout_width="match_parent" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/SeparatorSectionLight"/>
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="2">
+                            <TextView android:textSize="14sp" android:textColor="@color/black_light" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/revisar_importe" android:layout_weight="1" android:fontFamily="@font/open_sans_regular"/>
+                            <TextView android:textSize="14sp" android:textColor="@color/black_light" android:gravity="right" android:id="@+id/tv_importe_monto" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/open_sans_bold"/>
+                        </LinearLayout>
+                        <View android:layout_width="match_parent" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/SeparatorSectionLight"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="2">
+                            <TextView android:textSize="14sp" android:textColor="@color/black_light" android:id="@+id/tv_tarjeta" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/revisar_tarjeta_nombre" android:layout_weight="1" android:fontFamily="@font/open_sans_regular"/>
+                            <TextView android:textSize="14sp" android:textColor="@color/black_light" android:gravity="right" android:id="@+id/tv_tarjeta_nro" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/open_sans_bold"/>
+                        </LinearLayout>
+                        <View android:layout_width="match_parent" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/SeparatorSectionLight"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="2">
+                            <TextView android:textSize="14sp" android:textColor="@color/black_light" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/medio_pago" android:layout_weight="1" android:fontFamily="@font/open_sans_regular"/>
+                            <TextView android:textSize="14sp" android:textColor="@color/black_light" android:gravity="right" android:id="@+id/tv_medio_pago" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/open_sans_bold"/>
+                        </LinearLayout>
+                        <View android:layout_width="match_parent" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/SeparatorSectionLight"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/general_margin" android:layout_marginBottom="@dimen/general_margin" android:weightSum="3">
+                        <LinearLayout android:orientation="vertical" android:id="@+id/layout_receipt" android:background="@drawable/gray_border_small_radius" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="4dp" android:layout_weight="1" android:elevation="2dp">
+                            <ImageView android:background="@color/white" android:layout_width="match_parent" android:layout_height="33dp" android:layout_marginLeft="4dp" android:layout_marginTop="8dp" android:layout_marginRight="4dp" android:src="@drawable/ic_receipt_red_b"/>
+                            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:text="@string/comprobante" style="@style/generic_small_text"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@+id/layout_download" android:background="@drawable/gray_border_small_radius" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="4dp" android:layout_weight="1" android:elevation="2dp">
+                            <ImageView android:background="@color/white" android:layout_width="match_parent" android:layout_height="33dp" android:layout_marginLeft="4dp" android:layout_marginTop="8dp" android:layout_marginRight="4dp" android:src="@drawable/ic_download_red_b"/>
+                            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:text="@string/descargar" style="@style/generic_small_text"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@+id/layout_share" android:background="@drawable/gray_border_small_radius" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="4dp" android:layout_weight="1" android:elevation="2dp">
+                            <ImageView android:background="@color/white" android:layout_width="match_parent" android:layout_height="33dp" android:layout_marginLeft="4dp" android:layout_marginTop="8dp" android:layout_marginRight="4dp" android:src="@drawable/ic_share_red_b"/>
+                            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:text="@string/compartir" style="@style/generic_small_text"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView android:id="@+id/btn_realizar_recarga" android:layout_marginBottom="2dp" android:text="@string/recarga_label_realizar_recarga" android:textAllCaps="false" style="@style/generic_boton_blanco_borderless_sube"/>
+                    <Button android:id="@+id/btn_volver_home" android:layout_marginTop="2dp" android:layout_marginBottom="25dp" android:text="@string/recarga_label_volver_a_home" android:textAllCaps="false" style="@style/generic_boton_rojo_sube"/>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/layout_pdf" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:padding="@dimen/general_margin" android:visibility="visible" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/img_santander_logo_red"/>
+                        <View style="@style/SeparatorSubSection"/>
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <LinearLayout android:orientation="vertical" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:textSize="24sp" android:textColor="@color/black" android:gravity="center" android:padding="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/comprobante_de_pago" android:fontFamily="@font/open_sans_bold"/>
+                                <TextView android:textSize="14sp" android:textColor="@color/black" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/recarga_label_sube" android:fontFamily="@font/open_sans_semi_bold"/>
+                                <TextView android:textSize="32sp" android:textColor="@color/generic_black" android:gravity="center" android:id="@+id/tv_monto_pdf" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/open_sans_bold"/>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="2">
+                                    <TextView android:textColor="@color/black_light" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/recarga_label_tarjeta" android:layout_weight="1" style="generic_row_data_comp"/>
+                                    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                                        <TextView android:textColor="@color/black" android:gravity="right" android:id="@+id/tv_tarjeta_pdf" android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/open_sans_bold"/>
+                                        <TextView android:textSize="14sp" android:textColor="@color/black" android:gravity="right" android:id="@+id/tv_tarjeta_alias_pdf" android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/open_sans_light"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="2">
+                                    <TextView android:textColor="@color/black_light" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/recarga_label_medio_pago" android:layout_weight="1" style="generic_row_data_comp"/>
+                                    <TextView android:textColor="@color/black" android:gravity="right" android:id="@+id/tv_medio_pago_pdf" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/open_sans_bold"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="2">
+                                    <TextView android:textColor="@color/black_light" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/recarga_label_fecha" android:layout_weight="1" style="generic_row_data_comp"/>
+                                    <TextView android:textColor="@color/black" android:gravity="right" android:id="@+id/tv_fecha_pdf" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/open_sans_bold"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="2">
+                                    <TextView android:textColor="@color/black_light" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/recarga_label_nro_comprobante" android:layout_weight="1" style="generic_row_data_comp"/>
+                                    <TextView android:textColor="@color/black" android:gravity="right" android:id="@+id/tv_nro_comprobante_pdf" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/open_sans_bold"/>
+                                </LinearLayout>
+                                <TextView android:id="@+id/tv_terminos_condiciones_pdf" android:padding="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/text_legend_small"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+</LinearLayout>

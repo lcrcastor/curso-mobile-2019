@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/wrapperItem" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/vgItem" android:background="@drawable/border_bottom_layout" android:layout_width="match_parent" android:layout_height="@dimen/list_item_height">
+        <RelativeLayout android:id="@+id/vgRowItem" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+            <ImageView android:gravity="center_vertical" android:id="@+id/ivArrow" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/ic_arrow_small" android:layout_alignParentLeft="true" android:contentDescription="@string/IDXX_OPTION_ACCORDION_COLLAPSE"/>
+            <ImageView android:gravity="center_vertical" android:id="@+id/ivCheck" android:layout_width="21dp" android:layout_height="21dp" android:layout_marginTop="15dp" android:layout_marginBottom="11dp" android:src="@drawable/ic_checkbox_unchecked" android:layout_alignParentRight="true"/>
+            <TextView android:textSize="13sp" android:textColor="@color/generic_black" android:gravity="center_vertical" android:id="@+id/tvLabel" android:paddingLeft="18dp" android:paddingRight="5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_toLeftOf="@+id/ivCheck" android:layout_toRightOf="@+id/ivArrow" fontPath="fonts/OpenSans-Regular.otf" style="@style/style_text_label"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/vgChildren" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

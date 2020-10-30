@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" style="@style/MainLayout">
+    <RelativeLayout android:gravity="center" android:id="@+id/footer_confirm_payment_form_button_pay" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:id="@+id/confirm_payment_form_button_pay" android:text="@string/ID268_CARDPAYMENT_CONFIRM_BTN_PAY" style="@style/generic_boton_rojo"/>
+    </RelativeLayout>
+    <ScrollView android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/footer_confirm_payment_form_button_pay">
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/confirm_payment_form_credit_card_title" android:text="@string/ID261_CARDPAYMENT_CONFIRM_LBL_TITLE" android:layout_weight="1" style="@style/generic_title"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSectionTitle"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/confirm_payment_form_credit_card" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID262_CARDPAYMENT_CONFIRM_LBL_CARD" android:layout_weight="2" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/confirm_payment_form_credit_card_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/confirm_payment_form_amount" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID263_CARDPAYMENT_CONFIRM_LBL_AMOUNT" android:layout_weight="2" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/confirm_payment_form_amount_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:id="@+id/confirm_payment_form_debit_account_in_pesos_divider" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/confirm_payment_form_debit_account_in_pesos_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/confirm_payment_form_debit_account_in_pesos" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID264_CARDPAYMENT_CONFIRM_LBL_DEBIT" android:layout_weight="2" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_CUENTA_PESO_ARGENTINO" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/confirm_payment_form_debit_account_in_pesos_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:id="@+id/confirm_payment_form_debit_account_in_dollars_divider" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/confirm_payment_form_debit_account_in_dollars_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/confirm_payment_form_debit_account_in_dollars" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID985_CCARDS_CONFIRMAR_PAGO_LABEL_CUENTA_DEBITO_DOLARES" android:layout_weight="1" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_CUENTA_DOLAR" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/confirm_payment_form_debit_account_in_dollars_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:id="@+id/confirm_payment_form_balance_in_pesos_divider" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/confirm_payment_form_balance_in_pesos_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/confirm_payment_form_balance_in_pesos" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID265_CARDPAYMENT_CONFIRM_LBL_AMOUNT" android:layout_weight="2" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_MONTO_PESO_ARGENTINO" style="@style/generic_row_label_conf"/>
+                <ar.com.santander.rio.mbanking.view.AmountView android:gravity="end" android:id="@+id/confirm_payment_form_balance_in_pesos_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:id="@+id/confirm_payment_form_balance_in_dollars_divider" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/confirm_payment_form_balance_in_dollars_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/confirm_payment_form_balance_in_dollars" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID986_CCARDS_CONFIRMAR_PAGO_LABEL_MONTO_DOLARES" android:layout_weight="1" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_MONTO_DOLAR" style="@style/generic_row_label_conf"/>
+                <ar.com.santander.rio.mbanking.view.AmountView android:gravity="end" android:id="@+id/confirm_payment_form_balance_in_dollars_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:id="@+id/confirm_payment_form_quote_of_the_day_divider" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/confirm_payment_form_quote_of_the_day_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/confirm_payment_form_quote_of_the_day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID266_CARDPAYMENT_CONFIRM_LBL_DAILYQUOTE" style="@style/generic_row_label_conf"/>
+                <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ar.com.santander.rio.mbanking.view.AmountView android:id="@+id/confirm_payment_form_quote_of_the_day_content" android:layout_width="wrap_content" android:layout_height="wrap_content" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_row_data_conf"/>
+                    <ar.com.santander.rio.mbanking.view.AmountView android:id="@+id/confirm_payment_form_quote_of_the_day_ars_content" android:layout_width="wrap_content" android:layout_height="wrap_content" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_row_data_conf"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/confirm_payment_form_payment_date" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID267_CARDPAYMENT_CONFIRM_LBL_ENDATE" android:layout_weight="1" style="@style/generic_row_label_conf"/>
+                <ar.com.santander.rio.mbanking.view.DateView android:gravity="end" android:id="@+id/confirm_payment_form_payment_date_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

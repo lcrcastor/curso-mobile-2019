@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:nextFocusDown="@+id/txtDirec" android:layout_width="match_parent" android:layout_height="match_parent">
+    <fragment android:name="com.google.android.gms.maps.MapFragment" android:id="@+id/sucursal_detalle_map_view" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/ll"/>
+    <RelativeLayout android:background="@color/white_semitransparent" android:padding="@dimen/padding_body_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/ll">
+        <TextView android:id="@+id/txtDirec" android:padding="@dimen/padding_body_content" android:nextFocusDown="@+id/txtDist" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:layout_toLeftOf="@+id/txtDist" android:layout_alignParentLeft="true" style="@style/generic_row_data_comp"/>
+        <TextView android:id="@+id/txtDist" android:padding="@dimen/padding_body_content" android:nextFocusDown="@+id/txtNombre" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="300 mts" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/min_height_detail_footer" android:layout_alignParentBottom="true">
+        <View android:background="@color/grey_medium_light_transparent" android:layout_width="match_parent" android:layout_height="1dp"/>
+        <ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="top|center_vertical|center_horizontal|center" android:orientation="horizontal" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="center" android:id="@+id/imgCajero" android:layout_width="0dp" android:layout_height="60dp" android:layout_weight="1"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3">
+                        <TextView android:id="@+id/txtNombre" android:nextFocusDown="@+id/txtDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/generic_row_data_comp"/>
+                        <TextView android:textSize="12dp" android:textColor="@color/generic_black" android:id="@+id/txtDesc" android:nextFocusDown="@+id/telephoneRow" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/generic_fontSemibold"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:background="@color/grey_medium_light_transparent" android:layout_width="match_parent" android:layout_height="1dp"/>
+                <ar.com.santander.rio.mbanking.view.TelephoneRow android:id="@+id/telephoneRow" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/ic_call"/>
+                <View android:background="@color/grey_medium_light_transparent" android:layout_width="match_parent" android:layout_height="1dp"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

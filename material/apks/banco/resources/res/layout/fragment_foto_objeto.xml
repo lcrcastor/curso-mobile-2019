@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.constraint.ConstraintLayout android:id="@+id/camera_preview_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:id="@+id/camera_preview" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout android:id="@+id/buttons_layout" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="30dp">
+        <Button android:textColor="@color/grey_darker" android:id="@+id/confirm_button" android:background="@drawable/bg_top_ios_btn" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginBottom="0dp" android:text="@string/ID_4821_SEGUROS_BTN_SELECCIONAR_FOTO" android:textAllCaps="false" app:layout_constraintBottom_toTopOf="@+id/cancel_button" app:layout_constraintEnd_toEndOf="0" app:layout_constraintHorizontal_bias="0" app:layout_constraintStart_toStartOf="0"/>
+        <Button android:textColor="@color/red_corporative_text" android:id="@+id/cancel_button" android:background="@drawable/bg_bottom_ios_btn" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginLeft="16dp" android:layout_marginTop="0dp" android:layout_marginRight="16dp" android:layout_marginBottom="4dp" android:text="@string/ID_4822_SEGUROS_BTN_VOLVER_A_TOMAR" android:textAllCaps="false" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintHorizontal_bias="0" app:layout_constraintStart_toStartOf="0"/>
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout android:id="@+id/fav_button_layout" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <android.support.design.widget.FloatingActionButton android:id="@+id/shot_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" app:backgroundTint="@color/white" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:srcCompat="@drawable/cam_ico"/>
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>

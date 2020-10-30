@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="bottom" android:id="@+id/wrapperBtn" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:id="@+id/vgWrapperButton" style="@style/wrapperButtonRed">
+            <Button android:id="@+id/btnReceiptPayment" android:text="@string/ID227_PAYMENT_DETAIL_LBL_BACK" style="@style/generic_boton_rojo"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <ScrollView android:id="@+id/svPageReceipt" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/wrapperBtn">
+        <LinearLayout android:orientation="vertical" android:id="@+id/bodyReceipt" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include layout="@layout/title_simple_layout"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/vgWrapperReceiptTopPayment" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <View style="@style/SeparatorSectionTitle"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/vgWrapperReceiptBottomPayment" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/wrapperLegend" android:padding="@dimen/general_margin" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:id="@+id/tvLegendTop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" style="@style/generic_leyend_light"/>
+                <TextView android:id="@+id/tvLegendBottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" style="@style/generic_leyend_light"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layoutLeyendaLink" android:background="@color/fondo_link" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_margin" android:layout_marginTop="20dp" android:layout_marginRight="@dimen/general_margin">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bulb"/>
+                    <TextView android:id="@+id/descripcionLink" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="3dp" android:text="" style="@style/leyenda_link"/>
+                </LinearLayout>
+                <TextView android:autoLink="web" android:linksClickable="true" android:id="@+id/link" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="41dp" android:layout_marginRight="@dimen/general_margin" android:layout_marginBottom="20dp" android:text="@string/link_seguro" android:layout_alignTop="@+id/credito_page4_idLeyendaLink" style="@style/generic_leyend_light_token_obp"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include layout="@layout/layout_bottom_receipt_share"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

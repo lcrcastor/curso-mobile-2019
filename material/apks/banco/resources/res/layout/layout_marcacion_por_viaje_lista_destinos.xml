@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/F26_03_RLL_HEADER" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:id="@+id/F26_03_LBL_TITLE" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:text="@string/ID3988_MARCACION_VIAJE_TITLE_SELECCIONAR_DESTINO" android:layout_alignParentTop="true" style="@style/generic_title"/>
+            <View android:layout_marginTop="12dp" android:layout_below="@+id/F26_03_LBL_TITLE" style="@style/SeparatorSectionTitle"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/F26_03_BTN_GUARDAR" android:layout_below="@+id/F26_03_RLL_HEADER">
+        <RelativeLayout android:id="@+id/F26_03_RLL_SEARCH_BAR" android:layout_width="match_parent" android:layout_height="50dp">
+            <ar.com.santander.rio.mbanking.view.ClearableEditText android:id="@+id/F26_03_INP_SEARCH" android:paddingLeft="40dp" android:paddingRight="5dp" android:layout_width="match_parent" android:layout_height="32dp" android:layout_marginLeft="9dp" android:layout_marginRight="9dp" android:hint="@string/ID3989_MARCACION_VIAJE_HINT_BUSCAR_PAIS" android:maxLines="1" android:lines="1" android:maxLength="64" android:layout_centerVertical="true" android:inputType="textNoSuggestions" app:color="@color/grey_medium_light" style="@style/generic_search_input"/>
+            <ImageView android:layout_width="14dp" android:layout_height="14dp" android:layout_marginLeft="10dp" android:src="@drawable/ic_search" android:layout_alignLeft="@+id/F26_03_INP_SEARCH" android:layout_centerVertical="true" android:contentDescription="@null"/>
+        </RelativeLayout>
+        <View style="@style/SeparatorSectionTitle"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <ListView android:id="@+id/F26_03_LST_DESTINOS" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <TextView android:id="@+id/F26_MARCACION_DETALLE_AGREGAR_DESTINOS" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:text="@string/ID3990_MARCACION_DETALLE_DESTINOS_MENSAJE_AGREGAR_DESTINOS" style="@style/generic_row_data_form"/>
+            <RelativeLayout android:orientation="vertical" android:id="@+id/F26_03_RLL_SEARCH_PREDICTIVO" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+                <View android:layout_gravity="bottom" android:background="@color/grey_medium_dark_transparent" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                <ListView android:id="@+id/F26_03_LST_SEARCH_PREDICTIVO" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <Button android:id="@+id/F26_03_BTN_GUARDAR" android:text="@string/IDXX_MARCACION_VIAJE_BTN_SELECCIONAR_DESTINOS" android:layout_alignParentBottom="true" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+</RelativeLayout>

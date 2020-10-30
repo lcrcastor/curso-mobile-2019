@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/vgLogin" android:background="@color/grey_light" android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/loginTradicional" layout="@layout/login_tradicional"/>
+    <include android:id="@+id/loginNoTradicional" layout="@layout/login_no_tradicional"/>
+</ViewFlipper>

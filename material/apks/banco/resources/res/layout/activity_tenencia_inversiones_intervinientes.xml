@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="55dp">
+        <TextView android:id="@+id/tv_functionality_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_margin" android:layout_marginTop="@dimen/general_margin" android:layout_marginRight="@dimen/general_margin" android:layout_marginBottom="@dimen/general_margin" style="@style/generic_title"/>
+        <View style="@style/SeparatorSectionTitle"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="55dp">
+        <TextView android:id="@+id/tv_subtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_margin" android:layout_marginTop="@dimen/general_margin" android:layout_marginRight="@dimen/general_margin" android:layout_marginBottom="@dimen/general_margin" android:text="@string/TITLE_TENENCIA_DE_INVERSIONES_INTERVINIENTES" style="@style/generic_title"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/container_area_light_gray" android:layout_width="match_parent" android:layout_height="55dp">
+        <TextView android:id="@+id/tv_account" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_margin" android:layout_marginTop="@dimen/general_margin" android:layout_marginRight="@dimen/general_margin" android:layout_marginBottom="@dimen/general_margin" style="@style/generic_title"/>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView android:id="@+id/rvPerfilInversor" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" app:layout_constraintStart_toStartOf="@+id/perfilInversorHeader" app:layout_constraintTop_toBottomOf="@+id/perfilInversorHeader"/>
+</LinearLayout>

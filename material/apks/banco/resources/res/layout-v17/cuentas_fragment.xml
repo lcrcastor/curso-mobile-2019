@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/rootViewTransaction" android:background="@color/white" android:focusable="false" android:layout_width="match_parent" android:layout_height="match_parent" android:nextFocusForward="@+id/selectorCuenta.idCuenta">
+    <LinearLayout android:orientation="vertical" android:id="@+id/cuentasContainer" android:focusable="false" android:layout_width="match_parent" android:layout_height="match_parent" android:nextFocusForward="@+id/cuentasFragment.selector">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/cuentasFragment.selector" android:paddingTop="21dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:nextFocusForward="@+id/selectorCuenta.idCuenta">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:layout_weight="1" android:layout_marginStart="18dp" android:layout_marginEnd="18dp">
+                <TextView android:gravity="left" android:layout_gravity="left" android:id="@+id/selectorCuenta.idCuenta" android:focusable="true" android:layout_width="wrap_content" android:layout_height="match_parent" android:nextFocusForward="@+id/vgSelectorAccount" style="@style/generic_account_selector"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="8dp" android:layout_marginRight="18dp" android:layout_weight="1" android:layout_marginStart="8dp" android:layout_marginEnd="18dp">
+                <ar.com.santander.rio.mbanking.view.CustomSpinner android:layout_gravity="right" android:id="@+id/vgSelectorAccount" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="Botón cambiar de cuenta" app:labelSpinner="@string/ID85_ACCOUNTS_POP_CHANGE"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View style="@style/SeparatorSectionTitle"/>
+        <RelativeLayout android:orientation="vertical" android:id="@+id/layout_ko_result" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:gravity="center" android:id="@+id/text_ko_result" android:paddingTop="37dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:text="@string/MSG_USER000069" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" style="@style/generic_leyend_light"/>
+            <ImageView android:id="@+id/image_ko_result" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/error_continuacion" android:layout_above="@+id/text_ko_result" android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/layout_no_accounts" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="horizontal" android:paddingTop="21dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:layout_marginStart="18dp" android:layout_marginEnd="18dp">
+                    <TextView android:focusable="true" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/ID14_PRIVATEMENU_BTN_ACCOUNTS" style="@style/generic_title_list_accounts"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View style="@style/SeparatorSectionTitle"/>
+            <ImageView android:id="@+id/image_no_accounts" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="47dp" android:src="@drawable/cruz_blanca_fondo_celeste" android:layout_above="@+id/text_no_accounts" android:layout_centerHorizontal="true"/>
+            <TextView android:gravity="center" android:id="@+id/text_no_accounts" android:paddingTop="37dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_margin_x3" android:layout_marginTop="@dimen/general_margin" android:layout_marginRight="@dimen/general_margin_x3" android:layout_marginBottom="@dimen/general_margin" android:text="@string/IDXXX_USER_HAVE_NO_ACCOUNTS" style="@style/generic_message_list_accounts"/>
+        </LinearLayout>
+        <com.sothree.slidinguppanel.SlidingUpPanelLayout android:gravity="bottom" android:id="@+id/slTransactions" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" app:umanoFadeColor="@android:color/transparent" app:umanoOverlay="false" app:umanoParalaxOffset="0dp" app:umanoScrollableView="@+id/gvList" app:umanoShadowHeight="0dp">
+            <LinearLayout android:orientation="vertical" android:id="@+id/wrapperContent" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@+id/layout_ok_result" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <ar.com.santander.rio.mbanking.view.HorizontalScrollList android:id="@+id/tabSelector" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    <include android:id="@+id/cuentasFragment.saldoTab" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/cuenta_saldo_layout"/>
+                    <include android:id="@+id/cuentasFragment.cbuTab" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/cuenta_cbu_layout"/>
+                </LinearLayout>
+            </LinearLayout>
+            <FrameLayout android:orientation="vertical" android:id="@+id/vgLoadTransactionsAccount" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+    </LinearLayout>
+</LinearLayout>

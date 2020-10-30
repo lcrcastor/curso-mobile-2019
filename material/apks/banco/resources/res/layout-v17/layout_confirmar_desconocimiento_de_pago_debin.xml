@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/MainLayout">
+    <ScrollView android:id="@+id/comprobantePreautorizacionDebin" android:layout_width="match_parent" android:layout_height="435dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <LinearLayout android:orientation="vertical" android:id="@+id/pantallaConfirmarDesconocimientoDePagoDebin" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/linearLayoutTitulo" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/textViewTitulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/standard_margin" android:text="@string/ID_4647_DEBIN_TIT_CONFIRMAR_DESCONOCIMIENTO" style="@style/generic_title"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSectionTitle"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ar.com.santander.rio.mbanking.view.AmountView android:textSize="33dp" android:textColor="@color/grey_medium_dark" android:gravity="center" android:id="@+id/amountViewImporteMaximoData" android:layout_width="match_parent" android:layout_height="40dp" android:layout_margin="@dimen/standard_margin" android:text="" android:hint="@string/SIMBOLO_PESOS" style="@style/generic_amount"/>
+                <TextView android:gravity="center" android:id="@+id/textViewVendedor" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="VENDEDOR S.A" android:layout_below="@+id/amountViewImporteMaximoData" style="@style/generic_list_data_column2"/>
+                <RelativeLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/textViewVendedor">
+                    <TextView android:id="@+id/ID_4420_DEBIN_CUIT_CUIL_CDI" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="10dp" android:layout_marginBottom="18dp" android:text="@string/ID_4420_DEBIN_CUIT_CUIL_CDI" style="@style/generic_list_data_column1"/>
+                    <TextView android:id="@+id/textViewConfirmarDesconocimientoDePagoDebinCUIT" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="18dp" android:text="27-33597573-3" android:layout_toRightOf="@+id/ID_4420_DEBIN_CUIT_CUIL_CDI" style="@style/generic_list_data_column2"/>
+                </RelativeLayout>
+            </RelativeLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:id="@+id/linearLayoutCBUConfirmarDesconocimientoDePagoDebin" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/standard_margin">
+                    <TextView android:id="@+id/textViewCBUConfirmarDesconocimientoDePagoDebin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4421_DEBIN_CBU" android:layout_alignParentLeft="true" style="@style/generic_list_data_column1"/>
+                    <TextView android:id="@+id/textViewCBUConfirmarDesconocimientoDePagoDebinData" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/generic_list_data_column2"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:id="@+id/linearLayoutAliasConfirmarDesconocimientoDePagoDebin" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/standard_margin">
+                    <TextView android:id="@+id/textViewAliasConfirmarDesconocimientoDePagoDebin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4422_DEBIN_ALIAS" android:layout_alignParentLeft="true" style="@style/generic_list_data_column1"/>
+                    <TextView android:id="@+id/textViewAliasConfirmarDesconocimientoDePagoDebinData" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/generic_list_data_column2"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:id="@+id/linearLayoutBancoConfirmarDesconocimientoDePagoDebin" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/standard_margin">
+                    <TextView android:id="@+id/textViewBancoConfirmarDesconocimientoDePagoDebin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4423_DEBIN_BANCO" android:layout_alignParentLeft="true" style="@style/generic_list_data_column1"/>
+                    <TextView android:id="@+id/textViewBancoConfirmarDesconocimientoDePagoDebinData" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/generic_list_data_column2"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutEstado" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/standard_margin">
+                    <TextView android:id="@+id/textViewEstado" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4414_DEBIN_ESTADO" android:layout_alignParentLeft="true" style="@style/generic_list_data_column1"/>
+                    <TextView android:id="@+id/textViewEstadoConfirmarDesconocimientoDePagoDebinData" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/generic_list_data_column2"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:id="@+id/linearLayoutCuentaDebito" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/standard_margin">
+                    <TextView android:id="@+id/textViewCuentaDebito" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4424_DEBIN_CUENTADEBITO" android:layout_alignParentLeft="true" style="@style/generic_list_data_column1"/>
+                    <TextView android:id="@+id/textViewCuentaDebitoConfirmarDesconocimientoDePagoDebinData" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/generic_list_data_column2"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutFechaDeSolicitud" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/standard_margin">
+                    <TextView android:id="@+id/textViewFechaDeSolicitud" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4425_DEBIN_FECHADESOLICITUD" android:layout_alignParentLeft="true" style="@style/generic_list_data_column1"/>
+                    <TextView android:id="@+id/textViewFechaDeSolicitudConfirmarDesconocimientoDePagoDebinData" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/generic_list_data_column2"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutFechaDeVencimiento" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/standard_margin">
+                    <TextView android:id="@+id/textViewFechaDeVencimiento" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4426_DEBIN_FECHADEVTO" android:layout_alignParentLeft="true" style="@style/generic_list_data_column1"/>
+                    <TextView android:id="@+id/textViewFechaDeVencimientoConfirmarDesconocimientoDePagoDebinData" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/generic_list_data_column2"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutConcepto" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/standard_margin">
+                    <TextView android:id="@+id/textViewConcepto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4428_DEBIN_CONCEPTO" android:layout_alignParentLeft="true" style="@style/generic_list_data_column1"/>
+                    <TextView android:id="@+id/textViewConceptoConfirmarDesconocimientoDePagoDebinData" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/generic_list_data_column2"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutDescripcion" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/standard_margin">
+                    <TextView android:id="@+id/textViewDescripcion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4429_DEBIN_DESCRIPCION" android:layout_alignParentLeft="true" style="@style/generic_list_data_column1"/>
+                    <TextView android:gravity="right" android:id="@+id/textViewDescripcionConfirmarDesconocimientoDePagoDebinData" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="60dp" android:maxLines="4" android:lines="4" android:minLines="3" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/generic_list_data_column2"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutIDDebin" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/standard_margin">
+                    <TextView android:id="@+id/textViewIDDebin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4427_DEBIN_IDDEBIN" android:layout_alignParentLeft="true" style="@style/generic_list_data_column1"/>
+                    <TextView android:id="@+id/textViewIDDebinConfirmarDesconocimientoDePagoDebinData" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/generic_list_data_column2"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@+id/F32_02_row_botones" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:layout_alignBottom="@+id/comprobantePreautorizacionDebin" android:layout_alignParentBottom="true" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/comprobantePreautorizacionDebin" app:layout_constraintVertical_bias="1">
+        <Button android:id="@+id/F32_02_BTN_PAGAR_DEBIN" android:visibility="visible" android:text="@string/F33_02_Btn_Confirmar" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

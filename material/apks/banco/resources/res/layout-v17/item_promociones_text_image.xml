@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="horizontal" android:background="@color/white" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="top|left|center_vertical|center_horizontal|center|start" android:orientation="horizontal" android:background="@color/white" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/imgPromocion" android:padding="1dp" android:layout_width="@dimen/image_popup_width" android:layout_height="@dimen/image_popup_width" android:layout_marginRight="5dp" android:scaleType="fitCenter" android:adjustViewBounds="true" android:minHeight="80dp" android:layout_marginEnd="5dp"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_row_infinitescroll" android:layout_weight="3" android:layout_marginStart="@dimen/padding_row_infinitescroll">
+            <RelativeLayout android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/txtNombre" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/txtDist" android:layout_alignParentLeft="true" android:layout_toStartOf="@+id/txtDist" android:layout_alignParentStart="true" style="@style/generic_row_data_comp"/>
+                <TextView android:gravity="center" android:id="@+id/txtDist" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_alignParentRight="true" android:layout_marginStart="5dp" android:layout_alignParentEnd="true" style="@style/generic_row_label_comp"/>
+            </RelativeLayout>
+            <TextView android:id="@+id/txtDirec" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/generic_row_label_comp"/>
+            <TextView android:textSize="13sp" android:textStyle="bold" android:textColor="@color/generic_red" android:ellipsize="end" android:id="@+id/txtDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/general_margin" android:maxLines="1" style="@style/generic_fontRegular"/>
+            <TextView android:textSize="@dimen/detalle_text_size" android:textColor="@color/generic_black" android:id="@+id/txtCupon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="sdfsdfdfdfssdffsdf"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

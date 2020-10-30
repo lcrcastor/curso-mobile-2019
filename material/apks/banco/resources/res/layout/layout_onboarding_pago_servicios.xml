@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ViewFlipper android:id="@+id/F06_01_FLP_OnBoarding" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentTop="true" android:layout_alignParentBottom="true">
+        <RelativeLayout android:orientation="vertical" android:id="@+id/F06.01_RLL_OnBoarding_Page1" android:background="@color/black_onboarding" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="20dp" android:textColor="@color/white" android:gravity="center" android:id="@+id/F06_01_LBL_OnBoarding_Page1_Label1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:text="@string/IDXX6_PAGO_SERVICIO_LBL_ONBOARDING_1" android:layout_centerVertical="true" android:lineSpacingExtra="1dp" fontPath="fonts/OpenSans-Regular.otf"/>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/F06_01_LNL_OnBoarding_Page1_Progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:layout_marginBottom="48dp" android:layout_above="@+id/F06_01_btn_nuevo_pago" android:layout_centerHorizontal="true">
+                <ImageView android:background="@drawable/onboarding_progress_red" android:layout_width="10dp" android:layout_height="10dp" android:layout_marginLeft="2dp" android:layout_marginRight="2dp"/>
+                <ImageView android:background="@drawable/onboarding_progress_white" android:layout_width="10dp" android:layout_height="10dp" android:layout_marginLeft="2dp" android:layout_marginRight="2dp"/>
+            </LinearLayout>
+            <Button android:id="@+id/F06_01_btn_nuevo_pago" android:text="@string/IDXX5_PAGO_SERVICIO_BTN_NUEVO_PAGO" android:layout_alignParentBottom="true" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:id="@+id/F06.01_RLL_OnBoarding_Page2" android:background="@color/black_onboarding" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="20dp" android:textColor="@color/white" android:gravity="center" android:id="@+id/F06_01_LBL_OnBoarding_Page2_Label1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:text="@string/IDXX7_PAGO_SERVICIO_LBL_ONBOARDING_2" android:layout_centerVertical="true" android:lineSpacingExtra="1dp" fontPath="fonts/OpenSans-Regular.otf"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/F06_01_LNL_OnBoarding_Page2_Progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:layout_marginBottom="48dp" android:layout_above="@+id/F06_01_BTN_Comenzar" android:layout_centerHorizontal="true">
+                <ImageView android:background="@drawable/onboarding_progress_white" android:layout_width="10dp" android:layout_height="10dp" android:layout_marginLeft="2dp" android:layout_marginRight="2dp"/>
+                <ImageView android:background="@drawable/onboarding_progress_red" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:layout_marginRight="2dp"/>
+            </LinearLayout>
+            <Button android:id="@+id/F06_01_BTN_Comenzar" android:text="@string/IDXX9_PAGO_SERVICIO_BTN_COMENZAR" android:layout_alignParentBottom="true" android:textAllCaps="false" style="@style/generic_boton_blanco_onboarding"/>
+        </RelativeLayout>
+    </ViewFlipper>
+</LinearLayout>

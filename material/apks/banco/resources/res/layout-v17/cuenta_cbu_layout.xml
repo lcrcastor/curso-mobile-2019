@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:paddingTop="70dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:id="@+id/linearLayoutInfoCbu" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/vContent" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="top|center_vertical|center_horizontal|center" android:layout_gravity="center_horizontal" android:id="@+id/textView6" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID4266_F28_00_CUENTAS_TEXT_CBU" android:contentDescription="@string/OUT_CBU" style="@style/generic_big_label_regular"/>
+            <TextView android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/cuentaCBU.value" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="8dp" style="@style/generic_big_label_light"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/vContentAlias" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:layout_gravity="center_vertical" android:id="@+id/cuentaAlias_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:text="@string/ID4267_F28_00_CUENTAS_TEXT_ALIAS_CBU" android:layout_marginEnd="5dp" style="@style/generic_big_label_regular"/>
+                <ImageView android:layout_gravity="center_vertical" android:id="@+id/cuentaAlias_help" android:focusable="true" android:clickable="true" android:layout_width="24dp" android:layout_height="24dp" android:tint="@color/grey_medium_light" android:contentDescription="@string/ACCESSIBILITY_ACOUNT_VINCULO_AYUDA_ALIAS" app:srcCompat="@drawable/ic_help_24dp"/>
+            </LinearLayout>
+            <TextView android:textSize="13sp" android:textColor="@color/grey_medium_light" android:gravity="center" android:layout_gravity="center" android:id="@+id/cuentaAlias_value" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="60dp" android:layout_marginTop="19dp" android:layout_marginRight="60dp" android:text="@string/ID4278_F28_00_CUENTAS_TEXT_SIN_ALIAS" android:layout_marginStart="60dp" android:layout_marginEnd="60dp" fontPath="fonts/OpenSans-Regular.otf"/>
+            <LinearLayout android:gravity="center" android:layout_gravity="top|center_vertical|center_horizontal|center" android:orientation="horizontal" android:id="@+id/shareAlias" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp">
+                <TextView android:id="@+id/copyContentCBU" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="Copiar" android:contentDescription="@string/ACCESIBILITY_ACOUNT_COPY_CBU" android:layout_marginEnd="10dp" style="@style/generic_data_currency"/>
+                <TextView android:id="@+id/shareContentAlias" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Compartir" android:contentDescription="@string/ACCESIBILITY_ACOUNT_SHARE_CBU_ALIAS" style="@style/generic_data_currency"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:id="@+id/linearLayout2" android:layout_width="match_parent" android:layout_height="match_parent">
+        <Button android:id="@+id/F06_00_btn_modificar_alias" android:text="@string/F01_00_LBL_BTN_MODIFICAR_ALIAS" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+        <Button android:id="@+id/F06_00_btn_abm_alias" android:layout_marginTop="0dp" android:text="@string/ID4268_F01_20_LBL_REFERENCE_CREAR_ALIAS" android:onClick="NuevoAlias" android:textAllCaps="false" style="@style/generic_boton_blanco_borde_gris"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" style="@style/MainLayout">
+    <RelativeLayout android:gravity="center" android:id="@+id/footer_buttonTransfer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:id="@+id/buttonTransfer" android:text="@string/ID475_TRANSFERENCE_PROOF_BTN_TRANS" style="@style/generic_boton_rojo"/>
+    </RelativeLayout>
+    <ScrollView android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/footer_buttonTransfer">
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/textViewTransferencias" android:text="@string/ID463_TRANSFERENCE_PROOF_TITLE" style="@style/generic_title"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSectionTitle"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:id="@+id/textViewLeyendaConfirmacion" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_leyend_confirm_transf"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:id="@+id/textViewImporteSignoMoneda" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID468_TRANSFERENCE_PROOF_PAYMENT" android:layout_weight="2" android:contentDescription="@string/ACCESSIBILITY_TRANSFERENCIAS_IMPORTE_PESO_ARGENTINO" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/textViewImporte" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:id="@+id/textViewPara" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID466_TRANSFERENCE_PROOF_TO" android:layout_weight="2" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/textViewCuentaDestino" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutBancoDestino" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID455_TRANSFERENCE_OTHER_TOBANK" android:layout_weight="1" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/textViewBancoDestino" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="2" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:id="@+id/dividerBancoDestino" android:visibility="gone" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutCUIT" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID454_TRANSFERENCE_OTHER_CIUT" android:layout_weight="1" android:contentDescription="@string/OUT_CUIT_CUIL_CDI_DNI" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/textViewCUIT" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="2" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:id="@+id/dividerCUIT" android:visibility="gone" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutTipo" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID451_TRANSFERENCE_THIRDPARTY_TYPE" android:layout_weight="2" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/textViewTipo" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:id="@+id/dividerTipo" android:visibility="gone" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutNumero" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID452_TRANSFERENCE_THIRDPARTY_NUMBER" android:layout_weight="2" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/textViewNumero" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:id="@+id/dividerNumero" android:visibility="gone" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID467_TRANSFERENCE_PROOF_OWNER" android:layout_weight="3" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/textViewTitular" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:id="@+id/dividerTitular" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:id="@+id/textViewDe" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID465_TRANSFERENCE_PROOF_FROM" android:layout_weight="2" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/textViewCuentaOrigen" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID469_TRANSFERENCE_PROOF_EXEDATE" android:layout_weight="1" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/textViewFechaEjecucion" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID470_TRANSFERENCE_PROOF_ACRDATE" android:layout_weight="1" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/textViewPlazoAcreditacion" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID471_TRANSFERENCE_PROOF_CONCEPT" android:layout_weight="1" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/textViewConcepto" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutLeyemda" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_margin_row">
+                <TextView android:gravity="start" android:id="@+id/leyenda" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_label_form"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/ID472_TRANSFERENCE_PROOF_CONCEPTREF" android:layout_weight="1" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/textViewReferenciaConcepto" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_margin" android:layout_marginTop="15dp" android:layout_marginBottom="8dp">
+                <TextView android:gravity="start" android:id="@+id/textViewTerminosCondiciones" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID473_TRANSFERENCE_PROOF_BTN_VIEW" android:contentDescription="@string/ACCESSIBILITY_TRANSFERENCIAS_VINCULO_TERMINOS_Y_CONDICIONES" style="@style/generic_link_term_condition"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_margin" android:layout_marginBottom="12dp">
+                <TextView android:gravity="start" android:id="@+id/textViewLegales" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID474_TRANSFERENCE_PROOF_BTN_LEGAL" android:contentDescription="@string/ACCESSIBILITY_TRANSFERENCIAS_VINCULO_LEGALES" style="@style/generic_link_term_condition"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

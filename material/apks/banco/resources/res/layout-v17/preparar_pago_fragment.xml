@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" style="@style/MainLayout">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/prepare_payment_form_credit_card_payment" android:layout_height="wrap_content" android:text="@string/ID232_CARDPAYMENT_PREPAY_LBL_TITLE" style="@style/generic_title"/>
+            <TextView android:gravity="end" android:id="@+id/prepare_payment_form_help" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID279_CARDPAYMENT_PREPAY_BTN_HELP" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_VINCULO_AYUDA" style="@style/generic_link_term_condition"/>
+        </LinearLayout>
+        <View style="@style/SeparatorSectionTitle"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/prepare_payment_form_credit_card" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID233_CARDPAYMENT_PREPAY_LBL_CARD" android:layout_weight="2" style="@style/generic_row_label_form"/>
+            <TextView android:gravity="end" android:id="@+id/prepare_payment_form_credit_card_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_form"/>
+        </LinearLayout>
+        <View style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/prepare_payment_form_expire_date" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID234_CARDPAYMENT_PREPAY_LBL_ENDDATE" android:layout_weight="1" style="@style/generic_row_label_form"/>
+            <ar.com.santander.rio.mbanking.view.DateView android:gravity="end" android:id="@+id/prepare_payment_form_expire_date_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_form"/>
+        </LinearLayout>
+        <View style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/prepare_payment_form_balance_in_pesos" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID235_CARDPAYMENT_PREPAY_LBL_BALANCE_DOL" android:layout_weight="2" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_SALDO_PESO_ARGENTINO" style="@style/generic_row_label_form"/>
+            <ar.com.santander.rio.mbanking.view.AmountView android:gravity="end" android:id="@+id/prepare_payment_form_balance_in_pesos_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_row_data_form"/>
+        </LinearLayout>
+        <View style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/prepare_payment_form_balance_in_dollars" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID236_CARDPAYMENT_PREPAY_LBL_BALANCE_PES" android:layout_weight="1" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_SALDO_DOLAR" style="@style/generic_row_label_form"/>
+            <ar.com.santander.rio.mbanking.view.AmountView android:gravity="end" android:id="@+id/prepare_payment_form_balance_in_dollars_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="2" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_row_data_form"/>
+        </LinearLayout>
+        <View android:id="@+id/prepare_payment_form_quote_of_the_day_divider" style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/prepare_payment_form_quote_of_the_day_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/prepare_payment_form_quote_of_the_day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID237_CARDPAYMENT_PREPAY_LBL_DAILYQUOTE" style="@style/generic_row_label_form"/>
+            <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ar.com.santander.rio.mbanking.view.AmountView android:gravity="right" android:id="@+id/prepare_payment_form_quote_of_the_day_content" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_row_data_form"/>
+                <ar.com.santander.rio.mbanking.view.AmountView android:id="@+id/prepare_payment_form_quote_of_the_day_ars_content" android:layout_width="wrap_content" android:layout_height="wrap_content" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_row_data_form"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/prepare_payment_form_minimum_payment" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID238_CARDPAYMENT_PREPAY_LBL_MINPAY" android:layout_weight="1" style="@style/generic_row_label_form"/>
+            <ar.com.santander.rio.mbanking.view.AmountView android:gravity="end" android:id="@+id/prepare_payment_form_minimum_payment_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_row_data_form"/>
+        </LinearLayout>
+        <View style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/prepare_payment_form_amount_payable_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/prepare_payment_form_amount_payable" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID239_CARDPAYMENT_PREPAY_LBL_PAYAMOUNT" android:layout_weight="1" style="@style/generic_row_label_form"/>
+            <TextView android:gravity="end" android:id="@+id/prepare_payment_form_amount_payable_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_selectable_form"/>
+        </LinearLayout>
+        <View style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/prepare_payment_form_currency_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/prepare_payment_form_currency" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID240_CARDPAYMENT_PREPAY_LBL_CURRENCY" android:layout_weight="1" style="@style/generic_row_label_form"/>
+            <TextView android:gravity="end" android:id="@+id/prepare_payment_form_currency_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_selectable_form"/>
+        </LinearLayout>
+        <View android:id="@+id/prepare_payment_form_debit_account_in_pesos_divider" style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/prepare_payment_form_debit_account_in_pesos_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/prepare_payment_form_debit_account_in_pesos" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID241_CARDPAYMENT_PREPAY_LBL_DEBITPES" android:layout_weight="2" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_CUENTA_PESO_ARGENTINO" style="@style/generic_row_label_form"/>
+            <TextView android:gravity="end" android:id="@+id/prepare_payment_form_debit_account_in_pesos_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_selectable_form"/>
+        </LinearLayout>
+        <View android:id="@+id/prepare_payment_form_debit_account_in_dollars_divider" style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/prepare_payment_form_debit_account_in_dollars_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/prepare_payment_form_debit_account_in_dollars" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID242_CARDPAYMENT_PREPAY_LBL_DEBITDOL" android:layout_weight="1" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_CUENTA_DOLAR" style="@style/generic_row_label_form"/>
+            <TextView android:gravity="end" android:id="@+id/prepare_payment_form_debit_account_in_dollars_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_selectable_form"/>
+        </LinearLayout>
+        <View android:id="@+id/prepare_payment_form_amount_in_pesos_divider" style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/prepare_payment_form_amount_in_pesos_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/prepare_payment_form_amount_in_pesos" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID243_CARDPAYMENT_PREPAY_LBL_AMOUNTDOL" android:layout_weight="1" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_MONTO_PESO_ARGENTINO" style="@style/generic_row_label_form"/>
+            <ar.com.santander.rio.mbanking.view.AmountView android:gravity="end" android:id="@+id/prepare_payment_form_amount_in_pesos_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="2" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_row_data_form"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/prepare_payment_form_amount_in_pesos_editable_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/prepare_payment_form_amount_in_pesos_editable" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID243_CARDPAYMENT_PREPAY_LBL_AMOUNTDOL" android:layout_weight="1" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_MONTO_PESO_ARGENTINO" style="@style/generic_row_label_form"/>
+            <ar.com.santander.rio.mbanking.view.NumericEditText android:gravity="end" android:id="@+id/prepare_payment_form_amount_in_pesos_editable_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="18" android:digits="0123456789,." android:layout_weight="2" android:inputType="numberDecimal" app:max_digits_decimal="2" app:max_digits_integer="12" style="@style/generic_row_input_form"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/prepare_payment_form_amount_in_pesos_see_detail_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="0dp" android:layout_marginRight="@dimen/general_margin" android:layout_marginBottom="@dimen/general_margin" android:layout_marginEnd="@dimen/general_margin">
+            <TextView android:gravity="end" android:id="@+id/prepare_payment_form_amount_in_pesos_see_detail" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID244_CARDPAYMENT_PREPAY_BTN_VIEWDETAIL" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_VINCULO_VER_DETALLE" style="@style/generic_link_term_condition"/>
+        </LinearLayout>
+        <View android:id="@+id/prepare_payment_form_amount_in_dollars_divider" style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/prepare_payment_form_amount_in_dollars_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/prepare_payment_form_amount_in_dollars" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID290_STOPDEBIT_PREPAY_LBL_AMOUNTDOL" android:layout_weight="1" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_MONTO_DOLAR" style="@style/generic_row_label_form"/>
+            <ar.com.santander.rio.mbanking.view.AmountView android:gravity="end" android:id="@+id/prepare_payment_form_amount_in_dollars_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="2" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_row_data_form"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/prepare_payment_form_amount_in_dollars_editable_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/prepare_payment_form_amount_in_dollars_editable" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID290_STOPDEBIT_PREPAY_LBL_AMOUNTDOL" android:layout_weight="1" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_MONTO_DOLAR" style="@style/generic_row_label_form"/>
+            <ar.com.santander.rio.mbanking.view.NumericEditText android:gravity="end" android:id="@+id/prepare_payment_form_amount_in_dollars_editable_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="18" android:digits="0123456789,." android:layout_weight="2" android:inputType="numberDecimal" app:max_digits_decimal="2" app:max_digits_integer="12" style="@style/generic_row_input_form"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/prepare_payment_form_amount_in_dollars_see_detail_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="0dp" android:layout_marginRight="@dimen/general_margin" android:layout_marginBottom="@dimen/general_margin" android:layout_marginEnd="@dimen/general_margin">
+            <TextView android:gravity="end" android:id="@+id/prepare_payment_form_amount_in_dollars_see_detail" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID244_CARDPAYMENT_PREPAY_BTN_VIEWDETAIL" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_VINCULO_VER_DETALLE" style="@style/generic_link_term_condition"/>
+        </LinearLayout>
+        <View style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/prepare_payment_form_payment_date_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/prepare_payment_form_payment_date" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID291_STOPDEBIT_PREPAY_LBL_ENDDATE" android:layout_weight="1" style="@style/generic_row_label_form"/>
+            <ar.com.santander.rio.mbanking.view.DateView android:gravity="end" android:id="@+id/prepare_payment_form_payment_date_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="2" style="@style/generic_row_data_selectable_form"/>
+        </LinearLayout>
+        <View style="@style/SeparatorSection"/>
+        <Button android:id="@+id/prepare_payment_form_button_continue" android:text="@string/ID260_CARDPAYMENT_PREPAY_BTN_CONTINUE" style="@style/generic_boton_rojo"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp">
+            <Button android:layout_gravity="end" android:id="@+id/prepare_payment_form_button_pay" android:text="@string/ID293_STOPDEBIT_PREPAY_BTN_PAY" android:layout_weight="1" style="@style/generic_boton_stop_debit_pagar"/>
+            <Button android:layout_gravity="start" android:id="@+id/prepare_payment_form_button_stop_debit" android:text="@string/ID292_STOPDEBIT_PREPAY_BTN_STOPDEBIT" android:layout_weight="1" style="@style/generic_boton_stop_debit_pagar"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

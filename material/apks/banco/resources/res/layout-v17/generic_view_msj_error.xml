@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/section_error_msj" android:background="@color/error_parcial_view_color" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <View android:id="@+id/separador_msj_error_up" android:layout_above="@+id/section_msj_error" style="@style/StrongSeparatorSectionGrey"/>
+    <TextView android:id="@+id/section_msj_error" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="15dp" android:layout_marginRight="15dp" android:layout_marginBottom="20dp" android:layout_marginStart="15dp" android:layout_marginEnd="15dp" style="@style/generic_subtitle_fontSemibold_13sp"/>
+    <View android:id="@+id/separador_msj_error_down" android:layout_below="@+id/section_msj_error" style="@style/StrongSeparatorSectionGrey"/>
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/layout_empty" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentLeft="true" layout="@layout/layout_empty_favoritos"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/wrapperFavorite" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/layout_empty">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/llBuscar" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/layout_empty" android:layout_alignParentTop="true">
+            <LinearLayout android:orientation="horizontal" android:background="@drawable/edittext_search" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp">
+                <ImageView android:id="@+id/imgSearch" android:padding="10dp" android:layout_width="35dp" android:layout_height="35dp" android:src="@drawable/ic_search_red" android:tint="@color/generic_black"/>
+                <ar.com.santander.rio.mbanking.view.ClearableEditText android:textColor="@color/generic_black" android:layout_gravity="center" android:id="@+id/eTxtSearch" android:background="@drawable/edittext_noborder" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="@string/ID81_MYLOCATION_TBX_FAVSEARCH" android:singleLine="true" android:layout_weight="1" android:imeOptions="actionSearch" style="@style/generic_search_input"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View style="@style/SeparatorSectionTitle"/>
+        <include android:id="@+id/noBusqueda" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/llBuscar" layout="@layout/layout_no_busqueda"/>
+        <ar.com.santander.rio.mbanking.components.listswipe.SwipeMenuListView android:id="@+id/listView" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/llBuscar"/>
+    </LinearLayout>
+</RelativeLayout>

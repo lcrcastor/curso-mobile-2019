@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <View android:id="@+id/F10_00_separadorItem1" android:layout_above="@+id/lLF10_00_rll_tipo" style="@style/SeparatorSection"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/lLF10_00_rll_tipo" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@+id/F10_00_rll_tipo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_margin" android:layout_marginTop="@dimen/margin_title_tipo_de_tasa" android:layout_marginRight="@dimen/general_margin" android:layout_marginBottom="7dp">
+            <TextView android:id="@+id/F10_00_lbl_adapter_tipo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tradicional en pesos" android:layout_toLeftOf="@+id/F10_00_lbl_adapter_fecha" android:layout_alignParentLeft="true" style="@style/generic_tradicional_en_pesos_arrow_red_tenencia_plazo_fijo"/>
+            <TextView android:textSize="15dp" android:textColor="@color/grey_medium_dark" android:id="@+id/F10_00_lbl_adapter_fecha" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DD/MM/AAAA" android:layout_alignParentRight="true" app:fontPath="fonts/OpenSans-Regular.otf" style="@style/generic_date_arrow_red_tenencia_plazo_fijo"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/lLF10_00_rll_tipoTenencia" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="0dp" android:layout_below="@+id/lLF10_00_rll_tipo">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_margin" android:layout_marginTop="7dp" android:layout_marginRight="@dimen/general_margin" android:layout_marginBottom="7dp">
+            <TextView android:textSize="15dp" android:textColor="@color/grey_medium_dark" android:id="@+id/tipo_cuenta_lbl_row" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TIPO DE CUENTA" android:layout_alignParentLeft="true" app:fontPath="fonts/OpenSans-Regular.otf"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/lLF10_00_rll_tasa" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="0dp" android:layout_below="@+id/lLF10_00_rll_tipoTenencia">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_margin" android:layout_marginTop="7dp" android:layout_marginRight="@dimen/general_margin" android:layout_marginBottom="7dp">
+            <TextView android:textSize="15dp" android:textColor="@color/grey_medium_dark" android:id="@+id/F10_00_lbl_adapter_tasa" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID3002_LISTADOTEN_LBL_TASATNA" android:layout_alignParentLeft="true" app:fontPath="fonts/OpenSans-Regular.otf"/>
+            <TextView android:textSize="15dp" android:textColor="@color/grey_medium_dark" android:id="@+id/F10_00_lbl_adapter_tasa_data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="%" android:layout_alignParentRight="true" app:fontPath="fonts/OpenSans-Regular.otf"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/lLF10_00_rll_capital" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/lLF10_00_rll_tasa">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_margin" android:layout_marginTop="7dp" android:layout_marginRight="@dimen/general_margin" android:layout_marginBottom="7dp">
+            <TextView android:textSize="15dp" android:textColor="@color/grey_medium_dark" android:id="@+id/F10_00_lbl_adapter_capital" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID3003_LISTADOTEN_LBL_CAPITAL" android:layout_alignParentLeft="true" app:fontPath="fonts/OpenSans-Regular.otf"/>
+            <TextView android:textSize="15dp" android:textColor="@color/grey_medium_dark" android:id="@+id/F10_00_lbl_adapter_capital_data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$" android:layout_alignParentRight="true" app:fontPath="fonts/OpenSans-Regular.otf"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:id="@+id/F10_00_separadorTotal" android:background="@color/grey_light" android:layout_width="match_parent" android:layout_height="@dimen/height_line_separator" android:layout_below="@+id/lLF10_00_rll_capital" android:layout_alignLeft="@+id/lLF10_00_rll_tipo" android:layout_alignRight="@+id/lLF10_00_rll_tipo"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/lLF10_00_rll_total" android:background="@color/grey_extra_light" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/lLF10_00_rll_capital">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_margin" android:layout_marginTop="@dimen/general_margin" android:layout_marginRight="@dimen/general_margin" android:layout_marginBottom="@dimen/general_margin">
+            <TextView android:textSize="15dp" android:textColor="@color/grey_medium_dark" android:id="@+id/F10_00_lbl_adapter_total" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID3004_LISTADOTEN_LBL_TOTAL" android:layout_toLeftOf="@+id/F10_00_lbl_adapter_total_data" android:layout_alignParentLeft="true" app:fontPath="fonts/OpenSans-Bold.otf"/>
+            <TextView android:textSize="15dp" android:textColor="@color/grey_medium_dark" android:id="@+id/F10_00_lbl_adapter_total_data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_alignParentRight="true" app:fontPath="fonts/OpenSans-Regular.otf"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:id="@+id/F10_00_separadorItem" android:layout_width="match_parent" android:layout_height="@dimen/height_line_separator" android:layout_below="@+id/lLF10_00_rll_total" style="@style/SeparatorSection"/>
+</RelativeLayout>

@@ -1,0 +1,42 @@
+package com.rsa.mobilesdk.sdk;
+
+public class JSONStringConstants {
+    public static final String ALTITUDE = "Altitude";
+    public static final String ALTITUDE_ACCURACY = "AltitudeAccuracy";
+    public static final String BBSID = "BBSID";
+    public static final String CELL_TOWER_ID = "CellTowerId";
+    public static final String CHANNEL = "Channel";
+    public static final String COLLECTION_TIMESTAMP = "TIMESTAMP";
+    public static final String COMPROMISED = "Compromised";
+    public static final String DEVICE_MODEL = "DeviceModel";
+    public static final String DEVICE_NAME = "DeviceName";
+    public static final String DEVICE_SYSTEM_NAME = "DeviceSystemName";
+    public static final String DEVICE_SYSTEM_VERSION = "DeviceSystemVersion";
+    public static final String EMULATOR = "Emulator";
+    public static final String GEO_LOCATION_INFO = "GeoLocationInfo";
+    public static final String GEO_LOCATION_TIMESTAMP = "Timestamp";
+    public static final String HARDWARE_ID = "HardwareID";
+    public static final String HEADING = "Heading";
+    public static final String HORIZONTAL_ACCURACY = "HorizontalAccuracy";
+    public static final String LANGUAGES = "Languages";
+    public static final String LATITUDE = "Latitude";
+    public static final String LOCATION_AREA_CODE = "LocationAreaCode";
+    public static final String LONGITUDE = "Longitude";
+    public static final String MCC = "MCC";
+    public static final String MNC = "MNC";
+    public static final String MULTITASKING_SUPPORTED = "MultitaskingSupported";
+    public static final String OS_ID = "OS_ID";
+    public static final String PHONE_NUMBER = "PhoneNumber";
+    public static final String RSA_APPLICATION_KEY = "RSA_ApplicationKey";
+    public static final String SCREEN_SIZE = "ScreenSize";
+    public static final String SDK_VERSION = "SDK_VERSION";
+    public static final String SIGNAL_STRENGTH = "SignalStrength";
+    public static final String SIM_ID = "SIM_ID";
+    public static final String SPEED = "Speed";
+    public static final String SSID = "SSID";
+    public static final String STATION_NAME = "StationName";
+    public static final String STATUS = "Status";
+    public static final String WIFI_MAC_ADDRESS = "WiFiMacAddress";
+    public static final String WIFI_NETWORKS_DATA = "WiFiNetworksData";
+    public static final String WIFI_NETWORK_DATA = "WiFiNetworksData";
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/F20_00_IMG_ARROW" android:layout_alignParentLeft="true" android:layout_alignParentStart="true">
+            <ImageView android:id="@+id/F20_00_IMG_COUPON" android:layout_width="54dp" android:layout_height="50dp" android:layout_marginLeft="18dp" android:layout_marginTop="15dp" android:layout_marginBottom="15dp" android:layout_marginStart="18dp"/>
+            <TextView android:textSize="15dp" android:textColor="@color/grey_medium_dark" android:layout_gravity="center_vertical" android:id="@+id/F20_00_LBL_COUPON" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="20dp" style="@style/generic_list_label_fondos"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/F20_00_IMG_ARROW" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="14dp" android:src="@drawable/arrow_right" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <View style="@style/SeparatorSubSection"/>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/F28_00_RLL_BODY" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/F28_00_RLL_HEADER" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:id="@+id/F28_00_LBL_TITULO" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:text="@string/ID4002_F28_00_LBL_TITULO" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/generic_title"/>
+        <View android:id="@+id/F18_00_LBL_SEPARADOR_TITULO" android:layout_below="@+id/F28_00_LBL_TITULO" style="@style/SeparatorSectionTitle"/>
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView android:id="@+id/F28_00_RCV_NOTIFICACIONES" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/F28_00_RLL_HEADER" android:layout_alignParentBottom="true"/>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/F28_00_LNL_SIN_NOTIFICACIONES" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/F28_00_RLL_HEADER" android:layout_alignParentBottom="true">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/F28_00_IMG_BUZON_VACIO" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/campana" android:importantForAccessibility="no"/>
+        <TextView android:gravity="center" android:id="@+id/F28_00_LBL_BUZON_VACIO" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="38dp" android:layout_marginRight="18dp" android:text="@string/ID4003_F28_00_LBL_SIN_NOTIFICACIONES" style="@style/generic_row_data_conf"/>
+    </LinearLayout>
+</RelativeLayout>

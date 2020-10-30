@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="23dp" android:layout_marginRight="18dp" android:layout_marginBottom="26dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="12">
+            <TextView android:textSize="15dp" android:textColor="@color/generic_black" android:id="@+id/tvNombeBotonSeguro" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4045_SEGUROS_LBL_COMPRA_PROT" style="@style/generic_fontSemibold"/>
+            <TextView android:id="@+id/tvDescBotonSeguro" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="17dp" android:text="" android:contentDescription="" style="@style/generic_row_label_form"/>
+        </LinearLayout>
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_right" android:contentDescription="@string/ACCESIBILITY_FLECHA_COMPRA_PROTEGIDA"/>
+    </LinearLayout>
+    <View style="@style/SeparatorListView"/>
+</LinearLayout>

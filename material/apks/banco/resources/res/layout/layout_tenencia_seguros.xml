@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:id="@+id/F27_00_LBL_TITLE" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="@string/IDXX_SEGUROS_LBL_TITULO_TENENCIA" android:layout_alignParentTop="true" style="@style/generic_title"/>
+    <View android:id="@+id/F27_00_SEPARATOR_TITLE" android:layout_below="@+id/F27_00_LBL_TITLE" style="@style/SeparatorSectionTitle"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/F27_00_LNL_TABLE_HEADER" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/F27_00_SEPARATOR_TITLE" style="@style/generic_list_title_background">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="21dp" android:layout_marginRight="18dp" android:layout_marginBottom="14dp" android:weightSum="2">
+            <TextView android:gravity="start" android:layout_gravity="start" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/IDXX_SEGUROS_LBL_SEGURO" android:layout_weight="1" style="@style/generic_list_title_3columns"/>
+            <TextView android:gravity="end" android:layout_gravity="end" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/IDXX_SEGUROS_LBL_CUOTA" android:layout_weight="1" style="@style/generic_list_title_3columns"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@+id/F27_00_SEPARATOR_HEADER" android:layout_below="@+id/F27_00_LNL_TABLE_HEADER" style="@style/SeparatorListView"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/F27_00_BTN_CONTRATAR_SEGURO" android:layout_below="@+id/F27_00_SEPARATOR_HEADER" android:layout_alignParentLeft="true">
+        <LinearLayout android:orientation="vertical" android:id="@+id/F27_00_LNL_SEGUROS" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TableLayout android:orientation="vertical" android:id="@+id/F27_00_TBL_SEGUROS" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/F27_00_LNL_WARNING_NO_ASEGURADO" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14dp" android:textColor="@color/grey_medium_dark" android:gravity="center_horizontal" android:layout_gravity="center" android:id="@+id/F27_00_LBL_LINK_DESCRIPTCION" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="24dp" android:layout_marginRight="18dp" android:text="@string/IDXX_SEGUROS_LBL_DISPOSITIVO_NO_ASEGURADO" fontPath="fonts/OpenSans-Regular.otf"/>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24dp">
+                    <TextView android:textSize="14dp" android:textColor="@color/red_light" android:id="@+id/F27_00_LBL_MAS_INFO" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:text="@string/IDXX_SEGUROS_LBL_MAS_INFORMACION" fontPath="fonts/OpenSans-Bold.otf"/>
+                </LinearLayout>
+                <View android:id="@+id/F27_00_SEPARARTOR_LEYENDA_AYUDA" style="@style/SeparatorSection"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <TextView android:id="@+id/F27_00_LBL_SIN_SEGUROS" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4024_SEGUROS_LBL_LEYENDA" android:drawableTop="@drawable/sin_tenencia" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="@style/generic_leyend_light"/>
+    <ImageView android:id="@+id/F27_00_ICO_SIN_MEDIO_PAGO" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/error_continuacion" android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+    <TextView android:gravity="center_horizontal" android:layout_gravity="center" android:id="@+id/F27_00_LBL_SIN_MEDIO_PAGO" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="37dp" android:layout_marginBottom="68dp" android:text="@string/IDXX_SEGUROS_SIN_MEDIO_PAGO" android:layout_below="@+id/F27_00_ICO_SIN_MEDIO_PAGO" style="@style/generic_leyend_light"/>
+    <Button android:id="@+id/F27_00_BTN_CONTRATAR_SEGURO" android:text="@string/IDXX_SEGUROS_BTN_CONTRATAR_NUEVO_SEGURO" android:layout_alignParentBottom="true" style="@style/generic_boton_rojo"/>
+</RelativeLayout>

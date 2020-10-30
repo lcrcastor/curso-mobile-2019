@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/tarjetas_row_item" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <View android:background="@color/grey_medium_light" android:layout_width="match_parent" android:layout_height="1dp"/>
+    <LinearLayout android:orientation="horizontal" android:padding="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ar.com.santander.rio.mbanking.view.DateView android:gravity="left" android:layout_gravity="center_vertical" android:id="@+id/cell_date" android:layout_width="0dp" android:layout_height="wrap_content" android:text="88/88/88" android:maxLines="1" android:layout_weight="2.2" style="@style/generic_list_data_column1"/>
+        <TextView android:layout_gravity="center_vertical" android:id="@+id/cell_desc" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="Su pago" android:layout_weight="5" style="@style/generic_list_data_column2"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="100dp" android:layout_height="wrap_content">
+            <ar.com.santander.rio.mbanking.view.AmountView android:gravity="end" android:layout_gravity="center_vertical" android:id="@+id/cell_value" android:layout_width="match_parent" android:layout_height="wrap_content" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_list_data_column3"/>
+            <ar.com.santander.rio.mbanking.view.AmountView android:gravity="end" android:layout_gravity="center_vertical" android:id="@+id/cell_value_2" android:layout_width="match_parent" android:layout_height="wrap_content" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_list_data_column3"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

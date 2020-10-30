@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_checked="false" android:layout_width="24dp" android:layout_height="24dp" android:drawable="@drawable/ic_checkbox_off_gris"/>
+    <item android:state_checked="true" android:layout_width="24dp" android:layout_height="24dp" android:drawable="@drawable/ic_checkbox_on_rojo"/>
+    <item android:layout_width="24dp" android:layout_height="24dp" android:drawable="@drawable/ic_checkbox_off_gris"/>
+</selector>

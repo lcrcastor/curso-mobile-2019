@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/error_sube_ups_imagen" android:layout_width="109dp" android:layout_height="109dp" android:layout_marginTop="130dp" android:layout_marginBottom="15dp" android:src="@drawable/error_sube" android:layout_centerHorizontal="true"/>
+    <TextView android:textSize="40sp" android:textColor="#ff0000" android:id="@+id/ups_text" android:layout_width="80dp" android:layout_height="62dp" android:text="Ups!" android:layout_below="@+id/error_sube_ups_imagen" android:layout_centerHorizontal="true" android:lineSpacingExtra="5sp" android:fontFamily="@font/santander_text_regular"/>
+    <TextView android:textSize="40sp" android:textColor="#ff0000" android:layout_width="240dp" android:layout_height="62dp" android:text="Algo salió mal" android:layout_below="@+id/ups_text" android:layout_centerHorizontal="true" android:lineSpacingExtra="5sp" android:fontFamily="@font/santander_text_regular"/>
+</RelativeLayout>

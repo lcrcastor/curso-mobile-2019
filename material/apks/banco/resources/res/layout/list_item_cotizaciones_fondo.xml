@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/relative" android:background="@color/white" android:paddingBottom="14dp" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <View android:id="@+id/separator" style="@style/SeparatorSection"/>
+    <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp">
+        <TextView android:id="@+id/F24_13_lbl_data_nombre_fondo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="nombre" android:layout_toLeftOf="@+id/F24_13_rll_valores" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/generic_list_label_fondos"/>
+        <LinearLayout android:gravity="right" android:orientation="vertical" android:id="@+id/F24_13_rll_valores" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+            <LinearLayout android:orientation="vertical" android:id="@+id/F24_13_rll_data_valorCuota" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:id="@+id/F24_13_lbl_data_valorCuota" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="valor_cuota" style="@style/generic_list_data_fondos"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/F24_13_rll_data_ultimo_dia" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_vertical" android:id="@+id/F24_13_img_flecha_ultimo_dia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:contentDescription=" "/>
+                <TextView android:id="@+id/F24_13_lbl_data_valorUltimoDia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="ultimo_dia" style="@style/generic_list_data_fondos"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/F24_13_rll_data_ultimos30" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_vertical" android:id="@+id/F24_13_img_flecha_ultimos_30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:contentDescription=" "/>
+                <TextView android:id="@+id/F24_13_lbl_data_valorUltimos30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="ultimo_mes" style="@style/generic_list_data_fondos"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/F24_13_rll_data_ultimos90" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_vertical" android:id="@+id/F24_13_img_flecha_ultimos_90" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:contentDescription=" "/>
+                <TextView android:id="@+id/F24_13_lbl_data_valorUltimos90" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="ultimo_trimestre" style="@style/generic_list_data_fondos"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/F24_13_rll_data_valorAno" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_vertical" android:id="@+id/F24_13_img_flecha_ValorAno" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:contentDescription=" "/>
+                <TextView android:id="@+id/F24_13_lbl_data_valorAno" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="ultimo_ano" style="@style/generic_list_data_fondos"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

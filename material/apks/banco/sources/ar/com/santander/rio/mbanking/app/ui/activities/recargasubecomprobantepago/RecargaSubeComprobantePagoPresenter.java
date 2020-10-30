@@ -1,0 +1,28 @@
+package ar.com.santander.rio.mbanking.app.ui.activities.recargasubecomprobantepago;
+
+import android.text.TextUtils;
+import ar.com.santander.rio.mbanking.app.base.BasePresenter;
+import ar.com.santander.rio.mbanking.app.ui.activities.recargasubecomprobantepago.RecargaSubeComprobantePagoContract.Presenter;
+import ar.com.santander.rio.mbanking.app.ui.activities.recargasubecomprobantepago.RecargaSubeComprobantePagoContract.View;
+import ar.com.santander.rio.mbanking.managers.data.IDataManager;
+import ar.com.santander.rio.mbanking.services.model.general.RecargaComprobantePago;
+import ar.com.santander.rio.mbanking.services.soap.beans.body.PagoServiciosBodyResponseBean;
+import com.squareup.otto.Bus;
+
+public class RecargaSubeComprobantePagoPresenter extends BasePresenter<View> implements Presenter {
+    private RecargaComprobantePago a;
+
+    public RecargaSubeComprobantePagoPresenter(Bus bus, IDataManager iDataManager) {
+        super(bus, iDataManager);
+        RecargaComprobantePago recargaComprobantePago = new RecargaComprobantePago("$150", "6061 0482 0931", "Juan Valdez", "Cuenta Unica 120-345678/9", "13/11/2019 12:34 hs", "000123123123");
+        this.a = recargaComprobantePago;
+    }
+
+    public void initialize(PagoServiciosBodyResponseBean pagoServiciosBodyResponseBean, String str) {
+        View view = (View) this.mBaseView;
+        if (TextUtils.isEmpty(str)) {
+            str = "";
+        }
+        view.setView(pagoServiciosBodyResponseBean, str);
+    }
+}

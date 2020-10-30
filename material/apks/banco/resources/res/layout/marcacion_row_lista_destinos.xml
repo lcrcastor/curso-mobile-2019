@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/F26_PRUEBALAYOUT" android:background="@color/white" android:layout_width="match_parent" android:layout_height="50dp">
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/F26_Relative01" android:layout_width="match_parent" android:layout_height="40dp" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentBottom="true">
+        <TextView android:textColor="@color/grey_medium_dark" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/F26_MARCACION_ROW_DESTINOS_DATA" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:maxLines="1" android:layout_alignTop="@+id/F26_MARCACION_LISTADESTINOS_CLEAR_BUTTON" android:layout_alignBottom="@+id/F26_MARCACION_LISTADESTINOS_CLEAR_BUTTON" android:layout_alignParentLeft="true"/>
+    </RelativeLayout>
+</RelativeLayout>

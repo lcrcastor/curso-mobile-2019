@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/F24_00_RLL_MAIN" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:id="@+id/F24_00_RLL_CUENTA" android:paddingLeft="18dp" android:paddingTop="18dp" android:paddingRight="18dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <TextView android:id="@+id/F24_00_LBL_CUENTA_TITULO" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/NULL_TITLE_ACCOUNT" android:layout_toLeftOf="@+id/F24_00_LAYOUT_CAMBIAR_CUENTA" android:layout_alignParentLeft="true" style="@style/generic_account_selector"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/F24_00_LAYOUT_CAMBIAR_CUENTA" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+                <ar.com.santander.rio.mbanking.view.CustomSpinner android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/F24_00_vgSelectorAccountTenencias" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/ID2001_ENVEFECT_BTN_CAMBIARCTA" app:labelSpinner="@string/F24_SelectorAccount"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <View android:layout_below="@+id/F24_00_RLL_CUENTA" style="@style/SeparatorSectionTitle"/>
+        <ScrollView android:id="@+id/scrollTenencias" android:paddingTop="2dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/F24_00_LNL_BTNS" android:layout_below="@+id/F24_00_RLL_CUENTA">
+            <LinearLayout android:orientation="vertical" android:id="@+id/F24_00_LNL_HEADER" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@+id/F24_00_LBL_TITULO_TENENCIA_DE_FONDOS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginBottom="12dp" android:text="@string/F24_00_LBL_TITULO_TENENCIA_DE_FONDOS" style="@style/generic_title"/>
+                    <View style="@style/SeparatorSectionTitle"/>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/F24_00_RW_IMPORTES" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:gravity="center_horizontal" android:id="@+id/F24_00_LBL_TOTAL_EN_PESOS" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/F24_00_LBL_TOTAL_EN_PESOS" style="@style/generic_topDescription_amount_semibold"/>
+                        <TextView android:gravity="center_horizontal" android:id="@+id/F24_00_LBL_DATA_TOTAL_EN_PESOS" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="" style="@style/generic_amount_tenencia"/>
+                        <TextView android:gravity="center_horizontal" android:id="@+id/F24_00_LBL_TOTAL_EN_DOLARES" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="@string/F24_00_LBL_TOTAL_EN_DOLARES" style="@style/generic_topDescription_amount_semibold"/>
+                        <TextView android:gravity="center_horizontal" android:id="@+id/F24_00_LBL_DATA_TOTAL_EN_DOLARES" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="22dp" android:text="" style="@style/generic_amount_tenencia"/>
+                        <View style="@style/SeparatorSectionTitle"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/F24_00_LNL_LISTA" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    <RelativeLayout android:id="@+id/F24_00_RLL_SIGNO_MAS" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+                        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/F24_00_SIGNO_MAS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sin_tenencia" android:layout_centerHorizontal="true"/>
+                        <ar.com.santander.rio.mbanking.utils.itrsa.HtmlTextView android:gravity="center_horizontal" android:layout_gravity="center" android:id="@+id/F24_00_signo_mas_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:layout_marginRight="18dp" android:text="@string/F24_00_TXT_SIGNO_MAS" android:layout_below="@+id/F24_00_SIGNO_MAS" android:layout_centerHorizontal="true" style="@style/generic_leyend_light"/>
+                    </RelativeLayout>
+                    <TextView android:autoLink="web" android:linksClickable="true" android:id="@+id/F24_00_LBL_DATA_LEGALES_CUENTA" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:layout_marginRight="18dp" android:text="" style="@style/generic_leyend_light"/>
+                    <RelativeLayout android:id="@+id/F24_00_RLL_CARA_TRISTE" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+                        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/F24_00_cara_triste" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/error_continuacion" android:layout_centerHorizontal="true"/>
+                        <TextView android:gravity="center_horizontal" android:autoLink="web" android:linksClickable="true" android:id="@+id/F24_00_cara_triste_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="37dp" android:layout_marginRight="18dp" android:layout_marginBottom="20dp" android:text="@string/F24_00_TXT_CARA_TRISTE" android:layout_below="@+id/F24_00_cara_triste" android:layout_centerHorizontal="true" style="@style/generic_leyend_light"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout android:orientation="vertical" android:id="@+id/F24_00_LNL_BTNS" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <Button android:id="@+id/F24_00_BTN_SUSCRIBIR_FONDO" android:text="@string/F24_00_BTN_SUSCRIBIR_FONDO" android:layout_above="@+id/F24_00_BTN_CONOCE_MAS" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+            <Button android:id="@+id/F24_00_BTN_CONOCE_MAS" android:visibility="gone" android:text="@string/F24_00_BTN_CONOCE_MAS" android:textAllCaps="false" style="@style/generic_boton_blanco_border"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

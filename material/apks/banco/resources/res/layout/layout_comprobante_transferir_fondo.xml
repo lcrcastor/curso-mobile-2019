@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <Button android:id="@+id/F24_32_btn_volver" android:text="@string/F24_32_btn_volver" android:layout_alignParentBottom="true" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+    <ScrollView android:id="@+id/F24_32_scrollViewComprobante" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/F24_32_btn_volver" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:id="@+id/F24_32_lbl_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:text="@string/F24_32_lbl_title" style="@style/generic_title"/>
+            <View android:layout_marginTop="12dp" style="@style/SeparatorSectionTitle"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/F24_32_lnl_headerObjects" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="24dp" android:layout_marginRight="18dp" android:layout_marginBottom="28dp">
+                <TextView android:textSize="20dp" android:textColor="@color/generic_black" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@+id/F24_32_lbl_data_fondoOrigenHeader" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" style="@style/generic_fontRegular"/>
+                <TextView android:layout_gravity="center_horizontal" android:id="@+id/F24_32_lbl_importe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/ID_XX_F24_32_lbl_importe" style="@style/generic_topDescription_important_amount"/>
+                <TextView android:layout_gravity="center_horizontal" android:id="@+id/F24_32_lbl_data_importe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="" style="@style/generic_amount"/>
+                <ImageView android:layout_gravity="center_horizontal" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginTop="18dp" android:src="@drawable/arrow_gray_down_doble"/>
+                <TextView android:textSize="20dp" android:textColor="@color/generic_black" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@+id/F24_32_lbl_data_fondoDestinoHeader" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="" style="@style/generic_fontRegular"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSectionTitle"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/F24_32_lnl_detail_Objects" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@+id/F24_32_row_fechaHora" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F24_32_lbl_fechaHora" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_32_lbl_fechaHora" android:layout_toLeftOf="@+id/F24_32_lbl_data_fechaHora" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:id="@+id/F24_32_lbl_data_fechaHora" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_32_lbl_fechaHora" android:singleLine="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F24_32_row_cuentaTitulo" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F24_32_lbl_cuentaTitulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_32_lbl_cuentaTitulo" android:layout_toLeftOf="@+id/F24_32_lbl_data_cuentaTitulo" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:id="@+id/F24_32_lbl_data_cuentaTitulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_32_lbl_cuentaTitulo" android:singleLine="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F24_32_row_importeEstimado" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F24_32_lbl_importeEstimado" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_3887_F24_32_lbl_importeEstimado" android:layout_toLeftOf="@+id/F24_32_lbl_data_importeEstimado" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:id="@+id/F24_32_lbl_data_importeEstimado" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSectionTitle"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F24_32_row_fondoOrigenBottom" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F24_32_lbl_fondoOrigenBottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_3957_FONDOS_LBL_FONDO_ORIGEN" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F24_32_lbl_data_fondoOrigenBottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_32_lbl_fondoOrigenBottom" android:layout_toLeftOf="@+id/F24_32_lbl_fondoOrigenBottom" android:layout_toRightOf="@+id/F24_32_lbl_fondoOrigenBottom" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F24_32_row_cuotapartesOrigenBottom" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F24_32_lbl_cuotapartesOrigenBottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_32_lbl_cuotapartesOrigenBottom" android:layout_toLeftOf="@+id/F24_32_lbl_data_cuotapartesOrigenBottom" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:id="@+id/F24_32_lbl_data_cuotapartesOrigenBottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_32_lbl_cuotapartesOrigenBottom" android:singleLine="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F24_32_row_valorCuotaparteOrigenBottom" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F24_32_lbl_valorCuotaparteOrigenBottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_32_lbl_valorCuotaparteOrigenBottom" android:layout_toLeftOf="@+id/F24_32_lbl_data_valorCuotaparteOrigenBottom" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:id="@+id/F24_32_lbl_data_valorCuotaparteOrigenBottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_32_lbl_valorCuotaparteOrigenBottom" android:singleLine="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F24_32_row_fondoDestinoBottom" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F24_32_lbl_fondoDestinoBottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_3958_FONDOS_LBL_FONDO_DESTINO" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F24_32_lbl_data_fondoDestinoBottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_32_lbl_fondoDestinoBottom" android:layout_toRightOf="@+id/F24_32_lbl_fondoDestinoBottom" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F24_32_row_cuotapartesDestinoBottom" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F24_32_lbl_cuotapartesDestinoBottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_32_lbl_cuotapartesDestinoBottom" android:layout_toLeftOf="@+id/F24_32_lbl_data_cuotapartesDestinoBottom" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:id="@+id/F24_32_lbl_data_cuotapartesDestinoBottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_32_lbl_cuotapartesDestinoBottom" android:singleLine="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F24_32_row_valorCuotaparteDestinoBottom" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F24_32_lbl_valorCuotaparteDestinoBottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_32_lbl_valorCuotaparteDestinoBottom" android:layout_toLeftOf="@+id/F24_32_lbl_data_valorCuotaparteDestinoBottom" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:id="@+id/F24_32_lbl_data_valorCuotaparteDestinoBottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_32_lbl_valorCuotaparteDestinoBottom" android:singleLine="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F24_32_row_certificado" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F24_32_lbl_certificado" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_3932_FONDOS_LBL_NRO_CERTIFICADO" android:layout_toLeftOf="@+id/F24_32_lbl_data_certificado" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:id="@+id/F24_32_lbl_data_certificado" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_32_lbl_nroCertificado" android:singleLine="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <TextView android:textSize="11dp" android:textColor="@color/generic_black" android:gravity="center_vertical" android:id="@+id/F24_32_lbl_terminosLegales" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="28dp" android:text="" style="@style/generic_fontRegular"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp">
+                <include layout="@layout/layout_bottom_receipt_share"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

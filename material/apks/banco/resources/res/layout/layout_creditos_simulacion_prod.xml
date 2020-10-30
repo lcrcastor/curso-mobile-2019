@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include android:id="@+id/title_page2" layout="@layout/title_simple_layout"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/vgWrapperSimulacion" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/credito.page2.leyenda" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" style="@style/generic_leyend_light"/>
+        <Button android:id="@+id/creditos.continuar" android:text="@string/ID137_CREDITS_LENDCONF_BTN_CONTINUE" android:layout_alignParentBottom="true" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+    </LinearLayout>
+</ScrollView>

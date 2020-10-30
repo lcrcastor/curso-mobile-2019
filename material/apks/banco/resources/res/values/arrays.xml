@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="menu_privado_actions">
+        <item>SEGMENTO</item>
+        <item>NOTIFICACIONES</item>
+        <item>CUENTAS</item>
+        <item>CUENTAS_PRIVADA</item>
+        <item>TARJETAS</item>
+        <item>CREDITOS</item>
+        <item>PAGO_SERVICIOS</item>
+        <item>PAGO_TARJETAS</item>
+        <item>MARCACION_POR_VIAJE</item>
+        <item>RECARGA_CELULARES</item>
+        <item>TRANSFERENCIAS</item>
+        <item>EXTRACCION_SIN_TARJETA</item>
+        <item>ENVIO_EFECTIVO</item>
+        <item>DEBIN</item>
+        <item>TENENCIA_INVERSIONES</item>
+        <item>PLAZOS_FIJOS</item>
+        <item>FONDOS_INVERSION</item>
+        <item>COMPRAVENTA_DOLARES</item>
+        <item>SEGUROS</item>
+        <item>COMODINES_SUPERCLUB</item>
+        <item>NERS_ENCOLADOR</item>
+        <item>BLANQUEO_DE_CLAVE_BANELCO</item>
+        <item>PROGRAMA_WOMEN</item>
+        <item>SUSC_SORPRESA</item>
+        <item>NECESITAS_AYUDA</item>
+    </array>
+    <array name="menu_privado_options">
+        <item>@string/ID12_PRIVATEMENU_BTN_SEGMENT</item>
+        <item>@string/ID13_PRIVATEMENU_BTN_ALERTS</item>
+        <item>@string/ID14_PRIVATEMENU_BTN_ACCOUNTS</item>
+        <item>@string/ID20_PRIVATEMENU_BTN_BP</item>
+        <item>@string/ID15_PRIVATEMENU_BTN_CARDS</item>
+        <item>@string/ID16_PRIVATEMENU_BTN_CREDITS</item>
+        <item>@string/ID17_PRIVATEMENU_BTN_SERVICEPAYM</item>
+        <item>@string/ID18_PRIVATEMENU_BTN_CARDPAYM</item>
+        <item>@string/IDXX_PRIVATEMENU_BTN_MARCACION_POR_VIAJE</item>
+        <item>@string/ID19_PRIVATEMENU_BTN_MOBILEPAYM</item>
+        <item>@string/ID20_PRIVATEMENU_BTN_TRANFERENCE</item>
+        <item>@string/IDXX_PRIVATEMENU_BTN_NOCARD</item>
+        <item>@string/IDXX_PRIVATEMENU_BTN_SENDCASH</item>
+        <item>@string/IDXX_PRIVATEMENU_BTN_DEBIN</item>
+        <item>@string/IDXX_PRIVATEMENU_BTN_TENENCIA_DE_INVERSIONES</item>
+        <item>@string/ID21_PRIVATEMENU_BTN_DEPOSIT</item>
+        <item>@string/IDXX_PRIVATEMENU_BTN_INVESTMENT_FUNDS</item>
+        <item>@string/IDXX_PRIVATEMENU_BTN_BUYSELL_DOLLARS</item>
+        <item>@string/IDXX_PRIVATEMENU_BTN_INSURANCE</item>
+        <item>@string/IDXX_PRIVATEMENU_BTN_COMODINESSUPERCLUB</item>
+        <item>@string/IDXX_PRIVATEMENU_BTN_NERS</item>
+        <item>@string/ID_4914_BLANQUEO_CLAVE_BANELCO</item>
+        <item>@string/IDXX_PRIVATEMENU_BTN_PROGRAMA_WOMEN</item>
+        <item>@string/ID22_PRIVATEMENU_BTN_SURPRISESUB</item>
+        <item>@string/ID_4736_WATSON_NECESITAS_AYUDA</item>
+    </array>
+    <array name="menu_publico_actions">
+        <item>MOBILE_BANKING</item>
+        <item>PROMOS</item>
+        <item>CAJEROS</item>
+        <item>SUCURSALES</item>
+        <item>NUMEROS_UTILES</item>
+        <item>SOFT_TOKEN</item>
+        <item>NOTIF_PUSH</item>
+        <item>HOME</item>
+    </array>
+    <array name="menu_publico_options">
+        <item>@string/ID7_PUBLICMENU_BTN_MOBILEBANKING</item>
+        <item>@string/ID23_PRIVATEMENU_BTN_PROMOTIONS</item>
+        <item>@string/ID8_PUBLICMENU_BTN_CASHIERS</item>
+        <item>@string/ID9_PUBLICMENU_BTN_OFFICES</item>
+        <item>@string/ID10_PUBLICMENU_BTN_PHONENUMBERS</item>
+        <item>@string/IDXX_PUBLICMENU_BTN_SOFTTOKEN</item>
+        <item>@string/ID4004_PUBLICMENU_BTN_NOTIF_PUSH</item>
+        <item>@string/IDXX_PRIVATEPUBLICMENU_HOME</item>
+    </array>
+    <array name="options_filter_transaction">
+        <item>@string/ID96_ACCOUNTS_CHANGEACC_ACT_MOV1</item>
+        <item>@string/ID97_ACCOUNTS_CHANGEACC_ACT_MOV3</item>
+        <item>@string/ID98_ACCOUNTS_CHANGEACC_ACT_MOV7</item>
+        <item>@string/ID99_ACCOUNTS_CHANGEACC_ACT_IR</item>
+        <item>@string/ID100_ACCOUNTS_CHANGEACC_ACT_SEARCH</item>
+    </array>
+    <array name="recarga_sube_importes">
+        <item>Seleccionar</item>
+        <item>50</item>
+        <item>100</item>
+        <item>150</item>
+        <item>250</item>
+        <item>300</item>
+        <item>400</item>
+        <item>500</item>
+        <item>1000</item>
+    </array>
+    <array name="recarga_sube_pagos">
+        <item>Seleccionar</item>
+        <item>Cuenta Única 120-345678/9</item>
+        <item>Visa Débito 21-21341-90</item>
+        <item>Visa Crédito 234234-4234-543</item>
+    </array>
+    <array name="titulos">
+        <item>Títulos Públicos</item>
+        <item>Títulos Privados</item>
+        <item>Acciones</item>
+        <item>CEDEAR</item>
+    </array>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/F24_02_lnl_selectorCuentas" android:layout_width="match_parent" android:layout_height="50dp">
+        <TextView android:gravity="center_vertical" android:id="@+id/F24_02_lbl_cuentaSeleccionada" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="18dp" android:layout_weight="1" android:layout_marginStart="18dp" style="@style/generic_account_selector"/>
+        <ar.com.santander.rio.mbanking.view.CustomSpinner android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/F24_02_vgSelectorAccount" android:focusable="true" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="18dp" android:contentDescription="@string/ID2001_ENVEFECT_BTN_CAMBIARCTA" android:layout_marginEnd="18dp" app:labelSpinner="@string/F24_00_LBL_CAMBIAR_CUENTA"/>
+    </LinearLayout>
+    <View style="@style/SeparatorSectionTitle"/>
+    <LinearLayout android:background="@color/grey_extra_light" android:layout_width="match_parent" android:layout_height="50dp">
+        <TextView android:textSize="15sp" android:textColor="@color/generic_black" android:id="@+id/F24_02_LBL_TITLE" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:text="@string/F24_02_LBL_TITLE" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" style="@style/generic_fontSemibold"/>
+    </LinearLayout>
+    <View style="@style/SeparatorSectionTitle"/>
+    <android.support.v7.widget.RecyclerView android:id="@+id/F24_02_LST_FONDOS" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

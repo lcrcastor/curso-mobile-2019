@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="15sp" android:textColor="@color/generic_black" android:id="@+id/F24_06_lbl_nombre_fondo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="" style="@style/generic_fontSemibold"/>
+    <View style="@style/SeparatorSectionTitle"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="13sp" android:textColor="@color/generic_black" android:id="@+id/F24_06_LBL_ULTIMOS_MOVIMIENTOS" android:paddingBottom="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:text="@string/F24_06_LBL_TITULO_ULTIMOS_MOVIMIENTOS" android:layout_alignParentLeft="true" android:contentDescription="@string/F24_06_LBL_TITULO_ULTIMOS_MOVIMIENTOS" style="@style/generic_fontSemibold"/>
+        <RelativeLayout android:id="@+id/F24_06_RLL_BUSCAR" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_alignParentRight="true">
+            <TextView android:textSize="13sp" android:textColor="@color/generic_black" android:id="@+id/F24_06_LBL_BUSCAR" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3dp" android:text="@string/F24_06_LBL_BUSCAR" android:layout_toLeftOf="@+id/F24_06_IMG_BUSCAR" android:layout_alignParentTop="true" style="@style/generic_fontSemibold"/>
+            <ImageButton android:id="@+id/F24_06_IMG_BUSCAR" android:background="@color/white" android:paddingBottom="5dp" android:clickable="false" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginRight="18dp" android:src="@drawable/arrow_left" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription=""/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <View android:layout_marginTop="4dp" style="@style/SeparatorSection"/>
+    <RelativeLayout android:background="@color/grey_extra_light" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/F24_06_LL_TITLE" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="14dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+            <TextView android:gravity="start" android:id="@+id/F24_06_LBL_FECHA" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginRight="59dp" android:layout_marginBottom="14dp" android:text="@string/F24_06_LBL_FECHA" style="@style/generic_list_data_column3"/>
+            <TextView android:gravity="center_horizontal" android:id="@+id/F24_06_LBL_CONCEPTO" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginRight="30dp" android:layout_marginBottom="14dp" android:text="@string/F24_06_LBL_CONCEPTO" style="@style/generic_list_title_3columns"/>
+            <TextView android:gravity="end" android:id="@+id/F24_06_LBL_IMPORTE" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="14dp" android:text="@string/F24_06_LBL_IMPORTE" android:layout_weight="1" style="@style/generic_list_title_3columns"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <View style="@style/SeparatorSection"/>
+    <android.support.v7.widget.RecyclerView android:id="@+id/F24_06_RV_movimientos" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/F24_06_lbl_sin_movimientos" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/F24_00_cara_triste" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:src="@drawable/error_continuacion_b" android:layout_centerHorizontal="true"/>
+        <TextView android:textSize="15sp" android:textColor="@color/black" android:id="@+id/F24_06_lbl_sin_movimientos_txt" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:text="@string/ID_3968_FONDOS_LBL_ULTIMOS_MOVIMIENTOS"/>
+    </LinearLayout>
+</LinearLayout>

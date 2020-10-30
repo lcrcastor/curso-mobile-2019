@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/debin_row" android:background="@color/white" android:clickable="true" android:layout_width="match_parent" android:layout_height="45dp">
+    <RelativeLayout android:id="@+id/debin_row_data" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <TextView android:ellipsize="end" android:layout_gravity="start" android:id="@+id/txt_solicitanteDebin" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="14dp" android:layout_marginBottom="12dp" android:text="" android:maxLines="1" android:layout_toLeftOf="@+id/txt_importeDebin" android:layout_alignParentLeft="true" style="@style/generic_list_data_column1"/>
+        <TextView android:gravity="end" android:id="@+id/txt_importeDebin" android:clickable="false" android:layout_width="120dp" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="" android:layout_alignParentRight="true" style="@style/generic_list_data_column2"/>
+        <View android:layout_alignParentBottom="true" style="@style/SeparatorSection"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/last_item_list_debin" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:id="@+id/inc_loading_spinner" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include layout="@layout/list_loading_debin"/>
+        </LinearLayout>
+        <TextView android:textSize="13dp" android:textColor="@color/red_medium_light" android:gravity="center" android:id="@+id/inc_loading_error" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:text="text"/>
+    </LinearLayout>
+</RelativeLayout>

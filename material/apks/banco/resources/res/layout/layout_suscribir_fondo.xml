@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/F24_20_lnl_selectorCuentas" android:layout_width="match_parent" android:layout_height="50dp">
+        <TextView android:gravity="center_vertical" android:id="@+id/F24_20_lbl_data_cuentaTitulo" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="18dp" android:layout_weight="1" style="@style/generic_account_selector"/>
+        <ar.com.santander.rio.mbanking.view.CustomSpinner android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/F24_20_vgSelectorAccount" android:focusable="true" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="18dp" android:contentDescription="@string/ID2001_ENVEFECT_BTN_CAMBIARCTA" app:labelSpinner="@string/F24_SelectorAccount"/>
+    </LinearLayout>
+    <View style="@style/SeparatorSectionTitle"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:id="@+id/F24_20_LBL_TITLE" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:text="@string/F24_40_LBL_TITLE_SUSCRIBIR_MAS" style="@style/generic_title"/>
+            <View android:layout_marginTop="12dp" style="@style/SeparatorSectionTitle"/>
+            <RelativeLayout android:layout_gravity="center_horizontal" android:id="@+id/F24_20_RLL_SELECTED_AMOUNT_TYPE" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26dp">
+                <TextView android:id="@+id/F24_20_LBL_SELECTED_AMOUNT_TYPE" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_20_SELECTED_AMOUNT_TOTAL" style="@style/generic_topDescription_amount_semibold"/>
+                <ImageView android:id="@+id/F24_20_IMG_SELECTED_CURRENCY_CHEVRON" android:clickable="false" android:layout_width="14dp" android:layout_height="14dp" android:layout_marginLeft="8dp" android:src="@drawable/arrow_down" android:layout_toRightOf="@+id/F24_20_LBL_SELECTED_AMOUNT_TYPE" android:layout_alignTop="@+id/F24_20_LBL_SELECTED_AMOUNT_TYPE" android:layout_alignBottom="@+id/F24_20_LBL_SELECTED_AMOUNT_TYPE" android:layout_alignParentBottom="false" android:layout_alignWithParentIfMissing="false" android:contentDescription="@string/F24_SelectorAccount"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+                <ar.com.santander.rio.mbanking.view.NumericEditTextWithPrefixAccesibility android:id="@+id/F24_20_INP_AMOUNT" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" app:editTextPrefix_hint="0,00" app:editTextPrefix_max_digits_decimal="2" app:editTextPrefix_max_digits_integer="12" app:editTextPrefix_prefix="$" app:editTextPrefix_singleLine="true"/>
+            </RelativeLayout>
+            <View android:layout_marginTop="24dp" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/F24_20_row_fondo" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                    <TextView android:id="@+id/F24_20_lbl_fondo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/F24_20_lbl_fondo" android:layout_alignParentLeft="true" style="@style/generic_row_label_form"/>
+                    <TextView android:textSize="13sp" android:textColor="@color/generic_black" android:gravity="end" android:id="@+id/F24_20_lbl_data_fondo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_20_lbl_fondo" android:layout_toRightOf="@+id/F24_20_lbl_fondo" android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+                <View style="@style/SeparatorSection"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/F24_20_row_origen" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                    <TextView android:id="@+id/F24_20_lbl_origen" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_3921_FONDOS_LBL_ORIGEN" android:layout_alignParentLeft="true" style="@style/generic_row_label_form"/>
+                    <TextView android:textSize="13dp" android:gravity="end" android:id="@+id/F24_20_lbl_data_origen" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_3921_FONDOS_LBL_ORIGEN" android:drawablePadding="5dp" android:layout_toRightOf="@+id/F24_20_lbl_origen" android:layout_alignParentRight="true" fontPath="fonts/OpenSans-Semibold.otf"/>
+                </RelativeLayout>
+                <View style="@style/SeparatorSection"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/F24_20_row_cuentaTitulo_bottom" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                    <TextView android:id="@+id/F24_20_lbl_cuentaTitulo_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_40_LBL_CUENTA_TITULO" android:layout_toLeftOf="@+id/F24_20_lbl_data_cuentaTitulo_bottom" android:layout_alignParentLeft="true" style="@style/generic_row_label_form"/>
+                    <TextView android:id="@+id/F24_20_lbl_data_cuentaTitulo_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_alignParentRight="true" style="@style/generic_row_data_form"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/F24_20_row_importeTotal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                    <TextView android:id="@+id/F24_20_lbl_importeTotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_20_lbl_importeTotal" android:layout_toLeftOf="@+id/F24_20_lbl_data_importeTotal" android:layout_alignParentLeft="true" style="@style/generic_row_label_form"/>
+                    <TextView android:id="@+id/F24_20_lbl_data_importeTotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_20_lbl_importeTotal" android:maxLines="1" android:layout_alignParentRight="true" style="@style/generic_row_data_form"/>
+                </RelativeLayout>
+                <View style="@style/SeparatorSection"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/F24_20_row_cuotaPartes" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                    <TextView android:id="@+id/F24_20_lbl_cuotaPartes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_20_lbl_cuotaPartes" android:layout_toLeftOf="@+id/F24_20_lbl_data_cuotaPartes" android:layout_alignParentLeft="true" style="@style/generic_row_label_form"/>
+                    <TextView android:id="@+id/F24_20_lbl_data_cuotaPartes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_20_lbl_cuotaPartes" android:maxLines="1" android:layout_alignParentRight="true" style="@style/generic_row_data_form"/>
+                </RelativeLayout>
+                <View style="@style/SeparatorSection"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/F24_20_row_valorCuotaparte" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                    <TextView android:id="@+id/F24_20_lbl_valorCuotaparte" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_20_lbl_valorCuotaparte" android:layout_toLeftOf="@+id/F24_20_lbl_data_valorCuotaparte" android:layout_alignParentLeft="true" style="@style/generic_row_label_form"/>
+                    <TextView android:id="@+id/F24_20_lbl_data_valorCuotaparte" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_20_lbl_valorCuotaparte" android:maxLines="1" android:layout_alignParentRight="true" style="@style/generic_row_data_form"/>
+                </RelativeLayout>
+                <View style="@style/SeparatorSection"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/F24_20_row_plazoPago" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                    <TextView android:id="@+id/F24_20_lbl_plazoPago" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_20_lbl_plazoPago" android:layout_toLeftOf="@+id/F24_20_lbl_data_plazoPago" android:layout_alignParentLeft="true" style="@style/generic_row_label_form"/>
+                    <TextView android:id="@+id/F24_20_lbl_data_plazoPago" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_20_lbl_plazoPago" android:maxLines="1" android:layout_alignParentRight="true" style="@style/generic_row_data_form"/>
+                </RelativeLayout>
+                <View style="@style/SeparatorSection"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/F24_20_row_aceptacion_ejecucion" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:id="@+id/F24_20_rll_aceptacion_ejecucion" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="30dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                    <ImageView android:id="@+id/F24_20_img_checkbox_tyc" android:focusable="true" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginRight="10dp" android:contentDescription="@string/F24_41_ACEPTACION_POR_INICIATIVA_PROPIA"/>
+                    <TextView android:id="@+id/F24_20_lbl_acepto_ejecucion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:layout_marginTop="2dp" android:text="@string/F24_22_ACEPTACION_EJECUCION" android:layout_toRightOf="@+id/F24_20_img_checkbox_tyc" style="@style/generic_list_data_column1"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <TextView android:textSize="11dp" android:textColor="@color/generic_black" android:gravity="center_vertical" android:id="@+id/F24_20_lbl_leyendaLegal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="28dp" android:text="" style="@style/generic_fontRegular"/>
+            <Button android:id="@+id/F24_20_btn_continuar" android:text="@string/F24_20_btn_continuar" style="@style/generic_boton_rojo"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

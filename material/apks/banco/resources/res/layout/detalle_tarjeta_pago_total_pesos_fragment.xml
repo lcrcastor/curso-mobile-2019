@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" style="@style/MainLayout">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/credit_card_detail_total_payment_in_pesos_form_titleform_title" android:text="@string/ID245_CARDPAYMENT_DETAIL_LBL_TITLEDOL" style="@style/generic_title"/>
+        </LinearLayout>
+        <View style="@style/SeparatorSectionTitle"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/credit_card_detail_total_payment_in_pesos_form_balance_in_dollars" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID246_CARDPAYMENT_DETAIL_LBL_BALANCEDOL" android:layout_weight="1" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_SALDO_DOLAR" style="@style/generic_row_label_comp"/>
+            <ar.com.santander.rio.mbanking.view.AmountView android:gravity="end" android:id="@+id/credit_card_detail_total_payment_in_pesos_form_balance_in_dollars_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_row_data_comp"/>
+        </LinearLayout>
+        <View style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/credit_card_detail_total_payment_in_pesos_form_conversion_to_pesos" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID247_CARDPAYMENT_DETAIL_LBL_CONVERTDOL" android:layout_weight="1" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_CONVERSION_PESO_ARGENTINO" style="@style/generic_row_label_comp"/>
+            <ar.com.santander.rio.mbanking.view.AmountView android:gravity="end" android:id="@+id/credit_card_detail_total_payment_in_pesos_form_conversion_to_pesos_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_row_data_comp"/>
+        </LinearLayout>
+        <View style="@style/SeparatorSectionTitle"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/credit_card_detail_total_payment_in_pesos_form_quote_of_the_day_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/credit_card_detail_total_payment_in_pesos_form_quote_of_the_day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID248_CARDPAYMENT_DETAIL_LBL_DAILYQUOTEDOL" style="@style/generic_row_label_comp"/>
+            <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ar.com.santander.rio.mbanking.view.AmountView android:gravity="right" android:id="@+id/prepare_payment_form_quote_of_the_day_content" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_row_data_comp"/>
+                <ar.com.santander.rio.mbanking.view.AmountView android:id="@+id/prepare_payment_form_quote_of_the_day_ars_content" android:layout_width="wrap_content" android:layout_height="wrap_content" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_row_data_comp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:id="@+id/credit_card_detail_total_payment_in_pesos_form_quote_of_the_day_view_separation" style="@style/SeparatorSectionTitle"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/credit_card_detail_total_payment_in_pesos_form_balance_in_pesos" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID254_CARDPAYMENT_DETAIL_LBL_AMOUNTPES" android:layout_weight="1" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_SALDO_PESO_ARGENTINO" style="@style/generic_row_label_comp"/>
+            <ar.com.santander.rio.mbanking.view.AmountView android:gravity="end" android:id="@+id/credit_card_detail_total_payment_in_pesos_form_balance_in_pesos_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_row_data_comp"/>
+        </LinearLayout>
+        <View style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/credit_card_detail_total_payment_in_pesos_form_total_payment_in_pesos" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID250_CARDPAYMENT_DETAIL_LBL_TOTALPAYDOL" android:layout_weight="1" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_TOTAL_CONVERSION_DOLAR" style="@style/generic_row_label_comp"/>
+            <ar.com.santander.rio.mbanking.view.AmountView android:gravity="end" android:id="@+id/credit_card_detail_total_payment_in_pesos_form_total_payment_in_pesos_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_row_data_comp"/>
+        </LinearLayout>
+        <View style="@style/SeparatorSection"/>
+        <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/credit_card_detail_total_payment_in_pesos_form_info_seuo" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID991_CCARDS_VER_DETALLE_DESCRIPCION_SEUO" style="@style/generic_leyend_dark"/>
+            <TextView android:gravity="start" android:id="@+id/credit_card_detail_total_payment_in_pesos_form_info_reminder" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID992_CCARDS_VER_DETALLE_DESCRIPCION_RECORDATORIO" android:layout_below="@+id/credit_card_detail_total_payment_in_pesos_form_info_seuo" style="@style/generic_leyend_light"/>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="horizontal" android:id="@+id/llBuscar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/edittext_search" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp">
+        <ImageView android:id="@+id/imgSearch" android:padding="10dp" android:layout_width="35dp" android:layout_height="35dp" android:src="@drawable/ic_search_red" android:tint="@color/grey" android:contentDescription="@string/ACCESSIBILITY_BOTON_BUSCAR"/>
+        <ar.com.santander.rio.mbanking.view.ClearableEditText android:textSize="13sp" android:textColorHint="@color/generic_grey" android:layout_gravity="center" android:id="@+id/eTxtSearch" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="Buscar Sucursal" android:singleLine="true" android:maxLength="20" android:completionThreshold="3" android:layout_weight="1" android:imeOptions="actionSearch" style="@style/generic_search_input_light"/>
+    </LinearLayout>
+</LinearLayout>

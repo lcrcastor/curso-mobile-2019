@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:orientation="vertical" android:id="@+id/scrollView" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="@string/FXX_01_LBL_TITULO_CONFIRMAR_MODIFICAR_ALIAS" style="@style/generic_title"/>
+            <View style="@style/SeparatorSectionTitle"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="30dp" android:layout_marginBottom="18dp" android:weightSum="1">
+                <TextView android:textSize="15dp" android:textColor="@color/grey_medium_dark" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="14dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="@string/FXX_01_LBL_NUEVO_ALIAS_CONFIRMAR_MODIFICAR_ALIAS" fontPath="fonts/OpenSans-Bold.otf"/>
+                <TextView android:textSize="25dp" android:textColor="@color/grey_medium_dark" android:gravity="center_horizontal" android:id="@+id/F01_20_LBL_ALIAS_CREADO" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="0dp" android:layout_marginRight="18dp" android:text="" fontPath="fonts/OpenSans-Light.otf"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="18dp" android:weightSum="1">
+                <TextView android:textSize="15dp" android:textColor="@color/grey_medium_dark" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="14dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="@string/FXX_01_LBL_ALIAS_ANTERIOR_CONFIRMAR_MODIFICAR_ALIAS" fontPath="fonts/OpenSans-Bold.otf"/>
+                <TextView android:textSize="25dp" android:textColor="@color/grey_medium_dark" android:gravity="center_horizontal" android:id="@+id/F01_20_LBL_ALIAS_ANTERIOR" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="0dp" android:layout_marginRight="18dp" android:layout_marginBottom="24dp" android:text="" fontPath="fonts/OpenSans-Light.otf"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" style="@style/SeparatorListView"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:layout_marginRight="18dp" android:layout_marginBottom="18dp">
+                        <TextView android:id="@+id/F23_X2_LBL_TITULAR" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F01_20_LBL_TIT" android:maxLines="1" style="@style/generic_row_label_conf"/>
+                        <TextView android:gravity="end" android:id="@+id/F23_X2_LBL_DATA_TITULAR" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F23_X2_LBL_TITULAR" style="@style/generic_row_data_conf"/>
+                    </RelativeLayout>
+                    <View android:layout_width="match_parent" style="@style/SeparatorListView"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:layout_marginRight="18dp" android:layout_marginBottom="18dp">
+                        <TextView android:id="@+id/F23_X2_LBL_CUIT_CONFIRMACION" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/FXX_00_LBL_DOCUMENTO_MODIFICAR_ALIAS" android:maxLines="1" android:contentDescription="@string/ACCESSIBILITY_ALIAS_TIPOS_DOCUMENTOS" style="@style/generic_row_label_conf"/>
+                        <TextView android:gravity="end" android:id="@+id/F23_X2_LBL_DATA_CUIT" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F23_X2_LBL_CUIT_CONFIRMACION" style="@style/generic_row_data_conf"/>
+                    </RelativeLayout>
+                    <View android:layout_width="match_parent" style="@style/SeparatorListView"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:layout_marginRight="18dp" android:layout_marginBottom="18dp">
+                        <TextView android:id="@+id/F23_X2_LBL_CBU" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CBU" android:maxLines="1" android:contentDescription="@string/ACCESSIBILITY_ALIAS_CBU" style="@style/generic_row_label_conf"/>
+                        <TextView android:gravity="end" android:id="@+id/F23_X2_LBL_DATA_CBU" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F23_X2_LBL_CBU" style="@style/generic_row_data_conf"/>
+                    </RelativeLayout>
+                    <View android:layout_width="match_parent" style="@style/SeparatorListView"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:layout_marginRight="18dp" android:layout_marginBottom="18dp">
+                        <TextView android:id="@+id/F23_X2_LBL_NUMERO_CUENTA" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nro. de Cuenta" android:maxLines="1" android:contentDescription="@string/ACCESSIBILITY_ALIAS_NRO_CUENTA" style="@style/generic_row_label_conf"/>
+                        <TextView android:gravity="end" android:id="@+id/F23_X2_LBL_DATA_NUMERO_CUENTA" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toRightOf="@+id/F23_X2_LBL_NUMERO_CUENTA" style="@style/generic_row_data_conf"/>
+                    </RelativeLayout>
+                    <View android:layout_width="match_parent" style="@style/SeparatorListView"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:layout_marginRight="18dp" android:layout_marginBottom="18dp">
+                        <TextView android:id="@+id/F23_X2_LBL_TIPO_CUENTA" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tipo de Cuenta" android:maxLines="1" style="@style/generic_row_label_conf"/>
+                        <TextView android:gravity="end" android:id="@+id/F23_X2_LBL_DATA_TIPO_CUENTA" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F23_X2_LBL_TIPO_CUENTA" style="@style/generic_row_data_conf"/>
+                    </RelativeLayout>
+                    <View android:layout_width="match_parent" style="@style/SeparatorListView"/>
+                </LinearLayout>
+            </LinearLayout>
+            <Button android:id="@+id/F01_20_BTN_CONTINUAR_CONF" android:text="@string/ID_38XX_TRANSFERENCE_BTN_CONFIRM_NEW_RECIPIENT" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

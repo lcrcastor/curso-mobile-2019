@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include android:id="@+id/title" android:layout_width="match_parent" android:layout_height="55dp" layout="@layout/generic_view_title_layout"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include android:id="@+id/perfilInversorHeader" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/generic_view_header_perfil_inversor"/>
+                <include android:id="@+id/descripcion" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" app:layout_constraintStart_toStartOf="@+id/perfilInversorHeader" app:layout_constraintTop_toBottomOf="@+id/perfilInversorHeader" layout="@layout/generic_description_perfil_inversor"/>
+                <LinearLayout android:orientation="vertical" android:background="@color/leyenda_blue" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/black" android:id="@+id/textView14" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/perfil_inversor_info_text_bold"/>
+                    <TextView android:textColor="@color/black" android:id="@+id/textView15" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/perfil_inversor_info_text_regular"/>
+                    <TextView android:textColor="@color/com_facebook_blue" android:autoLink="web" android:id="@+id/tvmasinfo" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/perfil_inversor_info_mas_info"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</android.support.v7.widget.LinearLayoutCompat>

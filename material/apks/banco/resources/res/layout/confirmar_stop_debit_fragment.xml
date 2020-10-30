@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" style="@style/MainLayout">
+    <RelativeLayout android:gravity="center" android:id="@+id/footer_confirm_stop_debit_form_button_confirm" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:id="@+id/confirm_stop_debit_form_button_confirm" android:text="@string/ID300_STOPDEBIT_CONFIRM_BTN_CONFIRM" style="@style/generic_boton_rojo"/>
+    </RelativeLayout>
+    <ScrollView android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/footer_confirm_stop_debit_form_button_confirm">
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/confirm_stop_debit_form_title" android:text="@string/ID296_STOPDEBIT_CONFIRM_LBL_STOPDEBITCONFIRM" style="@style/generic_title"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSectionTitle"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/confirm_stop_debit_form_credit_card_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID297_STOPDEBIT_CONFIRM_LBL_CARD" android:layout_weight="2" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/confirm_stop_debit_form_credit_card_name_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/confirm_stop_debit_form_credit_card_number" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID298_STOPDEBIT_CONFIRM_LBL_ID" android:layout_weight="1" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/confirm_stop_debit_form_credit_card_number_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:id="@+id/confirm_stop_debit_form_debit_account_in_pesos_divider" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/confirm_stop_debit_form_debit_account_in_pesos_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/confirm_stop_debit_form_debit_account_in_pesos" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID299_STOPDEBIT_CONFIRM_LBL_DEBIT" android:layout_weight="2" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_CUENTA" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/confirm_stop_debit_form_debit_account_in_pesos_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:id="@+id/confirm_stop_debit_form_debit_account_in_dollars_divider" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Fecha" android:layout_weight="2" style="@style/generic_row_label_conf"/>
+                <ar.com.santander.rio.mbanking.view.DateView android:gravity="end" android:id="@+id/fechaComprobanteConf" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

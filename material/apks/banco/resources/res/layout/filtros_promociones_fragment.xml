@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout style="@style/BodyLayout">
+                <TextView android:id="@+id/vTitle" android:text="@string/ID359_PROMO_FILTER_LBL_FILTER" style="@style/generic_title"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <View style="@style/SeparatorSectionTitle"/>
+        <RelativeLayout android:background="@color/grey_extra_light" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:gravity="start" android:layout_gravity="center_horizontal" android:id="@+id/scrollDialogText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:text="@string/ID360_PROMO_FILTER_LBL_DAY" style="@style/generic_row_data_comp"/>
+        </RelativeLayout>
+        <View style="@style/SeparatorSection"/>
+        <ar.com.santander.rio.mbanking.view.HorizontalScrollList android:id="@+id/tabSelector" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <View style="@style/SeparatorSection"/>
+        <com.jmperezra.accordion_multilevel.widget.AccordionMultilevel android:id="@+id/idAccordionMPago" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <com.jmperezra.accordion_multilevel.widget.AccordionMultilevel android:id="@+id/idAccordionRublos" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>

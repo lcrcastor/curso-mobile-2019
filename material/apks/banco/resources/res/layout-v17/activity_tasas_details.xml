@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/F10_00_rll_header" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <TextView android:id="@+id/tasas_title" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="Detalle de tasas" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" style="@style/generic_title"/>
+            <View style="@style/SeparatorSectionTitle"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/F10_01_lnl_headerInfo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="22dp">
+                <TextView android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" style="@style/generic_topDescription_amount"/>
+                <ar.com.santander.rio.mbanking.view.AmountView android:gravity="center" android:id="@+id/F10_01_lbl_monto" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginTop="8dp" android:layout_marginBottom="10dp" android:text="Tasas aplicables" style="@style/generic_amount"/>
+                <TextView android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" style="@style/generic_bottomDescription_amount"/>
+            </LinearLayout>
+            <View android:id="@+id/F10_01_separador2" android:layout_width="match_parent" style="@style/SeparatorSubSection"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/F10_01_lnl_detailInfo" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:layout_marginStart="18dp" android:layout_marginEnd="18dp">
+                    <TextView android:id="@+id/F10_01_lbl_capital" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tasa Nominal Anual" android:layout_toLeftOf="@+id/F10_01_lbl_data_capital" android:layout_alignParentLeft="true" android:layout_toStartOf="@+id/F10_01_lbl_data_capital" android:layout_alignParentStart="true" style="@style/generic_row_label_conf"/>
+                    <TextView android:id="@+id/tasas_tna" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/generic_row_data_conf"/>
+                </RelativeLayout>
+                <View style="@style/SeparatorSection"/>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F10_01_LNL_CAPITAL_UVI" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:layout_marginStart="18dp" android:layout_marginEnd="18dp">
+                        <TextView android:id="@+id/F10_01_lbl_capital_uvi" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tasa Efectiva Anual" android:layout_toLeftOf="@+id/F10_01_lbl_data_capital_uvi" android:layout_alignParentLeft="true" android:layout_toStartOf="@+id/F10_01_lbl_data_capital_uvi" android:layout_alignParentStart="true" style="@style/generic_row_label_conf"/>
+                        <TextView android:id="@+id/tasas_tea" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/generic_row_data_conf"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <RelativeLayout android:id="@+id/F10_01_rlt_valor_uva" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:layout_marginStart="18dp" android:layout_marginEnd="18dp">
+                    <TextView android:id="@+id/F10_01_lbl_valor_uva" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Costo Financiero Total Nominal anual (sin IVA)" android:layout_toLeftOf="@+id/F10_01_lbl_data_valor_uva" android:layout_alignParentLeft="true" android:layout_toStartOf="@+id/F10_01_lbl_data_valor_uva" android:layout_alignParentStart="true" style="@style/generic_row_label_conf"/>
+                    <TextView android:id="@+id/tasas_cftna_sIva" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/generic_row_data_conf"/>
+                </RelativeLayout>
+                <View android:id="@+id/F10_01_separador4" android:layout_width="match_parent" style="@style/SeparatorSection"/>
+                <RelativeLayout android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:layout_marginStart="18dp" android:layout_marginEnd="18dp">
+                    <TextView android:id="@+id/F10_01_lbl_tasa" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Costo Financiero Total Nominal anual" android:layout_toLeftOf="@+id/F10_01_lbl_data_tasa" android:layout_alignParentLeft="true" android:layout_toStartOf="@+id/F10_01_lbl_data_tasa" android:layout_alignParentStart="true" style="@style/generic_row_label_conf"/>
+                    <TextView android:id="@+id/tasas_cftna_cIva" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/generic_row_data_conf"/>
+                </RelativeLayout>
+                <View android:id="@+id/F10_01_separador5" android:layout_width="match_parent" style="@style/SeparatorSection"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

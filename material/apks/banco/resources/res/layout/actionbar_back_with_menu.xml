@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:background="@color/red_light" android:layout_width="match_parent" android:layout_height="56dp">
+    <include layout="@layout/actionbar_logo"/>
+    <ImageView android:id="@+id/back_imgButton" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_margin" android:tint="@color/white" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@string/CONTENT_ATRAS" app:srcCompat="@drawable/ic_arrow_left_black_24dp"/>
+    <ImageView android:id="@+id/menu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/general_margin" android:tint="@color/white" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/ACCESSIBILITY_ACTIONBAR_OPTIONS" app:srcCompat="@drawable/ic_menu_vector_24dp"/>
+</RelativeLayout>

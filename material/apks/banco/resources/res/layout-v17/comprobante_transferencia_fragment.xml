@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" style="@style/MainLayout">
+    <RelativeLayout android:gravity="center" android:id="@+id/footer_buttonBack" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:id="@+id/buttonBack" android:text="@string/ID488_TRANSFERENCE_PROOF_DONE_BTN_BACK" style="@style/generic_boton_rojo"/>
+    </RelativeLayout>
+    <ScrollView android:orientation="vertical" android:id="@+id/svComprobante" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/footer_buttonBack" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+        <LinearLayout android:orientation="vertical" android:id="@+id/comprobanteTransferencia" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/textViewComprobanteTransferenciasTitle" android:text="@string/ID476_TRANSFERENCE_PROOF_DONE_LBL_PROOF" style="@style/generic_title"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSectionTitle"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID481_TRANSFERENCE_PROOF_DONE_LBL_DEBITEDPAY" android:layout_weight="2" style="@style/generic_row_label_comp"/>
+                <TextView android:gravity="end" android:id="@+id/textViewImporteDebitado" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_comp"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID480_TRANSFERENCE_PROOF_DONE_LBL_DESCACCOUNT" android:layout_weight="2" android:contentDescription="@string/ACCESSIBILITY_TRANSFERENCIAS_DESC_CTA_DESTINO" style="@style/generic_row_label_comp"/>
+                <TextView android:gravity="end" android:id="@+id/textViewDescripcionCtaDestino" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_comp"/>
+            </LinearLayout>
+            <View android:layout_weight="2" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutCtaDestino" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID478_TRANSFERENCE_PROOF_DONE_LBL_DESTACCOUNT" android:layout_weight="2" android:contentDescription="@string/ACCESSIBILITY_TRANSFERENCIAS_CTA_DESTINO" style="@style/generic_row_label_comp"/>
+                <TextView android:gravity="end" android:id="@+id/textViewCuentaDestino" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:id="@+id/dividerCtaDestino" android:visibility="gone" android:layout_weight="2" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutCBU" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:id="@+id/textViewCBU" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID954_TRANSFERENCE_LBL_COMPROBANTE_TRANSFERENCIA_CBU_CVU_BENEFICIARIO" android:layout_weight="2" android:contentDescription="@string/DESCRIPTION_CBU_CVU_BENEFICIARIO" style="@style/generic_row_label_comp"/>
+                <TextView android:gravity="end" android:id="@+id/textViewCBUValor" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_form"/>
+            </LinearLayout>
+            <View android:id="@+id/dividerCBU" android:visibility="gone" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutCUIT" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:id="@+id/textViewCUIT" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID955_TRANSFERENCE_LBL_COMPROBANTE_TRANSFERENCIA_CUIT_BENEFICIARIO" android:layout_weight="1" android:contentDescription="@string/CUIT_ACCESIBILITY_BENEFICIARIO" style="@style/generic_row_data_form"/>
+                <TextView android:gravity="end" android:id="@+id/textViewCUITValor" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="2" style="@style/generic_row_data_form"/>
+            </LinearLayout>
+            <View android:id="@+id/dividerCUIT" android:visibility="gone" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID479_TRANSFERENCE_PROOF_DONE_LBL_OWNER" android:layout_weight="2" android:contentDescription="@string/ACCESSIBILITY_TRANSFERENCIAS_TITULAR_CTA_DESTINO" style="@style/generic_row_label_comp"/>
+                <TextView android:gravity="end" android:id="@+id/textViewTitularCtaDestino" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_comp"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID477_TRANSFERENCE_PROOF_DONE_LBL_DEBITACCOUNT" android:layout_weight="2" android:contentDescription="@string/ACCESSIBILITY_TRANSFERENCIAS_CTA_DEBITO" style="@style/generic_row_label_comp"/>
+                <TextView android:gravity="end" android:id="@+id/textViewCuentaDebito" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_comp"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID482_TRANSFERENCE_PROOF_DONE_LBL_TRANSCONCEPT" android:layout_weight="1" style="@style/generic_row_label_comp"/>
+                <TextView android:gravity="end" android:id="@+id/textViewConceptoTransferencia" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_comp"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutLeyemda" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_margin_row">
+                <TextView android:gravity="start" android:id="@+id/leyenda" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_label_form"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID483_TRANSFERENCE_PROOF_DONE_LBL_INFO" android:layout_weight="1" style="@style/generic_row_label_comp"/>
+                <TextView android:gravity="end" android:id="@+id/textViewInformacionAdicional" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_comp"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID484_TRANSFERENCE_PROOF_DONE_LBL_ENDDATE" android:layout_weight="1" style="@style/generic_row_label_comp"/>
+                <TextView android:gravity="end" android:id="@+id/textViewPlazoAcreditacion" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_comp"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID485_TRANSFERENCE_PROOF_DONE_LBL_DATE" android:layout_weight="1" style="@style/generic_row_label_comp"/>
+                <TextView android:gravity="end" android:id="@+id/textViewFecha" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_comp"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID486_TRANSFERENCE_PROOF_DONE_LBL_TICKETNUM" android:layout_weight="1" style="@style/generic_row_label_comp"/>
+                <TextView android:gravity="end" android:id="@+id/textViewNumeroComprobante" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_comp"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutComprobanteAlias" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/IDXXX_TRANSFERENCE_PROOF_DONE_LBL_TICKETNUM_ALIAS" android:layout_weight="1" style="@style/generic_row_label_form"/>
+                <TextView android:gravity="end" android:id="@+id/textViewNumeroComprobanteAlias" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_row_data_form"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:id="@+id/textViewLeyenda2" android:layout_width="0dp" android:layout_height="wrap_content" android:text="" android:layout_weight="1" style="@style/generic_leyend_light"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:id="@+id/textViewLeyenda1" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/ID487_TRANSFERENCE_PROOF_DONE_LBL_SEUO" android:layout_weight="1" style="@style/generic_leyend_dark"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include layout="@layout/layout_bottom_receipt_share"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

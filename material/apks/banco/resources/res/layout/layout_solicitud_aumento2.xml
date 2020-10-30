@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:fillViewport="false" style="@style/MainLayout">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:id="@+id/F33_01_txt_title" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="@string/F33_01_Lbl_Solicitud_de_Aumento_de_Limite_para_Transferencias" style="@style/generic_title"/>
+        </LinearLayout>
+        <View style="@style/SeparatorSectionTitle"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="44dp" android:layout_marginRight="18dp" android:layout_marginBottom="50dp">
+            <RelativeLayout android:layout_gravity="center_horizontal" android:id="@+id/selectorImporte" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="14dp">
+                <TextView android:id="@+id/txtimporteSeleccionado" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F33_01_Lbl_Importe_en" style="@style/generic_label_currency"/>
+                <ImageView android:id="@+id/imgImporteSeleccionado" android:paddingLeft="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrowdown" android:layout_toRightOf="@+id/txtimporteSeleccionado" android:layout_alignTop="@+id/txtimporteSeleccionado" android:layout_alignBottom="@+id/txtimporteSeleccionado" android:layout_alignParentBottom="false" android:layout_alignWithParentIfMissing="false"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ar.com.santander.rio.mbanking.view.NumericEditTextWithPrefixAccesibility android:id="@+id/editTextImporte" android:layout_width="match_parent" android:layout_height="50dp" android:imeOptions="actionDone" app:editTextPrefix_hint="0,00" app:editTextPrefix_max_digits_decimal="2" app:editTextPrefix_max_digits_integer="12" app:editTextPrefix_prefix="$" app:editTextPrefix_singleLine="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <View style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutPara" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_margin_row">
+            <TextView android:gravity="start" android:id="@+id/textViewPara" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/F33_01_Lbl_Para" android:layout_weight="2" style="@style/generic_row_label_form"/>
+            <TextView android:gravity="end" android:id="@+id/textViewSeleccionar" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID446_TRANSFERENCE_BTN_SELECT" android:drawablePadding="20dp" android:layout_weight="1" style="@style/generic_row_data_form"/>
+            <ImageView android:paddingLeft="5dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/arrowright"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/linearLayoutTitularDividerSolicitud" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <View android:layout_marginBottom="16dp" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutAliasSolicitud" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="10dp">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/IDXXX_TRANSFERENCE_ALL_ALIAS" android:layout_weight="5" style="@style/generic_row_label_form"/>
+                <TextView android:gravity="end" android:id="@+id/textViewAliasSolicitud" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_form"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutTitularSolicitud" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="10dp">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID447_TRANSFERENCE_MYACCOUNTS_TITLE" android:layout_weight="5" style="@style/generic_row_label_form"/>
+                <TextView android:gravity="end" android:id="@+id/textViewTitularSolicitud" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_form"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutCUITSolicitud" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="10dp">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID454_TRANSFERENCE_OTHER_CIUT" android:layout_weight="1" android:contentDescription="@string/CUIT_ACCESIBILITY" style="@style/generic_row_label_form"/>
+                <TextView android:gravity="end" android:id="@+id/textViewCUITSolicitud" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="2" style="@style/generic_row_data_form"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutTipoCuentaSolicitud" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="10dp">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID448_TRANSFERENCE_MYACCOUNTS_TYPE" android:layout_weight="2" style="@style/generic_row_label_form"/>
+                <TextView android:gravity="end" android:id="@+id/textViewTipoCuentaSolicitud" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_form"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutBancoDestinoSolicitud" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="10dp">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID455_TRANSFERENCE_OTHER_TOBANK" android:layout_weight="1" style="@style/generic_row_label_form"/>
+                <TextView android:gravity="end" android:id="@+id/textViewBancoDestinoSolicitud" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="2" style="@style/generic_row_data_form"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutTipoSolicitud" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="10dp">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID451_TRANSFERENCE_THIRDPARTY_TYPE" android:layout_weight="2" style="@style/generic_row_label_form"/>
+                <TextView android:gravity="end" android:id="@+id/textViewTipoSolicitud" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_form"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutNumeroSolicitud" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="10dp">
+                <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Nro. de Cuenta" android:layout_weight="2" android:contentDescription="Número de cuenta" style="@style/generic_row_label_form"/>
+                <TextView android:gravity="end" android:id="@+id/textViewNumeroSolicitud" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_form"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutCBUSolicitud" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                <TextView android:gravity="start" android:layout_width="44dp" android:layout_height="wrap_content" android:text="@string/ID456_TRANSFERENCE_OTHER_CBU_CVU" android:layout_weight="0.5" android:contentDescription="@string/OUT_CBU_CVU" style="@style/generic_row_label_form"/>
+                <TextView android:gravity="end" android:id="@+id/textViewCBUSolicitud" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" style="@style/generic_row_data_form"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutDe" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_margin_row">
+            <TextView android:gravity="start" android:id="@+id/textViewDe" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/F33_01_Lbl_De" android:layout_weight="6" style="@style/generic_row_label_form"/>
+            <TextView android:gravity="end" android:id="@+id/textViewCuentaOrigen" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="CTA $ 205-0202022" android:layout_weight="1" style="@style/generic_row_data_form_with_arrow_right"/>
+        </LinearLayout>
+        <View style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" style="@style/generic_margin_row">
+            <TextView android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/F33_01_Lbl_Fecha" android:layout_weight="1" style="@style/generic_row_label_form"/>
+            <TextView android:gravity="end" android:id="@+id/textViewFechaEjecucion" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_form_with_arrow_right"/>
+        </LinearLayout>
+        <View style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="12dp" android:layout_marginRight="18dp">
+            <TextView android:gravity="start" android:id="@+id/F33_01_txt_leyenda" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" style="@style/generic_leyend_light"/>
+        </LinearLayout>
+        <Button android:id="@+id/F33_01_btn_enviar" android:text="@string/F33_01_Btn_Enviar" android:layout_alignParentBottom="true" style="@style/generic_boton_rojo"/>
+    </LinearLayout>
+</ScrollView>

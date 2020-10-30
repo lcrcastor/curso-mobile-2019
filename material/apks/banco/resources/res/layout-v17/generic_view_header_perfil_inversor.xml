@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/rlViewCenter" android:paddingTop="35dp" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAlignment="center">
+        <TextView android:id="@+id/tvTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tu perfil de inversión es" android:layout_centerHorizontal="true" style="@style/generic_list_data_column1"/>
+        <TextView android:id="@+id/tvnombrePerfil" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/tvTxt" android:layout_centerHorizontal="true" style="@style/perfil_inversor_style"/>
+    </RelativeLayout>
+    <View android:layout_below="@+id/rlViewCenter" style="@style/SeparatorSectionBlack"/>
+</RelativeLayout>

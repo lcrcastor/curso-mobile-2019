@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:id="@+id/idSoftTokenView" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ViewFlipper android:id="@+id/vgSoftToken" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include android:id="@+id/softTokenNew" layout="@layout/page_soft_token_new"/>
+            <include android:id="@+id/softTokenConfirmation" layout="@layout/page_soft_token_confirmation"/>
+            <include android:id="@+id/softTokenTimer" layout="@layout/page_soft_token_timer"/>
+        </ViewFlipper>
+    </LinearLayout>
+</LinearLayout>

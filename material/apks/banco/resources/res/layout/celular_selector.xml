@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/numCelular" android:background="@android:color/white" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:weightSum="6">
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="3">
+            <TextView android:id="@+id/idLabelCelular" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_row_label_form"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="right" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/linearCelular" android:clickable="true" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="3">
+            <TextView android:gravity="center_vertical" android:id="@+id/idValueCelular" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="@dimen/general_margin" android:drawableRight="@color/transparent" android:drawableEnd="@color/transparent" style="@style/generic_row_data_selectable_form"/>
+            <ImageView android:layout_gravity="center" android:id="@+id/rightRow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_right"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/empresaCelular" android:background="@android:color/white" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_margin" android:layout_marginRight="@dimen/general_margin" android:layout_marginBottom="@dimen/general_margin" android:weightSum="6">
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="3">
+            <TextView android:id="@+id/idLabelEmpresa" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_row_label_form"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="right" android:layout_gravity="right" android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="3">
+            <TextView android:gravity="right|center_vertical|center_horizontal|center" android:layout_gravity="right" android:id="@+id/idEmpresaValue" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/generic_row_data_comp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View style="@style/SeparatorSection"/>
+</LinearLayout>

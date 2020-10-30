@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:id="@+id/scroll_view_payment" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/tenencia_de_prestamos_payment_button" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/F10_00_rll_header" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+                <TextView android:id="@+id/payment_title" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="" style="@style/generic_title"/>
+                <View style="@style/SeparatorSectionTitle"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@+id/F10_01_lnl_headerInfo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="22dp">
+                    <TextView android:gravity="center_horizontal" android:id="@+id/payment_header_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Crédito" style="@style/generic_topDescription_amount"/>
+                    <ar.com.santander.rio.mbanking.view.AmountView android:gravity="center" android:id="@+id/payment_header_data" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginTop="8dp" android:layout_marginBottom="10dp" style="@style/generic_amount"/>
+                    <TextView android:gravity="center_horizontal" android:id="@+id/payment_header_detail" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" style="@style/generic_bottomDescription_amount"/>
+                </LinearLayout>
+                <View android:id="@+id/F10_01_separador2" android:layout_width="match_parent" style="@style/SeparatorSubSection"/>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F10_01_lnl_detailInfo" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:background="@color/grey_list_background" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingRight="18dp" android:paddingBottom="12dp" android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:id="@+id/payment_tipo_prestamo_label" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tipo de préstamo" android:layout_toLeftOf="@+id/F10_01_lbl_data_capital" android:layout_alignParentLeft="true" style="@style/generic_row_label_conf"/>
+                            <TextView android:id="@+id/payment_tipo_prestamo" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/credit_account_row_selector" android:focusable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                        <RelativeLayout android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingRight="18dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                            <TextView android:id="@+id/F10_01_lbl_valor_uva" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID310_FIXEDTERM_LBL_DEBITACCOUNT" android:layout_alignParentLeft="true" android:contentDescription="@string/ID310_FIXEDTERM_LBL_DEBITACCOUNT" style="@style/generic_row_label_conf"/>
+                            <RelativeLayout android:id="@+id/relativeLayoutDatosCuenta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/payment_account_arrow" android:layout_toRightOf="@+id/F10_01_lbl_valor_uva" android:importantForAccessibility="no">
+                                <TextView android:id="@+id/selector_account_id_2" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                                <TextView android:id="@+id/payment_monto_cuenta" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/selector_account_id_2" android:layout_alignParentRight="true" style="@style/generic_row_label_conf"/>
+                            </RelativeLayout>
+                            <ImageView android:id="@+id/payment_account_arrow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="6dp" android:src="@drawable/ic_arrow_small" android:layout_alignParentRight="true"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/F10_01_LNL_CAPITAL_UVI" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingRight="18dp" android:paddingBottom="12dp" android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:id="@+id/F10_01_lbl_capital_uvi" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cuota" android:layout_toLeftOf="@+id/F10_01_lbl_data_capital_uvi" android:layout_alignParentLeft="true" style="@style/generic_row_label_conf"/>
+                            <TextView android:id="@+id/payment_cuota" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/relativeLayoutPlazoDePrestamo" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingRight="18dp" android:paddingBottom="12dp" android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:id="@+id/F10_01_lbl_tasa" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Plazo de préstamo" android:layout_toLeftOf="@+id/F10_01_lbl_data_tasa" android:layout_alignParentLeft="true" style="@style/generic_row_label_conf"/>
+                            <TextView android:id="@+id/payment_plazo_prestamo" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/relativeLayoutFechaDeVencimiento" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingRight="18dp" android:paddingBottom="12dp" android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:id="@+id/F10_01_lbl_intereses" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fecha de vencimiento" android:layout_toLeftOf="@+id/F10_01_lbl_data_intereses" android:layout_alignParentLeft="true" style="@style/generic_row_label_conf"/>
+                            <TextView android:id="@+id/payment_fecha_vencimiento" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/relativeLayoutImporteDeLaCuota" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:background="@color/grey_list_background" android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingRight="18dp" android:paddingBottom="12dp" android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:id="@+id/F10_01_lbl_canal" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Importe de la cuota" android:layout_toLeftOf="@+id/F10_01_lbl_data_canal" android:layout_alignParentLeft="true" style="@style/generic_row_data_conf"/>
+                            <TextView android:id="@+id/payment_importe_cuota_data" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/relativeLayoutCapital" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingRight="18dp" android:paddingBottom="12dp" android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:id="@+id/F10_01_lbl_accionVto" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Capital" android:singleLine="true" android:layout_alignParentLeft="true" style="@style/generic_row_label_conf"/>
+                            <TextView android:gravity="right" android:id="@+id/payment_capital_data" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" android:layout_toRightOf="@+id/F10_01_lbl_accionVto" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <RelativeLayout android:id="@+id/ajuste_capital_mora_rl_payment" android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:id="@+id/ajuste_capital_mora_tv_payment" android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingBottom="12dp" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ajuste de capital por mora" android:singleLine="true" android:layout_alignParentLeft="true" style="@style/generic_row_label_conf"/>
+                        <TextView android:gravity="right" android:id="@+id/ajuste_capital_mora_data_payment" android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingRight="18dp" android:paddingBottom="12dp" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" android:layout_toRightOf="@+id/ajuste_capital_mora_tv" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                        <View android:layout_alignParentBottom="true" style="@style/SeparatorSection"/>
+                    </RelativeLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/relativeLayoutInteresesDelPeriodo" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingRight="18dp" android:paddingBottom="12dp" android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:id="@+id/F10_01_lbl_canal1" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Intereses compensatorios del Período" android:singleLine="true" android:layout_alignParentLeft="true" style="@style/generic_row_label_conf"/>
+                            <TextView android:gravity="right" android:id="@+id/payment_intereses_comp_data" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" android:layout_toRightOf="@+id/F10_01_lbl_canal1" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <RelativeLayout android:id="@+id/intereses_punitorios_rl_payment" android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:id="@+id/intereses_punitorios_tv_payment" android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingBottom="12dp" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Intereses punitorios" android:singleLine="true" android:layout_alignParentLeft="true" style="@style/generic_row_label_conf"/>
+                        <TextView android:gravity="right" android:id="@+id/intereses_punitorios_data_payment" android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingRight="18dp" android:paddingBottom="12dp" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" android:layout_toRightOf="@+id/intereses_punitorios_tv" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                        <View android:layout_alignParentBottom="true" style="@style/SeparatorSection"/>
+                    </RelativeLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/relativeLayoutCargoPorSeguroDeVida" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingRight="18dp" android:paddingBottom="12dp" android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:id="@+id/F10_01_lbl_intereses_punitorios" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cargo por Seguro de Vida" android:singleLine="true" android:layout_alignParentLeft="true" style="@style/generic_row_label_conf"/>
+                            <TextView android:gravity="right" android:id="@+id/payment_seguro_vida_data" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" android:layout_toRightOf="@+id/F10_01_lbl_intereses_punitorios" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/relativeLayoutImpuestosIVA" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingRight="18dp" android:paddingBottom="12dp" android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:id="@+id/F10_01_lbl_accionVto2" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Impuestos (IVA)" android:singleLine="true" android:layout_alignParentLeft="true" style="@style/generic_row_label_conf"/>
+                            <TextView android:gravity="right" android:id="@+id/payment_impuestos_iva_data" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" android:layout_toRightOf="@+id/F10_01_lbl_accionVto2" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/relativeLayoutImpuestosDeSellado" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingRight="18dp" android:paddingBottom="12dp" android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:id="@+id/F10_01_lbl_accionVto3" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Impuestos de Sellado" android:singleLine="true" android:layout_alignParentLeft="true" style="@style/generic_row_label_conf"/>
+                            <TextView android:gravity="right" android:id="@+id/payment_impuestos_sellado_data" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" android:layout_toRightOf="@+id/F10_01_lbl_accionVto3" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/relativeLayoutOtrosImpuestosPaymentCredit" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingRight="18dp" android:paddingBottom="12dp" android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:id="@+id/OtrosImpuestosPaymentCredit" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Otros Impuestos" android:singleLine="true" android:layout_alignParentLeft="true" style="@style/generic_row_label_conf"/>
+                            <TextView android:gravity="right" android:id="@+id/OtrosImpuestosPaymentCreditData" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" android:layout_toRightOf="@+id/OtrosImpuestosPaymentCredit" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/linearLayoutIVAPaymentCredit" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:id="@+id/iva_rlPaymentCredit" android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:id="@+id/textViewIVATittlePaymentCredit" android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingBottom="12dp" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="I.V.A" android:singleLine="true" android:layout_alignParentLeft="true" style="@style/generic_row_label_conf"/>
+                            <TextView android:gravity="right" android:id="@+id/textViewIVADataPaymentCredit" android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingRight="18dp" android:paddingBottom="12dp" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" android:layout_toRightOf="@+id/textViewIVATittle" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                        </RelativeLayout>
+                        <View android:layout_alignParentBottom="true" style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <RelativeLayout android:id="@+id/relativeImporteDeCuotaPuraUVASPayment" android:background="@color/grey_list_background" android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:id="@+id/textViewImporteDeCuotaPuraUVASPayment" android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingBottom="12dp" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Importe de Cuota pura UVAs" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/generic_row_data_conf"/>
+                        <TextView android:gravity="right" android:id="@+id/textViewImporteDeCuotaPuraUVAS_dataPayment" android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingRight="18dp" android:paddingBottom="12dp" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" android:layout_toRightOf="@+id/textViewImporteDeCuotaPuraUVAS" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                        <View android:layout_alignParentBottom="true" style="@style/SeparatorSection"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:orientation="vertical" android:id="@+id/capital_uva_rl_Payment" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <RelativeLayout android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                            <TextView android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Capital en UVAs" android:layout_toLeftOf="@+id/capital_uva_data" android:layout_alignParentLeft="true" style="@style/generic_row_label_conf"/>
+                            <TextView android:id="@+id/capital_uva_dataPayment" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                        </RelativeLayout>
+                        <View android:layout_width="match_parent" android:layout_alignParentBottom="true" style="@style/SeparatorSection"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:orientation="vertical" android:id="@+id/intereses_uva_rl_Payment" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <RelativeLayout android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                            <TextView android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Intereses en UVAs" android:layout_toLeftOf="@+id/intereses_uva_data" android:layout_alignParentLeft="true" style="@style/generic_row_label_conf"/>
+                            <TextView android:id="@+id/intereses_uva_data_Payment" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                        </RelativeLayout>
+                        <View android:layout_width="match_parent" android:layout_alignParentBottom="true" style="@style/SeparatorSection"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@+id/relativeLayoutTasas" android:background="@color/grey_list_background" android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingRight="18dp" android:paddingBottom="12dp" android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:id="@+id/F10_01_lbl_accionVto4" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tasas" android:singleLine="true" android:layout_alignParentLeft="true" style="@style/generic_row_data_conf"/>
+                        <TextView android:gravity="right" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="false" android:layout_toRightOf="@+id/F10_01_lbl_accionVto4" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                    </RelativeLayout>
+                    <View android:layout_width="match_parent" style="@style/SeparatorSection"/>
+                    <RelativeLayout android:id="@+id/relativeLayoutTNA" android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F10_01_lbl_accionVto5" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TNA" android:singleLine="true" android:layout_alignParentLeft="true" android:contentDescription="T N A" style="@style/generic_row_label_conf"/>
+                        <TextView android:gravity="right" android:id="@+id/payment_tna_data" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" android:layout_toRightOf="@+id/F10_01_lbl_accionVto5" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                    </RelativeLayout>
+                    <View android:layout_width="match_parent" style="@style/SeparatorSection"/>
+                    <RelativeLayout android:id="@+id/relativeLayoutTEA" android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F10_01_lbl_accionVto6" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TEA" android:singleLine="true" android:layout_alignParentLeft="true" android:contentDescription="T E A" style="@style/generic_row_label_conf"/>
+                        <TextView android:gravity="right" android:id="@+id/payment_tea_data" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" android:layout_toRightOf="@+id/F10_01_lbl_accionVto6" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                    </RelativeLayout>
+                    <View android:layout_width="match_parent" style="@style/SeparatorSection"/>
+                    <RelativeLayout android:id="@+id/relativeLayoutCFTNA" android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F10_01_lbl_accionVto61" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F01_tenencia_CFTEA" android:singleLine="true" android:layout_alignParentLeft="true" android:contentDescription="C F T E A con impuesto" style="@style/generic_row_label_comp_4"/>
+                        <TextView android:gravity="right" android:id="@+id/payment_cftna_data" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" android:layout_toRightOf="@+id/F10_01_lbl_accionVto61" android:layout_alignParentRight="true" style="@style/generic_row_data_comp_4"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                    <RelativeLayout android:id="@+id/relativeLayoutCFTNASiva" android:focusable="true" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F10_01_lbl_accionVto62" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F01_tenencia_CFTEA_s_IMP" android:singleLine="true" android:layout_alignParentLeft="true" android:contentDescription="C F T E A sin Impuesto" style="@style/generic_row_label_comp_4"/>
+                        <TextView android:gravity="right" android:id="@+id/payment_cftna_sIva_data" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" android:layout_toRightOf="@+id/F10_01_lbl_accionVto14" android:layout_alignParentRight="true" style="@style/generic_row_data_comp_4"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                    <RelativeLayout android:orientation="vertical" android:id="@+id/leyenda_r3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" style="@style/BodyLayout">
+                        <TextView android:gravity="left" android:id="@+id/leyenda_data_2" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="false" style="@style/generic_leyend_light"/>
+                    </RelativeLayout>
+                    <TextView android:id="@+id/leyenda_tasa_payment" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_margin" android:layout_marginRight="@dimen/general_margin" style="@style/generic_leyend_light"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <Button android:layout_gravity="center" android:id="@+id/tenencia_de_prestamos_payment_button" android:text="Continuar" android:layout_alignParentBottom="true" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15dp" android:textColor="@color/generic_black" android:id="@+id/F24_14_LBL_TITLE" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginBottom="12dp" android:layout_marginStart="18dp" style="@style/generic_fontSemibold"/>
+            <View style="@style/SeparatorSectionTitle"/>
+            <RelativeLayout android:background="@color/grey_light" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:id="@+id/F24_14_LNL_HEADER_HONORARIOS" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="10dp" android:layout_marginBottom="14dp" android:layout_marginStart="18dp" android:layout_marginEnd="10dp">
+                    <TextView android:gravity="left|center_vertical|center_horizontal|center|start" android:id="@+id/F24_14_LBL_NOMBRE" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/F24_14_LBL_NOMBRE" android:layout_weight="2" android:contentDescription="@string/ACCESSIBILITY_SUPOERFONDO" style="@style/generic_list_title_3columns"/>
+                    <TextView android:gravity="end" android:id="@+id/F24_14_LBL_ENTRADA" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="@string/ID_3877_FONDOS_LBL_ENTRADA" android:layout_weight="1" android:layout_marginEnd="10dp" style="@style/generic_list_title_3columns"/>
+                    <TextView android:gravity="center" android:id="@+id/F24_14_LBL_SALIDA" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/ID_3878_FONDOS_LBL_SALIDA" android:layout_weight="1" style="@style/generic_list_title_3columns"/>
+                    <TextView android:gravity="end" android:id="@+id/F24_14_LBL_ADMIN" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/F24_15_LBL_COMISION" android:layout_weight="1" android:textAlignment="center" style="@style/generic_list_title_3columns"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout android:background="@color/grey_light" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:id="@+id/F24_15_LNL_HEADER_HORARIOS" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="14dp" android:layout_marginStart="18dp" android:layout_marginEnd="18dp">
+                    <TextView android:gravity="left|center_vertical|center_horizontal|center|start" android:id="@+id/F24_15_LBL_NOMBRE" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/F24_15_LBL_NOMBRE" android:layout_weight="46" android:contentDescription="@string/ACCESSIBILITY_SUPOERFONDO" style="@style/generic_list_title_3columns"/>
+                    <TextView android:gravity="left|center_vertical|center_horizontal|center|start" android:id="@+id/F24_15_LBL_APERTURA" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/F24_15_LBL_APERTURA" android:layout_weight="27" style="@style/generic_list_title_3columns"/>
+                    <TextView android:gravity="end" android:id="@+id/F24_15_LBL_CIERRE" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/F24_15_LBL_CIERRE" android:layout_weight="27" style="@style/generic_list_title_3columns"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <View style="@style/SeparatorSection"/>
+            <TableLayout android:id="@+id/F24_14_LST_DATOS" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <TextView android:id="@+id/F24_14_LBL_LEGALES" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="26dp" android:layout_marginRight="18dp" android:layout_marginBottom="18dp" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" style="@style/generic_leyend_light"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

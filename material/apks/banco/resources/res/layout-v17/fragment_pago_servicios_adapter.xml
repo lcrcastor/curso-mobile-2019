@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/F06_00_linear_layout_adapter" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="13dp" android:textColor="@color/generic_black" android:id="@+id/F06_00_lbl_fechavto_adapter" android:layout_width="70dp" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="14dp" android:layout_marginRight="18dp" android:layout_marginBottom="10dp" android:text="@string/ID2052_ENVEFECT_LBL_VENCIM" android:maxLines="2" android:minLines="1" android:singleLine="true" style="@style/generic_fontRegular"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:layout_marginRight="18dp" android:layout_marginBottom="10dp" android:layout_weight="1">
+            <TextView android:ellipsize="end" android:id="@+id/F06_00_lbl_empresa1_adapter" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Empresa1" android:singleLine="true" style="@style/generic_list_data_column2"/>
+            <TextView android:ellipsize="end" android:id="@+id/F06_00_lbl_empresa2_adapter" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Empresa2" android:singleLine="true" style="@style/generic_list_data_column2_bottom_text"/>
+        </LinearLayout>
+        <TextView android:textSize="13dp" android:textColor="@color/generic_black" android:ellipsize="end" android:gravity="right" android:id="@+id/F06_00_lbl_importe_adapter" android:layout_width="73dp" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:layout_marginRight="6dp" android:layout_marginBottom="10dp" android:text="@string/ID2054_ENVEFECT_LBL_IMPORTE" android:maxLines="1" android:layout_marginEnd="6dp" style="@style/generic_fontSemibold"/>
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/F06_00_img_flecha_adapter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="18dp" android:layout_marginBottom="7dp" android:contentDescription="" android:layout_marginEnd="18dp"/>
+    </LinearLayout>
+    <View style="@style/SeparatorListView"/>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/wrapperTransactions" android:background="@color/grey_extra_light" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <include layout="@layout/title_simple_layout"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" style="@style/BodyLayout">
+        <TextView android:textColor="@color/generic_black" android:gravity="left" android:layout_gravity="center_vertical" android:id="@+id/vFirstCol" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Numero a Recargar" android:singleLine="true" android:layout_weight="50" style="@style/generic_list_title_fondos"/>
+        <TextView android:gravity="left" android:layout_gravity="bottom" android:id="@+id/vSecondCol" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Empresa" android:singleLine="true" android:layout_weight="50" style="@style/generic_list_title_3columns"/>
+    </LinearLayout>
+</LinearLayout>

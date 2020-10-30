@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/idTarjetasView" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textColor="#444444" android:id="@+id/view_title" android:padding="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/terminos_condiciones_view_title" style="@style/fontBold"/>
+        <View android:id="@+id/F27_00_SEPARATOR_TITLE" android:layout_below="@+id/F27_00_LBL_TITLE" style="@style/SeparatorSectionTitle"/>
+        <TextView android:textColor="#444444" android:id="@+id/tv_custodia_terminos_condiciones" android:paddingLeft="18dp" android:paddingTop="40dp" android:paddingRight="30dp" android:paddingBottom="30dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

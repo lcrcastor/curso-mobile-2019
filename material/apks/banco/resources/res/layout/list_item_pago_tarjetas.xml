@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="top" android:orientation="vertical" android:id="@+id/credit_cards_list_layout" android:background="@color/white" android:paddingLeft="@dimen/general_margin" android:paddingTop="@dimen/general_margin" android:paddingRight="@dimen/general_margin" android:paddingBottom="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="0dp">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ar.com.santander.rio.mbanking.view.DateView android:textSize="@dimen/text_size_row_max" android:textColor="@color/generic_black" android:gravity="start" android:id="@+id/credit_cards_list_exp_date" android:paddingRight="@dimen/padding_item_data" android:layout_width="0dp" android:layout_height="match_parent" android:maxLines="1" android:layout_weight="80" fontPath="fonts/OpenSans-Regular.otf"/>
+        <LinearLayout android:orientation="vertical" android:paddingRight="@dimen/padding_item_data" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="130">
+            <TextView android:gravity="start" android:id="@+id/credit_cards_list_credit_card" android:nextFocusRight="@+id/credit_cards_list_credit_card_detail" android:nextFocusDown="@+id/credit_cards_list_credit_card_detail" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/generic_list_data_column1"/>
+            <TextView android:textSize="@dimen/text_size_row_max" android:textColor="@color/generic_black" android:gravity="start" android:id="@+id/credit_cards_list_credit_card_detail" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_fontRegular"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/credit_cards_list_amount" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="65">
+            <ar.com.santander.rio.mbanking.view.AmountView android:gravity="end" android:id="@+id/credit_cards_list_amount_in_pesos" android:layout_width="match_parent" android:layout_height="wrap_content" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_list_data_column3"/>
+            <ar.com.santander.rio.mbanking.view.AmountView android:gravity="end" android:id="@+id/credit_cards_list_amount_in_dollars" android:layout_width="match_parent" android:layout_height="wrap_content" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_list_data_column3"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:layout_alignParentBottom="true" style="@style/SeparatorSection"/>
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textColor="#444444" android:padding="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Detalle de Custodia"/>
+        <View android:id="@+id/F27_00_SEPARATOR_TITLE-1" android:layout_below="@+id/F27_00_LBL_TITLE" style="@style/SeparatorSectionTitle"/>
+        <android.support.v4.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="#444444" android:gravity="center" android:padding="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Custodia Efectivo"/>
+                    <TextView android:gravity="center" android:id="@+id/tvLabelValueDolar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/tvLabelDolar" android:layout_centerHorizontal="true" style="@style/generic_amount"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <View android:id="@+id/F27_00_SEPARATOR_TITLE-2" android:layout_below="@+id/F27_00_LBL_TITLE" style="@style/SeparatorSectionTitle"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <TextView android:textColor="#444444" android:padding="18dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cantidad Valor Nominal "/>
+                        <TextView android:textColor="#444444" android:gravity="right" android:id="@+id/tvValorNominal" android:padding="18dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" style="@style/Widget.AppCompat.TextView.SpinnerItem"/>
+                    </LinearLayout>
+                    <View android:id="@+id/F27_00_SEPARATOR_TITLE-3" android:layout_below="@+id/F27_00_LBL_TITLE" style="@style/SeparatorSectionTitle"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <TextView android:textColor="#444444" android:padding="18dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Precio Mercado "/>
+                        <TextView android:textColor="#444444" android:gravity="right" android:id="@+id/tvPrecioMercado" android:padding="18dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" style="@style/Widget.AppCompat.TextView.SpinnerItem"/>
+                    </LinearLayout>
+                    <View android:id="@+id/F27_00_SEPARATOR_TITLE-5" android:layout_below="@+id/F27_00_LBL_TITLE" style="@style/SeparatorSectionTitle"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <TextView android:textColor="#444444" android:padding="18dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Estado"/>
+                        <TextView android:textColor="#444444" android:gravity="right" android:id="@+id/tvEstado" android:padding="18dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" style="@style/Widget.AppCompat.TextView.SpinnerItem"/>
+                    </LinearLayout>
+                    <View android:id="@+id/F27_00_SEPARATOR_TITLE-7" android:layout_below="@+id/F27_00_LBL_TITLE" style="@style/SeparatorSectionTitle"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:id="@+id/tv_custodia_terminos_condiciones" android:padding="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_small_text"/>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+</LinearLayout>

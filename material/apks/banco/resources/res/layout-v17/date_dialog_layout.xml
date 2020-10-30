@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/date_dialog_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/idTitle" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="60dp">
+            <TextView android:textSize="13dp" android:textColor="@color/generic_black" android:gravity="left" android:id="@+id/dialogTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="21dp" android:layout_marginRight="18dp" android:text="Título" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" style="@style/generic_fontBold"/>
+            <View android:id="@+id/idLine" android:background="@color/generic_grey" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="15dp" android:layout_below="@+id/idTitle"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ar.com.santander.rio.mbanking.view.DatePicker android:theme="@style/Widget.DatePicker" android:gravity="center" android:orientation="vertical" android:id="@+id/datePicker" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="2">
+                <Button android:id="@+id/cancelButton" android:layout_marginTop="10dp" android:layout_marginRight="9dp" android:text="Cancelar" android:layout_weight="1" android:layout_marginEnd="9dp" style="@style/generic_boton_blanco_borde_gris"/>
+                <Button android:id="@+id/aceptarButton" android:layout_marginLeft="9dp" android:layout_marginTop="10dp" android:text="Aceptar" android:layout_weight="1" android:layout_marginStart="9dp" style="@style/generic_boton_rojo"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

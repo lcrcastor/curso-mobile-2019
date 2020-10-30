@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/relative" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <View android:id="@+id/separator" android:layout_alignParentTop="true" style="@style/SeparatorSection"/>
+    <TextView android:id="@+id/F24_10_lbl_data_nombre_fondo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="10dp" android:text="texto" android:layout_toLeftOf="@+id/F24_10_RLL_data" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/generic_list_data_column1"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/F24_10_RLL_data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+        <TextView android:id="@+id/F24_10_lbl_data_importe_fondo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="texto" style="@style/generic_list_data_column2"/>
+        <ImageView android:id="@+id/F24_10_img_navigation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="24dp" android:layout_marginRight="10dp" android:src="@drawable/arrow_left"/>
+    </LinearLayout>
+</RelativeLayout>

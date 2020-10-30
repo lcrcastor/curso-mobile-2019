@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" style="@style/MainLayout">
+    <RelativeLayout android:gravity="center" android:id="@+id/footer_proof_of_payment_form_button_back" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:id="@+id/proof_of_payment_form_button_back" android:text="@string/ID277_CARDPAYMENT_PROOF_BTN_BACK" style="@style/generic_boton_rojo"/>
+    </RelativeLayout>
+    <ScrollView android:orientation="vertical" android:id="@+id/svComprobantePagoTarjeta" android:tag="@string/IDXX_SHARE_PAGO_TARJETA" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/footer_proof_of_payment_form_button_back">
+        <LinearLayout android:orientation="vertical" android:id="@+id/proof_of_payment" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:gravity="start" android:id="@+id/proof_of_payment_form_title" android:padding="@dimen/padding_text_title_main" android:text="@string/ID987_CCARDS_COMPROBANTE_PAGO_TITLE" style="@style/generic_title"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSectionTitle"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/proof_of_payment_form_credit_card" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID269_CARDPAYMENT_PROOF_LBL_CARD" android:layout_weight="1" style="@style/generic_row_label_comp"/>
+                <TextView android:gravity="end" android:id="@+id/proof_of_payment_form_credit_card_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_comp"/>
+            </LinearLayout>
+            <View android:id="@+id/proof_of_payment_form_debit_account_in_pesos_divider" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/proof_of_payment_form_debit_account_in_pesos_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/proof_of_payment_form_debit_account_in_pesos" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID270_CARDPAYMENT_PROOF_LBL_DEBITACCOUNT" android:layout_weight="1" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_CUENTA_PESO_ARGENTINO" style="@style/generic_row_label_comp"/>
+                <TextView android:gravity="end" android:id="@+id/proof_of_payment_form_debit_account_in_pesos_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_comp"/>
+            </LinearLayout>
+            <View android:id="@+id/proof_of_payment_form_debit_account_in_dollars_divider" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/proof_of_payment_form_debit_account_in_dollars_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/proof_of_payment_form_debit_account_in_dollars" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID989_CCARDS_COMPROBANTE_PAGO_LABEL_CUENTA_DEBITO_DOLARES" android:layout_weight="1" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_CUENTA_DOLAR" style="@style/generic_row_label_comp"/>
+                <TextView android:gravity="end" android:id="@+id/proof_of_payment_form_debit_account_in_dollars_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_comp"/>
+            </LinearLayout>
+            <View android:id="@+id/proof_of_payment_form_balance_in_pesos_divider" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/proof_of_payment_form_balance_in_pesos_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/proof_of_payment_form_balance_in_pesos" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID271_CARDPAYMENT_PROOF_LBL_AMOUNT" android:layout_weight="1" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_MONTO_PESO_ARGENTINO" style="@style/generic_row_label_comp"/>
+                <ar.com.santander.rio.mbanking.view.AmountView android:gravity="end" android:id="@+id/proof_of_payment_form_balance_in_pesos_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_row_data_comp"/>
+            </LinearLayout>
+            <View android:id="@+id/proof_of_payment_form_balance_in_dollars_divider" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/proof_of_payment_form_balance_in_dollars_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/proof_of_payment_form_balance_in_dollars" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID990_CCARDS_COMPROBANTE_PAGO_LABEL_MONTO_DOLARES" android:layout_weight="1" android:contentDescription="@string/ACCESSIBILITY_PAGOTARJETAS_MONTO_DOLAR" style="@style/generic_row_label_comp"/>
+                <ar.com.santander.rio.mbanking.view.AmountView android:gravity="end" android:id="@+id/proof_of_payment_form_balance_in_dollars_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_row_data_comp"/>
+            </LinearLayout>
+            <View android:id="@+id/proof_of_payment_form_quote_of_the_day_divider" style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/proof_of_payment_form_quote_of_the_day_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/proof_of_payment_form_quote_of_the_day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID272_CARDPAYMENT_PROOF_LBL_DAILYQUOTE" style="@style/generic_row_label_comp"/>
+                <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ar.com.santander.rio.mbanking.view.AmountView android:id="@+id/proof_of_payment_form_quote_of_the_day_content" android:layout_width="wrap_content" android:layout_height="wrap_content" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_row_data_comp"/>
+                    <ar.com.santander.rio.mbanking.view.AmountView android:id="@+id/proof_of_payment_form_quote_of_the_day_ars_content" android:layout_width="wrap_content" android:layout_height="wrap_content" app:maxTextSize="@dimen/text_size_row_max" app:minTextSize="@dimen/text_size_row_min" style="@style/generic_row_data_comp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/proof_of_payment_form_payment_date" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID273_CARDPAYMENT_PROOF_LBL_ENDDATE" android:layout_weight="1" style="@style/generic_row_label_comp"/>
+                <ar.com.santander.rio.mbanking.view.DateView android:gravity="end" android:id="@+id/proof_of_payment_form_payment_date_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_comp"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/proof_of_payment_form_number" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID274_CARDPAYMENT_PROOF_LBL_TICKETNO" android:layout_weight="1" style="@style/generic_row_label_comp"/>
+                <TextView android:gravity="end" android:id="@+id/proof_of_payment_form_number_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="2" style="@style/generic_row_data_comp"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSection"/>
+            <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                <TextView android:gravity="start" android:id="@+id/proof_of_payment_form_info_reminder" android:paddingTop="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID275_CARDPAYMENT_PROOF_LBL_HELP" android:layout_below="@+id/proof_of_payment_form_info_seuo" style="@style/generic_leyend_dark"/>
+                <TextView android:gravity="start" android:id="@+id/proof_of_payment_form_info_seuo" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID276_CARDPAYMENT_PROOF_LBL_HELP2" style="@style/generic_leyend_light"/>
+            </RelativeLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include layout="@layout/layout_bottom_receipt_share"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

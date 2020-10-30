@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/mainLayoutST" android:background="@color/white" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="match_parent">
+    <ScrollView android:id="@+id/F12_17_scr_prepararEnvio" android:background="@color/white" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/F12_17_lnl_prepararEnvio" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:id="@+id/F12_17_lbl_prepararEnvio" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="@string/ID2157_ENVEFECT_LBL_PREPENVEFE" style="@style/generic_title"/>
+            <View android:id="@+id/F12_17_txv_separador1" style="@style/SeparatorSectionTitle"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="14dp">
+                <TextView android:id="@+id/F12_17_lbl_cuentaDebito" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:text="@string/ID2158_ENVEFECT_LBL_CUENDEBIT" style="@style/generic_row_label_form"/>
+                <TextView android:gravity="end" android:id="@+id/F12_17_lbl_data_cuentaDebito" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginRight="18dp" android:text="@string/NULL_ACCOUNT" android:singleLine="true" android:layout_toRightOf="@+id/F12_17_lbl_cuentaDebito" android:layout_alignParentRight="true" style="@style/generic_row_data_form"/>
+            </RelativeLayout>
+            <View android:id="@+id/F12_17_txv_separador2" style="@style/SeparatorSection"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="14dp">
+                <TextView android:id="@+id/F12_17_lbl_importe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:text="@string/ID2159_ENVEFECT_LBL_IMPORTE" style="@style/generic_row_label_form"/>
+                <TextView android:gravity="end" android:id="@+id/F12_17_lbl_data_importe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginRight="18dp" android:text="@string/NULL_AMOUNT" android:singleLine="true" android:layout_toRightOf="@+id/F12_17_lbl_importe" android:layout_alignParentRight="true" style="@style/generic_row_data_form"/>
+            </RelativeLayout>
+            <View android:id="@+id/F12_17_txv_separador3" style="@style/SeparatorSection"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="14dp">
+                <TextView android:id="@+id/F12_17_lbl_destinatario" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:text="@string/ID2160_ENVEFECT_LBL_DESTINATARIO" style="@style/generic_row_label_form"/>
+                <TextView android:gravity="end" android:id="@+id/F12_17_lbl_seleccionarDestinatario" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/ID2164_ENVEFECT_LBL_DESTINATARIO" android:singleLine="true" android:layout_toLeftOf="@+id/F12_17_img_seleccionarDestinatario" android:layout_toRightOf="@+id/F12_17_lbl_destinatario" style="@style/generic_row_data_form"/>
+                <ImageView android:id="@+id/F12_17_img_seleccionarDestinatario" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25dp" android:layout_marginRight="14dp" android:src="@drawable/arrow_right" android:layout_alignParentRight="true" android:contentDescription="@string/ID2164_ENVEFECT_LBL_DESTINATARIO"/>
+            </RelativeLayout>
+            <View android:id="@+id/F12_17_txv_separador4" style="@style/SeparatorSection"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

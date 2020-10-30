@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/bodyDialog" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="4">
+    <LinearLayout android:orientation="vertical" android:id="@+id/idTitle" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@+id/layoutContent" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <TextView android:textSize="13sp" android:textColor="@color/generic_black" android:gravity="center_horizontal" android:id="@+id/dialogTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="15dp" android:layout_marginRight="18dp" style="@style/generic_fontBold"/>
+        <View android:id="@+id/layout_list_title_separator" android:background="@color/generic_grey" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="12dp"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/layoutContent" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="4" app:layout_constraintBottom_toTopOf="@+id/buttons" app:layout_constraintEnd_toEndOf="0" app:layout_constraintHeight_min="100dp" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/idTitle">
+        <ListView android:id="@+id/listOptions" android:background="@android:color/white" android:focusable="true" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:choiceMode="singleChoice" android:contentDescription="@string/LIST_OPTIONS_DIALOG_FRAGMENT"/>
+        <TextView android:textSize="13sp" android:textColor="@color/generic_black" android:gravity="center_horizontal" android:id="@+id/messageAlert" android:background="@color/white" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="18dp" android:layout_marginRight="10dp" android:layout_marginBottom="8dp" android:importantForAccessibility="yes" style="@style/generic_fontRegular"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/buttons" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/layoutContent">
+        <Button android:id="@+id/oneOptionButton" android:visibility="visible" style="@style/generic_boton_rojo"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/layout_twoOptions" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="0dp" android:weightSum="2" app:layout_constraintBottom_toBottomOf="@+id/messageAlert" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0">
+            <Button android:id="@+id/twoOptionsNegativeButton" android:layout_marginRight="9dp" android:layout_weight="1" style="@style/generic_boton_blanco_borde_negro_fino"/>
+            <Button android:id="@+id/twoOptionsPositiveButton" android:layout_marginLeft="9dp" android:layout_weight="1" style="@style/generic_boton_rojo"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/layout_threeOptions" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="0dp">
+            <Button android:id="@+id/threeOptionsButton1" style="@style/generic_boton_rojo"/>
+            <Button android:id="@+id/threeOptionsButton2" android:layout_marginTop="0dp" style="@style/generic_boton_blanco_borde_gris"/>
+            <Button android:id="@+id/threeOptionsButton3" android:layout_marginTop="0dp" style="@style/generic_boton_blanco_borde_gris"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

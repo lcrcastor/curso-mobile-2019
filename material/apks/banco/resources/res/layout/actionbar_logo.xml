@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <LinearLayout android:orientation="vertical" android:id="@+id/inl_logo_default" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+        <include layout="@layout/actionbar_logo_default"/>
+        <include layout="@layout/actionbar_logo_select"/>
+        <include layout="@layout/actionbar_logo_advance"/>
+        <include layout="@layout/actionbar_logo_universidades"/>
+    </LinearLayout>
+</merge>

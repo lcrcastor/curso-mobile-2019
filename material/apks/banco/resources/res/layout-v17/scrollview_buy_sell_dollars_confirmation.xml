@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/F20_01_scr_container" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/F20_01_LNL_BOTTOMOBJECTS">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include layout="@layout/title_simple_layout"/>
+        <RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp">
+            <TextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@+id/F21_01_LBL_DOLLARSTOOPERATE" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_row_data_form"/>
+            <TextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@+id/F21_01_LBL_DATA_DOLLARSTOOPERATE" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/F21_01_LBL_DOLLARSTOOPERATE" style="@style/generic_amount"/>
+            <TextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@+id/F21_01_LBL_PESOSTOOPERATE" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:layout_below="@+id/F21_01_LBL_DATA_DOLLARSTOOPERATE" style="@style/generic_topDescription_amount"/>
+            <TextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@+id/F21_01_LBL_DATA_PESOSTOOPERATE" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/F21_01_LBL_PESOSTOOPERATE" style="@style/generic_big_label_regular"/>
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center_horizontal" android:id="@+id/F21_01_EXCHANGERATE" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="14dp">
+            <TextView android:id="@+id/F21_01_LBL_DATA_EXCHANGERATE" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="@string/ID3520_COMPRA_VENTA_LBL_COTIZACION_LABEL" style="@style/generic_alert_title"/>
+        </RelativeLayout>
+        <View style="@style/StrongSeparatorSection"/>
+        <RelativeLayout android:id="@+id/F21_01_ORIGINACCOUNT" android:paddingLeft="18dp" android:paddingTop="20dp" android:paddingRight="18dp" android:paddingBottom="14dp" style="@style/rowTableWithoutVerticalPadding">
+            <TextView android:id="@+id/F21_01_LBL_ORIGINACCOUNT" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID3526_COMPRA_VENTA_LBL_CTA_ORIGEN" style="@style/generic_row_label_conf"/>
+            <TextView android:gravity="end" android:id="@+id/F21_01_LBL_DATA_ORIGINACCOUNT" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_toRightOf="@+id/F21_01_LBL_ORIGINACCOUNT" android:layout_alignParentRight="true" android:layout_marginStart="18dp" android:layout_toEndOf="@+id/F21_01_LBL_ORIGINACCOUNT" android:layout_alignParentEnd="true" style="@style/generic_row_data_conf"/>
+        </RelativeLayout>
+        <View style="@style/SeparatorSection"/>
+        <RelativeLayout android:id="@+id/F21_01_DESTINATIONACCOUNT" android:paddingLeft="18dp" android:paddingTop="20dp" android:paddingRight="18dp" android:paddingBottom="14dp" style="@style/rowTableWithoutVerticalPadding">
+            <TextView android:id="@+id/F21_01_LBL_DESTINATIONACCOUNT" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="18dp" android:text="@string/ID3530_COMPRA_VENTA_LBL_CTA_DESTINO" android:layout_marginEnd="18dp" style="@style/generic_row_label_conf"/>
+            <TextView android:gravity="end" android:id="@+id/F21_01_LBL_DATA_DESTINATIONACCOUNT" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_toRightOf="@+id/F21_01_LBL_DESTINATIONACCOUNT" android:layout_alignParentRight="true" android:layout_marginStart="18dp" android:layout_toEndOf="@+id/F21_01_LBL_DESTINATIONACCOUNT" android:layout_alignParentEnd="true" style="@style/generic_row_data_conf"/>
+        </RelativeLayout>
+        <View style="@style/SeparatorSection"/>
+        <TextView android:layout_gravity="start" android:id="@+id/F21_01_LBL_LEGALS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="24dp" android:layout_marginRight="18dp" android:layout_marginBottom="26dp" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" style="@style/generic_leyend_light"/>
+    </LinearLayout>
+</ScrollView>

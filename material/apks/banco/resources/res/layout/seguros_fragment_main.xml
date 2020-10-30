@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ViewFlipper android:id="@+id/seguros_view_flipper" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include android:id="@+id/tenencia_seguros" layout="@layout/layout_tenencia_seguros"/>
+        <include android:id="@+id/detalle_seguro" layout="@layout/layout_detalle_seguro"/>
+        <include android:id="@+id/solicitar_asistencia" layout="@layout/layout_solicitar_asistencia"/>
+        <include android:id="@+id/detalle_asistencia" layout="@layout/layout_detalle_asistencia"/>
+    </ViewFlipper>
+</LinearLayout>

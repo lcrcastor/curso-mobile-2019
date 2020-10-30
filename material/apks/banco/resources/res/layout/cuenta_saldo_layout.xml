@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/llCuentasSaldoBlock" android:background="@color/white" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@+id/blankBlock" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="0">
+        <ar.com.santander.rio.mbanking.view.AmountView android:gravity="center" android:layout_gravity="center" android:id="@+id/cuentaSaldo.value" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:maxHeight="140dp" android:minHeight="90dp" app:maxTextSize="@dimen/text_size_amount_max" app:minTextSize="@dimen/text_size_amount_min" style="@style/generic_amount"/>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@+id/limite__descubierto_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="25dp">
+            <TextView android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:text="@string/ID88_ACCOUNTS_LBL_LIMIT" style="@style/generic_row_label_comp"/>
+            <ar.com.santander.rio.mbanking.view.AmountView android:textSize="13sp" android:id="@+id/limiteDescubierto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="18dp" app:maxTextSize="14sp" app:minTextSize="12sp" style="@style/generic_row_data_comp"/>
+        </LinearLayout>
+        <View android:id="@+id/grayDividerLimiteExt" android:background="@color/grey_medium_light" android:layout_width="match_parent" android:layout_height="1dp"/>
+    </LinearLayout>
+    <GridLayout android:orientation="horizontal" android:id="@+id/limite__extraction_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:columnCount="3">
+        <TextView android:textSize="13sp" android:gravity="left" android:id="@+id/tvLimiteExtraccion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="15dp" android:text="@string/ID_4749_CUENTAS_LBL_LIMITE_DE_EXTRACCION" style="@style/generic_row_label_comp"/>
+        <ar.com.santander.rio.mbanking.view.AmountView android:textSize="13sp" android:gravity="fill_horizontal" android:layout_gravity="right" android:id="@+id/avLimiteExtraccion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="15dp" app:maxTextSize="14sp" app:minTextSize="12sp" style="@style/generic_row_data_comp"/>
+        <ImageView android:id="@+id/ivArrow_limite_extraccion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_left"/>
+    </GridLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:id="@+id/svPageCreate" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:id="@+id/F10_CREATE_rll_header" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:layout_alignParentTop="true">
+                <TextView android:id="@+id/vTitle" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:text="@string/ID309_FIXEDTERM_LBL_CONSTITUTION" android:layout_toLeftOf="@+id/F10_00_lbl_linkTasas" android:layout_alignParentLeft="true" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" android:layout_alignParentStart="true" style="@style/generic_title"/>
+                <TextView android:id="@+id/F10_CREATE_lbl_linkTasas" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:text="@string/ID3001_LISTADOTEN_LBL_TASA" android:layout_alignParentRight="true" android:layout_marginEnd="18dp" android:layout_alignParentEnd="true" style="@style/generic_link_term_condition"/>
+            </RelativeLayout>
+            <View android:id="@+id/separadorTitulo" android:layout_below="@+id/F10_CREATE_rll_header" style="@style/SeparatorSectionTitle"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/vgWrapperCreateLongTermDeposit" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/separadorTitulo"/>
+            <Button android:id="@+id/btnContinueInCreate" android:layout_marginTop="@dimen/standard_margin" android:text="@string/ID200_PAYMENT_DETAILWITHOUT_BTN_CONTINUE" android:layout_below="@+id/vgWrapperCreateLongTermDeposit" style="@style/generic_boton_rojo"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

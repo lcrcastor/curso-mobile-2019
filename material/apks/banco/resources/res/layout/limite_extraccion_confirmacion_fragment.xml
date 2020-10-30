@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:focusable="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/btnConfirmar" android:layout_alignParentTop="true">
+        <TextView android:id="@+id/tvTitle" android:text="@string/ID_4761_CUENTAS_TIT_CONFIMAR_CAMBIO_DE_LIMITE_DE_EXTRACCION" style="@style/generic_title_wrap_content"/>
+        <View android:layout_width="match_parent" style="@style/SeparatorSectionTitle"/>
+        <ScrollView android:id="@+id/svInfoContainer" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_list_title_background">
+                    <TextView android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="18dp" android:text="@string/ID_4762_CUENTAS_LBL_LIMITE_EN_CAJEROS_BANELCO_SANTANDER_RIO" style="@style/generic_row_label_conf"/>
+                    <View style="@style/SeparatorListView"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_margin_row">
+                        <TextView android:id="@+id/tvLimiteActualLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4832_CUENTAS_LBL_LIMITE_ACTUAL" style="@style/generic_row_label_conf"/>
+                        <TextView android:gravity="right" android:id="@+id/tvLimiteActualValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="XXXX" android:layout_toRightOf="@+id/tvLimiteActualLabel" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorListView"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_margin_row">
+                        <TextView android:id="@+id/tvNuevoLimiteLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4833_CUENTAS_LBL_NUEVO" style="@style/generic_row_label_conf"/>
+                        <TextView android:gravity="right" android:id="@+id/tvNuevoLimiteValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="XXXX" android:layout_toRightOf="@+id/tvNuevoLimiteLabel" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorListView"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_margin_row">
+                        <TextView android:id="@+id/tvValidezLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4763_CUENTAS_LBL_VIGENCIA" style="@style/generic_row_label_conf"/>
+                        <TextView android:gravity="right" android:id="@+id/tvValidezValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="XXXX" android:layout_toRightOf="@+id/tvValidezLabel" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorListView"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_list_title_background">
+                    <TextView android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="18dp" android:text="@string/ID_4764_CUENTAS_LBL_LIMITE_EN_OTROS_CAJEROS" style="@style/generic_row_label_conf"/>
+                    <View style="@style/SeparatorListView"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_margin_row">
+                        <TextView android:id="@+id/tvRedBanelcoOtrosBancosLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4752_CUENTAS_LBL_EN_CAJEROS_BANELCO_OTROS_BANCOS" style="@style/generic_row_label_conf"/>
+                        <TextView android:gravity="right" android:id="@+id/tvRedBanelcoOtrosBancosValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="XXXX" android:layout_toRightOf="@+id/tvRedBanelcoOtrosBancosLabel" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorListView"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_margin_row">
+                        <TextView android:id="@+id/tvRedLinkLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4835_CUENTAS_LBL_EN_CAJEROS_RED_LINK" style="@style/generic_row_label_conf"/>
+                        <TextView android:gravity="right" android:id="@+id/tvRedLinkValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="XXXX" android:layout_toRightOf="@+id/tvRedLinkLabel" android:layout_alignParentRight="true" style="@style/generic_row_data_conf"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorListView"/>
+                </LinearLayout>
+                <TextView android:gravity="center" android:id="@+id/tvLegends" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" style="@style/generic_leyend_light"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <Button android:id="@+id/btnConfirmar" android:text="@string/ID_4293_CUENTAS_BTN_CONFIRMAR" android:layout_alignParentBottom="true" style="@style/generic_boton_rojo"/>
+</RelativeLayout>

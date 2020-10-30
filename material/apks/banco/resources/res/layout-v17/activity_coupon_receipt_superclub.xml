@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/drawer_layout" android:background="@color/grey_dark" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:background="@color/white" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ScrollView android:id="@+id/F20_03_SCR_RECEIPT" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/F20_03_BTN_BACK" android:layout_alignParentTop="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:id="@+id/F20_03_LBL_TITLE" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:text="@string/ID3013_COMODINES_SUPER_CLUB_LBL_COMPROBANTE" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" style="@style/generic_title"/>
+                </LinearLayout>
+                <View android:layout_marginTop="12dp" style="@style/SeparatorSectionTitle"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:gravity="center_horizontal" android:id="@+id/F20_03_LBL_DESCRIPTION" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:text="30% AHORRO CARO CUORE PAGO CON TARJETA DÉBITO" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" style="@style/generic_title"/>
+                </LinearLayout>
+                <View android:layout_marginTop="14dp" style="@style/SeparatorSectionTitle"/>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+                    <TextView android:id="@+id/F20_30_LBL_CHANGE_DATE" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:text="@string/ID3014_COMODINES_SUPER_CLUB_LBL_FECHA_CANJE" android:layout_marginStart="18dp" style="@style/generic_row_label_comp"/>
+                    <TextView android:gravity="end" android:id="@+id/F20_03_LBL_DATA_CHANGE_DATE" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:text="16/12/2015" android:layout_toRightOf="@+id/F20_30_LBL_CHANGE_DATE" android:layout_alignParentRight="true" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" android:layout_toEndOf="@+id/F20_30_LBL_CHANGE_DATE" android:layout_alignParentEnd="true" style="@style/generic_row_data_comp"/>
+                </RelativeLayout>
+                <View style="@style/SeparatorSubSection"/>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+                    <TextView android:id="@+id/F20_03_LBL_POINTS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:text="@string/ID3015_COMODINES_SUPER_CLUB_LBL_PUNTOS_SC" android:layout_marginStart="18dp" style="@style/generic_row_label_comp"/>
+                    <TextView android:gravity="end" android:id="@+id/F20_03_LBL_DATA_POINTS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:text="3.500" android:layout_toRightOf="@+id/F20_03_LBL_POINTS" android:layout_alignParentRight="true" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" android:layout_toEndOf="@+id/F20_03_LBL_POINTS" android:layout_alignParentEnd="true" style="@style/generic_row_data_comp"/>
+                </RelativeLayout>
+                <View style="@style/SeparatorSubSection"/>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+                    <TextView android:id="@+id/F20_03_LBL_RECEIPT_NUMBER" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:text="@string/ID3016_COMODINES_SUPER_CLUB_LBL_COMPROBANTE" android:layout_marginStart="18dp" style="@style/generic_row_label_comp"/>
+                    <TextView android:gravity="end" android:id="@+id/F20_03_LBL_DATA_RECEIPT_NUMBER" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:text="178723432" android:layout_toRightOf="@+id/F20_03_LBL_RECEIPT_NUMBER" android:layout_alignParentRight="true" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" android:layout_toEndOf="@+id/F20_03_LBL_RECEIPT_NUMBER" android:layout_alignParentEnd="true" style="@style/generic_row_data_comp"/>
+                </RelativeLayout>
+                <View style="@style/SeparatorSubSection"/>
+                <TextView android:id="@+id/F20_03_LBL_STORES" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:text="@string/ID3018_COMODINES_SUPER_CLUB_LINK_LOCALES" android:layout_marginStart="18dp" style="@style/generic_link_term_condition"/>
+                <TextView android:id="@+id/F20_03_LBL_LEGAL" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="30dp" android:layout_marginRight="18dp" android:lineSpacingExtra="3dp" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" style="@style/generic_leyend_light"/>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp">
+                    <include layout="@layout/layout_bottom_receipt_share"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+        <Button android:id="@+id/F20_03_BTN_BACK" android:text="@string/ID3017_COMODINES_SUPER_CLUB_BTN_VOLVER" android:layout_alignParentBottom="true" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+    </RelativeLayout>
+    <ListView android:layout_gravity="start" android:id="@+id/ID16_PRIVATEMENU_BTN_CREDITS" android:background="@color/grey_dark" android:scrollbars="none" android:layout_width="@dimen/navigation_drawer_width" android:layout_height="match_parent" android:divider="@android:color/transparent" android:dividerHeight="0dp" android:choiceMode="singleChoice"/>
+</android.support.v4.widget.DrawerLayout>

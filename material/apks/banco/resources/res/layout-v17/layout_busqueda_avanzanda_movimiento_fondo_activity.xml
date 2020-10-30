@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/F24_08_btn_buscar" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:id="@+id/F24_08_lbl_title" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:text="@string/F24_08_LBL_TITULO_BUSQUEDA_AVANZADA" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" style="@style/generic_title"/>
+            <View android:layout_marginTop="12dp" style="@style/SeparatorSectionTitle"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/F24_08_lnl_detail_Objects" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@+id/F24_08_row_fecha_desde" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:layout_marginRight="18dp" android:layout_marginBottom="14dp" android:layout_marginStart="18dp" android:layout_marginEnd="18dp">
+                        <TextView android:id="@+id/F24_08_lbl_fecha_desde" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_08_LBL_FECHA_DESDE" android:layout_toLeftOf="@+id/F24_08_lbl_data_fecha_desde" android:layout_alignParentLeft="true" android:layout_toStartOf="@+id/F24_08_lbl_data_fecha_desde" android:layout_alignParentStart="true" style="@style/generic_row_label_form"/>
+                        <TextView android:id="@+id/F24_08_lbl_data_fecha_desde" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/generic_row_data_selectable_form"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F24_08_row_fecha_hasta" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:layout_marginRight="18dp" android:layout_marginBottom="14dp" android:layout_marginStart="18dp" android:layout_marginEnd="18dp">
+                        <TextView android:id="@+id/F24_08_lbl_fecha_hasta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_08_LBL_FECHA_HASTA" android:layout_toLeftOf="@+id/F24_08_lbl_data_fecha_hasta" android:layout_alignParentLeft="true" android:layout_toStartOf="@+id/F24_08_lbl_data_fecha_hasta" android:layout_alignParentStart="true" style="@style/generic_row_label_form"/>
+                        <TextView android:id="@+id/F24_08_lbl_data_fecha_hasta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/generic_row_data_selectable_form"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F24_08_row_importe" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:layout_marginRight="18dp" android:layout_marginBottom="14dp" android:layout_marginStart="18dp" android:layout_marginEnd="18dp">
+                        <TextView android:id="@+id/F24_08_lbl_importe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_08_LBL_IMPORTE" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentStart="true" style="@style/generic_row_label_form"/>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="22dp" android:layout_marginTop="14dp" android:layout_marginRight="22dp" android:layout_below="@+id/F24_08_lbl_importe" android:layout_marginStart="22dp" android:layout_marginEnd="22dp">
+                            <ar.com.santander.rio.mbanking.view.NumericEditText android:gravity="end" android:id="@+id/F24_08_edt_importe_desde" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="13dp" android:hint="@string/F24_08_LBL_IMPORTE_DESDE" android:singleLine="true" android:maxLength="18" android:digits="0123456789,." android:layout_weight="1" android:inputType="numberDecimal" android:textCursorDrawable="@drawable/color_cursor" android:layout_marginEnd="13dp" app:max_digits_decimal="2" app:max_digits_integer="12" style="@style/InputAmountFilters"/>
+                            <ar.com.santander.rio.mbanking.view.NumericEditText android:gravity="end" android:id="@+id/F24_08_edt_importe_hasta" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="13dp" android:hint="@string/F24_08_LBL_IMPORTE_HASTA" android:singleLine="true" android:maxLength="18" android:digits="0123456789,." android:layout_weight="1" android:inputType="numberDecimal" android:textCursorDrawable="@drawable/color_cursor" android:layout_marginStart="13dp" app:max_digits_decimal="2" app:max_digits_integer="12" style="@style/InputAmountFilters"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <Button android:id="@+id/F24_08_btn_buscar" android:text="@string/F24_08_BTN_BUSCAR" android:layout_alignParentBottom="true" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+</RelativeLayout>

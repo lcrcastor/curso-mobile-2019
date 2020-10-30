@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/MainLayout">
+    <RelativeLayout android:id="@+id/F20_00_RLL_HOME" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ScrollView android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:id="@+id/F20_00_rll_scroll" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:orientation="vertical" android:id="@+id/F20_00_LNL_CONTAINER" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+                    <include layout="@layout/title_simple_layout"/>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/layout_ok_result" android:visibility="visible" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="4">
+                        <ar.com.santander.rio.mbanking.view.HorizontalScrollList android:id="@+id/tabSelector" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                        <RelativeLayout android:layout_gravity="center_horizontal" android:id="@+id/F20_00_RLL_SELECTED_CURRENCY" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp">
+                            <TextView android:id="@+id/F20_00_LBL_SELECTED_CURRENCY" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID3600_COMPRA_VENTA_LBL_IMPORTE_EN" style="@style/generic_row_label_form"/>
+                            <ImageView android:id="@+id/F20_00_IMG_SELECTED_CURRENCY_CHEVRON" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:src="@drawable/arrowdown" android:layout_toRightOf="@+id/F20_00_LBL_SELECTED_CURRENCY" android:layout_alignTop="@+id/F20_00_LBL_SELECTED_CURRENCY" android:layout_alignBottom="@+id/F20_00_LBL_SELECTED_CURRENCY" android:layout_alignParentBottom="false" android:layout_alignWithParentIfMissing="false"/>
+                        </RelativeLayout>
+                        <RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <ar.com.santander.rio.mbanking.view.NumericEditTextWithPrefixAccesibility android:id="@+id/F20_00_INP_AMOUNT" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginLeft="18dp" android:layout_marginTop="6dp" android:layout_marginRight="18dp" app:editTextPrefix_hint="0,00" app:editTextPrefix_max_digits_decimal="2" app:editTextPrefix_max_digits_integer="12" app:editTextPrefix_prefix="$" app:editTextPrefix_singleLine="true"/>
+                        </RelativeLayout>
+                        <TextView android:layout_gravity="center_horizontal" android:id="@+id/F20_00_TXV_EXCHANGE_RATE" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="26dp" android:text="@string/ID3520_COMPRA_VENTA_LBL_COTIZACION_LABEL" style="@style/generic_alert_title"/>
+                        <View style="@style/SeparatorSection"/>
+                        <RelativeLayout android:id="@+id/F20_00_RLL_ORIGIN_ACCOUNT" android:paddingTop="20dp" android:paddingBottom="14dp" style="@style/rowTableWithoutVerticalPadding">
+                            <TextView android:id="@+id/F20_00_LBL_ORIGIN_ACCOUNT" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID3526_COMPRA_VENTA_LBL_CTA_ORIGEN" style="@style/generic_row_label_form"/>
+                            <TextView android:id="@+id/F20_00_LBL_DATA_ORIGIN_ACCOUNT" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" style="@style/generic_row_data_selectable_form"/>
+                            <TextView android:id="@+id/F20_00_LBL_DATA_ORIGIN_AMOUNT" android:paddingRight="15dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/F20_00_LBL_DATA_ORIGIN_ACCOUNT" android:layout_alignParentRight="true" style="@style/generic_row_label_form"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                        <RelativeLayout android:id="@+id/F20_00_RLL_DESTINATION_ACCOUNT" android:paddingTop="20dp" android:paddingBottom="14dp" style="@style/rowTableWithoutVerticalPadding">
+                            <TextView android:id="@+id/F20_00_LBL_DESTINATION_ACCOUNT" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID3530_COMPRA_VENTA_LBL_CTA_DESTINO" style="@style/generic_row_label_form"/>
+                            <TextView android:id="@+id/F20_00_LBL_DATA_DESTINATION_ACCOUNT" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" style="@style/generic_row_data_selectable_form"/>
+                            <TextView android:id="@+id/F20_00_LBL_DATA_DESTINATION_AMOUNT" android:paddingRight="15dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/F20_00_LBL_DATA_DESTINATION_ACCOUNT" android:layout_alignParentRight="true" style="@style/generic_row_label_form"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:id="@+id/F20_00_LBL_BOTTOMOBJECTS" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/F20_00_LNL_CONTAINER" android:layout_alignParentBottom="true">
+                    <Button android:id="@+id/F20_00_BTN_CONTINUE" android:text="@string/ID3560_COMPRA_VENTA_BTN_CONTINUAR" android:textAllCaps="false" style="@style/generic_boton_disable"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

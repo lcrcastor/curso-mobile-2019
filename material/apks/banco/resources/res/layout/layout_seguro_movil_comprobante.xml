@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:id="@+id/F27_34_scrollview_comprobante" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/F27_34_btn_volver" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:id="@+id/F27_34_txt_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="@string/ID_4151_SEGUROS_LBL_COMP_CONT_SGRO" style="@style/generic_title"/>
+            <View style="@style/SeparatorSectionTitle"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="23dp">
+                <TextView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:text="@string/ID_4135_SEGUROS_LBL_SGRO_MOVIL" style="@style/generic_row_label_comp"/>
+                <TextView android:textSize="13dp" android:textColor="@color/generic_black" android:layout_gravity="center_horizontal" android:id="@+id/textView6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="@string/ID_4059_SEGUROS_LBL_IMPORTE_MENSUAL" style="@style/generic_fontLight"/>
+                <TextView android:layout_gravity="center_horizontal" android:id="@+id/F27_34_lbl_data_importe_mensual" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13dp" android:layout_marginBottom="23dp" android:text="" style="@style/generic_amount"/>
+                <View style="@style/SeparatorSectionTitle"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="12dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F27_34_lbl_compania" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/F27_24_lbl_compania" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F27_34_lbl_data_compania" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F27_24_lbl_data_compania" android:layout_toRightOf="@+id/F27_34_lbl_compania" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="12dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F27_34_lbl_cobertura" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4070_SEGUROS_LBL_COBERTURA" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F27_34_lbl_data_cobertura" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Plan A" android:layout_toRightOf="@+id/F27_34_lbl_cobertura" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/linearLayoutSumaAsegurada1Comprobante" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="12dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F27_34_lbl_suma_asegurada1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4072_SEGUROS_LBL_SUMA_ASEG" android:layout_weight="1" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F27_34_lbl_data_suma_asegurada1" android:layout_width="0dp" android:layout_height="wrap_content" android:text="$10.000" android:lines="1" android:layout_weight="1" android:layout_toRightOf="@+id/F27_34_lbl_suma_asegurada1" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </LinearLayout>
+                    <View style="@style/SeparatorListView"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/linearLayoutSumaAsegurada2Comprobante" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="12dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F27_34_lbl_suma_asegurada2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4072_SEGUROS_LBL_SUMA_ASEG" android:layout_weight="1" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F27_34_lbl_data_suma_asegurada2" android:layout_width="0dp" android:layout_height="wrap_content" android:text="$10.000" android:lines="1" android:layout_weight="1" android:layout_toRightOf="@+id/F27_34_lbl_suma_asegurada1" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </LinearLayout>
+                    <View style="@style/SeparatorListView"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="12dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F27_34_lbl_fecha_inicio" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4030_SEGUROS_LBL_FECHA_INI" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F27_34_lbl_data_fecha_inicio" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="02/03/2017" android:layout_toRightOf="@+id/F27_34_lbl_fecha_inicio" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="12dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F27_34_lbl_poliza" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4031_SEGUROS_LBL_POLIZA_CERT" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F27_34_lbl_data_poliza" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3243424320" android:layout_toRightOf="@+id/F27_34_lbl_poliza" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:background="@color/grey_extra_light" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="12dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F27_34_lbl_disp_asegurado" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4139_SEGUROS_LBL_DISP_ASEG" android:layout_alignParentLeft="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="12dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F27_34_lbl_propietario" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4126_SEGUROS_LBL_PROPIETARIO" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F27_34_lbl_data_propietario" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mio" android:layout_toRightOf="@+id/F27_34_lbl_propietario" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="12dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F27_34_lbl_marca" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4141_SEGUROS_LBL_MARCA" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F27_34_lbl_data_marca" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Samsung" android:layout_toRightOf="@+id/F27_34_lbl_marca" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F27_34_lbl_modelo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4142_SEGUROS_LBL_MODELO" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F27_34_lbl_data_modelo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="S7 Edge" android:layout_toRightOf="@+id/F27_34_lbl_modelo" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorListView"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F27_34_lbl_imei" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4143_SEGUROS_LBL_IMEI" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F27_34_lbl_data_imei" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="435435123123123012312" android:layout_toRightOf="@+id/F27_34_lbl_imei" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F27_34_linear_cobertura_baja" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:background="@color/grey_extra_light" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="12dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4243_SEGUROS_LBL_COBER_DADA_BAJA" android:layout_alignParentLeft="true" style="@style/generic_row_data_comp"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="12dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                            <TextView android:id="@+id/F27_34_lbl_poliza_baja" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4031_SEGUROS_LBL_POLIZA_CERT" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                            <TextView android:gravity="end" android:id="@+id/F27_34_lbl_data_poliza_baja" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="736247682346324" android:layout_toRightOf="@+id/F27_34_lbl_poliza_baja" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="12dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                            <TextView android:id="@+id/F27_34_lbl_suma_baja" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4072_SEGUROS_LBL_SUMA_ASEG" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                            <TextView android:gravity="end" android:id="@+id/F27_34_lbl_data_suma_baja" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$6.000" android:layout_toRightOf="@+id/F27_34_lbl_suma_baja" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/layout_fecha_baja" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="12dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                            <TextView android:id="@+id/F27_34_lbl_fecha_inicio_baja" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4030_SEGUROS_LBL_FECHA_INI" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                            <TextView android:gravity="end" android:id="@+id/F27_34_lbl_data_fecha_inicio_baja" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="22/04/2016" android:layout_toRightOf="@+id/F27_34_lbl_fecha_inicio_baja" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="12dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                            <TextView android:id="@+id/F27_34_lbl_medipago_baja" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4032_SEGUROS_LBL_MEDIO_PAGO" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                            <TextView android:gravity="end" android:id="@+id/F27_34_lbl_data_mediopago_baja" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CU $ 162-2131233" android:layout_toRightOf="@+id/F27_34_lbl_medipago_baja" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="12dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                            <TextView android:id="@+id/F27_34_lbl_formapago_baja" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4033_SEGUROS_LBL_FORMA_PAGO" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                            <TextView android:gravity="end" android:id="@+id/F27_34_lbl_data_formapago_baja" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4075_SEGUROS_LBL_DEB_AUTO" android:layout_toRightOf="@+id/F27_34_lbl_formapago_baja" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/layout_propietario_comprobante2_aa" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="12dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                            <TextView android:id="@+id/F27_34_lbl_propietario_baja" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4126_SEGUROS_LBL_PROPIETARIO" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                            <TextView android:gravity="end" android:id="@+id/F27_34_lbl_data_propietario_baja" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mio" android:layout_toRightOf="@+id/F27_34_lbl_propietario_baja" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/layout_marca_comprobante" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="12dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                            <TextView android:id="@+id/F27_34_lbl_marca_baja" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4141_SEGUROS_LBL_MARCA" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                            <TextView android:gravity="end" android:id="@+id/F27_34_lbl_data_marca_baja" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Samsung" android:layout_toRightOf="@+id/F27_34_lbl_marca_baja" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/layout_modelo_comp_aa" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                            <TextView android:id="@+id/F27_34_lbl_modelo_baja" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4142_SEGUROS_LBL_MODELO" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                            <TextView android:gravity="end" android:id="@+id/F27_34_lbl_data_modelo_baja" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="S7 Edge" android:layout_toRightOf="@+id/F27_34_lbl_modelo_baja" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorListView"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/layout_id_dispositivo_comp" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                            <TextView android:id="@+id/F27_34_lbl_imei_baja" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4143_SEGUROS_LBL_IMEI" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                            <TextView android:gravity="end" android:id="@+id/F27_34_lbl_data_imei_baja" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="435435123123123012312" android:layout_toRightOf="@+id/F27_34_lbl_imei_baja" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                        </RelativeLayout>
+                        <View style="@style/SeparatorSectionTitle"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F27_34_lbl_medio_pago" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4032_SEGUROS_LBL_MEDIO_PAGO" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F27_34_lbl_data_medio_pago" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$1000.00" android:layout_toRightOf="@+id/F27_34_lbl_medio_pago" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorListView"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/F27_34_lbl_forma_pago" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/ID_4033_SEGUROS_LBL_FORMA_PAGO" android:layout_alignParentLeft="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F27_34_lbl_data_forma_pago" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Débito Automático" android:layout_toRightOf="@+id/F27_34_lbl_forma_pago" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorListView"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                    <TextView android:gravity="left" android:layout_gravity="center" android:id="@+id/compLeyendaSeguro" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="8dp" android:layout_marginRight="16dp" android:text="@string/F27_24_txt_comprobante_movil" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" style="@style/generic_leyend_light"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:importantForAccessibility="yes">
+                <include layout="@layout/layout_bottom_receipt_share"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <Button android:id="@+id/F27_34_btn_volver" android:text="@string/ID_4166_SEGUROS_LBL_VOLVER" android:layout_alignParentBottom="true" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+</RelativeLayout>

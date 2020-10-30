@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:gravity="center" android:id="@+id/tvNuevaLineaTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="29dp" android:text="@string/ID_4843_RECALIFICACION_LBL_NUEVA_LINEA_TOTAL_CREDITICIA" style="@style/generic_list_data_column3"/>
+    <ar.com.santander.rio.mbanking.view.AmountView android:gravity="center" android:id="@+id/avLimiteTotalCrediticio" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="13dp" android:importantForAccessibility="yes" app:maxTextSize="33dp" app:minTextSize="20dp" style="@style/generic_amount"/>
+    <TextView android:gravity="center" android:id="@+id/tvLimiteSinAsignar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="13dp" android:text="@string/ID_4849_RECALIFICACION_LBL_LIMITE_SIN_ASIGNAR" style="@style/generic_font_light_13sp"/>
+    <View android:id="@+id/separatorView" android:layout_width="match_parent" android:layout_marginTop="29dp" style="@style/StrongSeparatorSectionGrey"/>
+</LinearLayout>

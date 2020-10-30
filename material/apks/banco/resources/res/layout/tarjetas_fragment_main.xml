@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/principal_root" style="@style/MainLayout">
+    <include android:id="@+id/selector_root" layout="@layout/tarjetas_submenu_selector_tarjeta"/>
+    <ScrollView android:id="@+id/principal_root_layout" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/selector_root" android:layout_alignParentLeft="true">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:id="@+id/linearLayoutHomeTarjetas" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@+id/area_saldo" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <View style="@style/SeparatorSectionTitle"/>
+                    <TextView android:gravity="center" android:layout_gravity="center" android:id="@+id/text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="@string/ID495_CCARDS_MAIN_LBL_AVAILABLE" style="@style/generic_topDescription_important_amount"/>
+                    <TextView android:textSize="15dp" android:textColor="@color/red_light" android:gravity="center" android:id="@+id/saldoNoDisponible" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="30dp" android:layout_marginRight="30dp" android:text="@string/MSG_USER000100" fontPath="fonts/OpenSans-Regular.otf"/>
+                    <ar.com.santander.rio.mbanking.view.AmountView android:gravity="center" android:layout_gravity="center" android:id="@+id/compraDisp" android:paddingBottom="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" style="@style/generic_amount"/>
+                    <View android:id="@+id/line1" style="@style/SeparatorSection"/>
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/area_autorizaciones" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                            <TextView android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="@string/IDXX_CCARDS_MAIN_LBL_AUTH_PESOS" style="@style/generic_tarjetas_box_title"/>
+                            <ar.com.santander.rio.mbanking.view.AmountView android:gravity="center" android:layout_gravity="center" android:id="@+id/total_autorizaciones_pesos" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:text="@string/ID498_CCARDS_MAIN_LBL_NODATA" style="@style/generic_tarjetas_box_amount"/>
+                        </LinearLayout>
+                        <View android:background="@color/grey_light" android:layout_width="1dp" android:layout_height="match_parent"/>
+                        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                            <TextView android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="@string/IDXX_CCARDS_MAIN_LBL_AUTH_DOLLARS" style="@style/generic_tarjetas_box_title"/>
+                            <ar.com.santander.rio.mbanking.view.AmountView android:gravity="center" android:layout_gravity="center" android:id="@+id/total_autorizaciones_dolares" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:text="@string/ID498_CCARDS_MAIN_LBL_NODATA" style="@style/generic_tarjetas_box_amount"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View android:id="@+id/line2" style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/area_cierre_venc" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                        <TextView android:gravity="center" android:layout_gravity="center" android:id="@+id/text4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/ID497_CCARDS_MAIN_LBL_NEXTCLOSE" style="@style/generic_tarjetas_box_title"/>
+                        <TextView android:gravity="center" android:layout_gravity="center" android:id="@+id/proximo_cierre" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:text="@string/ID498_CCARDS_MAIN_LBL_NODATA" style="@style/generic_tarjetas_box_amount"/>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                    <View android:id="@+id/line3" android:background="@color/grey_light" android:layout_width="1dp" android:layout_height="match_parent"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                        <TextView android:gravity="center" android:layout_gravity="center" android:id="@+id/text5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/ID498_CCARDS_MAIN_LBL_NEXTEXPIRATION" style="@style/generic_tarjetas_box_title"/>
+                        <TextView android:gravity="center" android:layout_gravity="center" android:id="@+id/proximo_vencimiento" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:text="@string/ID498_CCARDS_MAIN_LBL_NODATA" style="@style/generic_tarjetas_box_amount"/>
+                        <View style="@style/SeparatorSection"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <Button android:id="@+id/nav_pagar" android:visibility="visible" android:layout_marginTop="25dp" android:text="@string/ID502_CCARDS_MAIN_BTN_PAY" android:layout_below="@+id/linearLayoutHomeTarjetas" android:layout_alignRight="@+id/linearLayoutHomeTarjetas" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

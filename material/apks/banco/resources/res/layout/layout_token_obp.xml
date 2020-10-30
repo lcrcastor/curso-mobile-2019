@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/row_tokenOBPOk" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="18dp" android:paddingTop="35dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="27dp" android:textColor="@color/grey_medium_dark" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="@string/ID_4337_TOKEN_OBP_AUTORIZAR" fontPath="fonts/FrutigerLTStd-Light.otf"/>
+            <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:src="@drawable/token"/>
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="25dp" android:text="@string/ID_4338_TOKEN_OBP_APROBAR" style="@style/generic_leyend_light_token_obp"/>
+            <TextView android:gravity="center" android:id="@+id/tokenOBPMensaje" android:layout_width="match_parent" android:layout_height="wrap_content" android:text=" " style="@style/generic_leyend_light"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="18dp" android:layout_marginRight="18dp">
+            <Button android:id="@+id/tokenOBPAceptar" android:layout_width="match_parent" android:text="@string/ID_4339_TOKEN_OBP_ACEPTAR" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+            <Button android:id="@+id/tokenOBPCancelar" android:layout_width="match_parent" android:text="@string/ID_4340_TOKEN_OBP_CANCELAR" android:textAllCaps="false" style="@style/generic_boton_blanco_border"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/row_tokenOBPSinToken" android:paddingLeft="18dp" android:paddingTop="35dp" android:paddingRight="18dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="20dp" android:textColor="@color/grey_medium_dark" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="30dp" android:text="@string/ID_4342_TOKEN_OBP_LO_SENTIMOS"/>
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/error_continuacion" android:layout_centerHorizontal="true"/>
+        <TextView android:textColor="@color/grey_medium_dark" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="37dp" android:layout_marginBottom="15dp" android:text="@string/ID_4343_TOKEN_OBP_SIN_TOKEN" style="@style/generic_leyend_light"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <Button android:layout_gravity="bottom" android:id="@+id/tokenOBPCancelarSinToken" android:layout_width="match_parent" android:text="@string/ID_4340_TOKEN_OBP_CANCELAR" android:textAllCaps="false" style="@style/generic_boton_blanco_border"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

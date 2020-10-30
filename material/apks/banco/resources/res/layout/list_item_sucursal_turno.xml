@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="top" android:orientation="horizontal" android:background="@color/white" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imgCajero" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+        <TextView android:id="@+id/tvTiempo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" style="@style/generic_row_label_comp"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:paddingTop="10dp" android:paddingRight="10dp" android:paddingBottom="10dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_weight="3">
+        <RelativeLayout android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:id="@+id/txtNombre" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/txtDist" android:layout_alignParentLeft="true" style="@style/generic_row_data_comp"/>
+            <TextView android:id="@+id/txtDist" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_alignParentRight="true" style="@style/generic_row_label_comp"/>
+        </RelativeLayout>
+        <TextView android:id="@+id/txtDirec" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" style="@style/generic_row_label_comp"/>
+        <TextView android:textSize="13sp" android:textColor="@color/generic_grey" android:id="@+id/txtDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" style="@style/generic_fontRegular"/>
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@+id/arrow_left_row" android:layout_width="18dp" android:layout_height="18dp" android:layout_marginTop="@dimen/standard_margin" android:layout_marginRight="16dp" android:layout_marginBottom="@dimen/standard_margin" android:src="@drawable/ic_arrow_small" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0"/>
+</LinearLayout>

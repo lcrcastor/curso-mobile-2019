@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="16dp">
+        <ImageView android:id="@+id/F32_02_IMG_SEMAFORO" android:layout_width="13dp" android:layout_height="13dp" android:layout_marginLeft="18dp" android:layout_marginTop="2dp" android:layout_alignParentLeft="true" android:contentDescription="" android:layout_marginStart="18dp" android:layout_alignParentStart="true"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/F32_02_LNL_NUMERO_CUENTA" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_toLeftOf="@+id/F32_02_IMG_ACCION" android:layout_toRightOf="@+id/F32_02_IMG_SEMAFORO" android:layout_centerVertical="true" android:layout_marginStart="10dp" android:layout_marginEnd="10dp" android:layout_toStartOf="@+id/F32_02_IMG_ACCION" android:layout_toEndOf="@+id/F32_02_IMG_SEMAFORO">
+            <TextView android:textSize="15dp" android:textColor="@color/grey_medium_dark" android:id="@+id/F32_02_TXT_NUMERO_CUENTA" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="TEST" fontPath="fonts/OpenSans-Bold.otf"/>
+            <TextView android:textSize="11dp" android:textColor="@color/grey_medium_dark" android:id="@+id/F32_02_TXT_TIPO_CUENTA" android:layout_width="match_parent" android:layout_height="wrap_content" fontPath="fonts/OpenSans-Regular.otf"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/F32_02_IMG_ACCION" android:layout_width="13dp" android:layout_height="13dp" android:layout_marginRight="18dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="" android:layout_marginEnd="18dp" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <View android:id="@+id/F27_00_ITEM_SEPARATOR_BOTTOM" style="@style/SeparatorListView"/>
+</LinearLayout>

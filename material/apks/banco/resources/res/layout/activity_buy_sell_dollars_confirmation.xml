@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/MainLayout">
+    <LinearLayout android:gravity="center" android:id="@+id/F20_01_LNL_BOTTOMOBJECTS" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:id="@+id/F20_01_btn_confirm" android:text="@string/ID3590_COMPRA_VENTA_BTN_CONFIRMAR" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+    </LinearLayout>
+    <include layout="@layout/scrollview_buy_sell_dollars_confirmation"/>
+</RelativeLayout>

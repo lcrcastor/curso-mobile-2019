@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:id="@+id/layoutItemView" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="15dp">
+    <ImageView android:id="@+id/ivItem" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:tint="@color/generic_black" android:contentDescription="@string/ACCESSIBILITY_BOTON_BUSCAR"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ar.com.santander.rio.mbanking.utils.itrsa.HtmlTextView android:theme="@style/generic_big_label_light" android:textSize="15dp" android:layout_gravity="left" android:id="@+id/tvDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="7dp"/>
+        <ar.com.santander.rio.mbanking.utils.itrsa.HtmlTextView android:theme="@style/generic_big_label_light" android:textSize="10dp" android:layout_gravity="left" android:id="@+id/tvSubDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="7dp"/>
+    </LinearLayout>
+</LinearLayout>

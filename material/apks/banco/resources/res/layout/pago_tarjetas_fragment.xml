@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/prepare_payment_form_view_flipper" android:background="@color/grey_light" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ar.com.santander.rio.mbanking.components.infinitescroll.InfiniteScrollListView android:id="@android:id/list" android:headerDividersEnabled="true" style="@style/MainLayout"/>
+    <include android:id="@+id/preparar_pago" layout="@layout/preparar_pago_fragment"/>
+    <include android:id="@+id/confirmar_pago" layout="@layout/confirmar_pago_fragment"/>
+    <include android:id="@+id/comprobante_pago" layout="@layout/comprobante_pago_fragment"/>
+    <include android:id="@+id/confirmar_stop_debit" layout="@layout/confirmar_stop_debit_fragment"/>
+    <include android:id="@+id/comprobante_stop_debit" layout="@layout/comprobante_stop_debit_fragment"/>
+    <include android:id="@+id/detalle_tarjeta_pago_total_pesos" layout="@layout/detalle_tarjeta_pago_total_pesos_fragment"/>
+    <include android:id="@+id/detalle_tarjeta_pago_total_dolares" layout="@layout/detalle_tarjeta_pago_total_dolares_fragment"/>
+    <include android:id="@+id/ayuda_tarjeta" layout="@layout/ayuda_tarjeta_fragment"/>
+</ViewFlipper>

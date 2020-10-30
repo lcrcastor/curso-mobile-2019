@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="bottom" android:id="@+id/wrapperBtn" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout style="@style/wrapperButtonRed">
+            <Button android:id="@+id/btnConstituirInConfirm" android:text="@string/ID331_FIXEDTERM_CONFIRM_BTN_CONTINUE" style="@style/generic_boton_rojo"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <ScrollView android:id="@+id/svPageConfirm" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/wrapperBtn">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include layout="@layout/title_simple_layout"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/vgWrapperConfirmLongTermDeposit" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/wpLegendConfirm" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/BodyLayout">
+                <TextView android:id="@+id/tvLegendConfirm" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="false" style="@style/generic_leyend_light"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

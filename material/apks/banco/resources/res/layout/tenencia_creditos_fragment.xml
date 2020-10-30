@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ViewFlipper android:id="@+id/vfLongTermDeposit" android:background="@color/white" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include android:id="@+id/pageList" layout="@layout/layout_actual_tenencia_creditos"/>
+        <include android:id="@+id/pageDetail" layout="@layout/layout_detalle_de_cuota_de_prestamo"/>
+        <include android:id="@+id/pagePayment" layout="@layout/layout_payment_tenencia_creditos"/>
+        <include android:id="@+id/pageConfirm" layout="@layout/layout_confirm_tenencia_creditos"/>
+        <include android:id="@+id/pageReceipt" layout="@layout/layout_receipt_tenencia_creditos"/>//TODO: Borrar todo esto
+        <include android:id="@+id/pageListPF" layout="@layout/layout_actual_long_term_deposit"/>
+        <include android:id="@+id/pageDetailPF" layout="@layout/layout_detail_long_term_deposit"/>
+        <include android:id="@+id/pageCreatePF" layout="@layout/layout_create_long_term_deposit"/>
+        <include android:id="@+id/pageRatesPF" layout="@layout/layout_rates_long_term_deposit"/>
+        <include android:id="@+id/pageConfirmPF" layout="@layout/layout_confirm_long_term_deposit"/>
+        <include android:id="@+id/pageReceiptPF" layout="@layout/layout_receipt_long_term_deposit"/>
+    </ViewFlipper>
+</FrameLayout>

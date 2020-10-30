@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="@dimen/min_width_map_popup" android:layout_height="match_parent" android:layout_margin="5dp">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:id="@+id/imgMap" android:layout_width="@dimen/image_popup_width" android:layout_height="@dimen/image_popup_width" android:layout_margin="5dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <LinearLayout android:orientation="vertical" android:id="@+id/rrTitle" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:ellipsize="end" android:id="@+id/txtTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="2" style="@style/Nombre"/>
+                <TextView android:layout_gravity="end" android:id="@+id/txtDist" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/DetalleDirec"/>
+            </LinearLayout>
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:ellipsize="marquee" android:id="@+id/txtDirec" android:paddingTop="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="4" style="@style/AddressPopMapText"/>
+            <RelativeLayout android:id="@+id/rrTiempoDeEsperaYLinkTicket" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                <TextView android:id="@+id/tiempoDeEsperaInfoPopUp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" style="@style/generic_row_label_comp"/>
+                <TextView android:id="@+id/SolicitarTicketInfoPopUp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Solicitar Ticket" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/generic_row_data_form_with_arrow_right_red_link"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/rrVer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID70_CASHIERS_BTN_DETAIL" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" style="@style/VerDetalle"/>
+                <ImageView android:id="@+id/imageView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_arrow_small" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/toastContainer" android:background="@drawable/toasteroid_rounded_shape" android:padding="@dimen/small_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:alpha="@dimen/toasteroid_alpha_background">
+        <ImageView android:id="@+id/toastImage" android:layout_width="@dimen/toasteroid_image_size" android:layout_height="@dimen/toasteroid_image_size" android:src="@drawable/ic_toasteroid_info"/>
+        <TextView android:textColor="@android:color/white" android:id="@+id/toastMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/small_padding" android:text="This is an information text" android:layout_toRightOf="@+id/image" style="@style/toasteroid_font_size"/>
+    </LinearLayout>
+</RelativeLayout>

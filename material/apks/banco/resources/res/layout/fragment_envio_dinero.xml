@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="vertical" android:id="@+id/idEnvioDineroView" android:background="@color/white" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ScrollView android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:gravity="fill_vertical" android:id="@+id/F12_00_rll_scroll" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:orientation="vertical" android:id="@+id/F12_00_lnl_topobjects" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/F12_00_lnl_selectorCuentas" android:background="@color/white" android:layout_width="match_parent" android:layout_height="50dp">
+                        <TextView android:gravity="center_vertical" android:id="@+id/F12_00_lbl_selectorCuentas_idCuenta" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="18dp" android:layout_weight="1" style="@style/generic_account_selector"/>
+                        <ar.com.santander.rio.mbanking.view.CustomSpinner android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/F12_00_csp_selectorCuentas_vgSelectorAccount" android:focusable="true" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="18dp" android:contentDescription="@string/ID2001_ENVEFECT_BTN_CAMBIARCTA" app:labelSpinner="@string/ID2001_ENVEFECT_BTN_CAMBIARCTA"/>
+                    </LinearLayout>
+                    <View style="@style/SeparatorSectionTitle"/>
+                    <TextView android:textSize="13sp" android:textColor="@color/generic_black" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/F12_00_lbl_saldoCuenta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="34dp" android:text="@string/ID2002_ENVEFECT_LBL_SALDOCTA" fontPath="fonts/OpenSans-Regular.otf"/>
+                    <ar.com.santander.rio.mbanking.view.AmountView android:textColor="@color/green" android:gravity="center" android:id="@+id/F12_00_lbl_data_saldoCuenta" android:layout_width="match_parent" android:layout_height="42dp" android:layout_marginTop="7dp" android:text=" " app:maxTextSize="33sp" app:minTextSize="33sp" fontPath="fonts/OpenSans-Light.otf"/>
+                    <View android:id="@+id/F12_00_txv_separador2" android:layout_marginTop="34dp" style="@style/SeparatorSectionTitle"/>
+                    <TextView android:textSize="13sp" android:textColor="@color/generic_black" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/F12_00_lbl_importe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="@string/ID2168_ENVEFECT_LBL_TITULO" fontPath="fonts/OpenSans-Regular.otf"/>
+                    <ar.com.santander.rio.mbanking.view.NumericEditTextWithPrefixAccesibility android:id="@+id/F12_00_inp_importe" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginLeft="18dp" android:layout_marginTop="27dp" android:layout_marginRight="18dp" android:layout_marginBottom="50dp" app:editTextPrefix_hint="@string/ID2003_ENVEFECT_TBX_IMPENVIAR" app:editTextPrefix_max_digits_decimal="0" app:editTextPrefix_max_digits_integer="6" app:editTextPrefix_prefix="$" app:editTextPrefix_singleLine="true"/>
+                    <RelativeLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:gravity="center" android:id="@+id/F12_00_lbl_limiteDiario" android:layout_width="wrap_content" android:layout_height="18dp" android:text="@string/ID2004_ENVEFECT_LBL_LIMITE" style="@style/generic_leyend_light"/>
+                        <ImageView android:id="@+id/F12_00_img_limiteDiario" android:layout_width="18dp" android:layout_height="18dp" android:layout_marginLeft="5dp" android:src="@drawable/icon_help_login" android:layout_toRightOf="@+id/F12_00_lbl_limiteDiario" android:contentDescription="@string/ID2004_ENVEFECT_LBL_LIMITE"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F12_00_lnl_bottomobjects" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/F12_00_lnl_topobjects" android:layout_alignParentBottom="true">
+                    <Button android:enabled="false" android:id="@+id/F12_00_btn_continuar" android:text="@string/ID2005_ENVEFECT_BTN_CONTINUAR" android:textAllCaps="false" style="@style/generic_boton_disable"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>

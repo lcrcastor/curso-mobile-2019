@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/wrapperTransactions" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <include layout="@layout/title_simple_layout"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/BodyLayout">
+        <LinearLayout android:id="@+id/wrapperFirstColumn" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="4">
+            <TextView android:gravity="left" android:layout_gravity="center_vertical" android:id="@+id/vFirstCol" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3" style="@style/LabelLightCellInfiniteScroll"/>
+            <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        </LinearLayout>
+        <TextView android:gravity="left" android:layout_gravity="bottom" android:id="@+id/vSecondCol" android:layout_width="0dp" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="8" style="@style/LabelLightCellInfiniteScroll"/>
+        <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <TextView android:gravity="right" android:layout_gravity="bottom" android:id="@+id/vThirdCol" android:layout_width="0dp" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="3" style="@style/LabelLightCellInfiniteScroll"/>
+        <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

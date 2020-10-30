@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:id="@+id/comprobante_recalificacion_Scrollview" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <android.support.constraint.ConstraintLayout android:id="@+id/comprobante_recalificacion_view" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@+id/relativeLayout" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0">
+                <android.support.v7.widget.RecyclerView android:id="@+id/rvProductos" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:importantForAccessibility="no"/>
+                <android.support.constraint.ConstraintLayout android:orientation="horizontal" android:id="@+id/bottom_share_receip" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/rvProductos" android:layout_alignParentBottom="true">
+                    <include layout="@layout/layout_bottom_receipt_share"/>
+                </android.support.constraint.ConstraintLayout>
+            </RelativeLayout>
+            <include android:id="@+id/btnConfirmar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/relativeLayout" layout="@layout/generic_red_button"/>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

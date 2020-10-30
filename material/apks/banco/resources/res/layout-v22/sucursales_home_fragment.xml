@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <WebView android:id="@+id/webViewSucursalesHome" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <RelativeLayout android:id="@+id/imageErrorConnection" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:id="@+id/textViewTituloDelError" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="Error" android:importantForAccessibility="yes" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" style="@style/generic_title"/>
+        <View android:layout_below="@+id/textViewTituloDelError" style="@style/SeparatorSectionTitle"/>
+        <ImageView android:id="@+id/image" android:background="@drawable/error_continuacion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+        <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="30dp" android:layout_marginTop="20dp" android:layout_marginRight="30dp" android:text="@string/MSG_USER000002_General_errorNoconexion" android:layout_below="@+id/image" android:layout_marginHorizontal="30dp" style="@style/generic_row_label_conf"/>
+    </RelativeLayout>
+</RelativeLayout>

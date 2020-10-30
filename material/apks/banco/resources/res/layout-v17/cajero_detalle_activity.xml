@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <fragment android:name="com.google.android.gms.maps.MapFragment" android:id="@+id/sucursal_detalle_map_view" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/ll"/>
+    <RelativeLayout android:background="@color/white_semitransparent" android:padding="@dimen/padding_body_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/ll">
+        <TextView android:id="@+id/txtDirec" android:padding="@dimen/padding_body_content" android:nextFocusRight="@+id/txtDist" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:layout_toLeftOf="@+id/txtDist" android:layout_alignParentLeft="true" android:layout_marginEnd="10dp" android:layout_toStartOf="@+id/txtDist" android:layout_alignParentStart="true" style="@style/generic_row_data_comp"/>
+        <TextView android:id="@+id/txtDist" android:padding="@dimen/padding_body_content" android:nextFocusLeft="@+id/txtDirec" android:nextFocusRight="@+id/txtNombre" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/generic_row_data_comp"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/min_height_detail_footer" android:layout_alignParentBottom="true">
+        <View android:background="@color/grey_light" android:layout_width="match_parent" android:layout_height="1dp"/>
+        <ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="top|center_vertical|center_horizontal|center" android:orientation="horizontal" android:padding="@dimen/padding_body_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="center" android:id="@+id/imgCajero" android:layout_width="0dp" android:layout_height="60dp" android:layout_margin="@dimen/padding_body_content" android:layout_weight="1"/>
+                    <TextView android:textSize="13sp" android:textColor="@color/generic_black" android:id="@+id/txtNombre" android:nextFocusLeft="@+id/txtDist" android:nextFocusRight="@+id/txtEstadoTitle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="@dimen/margin_separator_top_bottom" android:layout_weight="3" style="@style/generic_fontSemibold"/>
+                </LinearLayout>
+                <View android:background="@color/grey_light" android:layout_width="match_parent" android:layout_height="1dp"/>
+                <LinearLayout android:orientation="vertical" android:id="@+id/llEstado" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:padding="@dimen/padding_body_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_gravity="center" android:layout_width="0dp" android:layout_height="30dp" android:src="@drawable/ic_info_cajero" android:layout_weight="1"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="@dimen/margin_separator_top_bottom" android:layout_weight="3">
+                            <TextView android:id="@+id/txtEstadoTitle" android:nextFocusLeft="@+id/txtNombre" android:nextFocusRight="@+id/txtEstado" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID72_CASHIERS_LBL_STATUS" style="@style/generic_row_data_comp"/>
+                            <TextView android:textSize="13sp" android:textColor="@color/generic_red" android:id="@+id/txtEstado" android:nextFocusLeft="@+id/txtEstadoTitle" android:nextFocusRight="@+id/txtExpendeDolar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginStart="5dp" style="@style/generic_fontRegular"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View android:background="@color/grey_light" android:layout_width="match_parent" android:layout_height="1dp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/llExpende" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:padding="@dimen/padding_body_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_gravity="center" android:layout_width="0dp" android:layout_height="30dp" android:src="@drawable/ic_dolares" android:layout_weight="1"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="@dimen/margin_separator_top_bottom" android:layout_weight="3">
+                            <TextView android:id="@+id/txtExpendeDolar" android:nextFocusLeft="@+id/txtEstado" android:nextFocusRight="@+id/txtExpende" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID73_CASHIERS_LBL_USD" style="@style/generic_row_data_comp"/>
+                            <TextView android:textSize="13sp" android:textColor="@color/generic_red" android:id="@+id/txtExpende" android:nextFocusLeft="@+id/txtExpendeDolar" android:nextFocusRight="@+id/txtDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginStart="5dp" style="@style/generic_fontRegular"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View android:background="@color/grey_light" android:layout_width="match_parent" android:layout_height="1dp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/llDesc" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center" android:padding="@dimen/padding_body_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:gravity="center" android:layout_gravity="center" android:id="@+id/imgMap" android:layout_width="0dp" android:layout_height="30dp" android:src="@drawable/ic_acreditacion" android:layout_weight="1"/>
+                        <TextView android:id="@+id/txtDesc" android:nextFocusLeft="@+id/txtExpende" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="@dimen/margin_separator_top_bottom" android:layout_weight="3" style="@style/generic_row_data_comp"/>
+                    </LinearLayout>
+                    <View android:background="@color/grey_light" android:layout_width="match_parent" android:layout_height="1dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:id="@+id/svPagePrepare" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.3">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include layout="@layout/title_simple_layout"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/vgWrapperFormPreparePayment" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1" style="@style/wrapperButtonRed">
+        <Button android:id="@+id/btnPreparePaymentService" android:text="@string/ID200_PAYMENT_DETAILWITHOUT_BTN_CONTINUE" style="@style/generic_boton_rojo"/>
+    </LinearLayout>
+</LinearLayout>

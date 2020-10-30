@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:focusable="true" style="@style/MainLayout">
+    <LinearLayout style="@style/MainTitleLayout">
+        <TextView android:id="@+id/vDateDetailsTransaction" android:textAllCaps="true" style="@style/TitleLayout"/>
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:paddingLeft="15dp" android:paddingRight="15dp" style="@style/BodyLayout">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp">
+                    <ar.com.santander.rio.mbanking.view.AmountView android:textSize="@dimen/text_size_amount_max" android:id="@+id/vAmount" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:gravity="center" android:layout_gravity="center" android:id="@+id/vDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="false" android:textAlignment="center" style="@style/DetailsAccount"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:gravity="center" android:layout_gravity="center" android:id="@+id/vDataAccount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" android:textAlignment="center" style="@style/DetailsAccount"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/tblDetailsTransactions" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                <View style="@style/SeparatorSection"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:id="@+id/F23_06_LBL_TITLE" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="@string/ID_3812_TRANSFERENCE_LBL_NEW_RECIPIENT" style="@style/generic_title"/>
+            <View style="@style/SeparatorSectionTitle"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/F23_06_LNL_ROW_CBU" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_margin_row">
+                    <TextView android:id="@+id/F23_06_LBL_CBU" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="18dp" android:text="@string/ID456_TRANSFERENCE_OTHER_CBU_CVU" android:contentDescription="@string/OUT_CBU_CVU" style="@style/generic_row_label_form"/>
+                    <TextView android:textSize="15dp" android:textColor="@color/grey_medium_dark" android:gravity="end" android:id="@+id/F23_06_LBL_DATA_CBU" android:layout_width="match_parent" android:layout_height="wrap_content" fontPath="fonts/OpenSans-Bold.otf"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" style="@style/SeparatorSubSection"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/F23_06_LNL_ROW_TITULAR" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_gravity="center_vertical" android:id="@+id/F23_06_LBL_TITULAR" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:layout_marginBottom="18dp" android:text="@string/ID_447_TRANSFERENCE_MYACCOUNTS_TITLE" android:layout_weight="9" style="@style/generic_row_label_form"/>
+                    <EditText android:gravity="right|center_vertical|center_horizontal|center|end" android:layout_gravity="center_vertical" android:id="@+id/F23_06_INP_TITULAR" android:paddingLeft="5dp" android:paddingTop="10dp" android:paddingRight="5dp" android:paddingBottom="6dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="18dp" android:maxLines="1" android:maxLength="64" android:layout_weight="11" android:inputType="text" style="@style/generic_row_input_form"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" style="@style/SeparatorSubSection"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/F23_06_LNL_ROW_CUIT_CUIL" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_gravity="center_vertical" android:id="@+id/F23_06_LBL_CUIT_CUIL" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:layout_marginBottom="18dp" android:text="@string/IDXX_TRANSFERENCE_ABM_ADDRESSEE_CUIT_CUIL" android:layout_weight="9" style="@style/generic_row_label_form"/>
+                    <EditText android:gravity="right|center_vertical|center_horizontal|center|end" android:layout_gravity="center_vertical" android:id="@+id/F23_06_INP_CUIT_CUIL" android:paddingLeft="5dp" android:paddingTop="10dp" android:paddingRight="5dp" android:paddingBottom="6dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="18dp" android:maxLines="1" android:maxLength="11" android:layout_weight="11" android:inputType="number" style="@style/generic_row_input_form"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" style="@style/SeparatorSubSection"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/F23_06_LNL_ROW_BANCO" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_gravity="center_vertical" android:id="@+id/F23_06_LBL_BANCO" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:layout_marginBottom="18dp" android:text="@string/IDXX_TRANSFERENCE_ABM_ADDRESSEE_BANK" android:layout_weight="9" style="@style/generic_row_label_form"/>
+                    <EditText android:gravity="right|center_vertical|center_horizontal|center|end" android:layout_gravity="center_vertical" android:id="@+id/F23_06_INP_BANCO" android:paddingLeft="5dp" android:paddingTop="10dp" android:paddingRight="5dp" android:paddingBottom="6dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="18dp" android:maxLines="1" android:maxLength="32" android:layout_weight="11" android:inputType="text" style="@style/generic_row_input_form"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" style="@style/SeparatorSubSection"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/F23_06_LNL_ROW_ALIAS" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_gravity="center_vertical" android:id="@+id/F23_06_LBL_RECORDATORIO" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:layout_marginBottom="18dp" android:text="@string/IDXX_TRANSFERENCE_ABM_ADDRESSEE_RECORDATORIO" android:layout_weight="9" style="@style/generic_row_label_form"/>
+                    <EditText android:gravity="right|center_vertical|center_horizontal|center|end" android:layout_gravity="center_vertical" android:id="@+id/F23_06_INP_RECORDATORIO" android:paddingLeft="5dp" android:paddingTop="10dp" android:paddingRight="5dp" android:paddingBottom="6dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="18dp" android:hint="@string/IDXX_TRANSFERENCE_ABM_ADDRESSEE_RECORDATORIO_HINT" android:maxLines="1" android:maxLength="30" android:digits="@string/INPUT_TEXT_NUMBER_ABM_DEST_TRANSF" android:layout_weight="11" android:inputType="text" style="@style/generic_row_input_form"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" style="@style/SeparatorSubSection"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/F23_06_LNL_ROW_EMAIL" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_gravity="center_vertical" android:id="@+id/F23_06_LBL_EMAIL" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:layout_marginBottom="18dp" android:text="@string/IDXX_TRANSFERENCE_ABM_ADDRESSEE_EMAIL" android:layout_weight="9" style="@style/generic_row_label_form"/>
+                    <EditText android:gravity="right|center_vertical|center_horizontal|center|end" android:layout_gravity="center_vertical" android:id="@+id/F23_06_INP_EMAIL" android:paddingLeft="5dp" android:paddingTop="10dp" android:paddingRight="5dp" android:paddingBottom="6dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="18dp" android:hint="@string/IDXX_TRANSFERENCE_ABM_ADDRESSEE_EMAIL_HINT" android:maxLines="1" android:maxLength="50" android:layout_weight="11" android:inputType="textEmailAddress" style="@style/generic_row_input_form"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" style="@style/SeparatorSubSection"/>
+            </LinearLayout>
+            <Button android:id="@+id/F23_06_BTN_GUARDAR" android:text="@string/IDXX_TRANSFERENCE_ABM_ADDRESSEE_BTN_CONTINUE" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

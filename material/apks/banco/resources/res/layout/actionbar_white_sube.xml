@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:background="@color/white" android:layout_width="match_parent" android:layout_height="72.5dp">
+    <include layout="@layout/actionbar_white_logo"/>
+    <TextView android:textSize="17.5sp" android:textColor="#333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/recarga_sube" android:layout_centerInParent="true" android:fontFamily="@font/santander_text_bold"/>
+    <ImageView android:id="@+id/ok" android:visibility="visible" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="@dimen/general_margin" android:src="@drawable/icono_cruz" android:tint="#ff0000" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/ACCESSIBILITY_ACTIONBAR_CLOSE"/>
+</RelativeLayout>

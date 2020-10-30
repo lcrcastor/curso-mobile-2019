@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" style="@style/MainLayout">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/big_title_general_margin">
+            <TextView android:gravity="start" android:id="@+id/credit_card_payment_help_form_title" android:paddingTop="@dimen/titular1_big_text_size" android:paddingBottom="@dimen/padding_text_title_main" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID228_CARDPAYMENT_MAIN_LBL_TITLE" style="@style/BigTitleAyuda"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/big_title_general_margin" android:layout_marginTop="@dimen/titular1_big_text_ayuda_size" android:layout_marginRight="@dimen/general_margin" android:layout_marginBottom="@dimen/general_margin">
+            <TextView android:gravity="start" android:id="@+id/credit_card_payment_help_form_info" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/DetailTextNormal"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

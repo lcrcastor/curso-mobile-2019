@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:id="@+id/linearLayoutTeResultoUtilEstaPregunta" android:padding="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginStart="10dp">
+    <TextView android:textColor="@color/generic_black" android:id="@+id/txtMensaje" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4742_WATSON_TE_RESULTÓ_ÚTIL_LA_RESPUESTA"/>
+    <ImageView android:textColor="@color/black" android:id="@+id/no" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:layout_marginStart="4dp" app:srcCompat="@drawable/ic_pulgarabajo_01"/>
+    <ImageView android:textColor="@color/black" android:id="@+id/si" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:layout_marginStart="4dp" app:srcCompat="@drawable/ic_pulgararriba_01"/>
+</LinearLayout>

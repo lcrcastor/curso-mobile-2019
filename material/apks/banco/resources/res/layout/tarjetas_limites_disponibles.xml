@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/tarjetas_limites_disponibles" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/tarjetas_submenu_selector_tarjeta"/>
+    <ScrollView android:id="@+id/tarjetas_limites_disponibles_s" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <View style="@style/SeparatorSectionTitle"/>
+            <TextView android:id="@+id/text1" android:layout_margin="@dimen/general_margin" android:text="@string/ID525_CCARDS_LIMITS_LBL_LIMITS" style="@style/generic_title"/>
+            <View android:id="@+id/line1" style="@style/SeparatorSectionTitle"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="end" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                    <TextView android:id="@+id/text_empty" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+                    <TextView android:gravity="bottom|right|center_vertical|center_horizontal|center|end" android:id="@+id/text2" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/ID526_CCARDS_LIMITS_LBL_LIMITS2" android:layout_weight="0.7" style="@style/generic_list_title_3columns"/>
+                    <TextView android:gravity="bottom|right|center_vertical|center_horizontal|center|end" android:id="@+id/text3" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/ID527_CCARDS_LIMITS_LBL_AVAILABLE" android:layout_weight="0.7" style="@style/generic_list_title_3columns"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                    <TextView android:gravity="center_vertical" android:id="@+id/text4" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/ID528_CCARDS_LIMITS_LBL_BUY" android:layout_weight="1" style="@style/generic_list_data_column1"/>
+                    <ar.com.santander.rio.mbanking.view.AmountView android:textStyle="normal" android:gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/limite_compra" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.7" app:maxTextSize="@dimen/bloque_texto_text_size" app:minTextSize="@dimen/detalle_text_size" style="@style/generic_list_data_column2"/>
+                    <ar.com.santander.rio.mbanking.view.AmountView android:textStyle="normal" android:gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/disponible_compra" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.7" app:maxTextSize="@dimen/bloque_texto_text_size" app:minTextSize="@dimen/detalle_text_size" style="@style/generic_list_data_column3"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" style="@style/SeparatorSection"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin">
+                    <TextView android:gravity="center_vertical" android:id="@+id/text6" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/ID530_CCARDS_LIMITS_LBL_ADVANCE" android:layout_weight="1" style="@style/generic_list_data_column1"/>
+                    <ar.com.santander.rio.mbanking.view.AmountView android:textStyle="normal" android:gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/limite_adelanto" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.7" app:maxTextSize="@dimen/bloque_texto_text_size" app:minTextSize="@dimen/detalle_text_size" style="@style/generic_list_data_column2"/>
+                    <ar.com.santander.rio.mbanking.view.AmountView android:textStyle="normal" android:gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/disponible_adelanto" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.7" app:maxTextSize="@dimen/bloque_texto_text_size" app:minTextSize="@dimen/detalle_text_size" style="@style/generic_list_data_column3"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" style="@style/SeparatorSection"/>
+            </LinearLayout>
+            <TextView android:textStyle="normal" android:gravity="center_horizontal" android:id="@+id/text7" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_margin" android:layout_marginTop="@dimen/check_button_dimen" android:layout_marginRight="@dimen/general_margin" android:text="@string/ID531_CCARDS_LIMITS_LBL_SEUO" style="@style/generic_leyend_light"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

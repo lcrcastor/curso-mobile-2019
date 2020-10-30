@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/F24_22_LY_COMPROBANTE_FONDO" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:id="@+id/F24_07_LBL_TITULO_COMPROBANTE" android:paddingLeft="18dp" android:paddingTop="18dp" android:paddingRight="0dp" android:paddingBottom="12dp" android:text="@string/F24_07_LBL_TITULO_COMPROBANTE" style="@style/generic_title"/>
+        <View style="@style/SeparatorSectionTitle"/>
+        <TextView android:gravity="center_horizontal" android:id="@+id/F24_07_LBL_FECHA_FONDO" android:paddingTop="24dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" style="@style/generic_topDescription_important_amount"/>
+        <TextView android:gravity="center_horizontal" android:id="@+id/F24_07_LBL_DATA_FONDO" android:paddingBottom="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" style="@style/generic_amount"/>
+        <TextView android:gravity="center_horizontal" android:id="@+id/F24_07_LBL_SUSCRIPCION" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/F24_07_LBL_SUSCRIPCION" style="@style/generic_topDescription_amount"/>
+        <View style="@style/SeparatorSectionTitle"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/F24_07_LNL_ROW_CUENTA_TITULO" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="16dp" android:layout_marginBottom="12dp">
+                <TextView android:id="@+id/F24_07_LBL_CUENTA_TITULO" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/F24_07_ROW_CUENTA_TITULO" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/F24_07_LBL_DATA_CUENTA_TITULO" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" style="@style/SeparatorSubSection"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/F24_07_LNL_ROW_FONDO" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="16dp" android:layout_marginBottom="12dp">
+                <TextView android:id="@+id/F24_07_LBL_FONDO" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/F24_07_ROW_FONDO" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/F24_07_LBL_DATA_FONDO_TXT" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" style="@style/SeparatorSubSection"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/F24_07_LNL_ROW_CUOTAPARTE" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="16dp" android:layout_marginBottom="12dp">
+                <TextView android:id="@+id/F24_07_LBL_CUOTAPARTE" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/F24_07_LBL_CUOTAPARTE" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/F24_07_LBL_DATA_CUOTAPARTE" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" style="@style/SeparatorSubSection"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/F24_07_LNL_ROW_COTIZACION" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="16dp" android:layout_marginBottom="12dp">
+                <TextView android:id="@+id/F24_07_LBL_COTIZACION" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/F24_07_LBL_COTIZACION" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/F24_07_LBL_DATA_COTIZACION" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" style="@style/SeparatorSubSection"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/F24_07_LNL_ROW_FECHA" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="16dp" android:layout_marginBottom="12dp">
+                <TextView android:id="@+id/F24_07_LBL_FECHA" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/F24_07_LBL_FECHA" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/F24_07_LBL_DATA_FECHA" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" style="@style/SeparatorSubSection"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/F24_07_LNL_ROW_CONCEPTO" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="16dp" android:layout_marginBottom="12dp">
+                <TextView android:id="@+id/F24_07_LBL_CONCEPTO" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/F24_07_LBL_CONCEPTO" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/F24_07_LBL_DATA_CONCEPTO" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" style="@style/SeparatorSubSection"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/F24_07_LNL_ROW_CERTIFICADO" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="16dp" android:layout_marginBottom="12dp">
+                <TextView android:id="@+id/F24_07_LBL_CERTIFICADO" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/ID_3932_FONDOS_LBL_NRO_CERTIFICADO" style="@style/generic_row_label_conf"/>
+                <TextView android:gravity="end" android:id="@+id/F24_07_LBL_DATA_CERTIFICADO" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/generic_row_data_conf"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" style="@style/SeparatorSubSection"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

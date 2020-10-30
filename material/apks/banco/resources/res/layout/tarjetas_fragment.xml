@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:id="@+id/idTarjetasView" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ViewFlipper android:id="@+id/tarjetas_view_flipper" android:background="@color/grey_light" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include android:id="@+id/tarjetas_main" layout="@layout/tarjetas_fragment_main"/>
+            <include android:id="@+id/limites_disponibles" layout="@layout/tarjetas_limites_disponibles"/>
+            <include android:id="@+id/ultimo_resumen" layout="@layout/tarjetas_ultimo_resumen"/>
+            <include android:id="@+id/ultimos_consumos" layout="@layout/tarjetas_ultimos_consumos"/>
+            <include android:id="@+id/detalle_consumo" layout="@layout/tarjetas_detalle_consumo"/>
+            <include android:id="@+id/tarjetas_terminos_condiciones" layout="@layout/tarjetas_terminos"/>
+        </ViewFlipper>
+    </LinearLayout>
+</LinearLayout>

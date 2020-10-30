@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/F10_00_rll_header" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <TextView android:id="@+id/vTitle" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="Próximas cuotas" style="@style/generic_title"/>
+            <View style="@style/SeparatorSectionTitle"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/F10_01_lnl_detailInfo" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/lmblayout3" android:background="@color/grey_list_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true">
+                        <TextView android:id="@+id/item_fecha_vto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:text="Fecha vto" android:layout_weight="0.7" android:contentDescription="Fecha de vencimiento" style="@style/generic_sub_titles_pago_de_servicios_columna_1"/>
+                        <TextView android:id="@+id/item_num_cuota" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:text="Número de cuota" android:layout_weight="0.7" style="@style/generic_sub_titles_pago_de_servicios_columna_2_3"/>
+                        <TextView android:id="@+id/item_cuota_impo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:text="Importe" android:layout_weight="0.7" style="@style/generic_sub_titles_pago_de_servicios_columna_2_3"/>
+                    </LinearLayout>
+                </RelativeLayout>
+                <View style="@style/SeparatorSection"/>
+                <RelativeLayout android:id="@+id/F10_01_rlt_valor_uva" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ListView android:id="@+id/proximas_cuotas_list_view" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:dividerHeight="2dp" android:text="@string/PLAZOS_FIJOS_VALOR_UVA" android:layout_toLeftOf="@+id/F10_01_lbl_data_valor_uva" android:layout_alignParentLeft="true" style="@style/generic_row_label_conf"/>
+                </RelativeLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F10_01_LNL_LEYENDA" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="16dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" style="@style/BodyLayout">
+                    <TextView android:id="@+id/F10_01_lbl_leyenda" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:singleLine="false" style="@style/generic_leyend_light"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/MainLayout">
+    <ScrollView android:id="@+id/comprobantePreautorizacionDebin" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="77dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <LinearLayout android:orientation="vertical" android:id="@+id/pantallaDetallePreautorizaciones" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/linearLayoutTitulo" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/textViewTitulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/standard_margin" android:text="@string/ID_4635_DEBIN_TIT_DETALLE_PREAUTORIZACION" style="@style/generic_title"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSectionTitle"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:gravity="center" android:id="@+id/textViewImporteMaximo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/standard_margin" android:text="@string/ID_4632_DEBIN_TIT_IMPORTE_MAXIMO" style="@style/generic_list_data_column1"/>
+                <ar.com.santander.rio.mbanking.view.AmountView android:textSize="33dp" android:textColor="@color/grey_medium_dark" android:gravity="center" android:id="@+id/amountViewImporteMaximoData" android:layout_width="match_parent" android:layout_height="40dp" android:text="" android:hint="@string/SIMBOLO_PESOS" android:layout_below="@+id/textViewImporteMaximo" style="@style/generic_amount"/>
+                <RelativeLayout android:gravity="center_horizontal" android:id="@+id/linearLayoutCUIT" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/amountViewImporteMaximoData" android:importantForAccessibility="yes">
+                    <TextView android:id="@+id/cuitCuilCdi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:layout_marginBottom="18dp" android:text="@string/ID_4420_DEBIN_CUIT_CUIL_CDI" android:contentDescription="@string/AC_CUIT2" style="@style/generic_list_data_column2_bottom_text"/>
+                    <TextView android:id="@+id/textViewDetallePreAutorizacionRecibidaCUIT" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:layout_marginTop="18dp" android:layout_marginBottom="18dp" android:layout_toRightOf="@+id/cuitCuilCdi" style="@style/generic_list_data_column2_bottom_text"/>
+                </RelativeLayout>
+            </RelativeLayout>
+            <View style="@style/SeparatorSection"/>
+            <RelativeLayout android:id="@+id/linearLayoutCuentaDebito" android:padding="@dimen/standard_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                <TextView android:id="@+id/textViewCuentaDebito" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4424_DEBIN_CUENTADEBITO" android:layout_alignParentLeft="true" style="@style/generic_list_data_column1"/>
+                <TextView android:id="@+id/textViewCuentaDebitoData" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_alignParentRight="true" style="@style/generic_list_data_column2"/>
+            </RelativeLayout>
+            <View style="@style/SeparatorSection"/>
+            <RelativeLayout android:id="@+id/linearLayoutEstado" android:padding="@dimen/standard_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                <TextView android:gravity="start" android:id="@+id/textViewEstado" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4414_DEBIN_ESTADO" android:layout_alignParentLeft="true" style="@style/generic_list_data_column1"/>
+                <TextView android:gravity="end" android:id="@+id/textViewEstadoDataConfirmarAutorizacionDebin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_alignParentRight="true" style="@style/generic_list_data_column2"/>
+            </RelativeLayout>
+            <View style="@style/SeparatorSection"/>
+            <RelativeLayout android:id="@+id/linearLayoutPeriodo" android:padding="@dimen/standard_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                <TextView android:id="@+id/textViewPeriodo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4636_DEBIN_LBL_PERIODO" android:layout_alignParentLeft="true" style="@style/generic_list_data_column1"/>
+                <TextView android:id="@+id/textViewPeriodoDataConfirmarAutorizacionDebin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_alignParentRight="true" style="@style/generic_list_data_column2"/>
+            </RelativeLayout>
+            <View style="@style/SeparatorSection"/>
+            <RelativeLayout android:id="@+id/linearLayoutImporteMaximoPorPeriodo" android:padding="@dimen/standard_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                <TextView android:id="@+id/textViewImporteMaximoPorPeriodo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4637_DEBIN_LBL_IMPORTE_PEDIODO" android:layout_alignParentLeft="true" style="@style/generic_list_data_column1"/>
+                <TextView android:id="@+id/textViewImporteMaximoPorPeriodoDataConfirmarAutorizacionDebin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_alignParentRight="true" style="@style/generic_list_data_column2"/>
+            </RelativeLayout>
+            <View style="@style/SeparatorSection"/>
+            <RelativeLayout android:id="@+id/linearLayoutImporteMaximoPorDebin" android:padding="@dimen/standard_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                <TextView android:id="@+id/textViewImporteMaximoPorDebin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4638_DEBIN_LBL_IMPORTE_DEBIN" android:layout_alignParentLeft="true" android:contentDescription="@string/ID_4638_DEBIN_LBL_IMPORTE_DEBIN_CONTENT_DESCRIPTION" style="@style/generic_list_data_column1"/>
+                <TextView android:id="@+id/textViewImporteMaximoPorDebinDataConfirmarAutorizacionDebin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_alignParentRight="true" style="@style/generic_list_data_column2"/>
+            </RelativeLayout>
+            <View style="@style/SeparatorSection"/>
+            <RelativeLayout android:id="@+id/linearLayoutCantidadMaximaDeDebinPorPeriodo" android:padding="@dimen/standard_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                <TextView android:id="@+id/textViewCantidadMaximaDeDebinPorPeriodo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4639_DEBIN_LBL_CANTIDAD_DEBIN" android:layout_alignParentLeft="true" android:contentDescription="@string/ID_4639_DEBIN_LBL_CANTIDAD_DEBIN_CONTENT_DESCRIPTION" style="@style/generic_list_data_column1"/>
+                <TextView android:id="@+id/textViewCantidadMaximaDeDebinPorPeriodoDataConfirmarAutorizacionDebin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_alignParentRight="true" style="@style/generic_list_data_column2"/>
+            </RelativeLayout>
+            <View style="@style/SeparatorSection"/>
+            <RelativeLayout android:id="@+id/linearLayoutConcepto" android:padding="@dimen/standard_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                <TextView android:id="@+id/textViewConcepto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4428_DEBIN_CONCEPTO" android:layout_alignParentLeft="true" style="@style/generic_list_data_column1"/>
+                <TextView android:id="@+id/textViewConceptoDataConfirmarAutorizacionDebin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_alignParentRight="true" style="@style/generic_list_data_column2"/>
+            </RelativeLayout>
+            <View style="@style/SeparatorSection"/>
+            <RelativeLayout android:id="@+id/linearLayoutDescripcion" android:padding="@dimen/standard_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                <TextView android:id="@+id/textViewDescripcion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4429_DEBIN_DESCRIPCION" android:layout_alignParentLeft="true" style="@style/generic_list_data_column1"/>
+                <TextView android:gravity="right" android:id="@+id/textViewDescripcionDataConfirmarAutorizacionDebin" android:layout_width="240dp" android:layout_height="wrap_content" android:layout_marginLeft="60dp" android:maxLines="4" android:minLines="3" android:layout_alignParentRight="true" style="@style/generic_list_data_column2"/>
+            </RelativeLayout>
+            <View style="@style/SeparatorSection"/>
+            <RelativeLayout android:id="@+id/linearLayoutIDSolicitud" android:padding="@dimen/standard_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+                <TextView android:id="@+id/textViewIDSolicitud" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ID_4640_DEBIN_LBL_ID_PREAUTORIZACION" android:layout_alignParentLeft="true" android:contentDescription="@string/ID_4640_DEBIN_LBL_ID_PREAUTORIZACION_DESCRIPTION" style="@style/generic_list_data_column1"/>
+                <TextView android:id="@+id/textViewIDSolicitudDataConfirmarAutorizacionDebin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_alignParentRight="true" style="@style/generic_list_data_column2"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@+id/F32_02_row_botones" android:background="@color/white" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:id="@+id/F32_02_BTN_PAGAR_DEBIN" android:visibility="visible" android:text="@string/F33_02_Btn_Confirmar" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+    </LinearLayout>
+</RelativeLayout>

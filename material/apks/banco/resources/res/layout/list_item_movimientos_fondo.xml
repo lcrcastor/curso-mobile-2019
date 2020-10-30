@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="14dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp">
+        <TextView android:gravity="start" android:id="@+id/F24_06_lst_fecha" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="25dp" android:text="03/01/2017" style="@style/generic_list_data_column1"/>
+        <TextView android:gravity="center_horizontal" android:id="@+id/F24_06_lst_concepto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp" android:text="RESC. 11" style="@style/generic_list_data_column2"/>
+        <TextView android:gravity="end" android:id="@+id/F24_06_lst_importe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="U$S 234.6754,65" android:layout_weight="1" style="@style/generic_list_data_column3"/>
+    </LinearLayout>
+    <View style="@style/SeparatorSection"/>
+</LinearLayout>

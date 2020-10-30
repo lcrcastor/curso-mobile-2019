@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:id="@+id/idTransferenciasView" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ViewFlipper android:id="@+id/transferencias_view_flipper" android:background="@color/grey_light" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include android:id="@+id/transferencias" layout="@layout/transferencias_fragment_main"/>
+            <include android:id="@+id/limites_horarios" layout="@layout/limites_horarios_transferencias_fragment"/>
+            <include android:id="@+id/confirmacion_transferencia" layout="@layout/confirmacion_transferencia_fragment"/>
+            <include android:id="@+id/agenda_destinatarios" layout="@layout/agenda_destinatarios_fragment"/>
+            <include android:id="@+id/terminos_condiciones" layout="@layout/terminos_condiciones_fragment"/>
+            <include android:id="@+id/legales" layout="@layout/legales_fragment"/>
+            <include android:id="@+id/comprobante_transferencia" layout="@layout/comprobante_transferencia_fragment"/>
+        </ViewFlipper>
+    </LinearLayout>
+</LinearLayout>

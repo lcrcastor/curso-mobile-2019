@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:gravity="top" android:id="@+id/F27_31_RLAYOUT_ITEM_SEGUROS_PLAN" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="10dp" android:layout_marginRight="18dp" android:layout_marginBottom="10dp" android:layout_marginStart="18dp" android:layout_marginEnd="18dp">
+        <CheckBox android:gravity="center" android:id="@+id/F27_31_BTN_CHECK" android:background="@drawable/check" android:clickable="false" android:layout_width="24dp" android:layout_height="24dp" android:button="@null" android:layout_alignParentRight="true" android:layout_alignParentEnd="true"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="12dp" android:layout_toLeftOf="@+id/F27_31_BTN_CHECK" android:layout_alignParentTop="true" android:layout_marginEnd="12dp" android:layout_toStartOf="@+id/F27_31_BTN_CHECK">
+            <TextView android:textSize="14dp" android:textColor="@color/generic_grey_dark" android:id="@+id/F27_31_LBL_DATA_PLAN" android:layout_width="match_parent" android:layout_height="wrap_content" fontPath="fonts/OpenSans-Semibold.otf" style="@style/generic_row_data_form"/>
+            <TextView android:textSize="14dp" android:textColor="@color/generic_grey_dark" android:id="@+id/F27_31_LBL_DATA_DESCRIPCION" android:layout_width="match_parent" android:layout_height="wrap_content" fontPath="fonts/OpenSans-Light.otf"/>
+            <TextView android:textSize="14dp" android:textColor="@color/generic_grey_dark" android:id="@+id/F27_31_LBL_DATA_DESCRIPCION2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp" fontPath="fonts/OpenSans-Light.otf"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:id="@+id/F27_31_ITEM_SEPARATOR_BOTTOM" android:visibility="visible" android:layout_marginTop="10dp" android:layout_alignParentBottom="true" style="@style/SeparatorListView"/>
+</RelativeLayout>

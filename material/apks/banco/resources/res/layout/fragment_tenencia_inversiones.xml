@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/llTenenciaInvercionesHomeView" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/selector_type" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/generic_view_title_with_selector"/>
+    <android.support.v4.widget.NestedScrollView android:id="@+id/scrollView" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/rlBelowSelector" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include android:id="@+id/title" android:background="@color/grey_extra_light" android:layout_width="match_parent" android:layout_height="55dp" android:layout_alignParentTop="true" layout="@layout/generic_view_title_layout"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_partial_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include android:id="@+id/view_msj_error" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/generic_view_msj_error"/>
+                <include android:id="@+id/amount_view" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/generic_view_amounts"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/llViewsWithValuesOfService" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/title">
+                <include android:id="@+id/subtitle_view_gray" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/generic_view_section_subtitle_center_gray_with_question"/>
+                <include android:id="@+id/list_form" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/generic_form_view"/>
+            </LinearLayout>
+            <View style="@style/SeparatorSectionTitle"/>
+            <include android:id="@+id/include_error" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/title" layout="@layout/generic_error_res4"/>
+            <RelativeLayout android:id="@+id/leyenda" android:paddingLeft="@dimen/general_margin" android:paddingTop="30dp" android:paddingRight="@dimen/general_margin" android:paddingBottom="30dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/general_margin">
+                <TextView android:id="@+id/text" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_leyend_light"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

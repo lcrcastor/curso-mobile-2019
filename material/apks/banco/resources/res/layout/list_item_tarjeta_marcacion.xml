@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="14dp" android:layout_marginRight="18dp" android:layout_marginBottom="10dp">
+        <LinearLayout android:gravity="start" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15dp" android:id="@+id/F26_04_LBL_DATA_TARJETA" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/generic_label_marcacion"/>
+            <TextView android:textSize="9dp" android:textColor="@color/grey_medium" android:id="@+id/F26_04_LBL_DATA_TIPO" android:layout_width="wrap_content" android:layout_height="wrap_content" fontPath="fonts/OpenSans-Regular.otf"/>
+        </LinearLayout>
+        <CheckBox android:gravity="center" android:id="@+id/F26_04_BTN_CHECK" android:background="@drawable/custom_checkbox_selector" android:layout_width="24dp" android:layout_height="24dp" android:button="@null" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <View android:id="@+id/F26_04_ITEM_SEPARATOR_BOTTOM" android:visibility="gone" style="@style/StrongSeparatorSectionGrey"/>
+</LinearLayout>

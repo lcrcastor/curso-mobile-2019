@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:id="@+id/checkmark_imagen" android:layout_width="109dp" android:layout_height="109dp" android:src="@drawable/error_sube" android:layout_centerHorizontal="true"/>
+        <TextView android:textSize="40sp" android:textColor="@color/generic_red" android:id="@+id/ups_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ups" android:layout_below="@+id/checkmark_imagen" android:layout_centerHorizontal="true" android:fontFamily="@font/open_sans_regular"/>
+        <TextView android:textSize="40sp" android:textColor="@color/generic_red" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-15dp" android:text="@string/algo_salio_mal" android:layout_below="@+id/ups_text" android:layout_centerHorizontal="true" android:fontFamily="@font/open_sans_regular"/>
+    </RelativeLayout>
+    <View android:id="@+id/close_animation_view" android:background="@color/white" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</RelativeLayout>

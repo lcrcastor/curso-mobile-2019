@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/wrapperRow" style="@style/RowFormulario">
+    <RelativeLayout android:id="@+id/vgWrapperRow" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/generic_margin_row">
+        <RelativeLayout android:gravity="left" android:id="@+id/vgLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" style="@style/BodyLayoutForm"/>
+        <RelativeLayout android:gravity="right" android:id="@+id/vgValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/vgLabel" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_toEndOf="@+id/vgLabel" android:layout_alignParentEnd="true" style="@style/BodyLayoutForm"/>
+    </RelativeLayout>
+    <View android:id="@+id/vSeparator" style="@style/SeparatorSection"/>
+</LinearLayout>

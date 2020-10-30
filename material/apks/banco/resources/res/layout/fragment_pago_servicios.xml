@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/homeScreen" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include layout="@layout/title_simple_layout"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="horizontal" android:id="@+id/F06_00_rll_columna_pago" android:background="@color/grey_extra_light" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/F06_00_lbl_fecha_vto" android:layout_width="70dp" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:layout_marginRight="18dp" android:layout_marginBottom="18dp" android:text="@string/IDXX1_PAGO_SERVICIO_VTO" android:maxLines="2" android:minLines="1" android:singleLine="false" android:contentDescription="@string/IDX17_PAGO_SERVICIO_LBL_VENCIMIENTO" style="@style/generic_sub_titles_pago_de_servicios_columna_1"/>
+                <TextView android:ellipsize="end" android:id="@+id/F06_00_lbl_empresa_pago" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginRight="18dp" android:layout_marginBottom="18dp" android:text="@string/IDXX2_PAGO_SERVICIO_EMPRESA" android:maxLines="1" android:singleLine="true" android:layout_weight="1" style="@style/generic_sub_titles_pago_de_servicios_columna_2_3"/>
+                <TextView android:gravity="right" android:id="@+id/F12_07_lbl_operRealizadasImporte" android:layout_width="61dp" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginRight="6dp" android:layout_marginBottom="18dp" android:text="@string/IDXX3_PAGO_SERVICIO_IMPORTE" android:maxLines="1" android:singleLine="true" style="@style/generic_sub_titles_pago_de_servicios_columna_2_3"/>
+                <View android:layout_gravity="center_vertical" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginRight="18dp"/>
+            </LinearLayout>
+            <View android:id="@+id/F06_00_txv_serparador_1" android:layout_below="@+id/F06_00_rll_columna_pago" style="@style/SeparatorSubSection"/>
+            <android.support.v7.widget.RecyclerView android:id="@+id/F06_00_RCV_lista_home" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/linearLayout2" android:layout_below="@+id/F06_00_txv_serparador_1"/>
+            <RelativeLayout android:orientation="vertical" android:id="@+id/F06_00_RLL_SIN_DEUDAS" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/linearLayout2" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                    <ImageView android:layout_gravity="center_horizontal" android:id="@+id/F06_00_IMG_TILDE_OK" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cruz_blanca_fondo_celeste"/>
+                    <TextView android:gravity="center" android:id="@+id/F18_00F_LBL_SUBTITULO" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/standard_left_margin" android:layout_marginTop="30dp" android:layout_marginRight="@dimen/standard_right_margin" android:text="@string/IDXX4_PAGO_SERVICIO_LBL_NO_PAYMENTS" android:layout_below="@+id/F06_00_IMG_TILDE_OK" android:lineSpacingExtra="3dp" style="@style/generic_leyend_light"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout android:id="@+id/linearLayout2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <Button android:id="@+id/F06_00_btn_nuevo_pago" android:text="@string/IDXX5_PAGO_SERVICIO_BTN_NUEVO_PAGO" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

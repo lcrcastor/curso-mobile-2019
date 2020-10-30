@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:id="@+id/idCreditosView" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ViewFlipper android:id="@+id/vgCreditos" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include android:id="@+id/pantallaInicial" layout="@layout/layout_creditos_inicio"/>
+            <include android:id="@+id/pantallaSimulacion" layout="@layout/layout_creditos_simulacion"/>
+            <include android:id="@+id/pantallaConfirmacion" layout="@layout/layout_creditos_confirmacion"/>
+            <include android:id="@+id/pantallaComprobante" layout="@layout/layout_creditos_comprobante"/>
+        </ViewFlipper>
+    </LinearLayout>
+</LinearLayout>

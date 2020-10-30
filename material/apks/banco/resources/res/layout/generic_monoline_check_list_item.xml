@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="18dp" android:layout_marginRight="10dp" android:layout_marginBottom="18dp">
+        <TextView android:textSize="13sp" android:textColor="@color/generic_black" android:id="@+id/tvLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="XXXXX XX XXXXX XXXXXXXX " android:singleLine="true" android:layout_toLeftOf="@+id/ivCheck" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/style_text_label"/>
+        <ImageView android:gravity="center_vertical" android:id="@+id/ivCheck" android:layout_width="21dp" android:layout_height="21dp" android:src="@drawable/ic_checkbox_unchecked" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <View android:layout_width="match_parent" style="@style/StrongSeparatorSectionGrey"/>
+</LinearLayout>

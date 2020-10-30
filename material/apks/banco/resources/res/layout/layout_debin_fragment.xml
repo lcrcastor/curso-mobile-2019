@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:id="@+id/idDebinView" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ViewFlipper android:id="@+id/debin_view_flipper" android:background="@color/grey_light" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include android:id="@+id/debin_main" layout="@layout/layout_debin"/>
+            <include android:id="@+id/debin_detalle_comprador" layout="@layout/layout_detalle_debin_comprador"/>
+            <include android:id="@+id/debin_detalle_vendedor" layout="@layout/layout_detalle_debin_vendedor"/>
+        </ViewFlipper>
+    </LinearLayout>
+</LinearLayout>

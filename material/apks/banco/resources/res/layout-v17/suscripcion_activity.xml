@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/idTitle" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="@dimen/button_height">
+            <TextView android:gravity="left" android:id="@+id/dialogTitle" android:layout_margin="@dimen/general_margin" android:text="@string/ID57_LOGIN_SUBSCRIPTION_LBL_TITLE" style="@style/generic_title"/>
+            <View android:id="@+id/idLine" android:background="@color/black" android:layout_width="match_parent" android:layout_height="@dimen/height_line_separator_strong" android:layout_below="@+id/idTitle" android:layout_centerHorizontal="true"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/idTitle2" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="@dimen/button_height">
+            <TextView android:textSize="13dp" android:textColor="@color/generic_black" android:gravity="left" android:layout_gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:text="@string/ID58_LOGIN_SUBSCRIPTION_LBL_UPDATE" style="@style/generic_fontSemibold"/>
+            <View android:id="@+id/idLine2" android:background="@color/separator_list_view" android:layout_width="match_parent" android:layout_height="@dimen/height_line_separator" android:layout_below="@+id/idTitle" android:layout_centerHorizontal="true"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/linearMail" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="@dimen/button_height" android:weightSum="6">
+            <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:text="@string/ID59_LOGIN_SUBSCRIPTION_TBX_EMAIL" style="@style/generic_row_label_form"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="4">
+                <ar.com.santander.rio.mbanking.view.EditTextValidator android:ellipsize="end" android:gravity="right|center_vertical|center_horizontal|center" android:layout_gravity="end" android:id="@+id/emailSusc" android:background="@drawable/edittext_complete" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/general_margin" android:minWidth="100dp" android:hint="nombre@email.com" android:singleLine="true" android:inputType="textEmailAddress" android:textCursorDrawable="@drawable/color_cursor" app:emailType="true" style="@style/generic_row_data_form"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:id="@+id/idLine3" android:background="@color/separator_list_view" android:layout_width="match_parent" android:layout_height="@dimen/height_line_separator" android:layout_below="@+id/idTitle" android:layout_centerHorizontal="true"/>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/linearCelular1" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="6">
+            <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="3">
+                <TextView android:id="@+id/idLabelCelular" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:text="@string/ID60_LOGIN_SUBSCRIPTION_TBX_TELEPHNUMBER" style="@style/generic_row_label_form"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="right" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/linearCelular" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="3">
+                <TextView android:gravity="center_vertical" android:id="@+id/idCelular" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="@dimen/general_margin" android:text="0342-154025342" style="@style/generic_row_data_form"/>
+                <ImageView android:layout_gravity="center" android:id="@+id/rightRow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/general_margin" android:src="@drawable/arrowright"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/empresaCelular" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="6">
+            <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="3">
+                <TextView android:id="@+id/idLabelEmpresa" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/general_margin" android:text="@string/ID66_LOGIN_EDITMOBILE_BTN_COMPANY" style="@style/generic_row_label_form"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="right" android:layout_gravity="right" android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="3">
+                <TextView android:gravity="right|center_vertical|center_horizontal|center" android:layout_gravity="right" android:id="@+id/idEmpresaCelular" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="@dimen/general_margin" android:text="Movistar" style="@style/generic_row_data_form"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:id="@+id/idLine4" android:background="@color/separator_list_view" android:layout_width="match_parent" android:layout_height="@dimen/height_line_separator" android:layout_below="@+id/idTitle" android:layout_centerHorizontal="true"/>
+    </LinearLayout>
+    <Button android:id="@+id/aceptarButton" android:text="@string/ID56_LOGIN_TERMS_BTN_ACCEPT" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:textAllCaps="false" android:layout_alignParentStart="true" style="@style/generic_boton_rojo"/>
+</RelativeLayout>

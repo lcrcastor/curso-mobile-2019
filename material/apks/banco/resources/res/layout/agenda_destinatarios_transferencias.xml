@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" style="@style/MainLayout">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="12dp">
+        <TextView android:gravity="start" android:id="@+id/textViewSeleccionarDestinatarioTitle" android:text="@string/ID489_TRANSFERENCE_PROOF_DONE_LBL_SELECT" style="@style/generic_title"/>
+    </LinearLayout>
+    <View style="@style/SeparatorSectionTitle"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayoutSearch" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:padding="10dp" android:layout_width="35dp" android:layout_height="match_parent" android:src="@drawable/ic_search_red" android:tint="@color/generic_black" android:contentDescription="@string/ACCESSIBILITY_BOTON_BUSCAR"/>
+        <ar.com.santander.rio.mbanking.view.ClearableEditText android:id="@+id/search" android:padding="15dp" android:layout_width="match_parent" android:layout_height="50dp" android:hint="@string/ID490_TRANSFERENCE_PROOF_DONE_TBX_SEARCH" android:maxLines="1" android:drawableLeft="@drawable/ic_search_input" android:imeOptions="actionDone" android:drawableStart="@drawable/ic_search_input" style="@style/generic_search_input">
+            <requestFocus/>
+        </ar.com.santander.rio.mbanking.view.ClearableEditText>
+    </LinearLayout>
+    <View style="@style/SeparatorSectionTitle"/>
+    <ListView android:id="@+id/listAgendaDestinatarios" android:descendantFocusability="beforeDescendants" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="@color/grey_light" android:dividerHeight="1dp" android:choiceMode="singleChoice" android:splitMotionEvents="false"/>
+</LinearLayout>

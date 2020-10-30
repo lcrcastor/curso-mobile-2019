@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="72" android:versionName="3.47.6" package="ar.com.santander.rio.mbanking">
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="27"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <permission android:name="ar.com.santander.rio.mbanking.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="ar.com.santander.rio.mbanking.permission.C2D_MESSAGE"/>
+    <uses-feature android:glEsVersion="20000" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"/>
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_APP_BADGE"/>
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <application android:theme="@style/IsbanTheme" android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:name="ar.com.santander.rio.mbanking.app.base.BaseApplication" android:allowBackup="false" android:hardwareAccelerated="true" android:supportsRtl="true" android:usesCleartextTraffic="true" android:resizeableActivity="false">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <meta-data android:name="io.fabric.ApiKey" android:value="872758b51119d38c22efd1426318ae459d1c7a75"/>
+        <provider android:name="android.support.v4.content.FileProvider" android:exported="false" android:authorities="ar.com.santander.rio.mbanking" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/files"/>
+        </provider>
+        <receiver android:name="com.appsflyer.MultipleInstallBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="ar.com.santander.rio.mbanking"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService"/>
+        <receiver android:name="com.google.android.gms.analytics.AnalyticsReceiver" android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.analytics.AnalyticsService" android:enabled="true" android:exported="false"/>
+        <receiver android:name="com.google.android.gms.analytics.CampaignTrackingReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.twincoders.twinpush.sdk.services.LocationChangeReceiver"/>
+        <receiver android:name="com.twincoders.twinpush.sdk.services.BootReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.appsflyer.SingleInstallBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="ar.com.santander.rio.mbanking.managers.notifications.PushIntentService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.twincoders.twinpush.sdk.services.RegistrationIntentService" android:exported="false"/>
+        <service android:name="ar.com.santander.rio.mbanking.utils.genesyschat.WhatsonChatBackgroundService" android:enabled="true"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/google_maps_api_key"/>
+        <activity android:theme="@style/IsbanTheme.Home" android:name="ar.com.santander.rio.mbanking.app.ui.activities.SplashScreenActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:noHistory="true" android:hardwareAccelerated="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="con.twincoders.twinpush.sdk.PUSH_NOTIFICATION_RECEIVED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="srio"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="sRio" android:host="SeguroObjeto"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="sRio" android:host="SeguroMovil"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.TokenOBPActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:theme="@style/IsbanTheme.No.BlackScreen" android:name="ar.com.santander.rio.mbanking.app.ui.activities.SantanderRioMainActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateVisible|adjustResize" android:hardwareAccelerated="true"/>
+        <activity android:theme="@style/IsbanTheme.Home" android:name="ar.com.santander.rio.mbanking.app.ui.activities.HomeActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Transparent" android:name="ar.com.santander.rio.mbanking.app.ui.activities.InfoActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/IsbanTheme" android:name="ar.com.santander.rio.mbanking.app.ui.activities.ErrorActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/IsbanTheme" android:name="ar.com.santander.rio.mbanking.app.ui.activities.SuscripcionActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/IsbanTheme" android:name="ar.com.santander.rio.mbanking.app.ui.activities.EditarCelularActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/IsbanTheme" android:name="ar.com.santander.rio.mbanking.app.ui.activities.CajeroDetalleActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/IsbanTheme" android:name="ar.com.santander.rio.mbanking.app.ui.activities.FiltrosActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/IsbanTheme" android:name="ar.com.santander.rio.mbanking.app.ui.activities.SucursalDetalleActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/IsbanTheme" android:name="ar.com.santander.rio.mbanking.app.ui.activities.MiUbicacionActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/IsbanTheme.Transparent" android:name="ar.com.santander.rio.mbanking.app.ui.activities.TelefonoSucursalSelectorActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/IsbanTheme" android:name="ar.com.santander.rio.mbanking.app.ui.activities.ZonaActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/IsbanTheme" android:name="ar.com.santander.rio.mbanking.app.ui.activities.StorageMyFavoriteActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/IsbanTheme" android:name="ar.com.santander.rio.mbanking.app.ui.activities.FavoritosActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize|adjustPan|adjustNothing"/>
+        <activity android:theme="@style/IsbanTheme" android:name="ar.com.santander.rio.mbanking.app.ui.activities.PromocionDetalleActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/IsbanTheme" android:name="ar.com.santander.rio.mbanking.app.ui.activities.LoginInfoActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/IsbanTheme" android:name="ar.com.santander.rio.mbanking.app.ui.activities.PromocionesFiltrosActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/IsbanTheme" android:name="ar.com.santander.rio.mbanking.app.ui.activities.DetailsTransactionActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.AppCompat.Dialog" android:name="com.twincoders.twinpush.sdk.activities.RichNotificationActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/IsbanTheme" android:name="ar.com.santander.rio.mbanking.app.ui.activities.NotificationWebViewActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.PrivateMenuActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.AppCompat.TranslucentOnBoarding" android:name="ar.com.santander.rio.mbanking.components.ViewOnBoarding" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.SubcategoriesListSuperClubActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.CategoryCouponDetailSuperClubActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.SubcategoryCouponDetailSuperClubActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.CategoryCouponsListSuperClubActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.SubcategoryCouponsListSuperClubActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.CategoryCouponReceiptSuperClubActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.SubcategoryCouponReceiptSuperClubActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.StoresSuperClubActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ActivityEnvioDineroComprobanteCancelacion" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ActivityEnvioDineroComprobanteEnvio" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ActivityEnvioDineroConfirmacionEnvio" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ActivityEnvioDineroDetalleOperacion" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ActivityEnvioDineroListadoDestinatarios" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ActivityEnvioDineroNuevoContacto" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ActivityEnvioDineroOperacionesRealizadas" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ActivityEnvioDineroPrepararEnvio" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.BusquedaAvanzadaActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ActivityExtraccionSinTarjetaOperacionesRealizadas" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/IsbanTheme" android:name="ar.com.santander.rio.mbanking.app.ui.activities.InfoActivityWithHyperlink" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.BuyDollarsConfirmationActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.SellDollarsConfirmationActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.BuyDollarsReceiptActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.SellDollarsReceiptActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.PrepareInvoicePaymentNuevoPagoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.PrepareNoInvoicePaymentNuevoPagoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.PrepareAfipPaymentNuevoPagoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ConfirmInvoicePaymentNuevoPagoActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ConfirmNoInvoicePaymentNuevoPagoActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ConfirmAfipPaymentNuevoPagoActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ComprobanteConFacturaNuevoPagoActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ComprobanteSinFacturaNuevoPagoActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ComprobanteAfipNuevoPagoActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.EscanearCodigoBarrasNuevoPagoActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.BuscarEmpresaNuevoPagoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize|adjustPan|adjustNothing"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.SeleccionarEmpresaNuevoPagoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.AgregarPagoElectronicoNuevoPagoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.AgregarPagoRecargaCelularNuevoPagoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.AgregarPagoAfipNuevoPagoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.SeleccionarPagoNuevoPagoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.DetalleFondoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.SeleccionarFondoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.SuscribirFondoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.TransferirFondoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.RescatarFondoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.SeleccionarInformacionFondoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.InformacionFondoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.InfoAdmFondosActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.CotizacionesFondoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.BusquedaAvanzadaMovimientoFondosActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.NuevoDestinatarioTransferenciaActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.EditarEliminarDestinatarioTransferenciaActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.NuevoAliasActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ModificacionAliasActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.BajaAliasActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ContratarSeguroActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.CompraProtegidaActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.SeguroMovilActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.SeleccionarOcupacionAltaSeguroActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.SeleccionarTarjetasMarcacionActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.NuevoDebinActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.GestionAdhesionDebinActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.AbmDebinActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.PreAutorizacionDebinActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.BuscadorDebinActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.SolicitudAumentoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.AgendaDestinatariosTransferenciasActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ExitActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ListDetailsActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.TasasDetailsActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ProximasCuotasActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.DetalleCuotaActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ProgramaWomenActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.FirmaCredinActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.utils.zurich_sdk.TestScreenActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.utils.zurich_sdk.TestBatteryActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.ContratarSeguroAccidenteActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.SeguroObjetosActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.UbicacionObjetoActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:theme="@style/Transparent" android:name="ar.com.santander.rio.mbanking.app.ui.activities.FotoObjetoActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize" android:largeHeap="true"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.SugerirSeguroObjetosActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.GestionTurnoActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.fragments.privado.PerfilDelInversorActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.fragments.privado.TenenciaInversionesIntervinientesActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.titulosvalores.TitulosValoresActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.titulosvaloresdetail.TitulosValoresDetailActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.custodias.CustodiasActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.fragments.privado.TerminosCondicionesActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.custodiadetalles.CustodiaDetallesActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.custodiaterminos.CustodiaTerminosActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:theme="@style/IsbanTheme.No.BlackScreen" android:name="ar.com.santander.rio.mbanking.app.ui.activities.RecargaSubeActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.recargasubecomprobantepago.RecargaSubeComprobantePagoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:name="ar.com.santander.rio.mbanking.app.ui.activities.errorrecarga.ErrorRecargaActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.zurich.battery.BatteryActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="com.zurich.lcd_test.TouchTestActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+    </application>
+</manifest>

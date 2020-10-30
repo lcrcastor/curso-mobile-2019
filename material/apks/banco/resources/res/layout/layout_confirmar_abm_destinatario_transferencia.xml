@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:id="@+id/scrollView" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/F23_21_LNL_TOP_OBJECTS" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/F23_21_LBL_TITLE" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" style="@style/generic_title"/>
+                <View style="@style/SeparatorSectionTitle"/>
+                <TableLayout android:orientation="vertical" android:id="@+id/F23_21_TABLE" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@+id/F23_21_LNL_BOTTOM_OBJECTS" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/F23_21_LNL_TOP_OBJECTS">
+                <Button android:id="@+id/F23_21_BTN_GUARDAR" android:text="@string/IDXX_TRANSFERENCE_ABM_ADDRESSEE_BTN_SAVE" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

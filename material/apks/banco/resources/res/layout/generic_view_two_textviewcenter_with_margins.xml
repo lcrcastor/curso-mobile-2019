@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/twoTextViewCenterWithMargins" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/rLTwoTextViewCenterWithMargins" android:paddingLeft="20dp" android:paddingTop="40dp" android:paddingRight="20dp" android:paddingBottom="40dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ar.com.santander.rio.mbanking.utils.itrsa.HtmlTextView android:textColor="@color/generic_black" android:id="@+id/textView1up" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:layout_centerHorizontal="true" style="@style/generic_time"/>
+        <ar.com.santander.rio.mbanking.utils.itrsa.HtmlTextView android:textSize="22sp" android:textColor="@color/generic_black" android:id="@+id/textView2down" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/textView1up" android:layout_centerHorizontal="true" style="@style/generic_row_data_comp_4"/>
+        <ar.com.santander.rio.mbanking.utils.itrsa.HtmlTextView android:textColor="@color/generic_black" android:id="@+id/textView3down" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_below="@+id/textView2down" android:layout_centerHorizontal="true" style="@style/generic_time"/>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

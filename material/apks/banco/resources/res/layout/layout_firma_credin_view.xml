@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <WebView android:layout_gravity="center_horizontal" android:id="@+id/webViewFirmaCredin" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</android.support.constraint.ConstraintLayout>

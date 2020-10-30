@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:id="@+id/comprobanteScrollView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/F33_03_btn_volver" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+        <LinearLayout android:orientation="vertical" android:id="@+id/F33_03_layout_comprobante" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@+id/F33_03_txt_title" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="@string/F33_03_Lbl_Comprobante_de_Solicitud_de_Aumento_de_Limite" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" style="@style/generic_title"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View style="@style/SeparatorSectionTitle"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="33sp" android:textColor="@color/grey_medium_dark" android:layout_gravity="center_horizontal" android:id="@+id/F33_03_lbl_data_importe_mensual" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:layout_marginBottom="50dp" android:text="" fontPath="fonts/OpenSans-Light.otf"/>
+                </LinearLayout>
+                <View style="@style/SeparatorSection"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_margin_row">
+                        <TextView android:id="@+id/F33_03_txt_para" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/F33_03_Lbl_Para" android:layout_alignParentLeft="true" android:layout_marginEnd="30dp" android:layout_alignParentStart="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F33_03_LBL_DATA_PARA" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F33_03_txt_para" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_toEndOf="@+id/F33_03_txt_para" android:layout_alignParentEnd="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_margin_row">
+                        <TextView android:id="@+id/F33_03_txt_titular" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/F33_03_Lbl_Titular" android:layout_alignParentLeft="true" android:layout_marginEnd="30dp" android:layout_alignParentStart="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F33_03_LBL_DATA_TITULAR" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F33_03_txt_titular" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_toEndOf="@+id/F33_03_txt_titular" android:layout_alignParentEnd="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F33_03_LNL_ROW_BANCO_DESTINO" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_margin_row">
+                        <TextView android:id="@+id/F33_03_LBL_BANCO_DESTINO" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/F33_02_Lbl_Banco_Destino" android:layout_alignParentLeft="true" android:layout_marginEnd="30dp" android:layout_alignParentStart="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F33_03_LBL_DATA_BANCO_DESTINO" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F33_03_LBL_BANCO_DESTINO" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_toEndOf="@+id/F33_03_LBL_BANCO_DESTINO" android:layout_alignParentEnd="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/F33_03_LNL_ROW_TIPO_CUENTA" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_margin_row">
+                        <TextView android:id="@+id/F33_03_txt_tipo_cuenta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/F33_03_Lbl_Tipo_de_Cuenta" android:layout_alignParentLeft="true" android:layout_marginEnd="30dp" android:layout_alignParentStart="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F33_03_LBL_DATA_TIPO_CUENTA" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F33_03_txt_tipo_cuenta" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_toEndOf="@+id/F33_03_txt_tipo_cuenta" android:layout_alignParentEnd="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_margin_row">
+                        <TextView android:id="@+id/F33_03_txt_tipo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/F33_03_Lbl_Tipo" android:layout_alignParentLeft="true" android:layout_marginEnd="30dp" android:layout_alignParentStart="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F33_03_LBL_DATA_TIPO" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F33_03_txt_tipo" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_toEndOf="@+id/F33_03_txt_tipo" android:layout_alignParentEnd="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_margin_row">
+                        <TextView android:id="@+id/F33_03_txt_numero" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/F33_03_Lbl_Numero" android:layout_alignParentLeft="true" android:layout_marginEnd="30dp" android:layout_alignParentStart="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F33_03_LBL_DATA_NUMERO" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F33_03_txt_numero" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_toEndOf="@+id/F33_03_txt_numero" android:layout_alignParentEnd="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_margin_row">
+                        <TextView android:id="@+id/F33_03_txt_de" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/F33_03_Lbl_De" android:layout_alignParentLeft="true" android:layout_marginEnd="30dp" android:layout_alignParentStart="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F33_03_LBL_DATA_DE" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F33_03_txt_de" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_toEndOf="@+id/F33_03_txt_de" android:layout_alignParentEnd="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_margin_row">
+                        <TextView android:id="@+id/F33_03_txt_fecha" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/F33_03_Lbl_Fecha" android:layout_alignParentLeft="true" android:layout_marginEnd="30dp" android:layout_alignParentStart="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F33_03_LBL_DATA_FECHA" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F33_03_txt_fecha" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_toEndOf="@+id/F33_03_txt_fecha" android:layout_alignParentEnd="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_margin_row">
+                        <TextView android:id="@+id/F33_03_txt_nro_comprobante" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/F33_03_Lbl_Nro_de_Comprobante" android:layout_alignParentLeft="true" android:contentDescription="Numero de Comprobante" android:layout_marginEnd="30dp" android:layout_alignParentStart="true" style="@style/generic_row_label_comp"/>
+                        <TextView android:gravity="end" android:id="@+id/F33_03_LBL_DATA_NRO_COMPROBANTE" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@+id/F33_03_txt_nro_comprobante" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_toEndOf="@+id/F33_03_txt_nro_comprobante" android:layout_alignParentEnd="true" style="@style/generic_row_data_comp"/>
+                    </RelativeLayout>
+                    <View style="@style/SeparatorSection"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:layout_marginRight="18dp" android:layout_marginStart="18dp" android:layout_marginEnd="18dp">
+                    <TextView android:gravity="start" android:id="@+id/F33_03_txt_leyenda" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" style="@style/generic_leyend_light"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp">
+                    <include layout="@layout/layout_bottom_receipt_share"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <Button android:id="@+id/F33_03_btn_volver" android:text="@string/F33_03_Btn_Volver" android:layout_alignParentBottom="true" android:textAllCaps="false" style="@style/generic_boton_rojo"/>
+</RelativeLayout>

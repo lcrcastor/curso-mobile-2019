@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/tarjetas_ultimos_consumos_sublist_footer" android:background="@color/ultimos_consumos_subtotal_grey_medium_transparent" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:id="@+id/sublist_title" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_margin" android:layout_marginTop="@dimen/general_margin" android:layout_weight="1" style="@style/UltimosConsumosSubtotal"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="120dp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/general_margin" android:layout_marginRight="@dimen/general_margin" android:layout_marginBottom="@dimen/general_margin">
+            <ar.com.santander.rio.mbanking.view.AmountView android:gravity="end" android:id="@+id/sublist_footer_total" android:layout_width="match_parent" android:layout_height="wrap_content" app:maxTextSize="@dimen/bloque_texto_text_size" app:minTextSize="@dimen/detalle_text_size" style="@style/generic_list_data_column3"/>
+            <ar.com.santander.rio.mbanking.view.AmountView android:gravity="end" android:id="@+id/sublist_footer_total_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" app:maxTextSize="@dimen/bloque_texto_text_size" app:minTextSize="@dimen/detalle_text_size" style="@style/generic_list_data_column3"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/grey_medium_light" android:layout_width="match_parent" android:layout_height="1dp"/>
+</LinearLayout>

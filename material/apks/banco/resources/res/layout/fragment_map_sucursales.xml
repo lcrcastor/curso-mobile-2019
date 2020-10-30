@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/llBuscar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="horizontal" android:background="@drawable/edittext_search" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp">
+            <ImageView android:id="@+id/imgSearch" android:padding="10dp" android:layout_width="35dp" android:layout_height="35dp" android:src="@drawable/ic_search_red" android:tint="@color/generic_black" android:contentDescription="@string/ACCESSIBILITY_BOTON_BUSCAR"/>
+            <ar.com.santander.rio.mbanking.view.ClearableEditText android:layout_gravity="center" android:id="@+id/eTxtSearch" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="@string/ID398_SUCURSALES_TXTBOX_SEARCH" android:singleLine="true" android:completionThreshold="3" android:layout_weight="1" android:imeOptions="actionSearch" style="@style/generic_search_input"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:layout_above="@+id/llButton" style="@style/SeparatorSectionTitle"/>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/llButton" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_below="@+id/llBuscar">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/txtLocaliza" android:background="@drawable/button_map_bar" android:layout_width="0dp" android:layout_height="@dimen/tab_height" android:layout_weight="1" android:contentDescription="@string/ACCESSIBILITY_BOTON_UBICACION" style="?android:attr/buttonBarButtonStyle">
+            <ImageView android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/ic_localizacion" android:contentDescription="TODO"/>
+            <TextView android:textSize="14sp" android:textColor="@color/generic_red" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="@string/ID69_CASHIERS_BTN_MYLOCATION" style="@style/generic_fontSemibold"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@+id/viewButton" android:background="@color/grey_light" android:layout_width="match_parent" android:layout_height="1dp" android:layout_below="@+id/llButton"/>
+    <include android:id="@+id/noBusqueda" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/viewButton" layout="@layout/layout_no_busqueda"/>
+    <ar.com.santander.rio.mbanking.components.SlidingUpPanelLayout android:gravity="bottom" android:id="@+id/slidingLayout" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/noBusqueda" android:smoothScrollbar="false" app:scrollView="@+id/list" app:umanoAnchorPoint="0.6" app:umanoDragView="@+id/slidingContainer" app:umanoPanelHeight="0dp" app:umanoParalaxOffset="100dp" app:umanoShadowHeight="4dp">
+        <RelativeLayout android:gravity="top" android:layout_width="match_parent" android:layout_height="match_parent">
+            <fragment android:name="com.google.android.gms.maps.SupportMapFragment" android:id="@+id/sucursal_map_fragmet" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <RelativeLayout android:id="@+id/llButtonMap" android:padding="10dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="5dp" android:layout_alignParentBottom="true">
+                <TextView android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/btnMasSucursales" android:background="@drawable/button_map" android:paddingLeft="5dp" android:paddingRight="5dp" android:layout_width="185dp" android:layout_height="@dimen/height_button_map" android:layout_marginRight="5dp" android:text="@string/ID400_SUCURSALES_BTN_LOADMORE" android:drawableLeft="@drawable/ic_mascajeros" android:layout_toLeftOf="@+id/btnOpen" android:layout_centerVertical="true" android:contentDescription="@string/ACCESSIBILITY_SUCURSALES_CARGAR" android:drawableStart="@drawable/ic_mascajeros" style="@style/generic_link_term_condition"/>
+                <ImageButton android:id="@+id/btnOpen" android:background="@drawable/button_map" android:padding="5dp" android:layout_width="@dimen/weight_button_map" android:layout_height="@dimen/height_button_map" android:layout_marginLeft="10dp" android:src="@drawable/ic_lista_cajeros" android:layout_alignParentRight="true" android:contentDescription="@string/ACCESSIBILITY_SUCURSALES_LISTA"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/slidingContainer" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ar.com.santander.rio.mbanking.components.infinitescroll.InfiniteScrollListView android:id="@+id/list" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:drawSelectorOnTop="true" android:cacheColorHint="@color/grey_light" android:divider="@color/separator_list_view" android:dividerHeight="1dp" android:smoothScrollbar="false"/>
+        </RelativeLayout>
+    </ar.com.santander.rio.mbanking.components.SlidingUpPanelLayout>
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/F24_XX_LNL_TITLE" android:paddingLeft="18dp" android:paddingTop="16dp" android:paddingRight="18dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <TextView android:id="@+id/F24_XX_LBL_TITLE" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/F24_XX_LBL_TITLE_INFO_RIESGO" style="@style/generic_title"/>
+    </LinearLayout>
+    <View android:id="@+id/separator1" android:layout_below="@+id/F24_XX_LNL_TITLE" style="@style/SeparatorSectionTitle"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="32dp" android:layout_marginRight="18dp" android:layout_above="@+id/F24_XX_BTN_ACEPTAR_RIESGO" android:layout_below="@+id/separator1">
+        <LinearLayout android:orientation="vertical" android:id="@+id/F24_XX_LNL_BODY" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="14sp" android:textColor="@color/grey_medium_dark" android:gravity="start" android:id="@+id/F24_XX_LBL_DATA_INFO_RIESGO" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" fontPath="fonts/OpenSans-Regular.otf"/>
+        </LinearLayout>
+    </ScrollView>
+    <Button android:id="@+id/F24_XX_BTN_ACEPTAR_RIESGO" android:text="@string/ID_4012_FONDOS_BTN_AVIRIESGO_SUSCRIBIR" android:layout_above="@+id/F24_XX_BTN_NO_ACEPTA_RIESGO" android:textAllCaps="false" style="@style/generic_boton_rojo_sin_margin_top_bottom"/>
+    <Button android:id="@+id/F24_XX_BTN_NO_ACEPTA_RIESGO" android:text="@string/ID_4013_FONDOS_BTN_AVIRIESGO" android:layout_alignParentBottom="true" android:textAllCaps="false" style="@style/generic_boton_blanco_borde_gris"/>
+</RelativeLayout>

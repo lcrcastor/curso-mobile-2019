@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:paddingLeft="18dp" android:paddingTop="15dp" android:paddingRight="18dp" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/IDXX_PRIVATEMENU_BTN_INVESTMENT_FUNDS" style="@style/generic_account_selector"/>
+    </LinearLayout>
+    <View style="@style/SeparatorSectionTitle"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/FXX_XX_IMG_CLOCK" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:src="@drawable/ico_reloj_gris"/>
+            <TextView android:gravity="center" android:autoLink="web" android:linksClickable="true" android:id="@+id/FXX_XX_LBL_MESSAGE" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="55dp" android:layout_marginRight="18dp" android:layout_marginBottom="20dp" android:text="@string/MSG_USER000069" style="@style/generic_leyend_light"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

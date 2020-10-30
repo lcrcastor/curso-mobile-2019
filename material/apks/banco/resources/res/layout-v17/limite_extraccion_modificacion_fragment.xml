@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:focusable="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/btnContinuar" android:layout_alignParentTop="true">
+        <TextView android:text="@string/ID_4755_CUENTAS_TIT_MODIFICAR_LIMITE_DE_EXTRACCION" style="@style/generic_title_wrap_content"/>
+        <View android:layout_width="match_parent" android:layout_height="1dp" style="@style/SeparatorSectionTitle"/>
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="15dp" android:paddingTop="18dp" android:paddingRight="10dp" android:paddingBottom="18dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="left" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/ID_4756_CUENTAS_LBL_LIMITE_ACTUAL" android:layout_weight="0.5" style="@style/generic_row_data_comp"/>
+            <TextView android:gravity="right" android:id="@+id/tvLimiteActual" android:layout_width="0dp" android:layout_height="wrap_content" android:text="$ X.XXX,XX" android:layout_weight="0.5" style="@style/generic_row_data_comp"/>
+        </LinearLayout>
+        <View android:layout_width="match_parent" style="@style/StrongSeparatorSectionGrey"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/wrapperTransactions" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/generic_list_title_background">
+            <TextView android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="15dp" android:text="@string/ID_4757_CUENTAS_LBL_NUEVO_LIMITE" style="@style/generic_row_data_comp"/>
+        </LinearLayout>
+        <View android:layout_width="match_parent" style="@style/StrongSeparatorSectionGrey"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/llTiempoValidez" android:paddingLeft="15dp" android:paddingTop="18dp" android:paddingRight="10dp" android:paddingBottom="18dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="left" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/ID_4758_CUENTAS_LBL_TIEMPO_DE_VIGENCIA" android:layout_weight="0.5" style="@style/generic_row_data_comp"/>
+            <RelativeLayout android:gravity="right" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.5">
+                <TextView android:textSize="13sp" android:id="@+id/tvTiempoValidez" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:layout_toLeftOf="@+id/ivArrow" android:layout_centerVertical="true" android:layout_marginEnd="5dp" style="@style/generic_row_data_comp"/>
+                <ImageView android:id="@+id/ivArrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_left" android:layout_centerVertical="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <View android:visibility="gone" android:layout_width="match_parent" style="@style/StrongSeparatorSectionGrey"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <android.support.v7.widget.RecyclerView android:id="@+id/rvLimites" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/tvLegends" android:layout_alignParentTop="true"/>
+            <TextView android:gravity="left" android:id="@+id/tvLegends" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:layout_alignParentBottom="true" style="@style/generic_leyend_light"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <Button android:enabled="false" android:id="@+id/btnContinuar" android:text="@string/ID_4760_CUENTAS_BTN_CONTINUAR" android:layout_alignParentBottom="true" style="@style/generic_boton_rojo"/>
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/idSimpleSelectorElement" android:background="@color/grey_medium_dark_transparent" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textSize="@dimen/titular1_text_size" android:textColor="@color/grey_medium_dark" android:gravity="center" android:id="@+id/textViewNumUtilesNumber" android:padding="@dimen/default_dialog_margin" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <View android:background="@color/grey_medium_light" android:layout_width="match_parent" android:layout_height="1dp"/>
+        <TextView android:textSize="@dimen/titulo2_text_size" android:textColor="@color/grey_light" android:gravity="center" android:id="@+id/textViewNumUtilesCall" android:padding="@dimen/default_dialog_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID116_ACCOUNTS_AVDSEARCH_BTN_CALL"/>
+        <View android:background="@color/grey_medium_light" android:layout_width="match_parent" android:layout_height="1dp"/>
+        <TextView android:textSize="@dimen/titulo2_text_size" android:textColor="@color/grey_light" android:gravity="center" android:id="@+id/textViewNumUtilesCopy" android:padding="@dimen/default_dialog_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID117_ACCOUNTS_AVDSEARCH_BTN_COPY"/>
+        <View android:background="@color/grey_medium_light" android:layout_width="match_parent" android:layout_height="1dp"/>
+        <TextView android:textSize="@dimen/titulo2_text_size" android:textColor="@color/grey_light" android:gravity="center" android:id="@+id/textViewNumUtilesSave" android:padding="@dimen/default_dialog_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID118_ACCOUNTS_AVDSEARCH_BTN_SAVE"/>
+        <View android:background="@color/grey_medium_light" android:layout_width="match_parent" android:layout_height="1dp"/>
+        <TextView android:textSize="@dimen/titulo2_text_size" android:textColor="@color/red_medium_light" android:gravity="center" android:id="@+id/textViewNumUtilesCancel" android:padding="@dimen/default_dialog_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID119_ACCOUNTS_AVDSEARCH_BTN_CANCEL"/>
+    </LinearLayout>
+</RelativeLayout>

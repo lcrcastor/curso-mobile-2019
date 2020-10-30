@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/item_producto" android:background="@color/white" android:layout_width="match_parent" android:layout_height="100dp">
+    <TextView android:id="@+id/tvdescripcionProducto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="10dp" style="@style/generic_list_data_column2"/>
+    <TextView android:id="@+id/tvTotalPesos" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="5dp" android:layout_below="@+id/tvdescripcionProducto" style="@style/generic_list_data_column2_bottom_text"/>
+    <TextView android:id="@+id/tvTotalDolares" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="5dp" android:layout_marginBottom="10dp" android:layout_below="@+id/tvTotalPesos" style="@style/generic_list_data_column2_bottom_text"/>
+    <View android:id="@+id/seprarador_producto" android:layout_width="match_parent" android:layout_alignParentBottom="true" style="@style/StrongSeparatorSectionGrey"/>
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/general_margin" android:src="@drawable/arrow_right" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+</RelativeLayout>

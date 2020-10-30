@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/BodyLayout">
+        <TextView android:id="@+id/tvTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Sorteo semanal Hincha Vip" style="@style/generic_alert_title"/>
+        <Space android:layout_width="match_parent" android:layout_height="10dp"/>
+        <TextView android:id="@+id/tvDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Has acumulaso 185 chances para participar en el proximo sorteo del 17 de Marzo" android:singleLine="false" style="@style/generic_alert_description"/>
+        <Space android:layout_width="match_parent" android:layout_height="10dp"/>
+        <TextView android:id="@+id/tvDate" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="15/11/13" style="@style/generic_alert_date"/>
+        <Space android:layout_width="match_parent" android:layout_height="5dp"/>
+    </LinearLayout>
+    <View style="@style/SeparatorSection"/>
+    <Space android:layout_width="match_parent" android:layout_height="5dp"/>
+</LinearLayout>

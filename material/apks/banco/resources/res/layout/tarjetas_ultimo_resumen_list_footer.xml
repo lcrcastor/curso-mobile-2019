@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/tarjetas_ultimo_resumen_list_footer" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="no">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="horizontal" android:background="@color/grey_light" android:padding="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textStyle="bold" android:id="@+id/ultimo_resumen_total_text" android:nextFocusDown="@+id/ultimo_resumen_total" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/ID518_CCARDS_LASTBRIEF_LBL_TOTAL" android:layout_weight="1" style="@style/LabelForm"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="120dp" android:layout_height="wrap_content">
+                <ar.com.santander.rio.mbanking.view.AmountView android:gravity="right" android:id="@+id/ultimo_resumen_total" android:nextFocusDown="@+id/ultimo_resumen_total_dolares" android:layout_width="match_parent" android:layout_height="wrap_content" app:maxTextSize="@dimen/bloque_texto_text_size" app:minTextSize="@dimen/detalle_text_size" style="@style/generic_list_data_column3"/>
+                <ar.com.santander.rio.mbanking.view.AmountView android:gravity="right" android:id="@+id/ultimo_resumen_total_dolares" android:nextFocusDown="@+id/text3" android:layout_width="match_parent" android:layout_height="wrap_content" app:maxTextSize="@dimen/bloque_texto_text_size" app:minTextSize="@dimen/detalle_text_size" style="@style/generic_list_data_column3"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:padding="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/text3" android:nextFocusDown="@+id/ultimo_resumen_pagos_pesos" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID519_CCARDS_LASTBRIEF_LBL_MINPAY" android:layout_weight="1" style="@style/generic_row_label_comp"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                    <ar.com.santander.rio.mbanking.view.AmountView android:gravity="right" android:id="@+id/ultimo_resumen_pagos_pesos" android:nextFocusDown="@+id/ultimo_resumen_pagos_dolares" android:layout_width="match_parent" android:layout_height="wrap_content" app:maxTextSize="@dimen/bloque_texto_text_size" app:minTextSize="@dimen/detalle_text_size" style="@style/generic_row_data_comp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="5dp">
+                <TextView android:id="@+id/text4" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID520_CCARDS_LASTBRIEF_LBL_EXPIRATION" android:layout_weight="1" style="@style/generic_row_label_comp"/>
+                <TextView android:gravity="right" android:id="@+id/ultimo_resumen_vencimiento" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_comp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View style="@style/SeparatorSection"/>
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:padding="@dimen/general_margin" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/text5" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID521_CCARDS_LASTBRIEF_LBL_NEXTCLOSE" android:layout_weight="1" style="@style/generic_row_label_comp"/>
+                <TextView android:gravity="right" android:id="@+id/ultimo_resumen_proximo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_comp"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                <TextView android:id="@+id/text5_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID522_CCARDS_LASTBRIEF_LBL_NEXTEXPIRATION" android:layout_weight="1" style="@style/generic_row_label_comp"/>
+                <TextView android:gravity="right" android:id="@+id/ultimo_resumen_proximo_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" style="@style/generic_row_data_comp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View style="@style/SeparatorSection"/>
+    </LinearLayout>
+    <TextView android:enabled="false" android:textSize="13dp" android:textColor="@color/generic_black" android:id="@+id/text6" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/general_margin" android:layout_marginTop="@dimen/general_margin" android:text="@string/ID523_CCARDS_LASTBRIEF_LBL_SEUO" style="@style/generic_fontRegular"/>
+    <TextView android:enabled="true" android:gravity="left" android:id="@+id/nav_terminos" android:paddingLeft="@dimen/general_margin" android:paddingTop="3dp" android:paddingRight="@dimen/general_margin" android:paddingBottom="@dimen/general_margin" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="@string/ID524_CCARDS_LASTBRIEF_BTN_VIEW" style="@style/generic_link_term_condition"/>
+</LinearLayout>

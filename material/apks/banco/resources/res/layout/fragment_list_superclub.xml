@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/F20_00_LNL" android:background="@color/white" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:id="@+id/F20_00_RLL_HEADER" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <TextView android:id="@+id/F20_00_LBL_TITLE" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:text="@string/ID3000_COMODINES_SUPER_CLUB_LBL_TITULO" android:layout_alignParentTop="true" style="@style/generic_title"/>
+            <View android:id="@+id/F20_00_separador1" android:layout_marginTop="12dp" android:layout_below="@+id/F20_00_LBL_TITLE" style="@style/SeparatorSectionTitle"/>
+            <TextView android:layout_gravity="center_horizontal" android:id="@+id/F20_00_LBL_POINTS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="20dp" android:layout_marginRight="18dp" android:text="@string/ID3001_COMODINES_SUPER_CLUB_LBL_PUNTOS_SC" android:layout_below="@+id/F20_00_separador1" android:layout_centerHorizontal="true" style="@style/generic_topDescription_amount"/>
+            <TextView android:layout_gravity="center_horizontal" android:id="@+id/F20_00_LBL_DATA_POINTS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="2dp" android:layout_marginRight="18dp" android:layout_marginBottom="15dp" android:text="" android:layout_below="@+id/F20_00_LBL_POINTS" android:layout_centerHorizontal="true" style="@style/generic_amount"/>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/F20_00_LNL_HOME" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/F20_00_RLL_HEADER" android:layout_alignParentBottom="true">
+            <View style="@style/SeparatorSectionTitle"/>
+            <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="50dp">
+                <ar.com.santander.rio.mbanking.view.ClearableEditText android:id="@+id/F20_00_INP_SEARCH" android:paddingLeft="40dp" android:layout_width="match_parent" android:layout_height="32dp" android:layout_marginLeft="9dp" android:layout_marginRight="9dp" android:hint="@string/ID3002_COMODINES_SUPER_CLUB_TBX_BUSCAR" android:lines="1" android:singleLine="true" android:maxLength="64" android:layout_centerVertical="true" android:inputType="textNoSuggestions" app:color="@color/grey_medium_light" style="@style/generic_search_input"/>
+                <ImageView android:id="@+id/F20_00_IMG_SEARCH" android:layout_width="14dp" android:layout_height="14dp" android:layout_marginLeft="10dp" android:src="@drawable/ic_search" android:layout_alignLeft="@+id/F20_00_INP_SEARCH" android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <View style="@style/SeparatorSectionTitle"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <android.support.v7.widget.RecyclerView android:id="@+id/F20_00_LST_DATA" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                <RelativeLayout android:orientation="vertical" android:id="@+id/F20_00_LNL_SEARCH" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <View android:layout_gravity="bottom" android:background="@color/grey_medium_dark_transparent" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    <android.support.v7.widget.RecyclerView android:id="@+id/F20_00_LST_SEARCH" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

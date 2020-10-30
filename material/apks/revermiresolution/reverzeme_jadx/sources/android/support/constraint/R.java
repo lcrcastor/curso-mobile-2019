@@ -1,0 +1,138 @@
+package android.support.constraint;
+
+public final class R {
+
+    public static final class attr {
+        public static final int layout_constraintBaseline_creator = 2130771971;
+        public static final int layout_constraintBaseline_toBaselineOf = 2130771972;
+        public static final int layout_constraintBottom_creator = 2130771973;
+        public static final int layout_constraintBottom_toBottomOf = 2130771974;
+        public static final int layout_constraintBottom_toTopOf = 2130771975;
+        public static final int layout_constraintDimensionRatio = 2130771976;
+        public static final int layout_constraintEnd_toEndOf = 2130771977;
+        public static final int layout_constraintEnd_toStartOf = 2130771978;
+        public static final int layout_constraintGuide_begin = 2130771979;
+        public static final int layout_constraintGuide_end = 2130771980;
+        public static final int layout_constraintGuide_percent = 2130771981;
+        public static final int layout_constraintHorizontal_bias = 2130771982;
+        public static final int layout_constraintHorizontal_chainPacked = 2130771983;
+        public static final int layout_constraintHorizontal_weight = 2130771984;
+        public static final int layout_constraintLeft_creator = 2130771985;
+        public static final int layout_constraintLeft_toLeftOf = 2130771986;
+        public static final int layout_constraintLeft_toRightOf = 2130771987;
+        public static final int layout_constraintRight_creator = 2130771988;
+        public static final int layout_constraintRight_toLeftOf = 2130771989;
+        public static final int layout_constraintRight_toRightOf = 2130771990;
+        public static final int layout_constraintStart_toEndOf = 2130771991;
+        public static final int layout_constraintStart_toStartOf = 2130771992;
+        public static final int layout_constraintTop_creator = 2130771993;
+        public static final int layout_constraintTop_toBottomOf = 2130771994;
+        public static final int layout_constraintTop_toTopOf = 2130771995;
+        public static final int layout_constraintVertical_bias = 2130771996;
+        public static final int layout_constraintVertical_chainPacked = 2130771997;
+        public static final int layout_constraintVertical_weight = 2130771998;
+        public static final int layout_editor_absoluteX = 2130771999;
+        public static final int layout_editor_absoluteY = 2130772000;
+        public static final int layout_goneMarginBottom = 2130772001;
+        public static final int layout_goneMarginEnd = 2130772002;
+        public static final int layout_goneMarginLeft = 2130772003;
+        public static final int layout_goneMarginRight = 2130772004;
+        public static final int layout_goneMarginStart = 2130772005;
+        public static final int layout_goneMarginTop = 2130772006;
+    }
+
+    public static final class id {
+        public static final int parent = 2131492873;
+    }
+
+    public static final class styleable {
+        public static final int[] ConstraintLayout_Layout = {16842948, com.example.reverzeme.R.attr.layout_constraintBaseline_creator, com.example.reverzeme.R.attr.layout_constraintBaseline_toBaselineOf, com.example.reverzeme.R.attr.layout_constraintBottom_creator, com.example.reverzeme.R.attr.layout_constraintBottom_toBottomOf, com.example.reverzeme.R.attr.layout_constraintBottom_toTopOf, com.example.reverzeme.R.attr.layout_constraintDimensionRatio, com.example.reverzeme.R.attr.layout_constraintEnd_toEndOf, com.example.reverzeme.R.attr.layout_constraintEnd_toStartOf, com.example.reverzeme.R.attr.layout_constraintGuide_begin, com.example.reverzeme.R.attr.layout_constraintGuide_end, com.example.reverzeme.R.attr.layout_constraintGuide_percent, com.example.reverzeme.R.attr.layout_constraintHorizontal_bias, com.example.reverzeme.R.attr.layout_constraintHorizontal_chainPacked, com.example.reverzeme.R.attr.layout_constraintHorizontal_weight, com.example.reverzeme.R.attr.layout_constraintLeft_creator, com.example.reverzeme.R.attr.layout_constraintLeft_toLeftOf, com.example.reverzeme.R.attr.layout_constraintLeft_toRightOf, com.example.reverzeme.R.attr.layout_constraintRight_creator, com.example.reverzeme.R.attr.layout_constraintRight_toLeftOf, com.example.reverzeme.R.attr.layout_constraintRight_toRightOf, com.example.reverzeme.R.attr.layout_constraintStart_toEndOf, com.example.reverzeme.R.attr.layout_constraintStart_toStartOf, com.example.reverzeme.R.attr.layout_constraintTop_creator, com.example.reverzeme.R.attr.layout_constraintTop_toBottomOf, com.example.reverzeme.R.attr.layout_constraintTop_toTopOf, com.example.reverzeme.R.attr.layout_constraintVertical_bias, com.example.reverzeme.R.attr.layout_constraintVertical_chainPacked, com.example.reverzeme.R.attr.layout_constraintVertical_weight, com.example.reverzeme.R.attr.layout_editor_absoluteX, com.example.reverzeme.R.attr.layout_editor_absoluteY, com.example.reverzeme.R.attr.layout_goneMarginBottom, com.example.reverzeme.R.attr.layout_goneMarginEnd, com.example.reverzeme.R.attr.layout_goneMarginLeft, com.example.reverzeme.R.attr.layout_goneMarginRight, com.example.reverzeme.R.attr.layout_goneMarginStart, com.example.reverzeme.R.attr.layout_goneMarginTop};
+        public static final int ConstraintLayout_Layout_android_orientation = 0;
+        public static final int ConstraintLayout_Layout_layout_constraintBaseline_creator = 1;
+        public static final int ConstraintLayout_Layout_layout_constraintBaseline_toBaselineOf = 2;
+        public static final int ConstraintLayout_Layout_layout_constraintBottom_creator = 3;
+        public static final int ConstraintLayout_Layout_layout_constraintBottom_toBottomOf = 4;
+        public static final int ConstraintLayout_Layout_layout_constraintBottom_toTopOf = 5;
+        public static final int ConstraintLayout_Layout_layout_constraintDimensionRatio = 6;
+        public static final int ConstraintLayout_Layout_layout_constraintEnd_toEndOf = 7;
+        public static final int ConstraintLayout_Layout_layout_constraintEnd_toStartOf = 8;
+        public static final int ConstraintLayout_Layout_layout_constraintGuide_begin = 9;
+        public static final int ConstraintLayout_Layout_layout_constraintGuide_end = 10;
+        public static final int ConstraintLayout_Layout_layout_constraintGuide_percent = 11;
+        public static final int ConstraintLayout_Layout_layout_constraintHorizontal_bias = 12;
+        public static final int ConstraintLayout_Layout_layout_constraintHorizontal_chainPacked = 13;
+        public static final int ConstraintLayout_Layout_layout_constraintHorizontal_weight = 14;
+        public static final int ConstraintLayout_Layout_layout_constraintLeft_creator = 15;
+        public static final int ConstraintLayout_Layout_layout_constraintLeft_toLeftOf = 16;
+        public static final int ConstraintLayout_Layout_layout_constraintLeft_toRightOf = 17;
+        public static final int ConstraintLayout_Layout_layout_constraintRight_creator = 18;
+        public static final int ConstraintLayout_Layout_layout_constraintRight_toLeftOf = 19;
+        public static final int ConstraintLayout_Layout_layout_constraintRight_toRightOf = 20;
+        public static final int ConstraintLayout_Layout_layout_constraintStart_toEndOf = 21;
+        public static final int ConstraintLayout_Layout_layout_constraintStart_toStartOf = 22;
+        public static final int ConstraintLayout_Layout_layout_constraintTop_creator = 23;
+        public static final int ConstraintLayout_Layout_layout_constraintTop_toBottomOf = 24;
+        public static final int ConstraintLayout_Layout_layout_constraintTop_toTopOf = 25;
+        public static final int ConstraintLayout_Layout_layout_constraintVertical_bias = 26;
+        public static final int ConstraintLayout_Layout_layout_constraintVertical_chainPacked = 27;
+        public static final int ConstraintLayout_Layout_layout_constraintVertical_weight = 28;
+        public static final int ConstraintLayout_Layout_layout_editor_absoluteX = 29;
+        public static final int ConstraintLayout_Layout_layout_editor_absoluteY = 30;
+        public static final int ConstraintLayout_Layout_layout_goneMarginBottom = 31;
+        public static final int ConstraintLayout_Layout_layout_goneMarginEnd = 32;
+        public static final int ConstraintLayout_Layout_layout_goneMarginLeft = 33;
+        public static final int ConstraintLayout_Layout_layout_goneMarginRight = 34;
+        public static final int ConstraintLayout_Layout_layout_goneMarginStart = 35;
+        public static final int ConstraintLayout_Layout_layout_goneMarginTop = 36;
+        public static final int[] ConstraintSet = {16842948, 16842960, 16842972, 16842996, 16842997, 16842999, 16843000, 16843001, 16843002, 16843701, 16843702, com.example.reverzeme.R.attr.layout_constraintBaseline_creator, com.example.reverzeme.R.attr.layout_constraintBaseline_toBaselineOf, com.example.reverzeme.R.attr.layout_constraintBottom_creator, com.example.reverzeme.R.attr.layout_constraintBottom_toBottomOf, com.example.reverzeme.R.attr.layout_constraintBottom_toTopOf, com.example.reverzeme.R.attr.layout_constraintDimensionRatio, com.example.reverzeme.R.attr.layout_constraintEnd_toEndOf, com.example.reverzeme.R.attr.layout_constraintEnd_toStartOf, com.example.reverzeme.R.attr.layout_constraintGuide_begin, com.example.reverzeme.R.attr.layout_constraintGuide_end, com.example.reverzeme.R.attr.layout_constraintGuide_percent, com.example.reverzeme.R.attr.layout_constraintHorizontal_bias, com.example.reverzeme.R.attr.layout_constraintHorizontal_chainPacked, com.example.reverzeme.R.attr.layout_constraintHorizontal_weight, com.example.reverzeme.R.attr.layout_constraintLeft_creator, com.example.reverzeme.R.attr.layout_constraintLeft_toLeftOf, com.example.reverzeme.R.attr.layout_constraintLeft_toRightOf, com.example.reverzeme.R.attr.layout_constraintRight_creator, com.example.reverzeme.R.attr.layout_constraintRight_toLeftOf, com.example.reverzeme.R.attr.layout_constraintRight_toRightOf, com.example.reverzeme.R.attr.layout_constraintStart_toEndOf, com.example.reverzeme.R.attr.layout_constraintStart_toStartOf, com.example.reverzeme.R.attr.layout_constraintTop_creator, com.example.reverzeme.R.attr.layout_constraintTop_toBottomOf, com.example.reverzeme.R.attr.layout_constraintTop_toTopOf, com.example.reverzeme.R.attr.layout_constraintVertical_bias, com.example.reverzeme.R.attr.layout_constraintVertical_chainPacked, com.example.reverzeme.R.attr.layout_constraintVertical_weight, com.example.reverzeme.R.attr.layout_editor_absoluteX, com.example.reverzeme.R.attr.layout_editor_absoluteY, com.example.reverzeme.R.attr.layout_goneMarginBottom, com.example.reverzeme.R.attr.layout_goneMarginEnd, com.example.reverzeme.R.attr.layout_goneMarginLeft, com.example.reverzeme.R.attr.layout_goneMarginRight, com.example.reverzeme.R.attr.layout_goneMarginStart, com.example.reverzeme.R.attr.layout_goneMarginTop};
+        public static final int ConstraintSet_android_id = 1;
+        public static final int ConstraintSet_android_layout_height = 4;
+        public static final int ConstraintSet_android_layout_marginBottom = 8;
+        public static final int ConstraintSet_android_layout_marginEnd = 10;
+        public static final int ConstraintSet_android_layout_marginLeft = 5;
+        public static final int ConstraintSet_android_layout_marginRight = 7;
+        public static final int ConstraintSet_android_layout_marginStart = 9;
+        public static final int ConstraintSet_android_layout_marginTop = 6;
+        public static final int ConstraintSet_android_layout_width = 3;
+        public static final int ConstraintSet_android_orientation = 0;
+        public static final int ConstraintSet_android_visibility = 2;
+        public static final int ConstraintSet_layout_constraintBaseline_creator = 11;
+        public static final int ConstraintSet_layout_constraintBaseline_toBaselineOf = 12;
+        public static final int ConstraintSet_layout_constraintBottom_creator = 13;
+        public static final int ConstraintSet_layout_constraintBottom_toBottomOf = 14;
+        public static final int ConstraintSet_layout_constraintBottom_toTopOf = 15;
+        public static final int ConstraintSet_layout_constraintDimensionRatio = 16;
+        public static final int ConstraintSet_layout_constraintEnd_toEndOf = 17;
+        public static final int ConstraintSet_layout_constraintEnd_toStartOf = 18;
+        public static final int ConstraintSet_layout_constraintGuide_begin = 19;
+        public static final int ConstraintSet_layout_constraintGuide_end = 20;
+        public static final int ConstraintSet_layout_constraintGuide_percent = 21;
+        public static final int ConstraintSet_layout_constraintHorizontal_bias = 22;
+        public static final int ConstraintSet_layout_constraintHorizontal_chainPacked = 23;
+        public static final int ConstraintSet_layout_constraintHorizontal_weight = 24;
+        public static final int ConstraintSet_layout_constraintLeft_creator = 25;
+        public static final int ConstraintSet_layout_constraintLeft_toLeftOf = 26;
+        public static final int ConstraintSet_layout_constraintLeft_toRightOf = 27;
+        public static final int ConstraintSet_layout_constraintRight_creator = 28;
+        public static final int ConstraintSet_layout_constraintRight_toLeftOf = 29;
+        public static final int ConstraintSet_layout_constraintRight_toRightOf = 30;
+        public static final int ConstraintSet_layout_constraintStart_toEndOf = 31;
+        public static final int ConstraintSet_layout_constraintStart_toStartOf = 32;
+        public static final int ConstraintSet_layout_constraintTop_creator = 33;
+        public static final int ConstraintSet_layout_constraintTop_toBottomOf = 34;
+        public static final int ConstraintSet_layout_constraintTop_toTopOf = 35;
+        public static final int ConstraintSet_layout_constraintVertical_bias = 36;
+        public static final int ConstraintSet_layout_constraintVertical_chainPacked = 37;
+        public static final int ConstraintSet_layout_constraintVertical_weight = 38;
+        public static final int ConstraintSet_layout_editor_absoluteX = 39;
+        public static final int ConstraintSet_layout_editor_absoluteY = 40;
+        public static final int ConstraintSet_layout_goneMarginBottom = 41;
+        public static final int ConstraintSet_layout_goneMarginEnd = 42;
+        public static final int ConstraintSet_layout_goneMarginLeft = 43;
+        public static final int ConstraintSet_layout_goneMarginRight = 44;
+        public static final int ConstraintSet_layout_goneMarginStart = 45;
+        public static final int ConstraintSet_layout_goneMarginTop = 46;
+        public static final int[] LinearConstraintLayout = {16842948};
+        public static final int LinearConstraintLayout_android_orientation = 0;
+    }
+}

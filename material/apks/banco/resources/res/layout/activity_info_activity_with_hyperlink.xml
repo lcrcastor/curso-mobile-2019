@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/big_title_general_margin_width" android:layout_marginTop="@dimen/big_title_general_margin_height" android:layout_marginRight="@dimen/big_title_general_margin_width" android:layout_marginBottom="@dimen/big_title_general_margin_height">
+            <TextView android:gravity="center_vertical" android:id="@+id/info_activity_with_hyperlink_title" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/BigTitle"/>
+        </LinearLayout>
+        <View android:background="@color/grey_medium_light" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+        <ListView android:id="@+id/info_activity_with_hyperlink_hyperlinks" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:choiceMode="singleChoice"/>
+    </LinearLayout>
+</RelativeLayout>

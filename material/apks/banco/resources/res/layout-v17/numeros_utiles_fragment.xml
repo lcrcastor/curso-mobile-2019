@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/F10_00_rll_header" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <TextView android:textColor="@color/generic_black" android:id="@+id/tvTitleNumeros_utiles" android:layout_marginLeft="18dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:text="@string/ID5_HOME_BTN_PHONENUMBERS" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" style="@style/generic_title"/>
+        <View style="@style/SeparatorSectionTitle"/>
+    </LinearLayout>
+    <ListView android:id="@+id/numeros_utiles_list" android:layout_width="match_parent" android:layout_height="wrap_content" android:listSelector="@android:color/transparent" android:divider="@color/grey_medium_dark" android:dividerHeight="1dp"/>
+    <RelativeLayout android:id="@+id/idSimpleSelectorElement" android:background="@color/grey_medium_dark_transparent" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <TextView android:textSize="@dimen/titular1_text_size" android:textColor="@color/grey_medium_light" android:gravity="center" android:id="@+id/textViewNumUtilesNumber" android:padding="@dimen/default_dialog_margin" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <View android:background="@color/grey_medium_light" android:layout_width="match_parent" android:layout_height="1dp"/>
+            <TextView android:textSize="@dimen/titulo2_text_size" android:textColor="@color/grey_medium_light" android:gravity="center" android:id="@+id/textViewNumUtilesCall" android:padding="@dimen/default_dialog_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID116_ACCOUNTS_AVDSEARCH_BTN_CALL"/>
+            <View android:background="@color/grey_medium_light" android:layout_width="match_parent" android:layout_height="1dp"/>
+            <TextView android:textSize="@dimen/titulo2_text_size" android:textColor="@color/grey_medium_light" android:gravity="center" android:id="@+id/textViewNumUtilesCopy" android:padding="@dimen/default_dialog_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID117_ACCOUNTS_AVDSEARCH_BTN_COPY"/>
+            <View android:background="@color/grey_medium_light" android:layout_width="match_parent" android:layout_height="1dp"/>
+            <TextView android:textSize="@dimen/titulo2_text_size" android:textColor="@color/grey_medium_light" android:gravity="center" android:id="@+id/textViewNumUtilesSave" android:padding="@dimen/default_dialog_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID118_ACCOUNTS_AVDSEARCH_BTN_SAVE"/>
+            <View android:background="@color/grey_medium_light" android:layout_width="match_parent" android:layout_height="1dp"/>
+            <TextView android:textSize="@dimen/titulo2_text_size" android:textColor="@color/red_medium_light" android:gravity="center" android:id="@+id/textViewNumUtilesCancel" android:padding="@dimen/default_dialog_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ID119_ACCOUNTS_AVDSEARCH_BTN_CANCEL"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
